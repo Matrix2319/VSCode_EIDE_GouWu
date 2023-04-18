@@ -100,22 +100,16 @@
         "name": "HARDWARE",
         "files": [
           {
-            "path": "HARDWARE/SRC/oled.c"
+            "path": "HARDWARE/SRC/ADC_Config.c"
           },
           {
-            "path": "HARDWARE/SRC/oled2.c"
-          },
-          {
-            "path": "HARDWARE/SRC/timer.c"
+            "path": "HARDWARE/SRC/exti.c"
           },
           {
             "path": "HARDWARE/SRC/gpio.c"
           },
           {
-            "path": "HARDWARE/SRC/ADC_Config.c"
-          },
-          {
-            "path": "HARDWARE/SRC/st178.c"
+            "path": "HARDWARE/SRC/hand.c"
           },
           {
             "path": "HARDWARE/SRC/moto.c"
@@ -124,16 +118,22 @@
             "path": "HARDWARE/SRC/move.c"
           },
           {
-            "path": "HARDWARE/SRC/ui.c"
+            "path": "HARDWARE/SRC/oled.c"
+          },
+          {
+            "path": "HARDWARE/SRC/oled2.c"
+          },
+          {
+            "path": "HARDWARE/SRC/st178.c"
           },
           {
             "path": "HARDWARE/SRC/stmflash.c"
           },
           {
-            "path": "HARDWARE/SRC/exti.c"
+            "path": "HARDWARE/SRC/timer.c"
           },
           {
-            "path": "HARDWARE/SRC/hand.c"
+            "path": "HARDWARE/SRC/ui.c"
           }
         ],
         "folders": []

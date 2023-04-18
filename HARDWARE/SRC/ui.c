@@ -25,9 +25,9 @@ char zhiling[][20]={                                              //机械臂动作
 										"$DGT:7-7,1!",//下同时收                6
 										"$DGT:8-8,1!",//板抬                    7
 										"$DGT:9-9,1!",//板下                    8
-										"$DGT:10-10,1!",//后收                  9
-										"$DGT:11-11,1!",//四周机械臂抬          10
-										"$DGT:12-12,1!",//四周机械臂复位        11
+										"$DGT:10-10,1!",//后收勾篮子                  9
+										"$DGT:11-11,1!",//机械臂抬          10
+										"$DGT:12-12,1!",//机械臂复位        11
 										
 										
 								   };
@@ -544,7 +544,7 @@ uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
 				stop();
 				printf("$DGT:12-12,1!");
 				delay_ms(200);
-				memset(USART3_RX_BUF,0,100);
+				memset(USART3_RX_BUF,0,100);//将数组清0
 				memset(s,0,100);
 				
 				
@@ -573,6 +573,7 @@ uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
 //						if (breakcnt>=4000) {breakcnt=0;USART3_Puts("time error");break;}//通信错误跳出2
 //					if(a[i][3]==3)
 //						if (breakcnt>=4000) {breakcnt=0;USART3_Puts("time error");break;}//通信错误跳出3
+
 						//在调试时使用这一组延时
 					if(a[i][3]==1)
 						if (breakcnt>=200) {breakcnt=0;USART3_Puts("time error");break;}//通信错误跳出1
