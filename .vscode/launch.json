@@ -10,7 +10,7 @@
             "interface": "swd",
             "executable": "build\\Template\\Template.elf",
             "runToEntryPoint": "main",
-            "device": "null"
+            "device": "STM32F103ZE"
         }
     ]
 }

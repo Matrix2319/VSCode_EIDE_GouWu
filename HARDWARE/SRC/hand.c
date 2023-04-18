@@ -32,9 +32,14 @@ void BuJin_Zhuan(u8 flag)
     if (flag == 'I') {
 		GPIO_SetBits(GPIOE,12);
         TIM_Cmd(TIM1, ENABLE);
-        TIM_SetCompare2(TIM1, 100);
-        while (GPIO_ReadInputDataBit(GPIOE, 8) == 0)
-            ;
+        TIM_SetCompare2(TIM1, 700);
+		while (1)
+		{
+			;
+		}
+		
+        // while (GPIO_ReadInputDataBit(GPIOE, 8) == 0)
+        //     ;
         TIM_SetCompare2(TIM1, 0);
         TIM_Cmd(TIM1, DISABLE);
     }

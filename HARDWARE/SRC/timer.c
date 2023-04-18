@@ -86,7 +86,7 @@ void Init_TIM1_PWM(u16 arr ,u16 psc)//19999  71    4999  71
 	TIM_OCInitStructure.TIM_OCNIdleState = TIM_OCIdleState_Reset;
 
 	TIM_OC1Init(TIM1, &TIM_OCInitStructure); //根据TIM_OCInitStruct中指定的参数初始化外设TIMx
-
+	TIM_OC2Init(TIM1, &TIM_OCInitStructure);
 	TIM_OC2PreloadConfig(TIM1, TIM_OCPreload_Enable); // CH2 ----B PE11
 	//TIM_OC3Init(TIM1, &TIM_OCInitStructure);
 	//TIM_OC3PreloadConfig(TIM1, TIM_OCPreload_Enable); // CH3 ----C PE13
