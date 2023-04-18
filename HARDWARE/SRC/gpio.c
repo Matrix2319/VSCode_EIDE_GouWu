@@ -4,30 +4,6 @@
 void SHOP_GPIO_init(void)
 {
 	GPIO_InitTypeDef  GPIO_InitStructure;
-	
-//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);	 //上电机
-//	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14;    
-//	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-//	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-//	GPIO_Init(GPIOB,&GPIO_InitStructure);
-//	
-//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE, ENABLE);	 //上电机
-//	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11|GPIO_Pin_12;    
-//	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-//	GPIO_Init(GPIOE,&GPIO_InitStructure);
-	
-
-	/*P1:PE11
-	D1:PE12
-	P2:PE13
-	D2:PB12
-	LED:PB13*/	
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE, ENABLE);	 
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11|GPIO_Pin_13|GPIO_Pin_12;    
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOE,&GPIO_InitStructure);
-	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);	 
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13|GPIO_Pin_12;    
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;

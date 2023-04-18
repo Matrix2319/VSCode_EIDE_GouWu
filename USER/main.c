@@ -32,7 +32,7 @@ int main(void)
     uart3_init(9600);   // 串口3
 
     Init_BMQ(); // 编码器初始化
-
+    Init_TIM1_PWM(1499,69);//步进电机1499,69为600HZ
     ADC_DMA_Configuration(); // ADC1初始化(不知道有没有用到，上车调试)
     ADKey_Init();            // ACD3初始化(用到)
 
