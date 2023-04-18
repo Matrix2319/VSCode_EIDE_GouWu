@@ -11,7 +11,7 @@ u8 Hand_LOW_BACK(void);
 u8 Hand_HIGH_GO(void);
 u8 Hand_HIGH_BACK(void);
 ////上层移动电机	
-void Zhua(u16 i);
+void Zhua();
 void Zhua_mid(u16 i);
 #endif 
 
