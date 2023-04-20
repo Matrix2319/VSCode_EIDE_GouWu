@@ -387,3 +387,169 @@ command:
 [2023-04-19 00:24:37]	[done]
 	build successfully !
 
+[2023-04-19 12:13:47]	[done]
+	build successfully !
+
+[2023-04-19 12:16:25]	[done]
+	build successfully !
+
+[2023-04-19 12:17:20]	[done]
+	build successfully !
+
+[2023-04-19 12:18:09]	[done]
+	build successfully !
+
+[2023-04-19 12:18:33]	[done]
+	build successfully !
+
+[2023-04-19 12:18:48]	[done]
+	build successfully !
+
+[2023-04-19 12:19:21]	[done]
+	build successfully !
+
+[2023-04-19 12:20:43]	[done]
+	build successfully !
+
+[2023-04-19 12:21:55]	[done]
+	build successfully !
+
+[2023-04-19 13:23:52]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 41: Warning:  #111-D: statement is unreachable
+          TIM_SetCompare2(TIM1, 0);
+          ^
+".\HARDWARE\SRC\hand.c", line 50: Warning:  #111-D: statement is unreachable
+          TIM_SetCompare2(TIM1, 0);
+          ^
+".\HARDWARE\SRC\hand.c", line 54: Error:  #29: expected an expression
+  		if(/*限位开关*/)
+  		           ^
+.\HARDWARE\SRC\hand.c: 2 warnings, 1 error
+
+[2023-04-19 13:24:25]	[done]
+	build successfully !
+
+[2023-04-19 13:28:39]	[done]
+	build successfully !
+
+[2023-04-19 13:30:02]	[done]
+	build successfully !
+
+[2023-04-19 13:34:29]	[done]
+	build successfully !
+
+[2023-04-19 13:35:42]	[done]
+	build successfully !
+
+[2023-04-19 13:39:18]	[done]
+	build successfully !
+
+[2023-04-19 13:39:38]	[done]
+	build successfully !
+
+[2023-04-19 13:41:20]	[done]
+	build successfully !
+
+[2023-04-19 13:42:35]	[done]
+	build successfully !
+
+[2023-04-19 14:05:50]	[done]
+	build successfully !
+
+[2023-04-19 14:06:56]	[done]
+	build successfully !
+
+[2023-04-19 14:10:55]	[done]
+	build successfully !
+
+[2023-04-19 14:12:38]	[done]
+	build successfully !
+
+[2023-04-19 14:16:27]	[done]
+	build successfully !
+
+[2023-04-19 14:18:06]	[done]
+	build successfully !
+
+[2023-04-19 14:37:57]	[done]
+	build successfully !
+
+[2023-04-19 14:38:07]	[done]
+	build successfully !
+
+[2023-04-19 14:38:51]	[done]
+	build successfully !
+
+[2023-04-19 15:20:00]	[done]
+	build successfully !
+
+[2023-04-19 15:20:23]	[done]
+	build successfully !
+
+[2023-04-19 15:20:35]	[done]
+	build successfully !
+
+[2023-04-19 15:20:45]	[done]
+	build successfully !
+
+[2023-04-19 15:21:09]	[done]
+	build successfully !
+
+[2023-04-19 15:21:19]	[done]
+	build successfully !
+
+[2023-04-19 15:21:32]	[done]
+	build successfully !
+
+[2023-04-19 15:22:06]	[done]
+	build successfully !
+
+[2023-04-19 15:22:16]	[done]
+	build successfully !
+
+[2023-04-19 15:22:34]	[done]
+	build successfully !
+
+[2023-04-19 15:25:03]	[done]
+	build successfully !
+
+[2023-04-19 15:25:57]	[done]
+	build successfully !
+
+[2023-04-19 15:26:23]	[done]
+	build successfully !
+
+[2023-04-19 15:27:34]	[done]
+	build successfully !
+
+[2023-04-19 15:28:35]	[done]
+	build successfully !
+
+[2023-04-19 15:29:53]	[done]
+	build successfully !
+
+[2023-04-19 15:32:50]	[done]
+	build successfully !
+
+[2023-04-19 15:33:40]	[done]
+	build successfully !
+
+[2023-04-19 15:34:06]	[done]
+	build successfully !
+
+[2023-04-19 15:34:56]	[done]
+	build successfully !
+
+[2023-04-19 15:38:53]	[done]
+	build successfully !
+
+[2023-04-20 20:34:52]	[done]
+	build successfully !
+
+[2023-04-20 20:44:03]	[done]
+	build successfully !
+

@@ -20,7 +20,7 @@ void SHOP_GPIO_init(void)
 	GPIO_Init(GPIOE,&GPIO_InitStructure);
 	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOF, ENABLE);	
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8|GPIO_Pin_12|GPIO_Pin_7|GPIO_Pin_8;    
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8|GPIO_Pin_12|GPIO_Pin_7;    
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
 	GPIO_Init(GPIOF,&GPIO_InitStructure);
 }

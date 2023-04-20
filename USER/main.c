@@ -27,14 +27,15 @@ int main(void)
     //	TZXH_LOGO();//台州学院logo显示
     All_GPIO_Init(); // 用到的IO口初始化
     SHOP_GPIO_init();
+    BuJin_GPIO_Init();
     uart1_init(115200); // 串口1
     uart2_init(9600);   // 串口2
     uart3_init(9600);   // 串口3
 
-    Init_BMQ(); // 编码器初始化
-    Init_TIM1_PWM(1499,109);//步进电机1499,69为600HZ
-    ADC_DMA_Configuration(); // ADC1初始化(不知道有没有用到，上车调试)
-    ADKey_Init();            // ACD3初始化(用到)
+    Init_BMQ();               // 编码器初始化
+    Init_TIM1_PWM(1499, 109); // 步进电机1499,69为600HZ,数字越打越慢
+    ADC_DMA_Configuration();  // ADC1初始化(不知道有没有用到，上车调试)
+    ADKey_Init();             // ACD3初始化(用到)
 
     Init_TIM8_PWM(899, 7); // 电机PWM波
     //	Init_TIM1_PWM(19999,71);//PE11 PE13舵机(预留)
@@ -43,10 +44,10 @@ int main(void)
 
     LCD_CLS();
     delay_ms(500);
- BuJin_Zhuan('I');
+
+
     while (1) {
 
-       
-        //MenuOperate();
+         MenuOperate();
     }
 }

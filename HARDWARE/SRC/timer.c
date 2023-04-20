@@ -88,12 +88,14 @@ void Init_TIM1_PWM(u16 arr ,u16 psc)//19999  71    4999  71
 	TIM_OC1Init(TIM1, &TIM_OCInitStructure); //根据TIM_OCInitStruct中指定的参数初始化外设TIMx
 	TIM_OC2Init(TIM1, &TIM_OCInitStructure);
 	TIM_OC2PreloadConfig(TIM1, TIM_OCPreload_Enable); // CH2 ----B PE11
-	//TIM_OC3Init(TIM1, &TIM_OCInitStructure);
-	//TIM_OC3PreloadConfig(TIM1, TIM_OCPreload_Enable); // CH3 ----C PE13
+	TIM_OC3Init(TIM1, &TIM_OCInitStructure);
+	TIM_OC3PreloadConfig(TIM1, TIM_OCPreload_Enable); // CH3 ----C PE13
 
 	TIM_CtrlPWMOutputs(TIM1, ENABLE); // MOE 主输出使能
 
 	TIM_ARRPreloadConfig(TIM1, ENABLE); //使能TIMx在ARR上的预装载寄存器
+	 TIM_SetCompare2(TIM1, 0);
+	  TIM_SetCompare3(TIM1, 0);
 
 	TIM_Cmd(TIM1, DISABLE); //不使能TIM1
 }
