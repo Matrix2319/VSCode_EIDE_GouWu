@@ -20,10 +20,12 @@ void BuJin_GPIO_Init()
     GPIO_SetBits(GPIOE, 12);
 
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOF, ENABLE);
-    GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_7 | GPIO_Pin_8; // 限位开关
-    GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_IPU;
+    GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_7 | GPIO_Pin_8|GPIO_Pin_9; // 限位开关
+    GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_IPD;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOE, &GPIO_InitStructure);
+    GPIO_Init(GPIOF, &GPIO_InitStructure);
+    GPIO_ResetBits(GPIOF,GPIO_Pin_7|GPIO_Pin_8|GPIO_Pin_9);  
+   
 }
 
 void BuJin_Zhuan(u8 flag)

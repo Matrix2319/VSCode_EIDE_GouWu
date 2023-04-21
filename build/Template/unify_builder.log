@@ -568,3 +568,61 @@ command:
 [2023-04-21 23:26:08]	[done]
 	build successfully !
 
+[2023-04-21 23:57:08]	[done]
+	build successfully !
+
+[2023-04-21 23:59:57]	[done]
+	build successfully !
+
+[2023-04-22 00:03:57]	[done]
+	build successfully !
+
+[2023-04-22 00:05:33]	[done]
+	build successfully !
+
+[2023-04-22 00:07:25]	[done]
+	build successfully !
+
+[2023-04-22 00:09:00]	[done]
+	build successfully !
+
+[2023-04-22 00:09:08]	[done]
+	build successfully !
+
+[2023-04-22 00:11:32]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\USER\main.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\USER\main.o --no_depend_system_headers --depend .\build\Template\USER\main.d .\USER\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\USER\main.c", line 68: Error:  #20: identifier "LCD" is undefined
+              LCD
+              ^
+".\USER\main.c", line 69: Error:  #79: expected a type specifier
+                  _16_HanZi_ASCII(10, 2, OLED_BUF);
+                                  ^
+".\USER\main.c", line 69: Error:  #79: expected a type specifier
+                  _16_HanZi_ASCII(10, 2, OLED_BUF);
+                                      ^
+".\USER\main.c", line 69: Error:  #757: variable "OLED_BUF" is not a type name
+                  _16_HanZi_ASCII(10, 2, OLED_BUF);
+                                         ^
+".\USER\main.c", line 23: Warning:  #177-D: variable "tx_flag" was declared but never referenced
+      int tx_flag = 0;
+          ^
+.\USER\main.c: 1 warning, 4 errors
+
+[2023-04-22 00:11:47]	[done]
+	build successfully !
+
+[2023-04-22 00:16:54]	[done]
+	build successfully !
+
+[2023-04-22 00:20:28]	[done]
+	build successfully !
+
+[2023-04-22 00:20:46]	[done]
+	build successfully !
+
+[2023-04-22 00:21:50]	[done]
+	build successfully !
+
