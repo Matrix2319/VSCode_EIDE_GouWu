@@ -870,3 +870,121 @@ command:
 [2023-04-22 14:11:48]	[done]
 	build successfully !
 
+[2023-04-22 14:53:23]	[done]
+	build successfully !
+
+[2023-04-22 15:17:28]	[done]
+	build successfully !
+
+[2023-04-22 15:18:14]	[done]
+	build successfully !
+
+[2023-04-22 15:23:14]	[done]
+	build successfully !
+
+[2023-04-22 15:27:49]	[done]
+	build successfully !
+
+[2023-04-22 15:31:31]	[done]
+	build successfully !
+
+[2023-04-22 15:50:12]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\SYSTEM\usart\usart.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\SYSTEM\usart\usart.o --no_depend_system_headers --depend .\build\Template\SYSTEM\usart\usart.d .\SYSTEM\usart\usart.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+".\SYSTEM\usart\usart.c", line 365: Warning:  #177-D: variable "Lcnt" was declared but never referenced
+      static u8 Lcnt = 0, Rcnt = 0;
+                ^
+".\SYSTEM\usart\usart.c", line 365: Warning:  #177-D: variable "Rcnt" was declared but never referenced
+      static u8 Lcnt = 0, Rcnt = 0;
+                          ^
+".\SYSTEM\usart\usart.c", line 473: Error:  #20: identifier "ftp" is undefined
+      va_start(ap, ftp);
+      ^
+".\SYSTEM\usart\usart.c", line 476: Error:  #20: identifier "c" is undefined
+      USARTx->DR = (u8)c; // 要发送的字符赋给串口数据寄存器
+                       ^
+".\SYSTEM\usart\usart.c", line 470: Warning:  #177-D: variable "i" was declared but never referenced
+      u16 i = 0;
+          ^
+.\SYSTEM\usart\usart.c: 3 warnings, 2 errors
+
+[2023-04-22 15:50:46]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\SYSTEM\usart\usart.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\SYSTEM\usart\usart.o --no_depend_system_headers --depend .\build\Template\SYSTEM\usart\usart.d .\SYSTEM\usart\usart.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\SYSTEM\usart\usart.c", line 365: Warning:  #177-D: variable "Lcnt" was declared but never referenced
+      static u8 Lcnt = 0, Rcnt = 0;
+                ^
+".\SYSTEM\usart\usart.c", line 365: Warning:  #177-D: variable "Rcnt" was declared but never referenced
+      static u8 Lcnt = 0, Rcnt = 0;
+                          ^
+".\SYSTEM\usart\usart.c", line 476: Error:  #20: identifier "c" is undefined
+      USARTx->DR = (u8)c; // 要发送的字符赋给串口数据寄存器
+                       ^
+".\SYSTEM\usart\usart.c", line 470: Warning:  #177-D: variable "i" was declared but never referenced
+      u16 i = 0;
+          ^
+.\SYSTEM\usart\usart.c: 3 warnings, 1 error
+
+[2023-04-22 15:52:58]	[done]
+	build successfully !
+
+[2023-04-22 15:53:18]	[done]
+	build successfully !
+
+[2023-04-22 15:55:35]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\USER\main.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\USER\main.o --no_depend_system_headers --depend .\build\Template\USER\main.d .\USER\main.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+".\USER\main.c", line 54: Error:  #20: identifier "Prin" is undefined
+  Prin
+  ^
+".\USER\main.c", line 60: Error:  #65: expected a ";"
+      }
+      ^
+".\USER\main.c", line 23: Warning:  #177-D: variable "tx_flag" was declared but never referenced
+      int tx_flag = 0;
+          ^
+.\USER\main.c: 1 warning, 2 errors
+
+[2023-04-22 15:56:16]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6218E: Undefined symbol Print (referred from main.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+
+
+[2023-04-22 15:56:27]	[done]
+	build successfully !
+
+[2023-04-22 15:56:41]	[done]
+	build successfully !
+
+[2023-04-22 15:57:04]	[done]
+	build successfully !
+
+[2023-04-22 16:58:50]	[done]
+	build successfully !
+
+[2023-04-22 17:02:31]	[done]
+	build successfully !
+
+[2023-04-22 17:13:02]	[done]
+	build successfully !
+
+[2023-04-22 20:06:41]	[done]
+	build successfully !
+
+[2023-04-22 20:16:58]	[done]
+	build successfully !
+
+[2023-04-22 20:21:39]	[done]
+	build successfully !
+

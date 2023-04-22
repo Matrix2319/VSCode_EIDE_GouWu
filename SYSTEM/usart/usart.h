@@ -22,6 +22,7 @@ extern u16 USART3_RX_STA;         		//接收状态标记
 
 extern int USART_PRINTF_FLAG;
 extern float angle_6;
+extern char USARTx_SendBuff[100];//任意串口的发送数组
 //如果想串口中断接收，请不要注释以下宏定义
 void uart1_init(u32 bound);
 void USART1_Putc(unsigned char c);
@@ -32,6 +33,8 @@ void USART2_Puts(char * str);
 void uart3_init(u32 bound);
 void USART3_Putc(unsigned char c);
 void USART3_Puts(char * str);
+void Printf(USART_TypeDef *USARTx, char *fmt, ...);
+
 #endif
 
 
