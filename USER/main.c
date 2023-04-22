@@ -45,29 +45,38 @@ int main(void)
     LCD_CLS();
     delay_ms(500);
 
+    // BuJin_Zhuan('S');
+    // delay_ms(500);
+    // BuJin_Zhuan('I');
+    // delay_ms(500);
+    // BuJin_Zhuan('I');
+    delay_ms(100);
+    BuJin_Zhuan('X');
     while (1) {
-        if (PFin(7) == 1) {
-            sprintf(OLED_BUF, "E7=%d", 1);
-            LCD_16_HanZi_ASCII(10, 6, OLED_BUF);
-        } else {
-            sprintf(OLED_BUF, "E7=%d", 0);
-            LCD_16_HanZi_ASCII(10, 6, OLED_BUF);
-        }
-        if (PFin(8) == 0) {
-            sprintf(OLED_BUF, "E8=%d", 0);
-            LCD_16_HanZi_ASCII(10, 4, OLED_BUF);
-        } else {
-            sprintf(OLED_BUF, "E8=%d", 1);
-            LCD_16_HanZi_ASCII(10, 4, OLED_BUF);
-        }
-        if (PFin(9) == 0) {
-            sprintf(OLED_BUF, "E9=%d", 0);
-            LCD_16_HanZi_ASCII(10, 2, OLED_BUF);
-        } else {
-            sprintf(OLED_BUF, "E9=%d", 1);
-                LCD_16_HanZi_ASCII(10, 2, OLED_BUF);
-        }
-        delay_ms(50);
-        // MenuOperate();
+         // BuJin_Zhuan('X');
+        // if (PFin(7) == 1) {
+        //     sprintf(OLED_BUF, "E7=%d", 1);
+        //     LCD_16_HanZi_ASCII(10, 6, OLED_BUF);
+        // } else {
+        //     sprintf(OLED_BUF, "E7=%d", 0);
+        //     LCD_16_HanZi_ASCII(10, 6, OLED_BUF);
+        // }
+        // if (PFin(8) == 0) {
+        //     sprintf(OLED_BUF, "E8=%d", 0);
+        //     LCD_16_HanZi_ASCII(10, 4, OLED_BUF);
+        // } else {
+        //     sprintf(OLED_BUF, "E8=%d", 1);
+        //     LCD_16_HanZi_ASCII(10, 4, OLED_BUF);
+        // }
+        // if (PFin(9) == 0) {
+        //     sprintf(OLED_BUF, "E9=%d", 0);
+        //     LCD_16_HanZi_ASCII(10, 2, OLED_BUF);
+        // } else {
+        //     sprintf(OLED_BUF, "E9=%d", 1);
+        //         LCD_16_HanZi_ASCII(10, 2, OLED_BUF);
+        // }
+        //delay_ms(50);
+         //MenuOperate();
+         delay_ms(500);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     }
 }

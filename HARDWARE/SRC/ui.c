@@ -2412,12 +2412,15 @@ void Clock_e(void)
                 switch (move_BUFF_SET[i][1]) {
                     case 1:
                         OLED_DrawHanzi(i * 32, 16, "Ç°", 1);
+                        //BuJin_Zhuan('S');
                         break;
                     case 0:
                         OLED_DrawHanzi(i * 32, 16, "ºó", 1);
+                        //BuJin_Zhuan('I');
                         break;
                     case 3:
                         OLED_DrawHanzi(i * 32, 16, "×ó", 1);
+                        //BuJin_Zhuan('T');
                         break;
                     case 4:
                         OLED_DrawHanzi(i * 32, 16, "ÓÒ", 1);

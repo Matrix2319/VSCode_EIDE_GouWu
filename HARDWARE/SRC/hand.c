@@ -31,32 +31,79 @@ void BuJin_GPIO_Init()
 void BuJin_Zhuan(u8 flag)
 {
     if (flag == 'I') {
-        PEout(12) = 0;
+        PEout(12) = 0;//上下动标志位（0为下）
         TIM_Cmd(TIM1, ENABLE);
         TIM_SetCompare2(TIM1, 700);
-        while (1) {
+        while (PFin(8) == 0) {//7上8下
             ;
         }
-
-        // while (GPIO_ReadInputDataBit(GPIOE, 8) == 0)
-        //     ;
         TIM_SetCompare2(TIM1, 0);
         TIM_Cmd(TIM1, DISABLE);
     }
     if (flag == 'S') {
         PEout(12) = 1;
         TIM_Cmd(TIM1, ENABLE);
-        TIM_SetCompare2(TIM1, 100);
-        while (1)
+        TIM_SetCompare2(TIM1, 700);
+        while (PFin(7) == 0) {
             ;
+        }
         TIM_SetCompare2(TIM1, 0);
         TIM_Cmd(TIM1, DISABLE);
     }
     if (flag == 'X') {
-		if(/*限位开关*/1)
-		{
+        if (PFin(8) == 1) // 在下面
+        {
+            delay_ms(200);
+            PEout(12) = 1;
+            delay_ms(200);
+            TIM_Cmd(TIM1, ENABLE);
+            delay_ms(200);
+            TIM_SetCompare2(TIM1, 700);
+            delay_ms(200);
+            for (u8 it = 0; it < 81; it++)
+                delay_ms(100);
+            TIM_SetCompare2(TIM1, 0);
+            TIM_Cmd(TIM1, DISABLE);
 
-		}
+        } else if (PFin(7) == 1) // 在上面
+        {
+            delay_ms(200);//延时是必要的
+            PEout(12) = 0;
+            delay_ms(200);
+            TIM_Cmd(TIM1, ENABLE);
+            delay_ms(200);
+            TIM_SetCompare2(TIM1, 700);
+            delay_ms(200);
+            for (u8 it = 0; it < 235; it++) delay_ms(100);
+            TIM_SetCompare2(TIM1, 0);
+            TIM_Cmd(TIM1, DISABLE);
+        } else // 哪都不在就先下后上
+        {
+            delay_ms(200);
+            PEout(12) = 0;
+            delay_ms(200);
+            TIM_Cmd(TIM1, ENABLE);
+            delay_ms(200);
+            TIM_SetCompare2(TIM1, 700);
+            while (PFin(8) == 0) {
+                ;
+            }
+            delay_ms(200);
+            TIM_SetCompare2(TIM1, 0);
+            delay_ms(200);
+            PEout(12) = 1;
+            delay_ms(200);
+            TIM_SetCompare2(TIM1, 700);
+            delay_ms(200);
+            for (u8 it = 0; it < 82; it++)
+                delay_ms(100);
+            TIM_SetCompare2(TIM1, 0);
+            TIM_Cmd(TIM1, DISABLE);
+        }
+    }
+    if (flag == 'T') {
+        TIM_SetCompare2(TIM1, 0);
+        TIM_Cmd(TIM1, DISABLE);
     }
 }
 void LunPan_Zhuan()
