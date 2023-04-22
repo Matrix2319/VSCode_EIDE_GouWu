@@ -20,7 +20,7 @@ void BuJin_GPIO_Init()
     GPIO_SetBits(GPIOE, 12);
 
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOF, ENABLE);
-    GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_7 | GPIO_Pin_8|GPIO_Pin_9; // 限位开关
+    GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_7 | GPIO_Pin_8|GPIO_Pin_9; // 限位开关7上8下9轮盘
     GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_IPD;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOF, &GPIO_InitStructure);
@@ -110,9 +110,9 @@ void LunPan_Zhuan()
 {
     TIM_Cmd(TIM1, ENABLE);
     TIM_SetCompare3(TIM1, 700);
-    for (u8 ta = 0; ta < 113; ta++) {
-        delay_ms(25);
-    }
+    while (PFin(9)==1);  
+    delay_ms(500);
+    while (PFin(9)==0);   
     TIM_SetCompare3(TIM1, 0); // 轮盘舵机500最快，800慢
     delay_ms(500);
     TIM_Cmd(TIM1, DISABLE);
