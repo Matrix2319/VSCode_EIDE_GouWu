@@ -7,7 +7,11 @@
 
 extern short int sum_value1, sum_value2;
 extern u16 sum_flag;
-u8 j = 0;
+u8 j                    = 0;
+u8 LunPan[6]            = {0, 0, 0, 0, 0, 0}; // 轮盘存放的东西
+u8 LunPani              = 0;                  // 轮盘的下标
+u8 Flag_HuoJia          = 0;                  // A,B,C,D区域
+u8 Flag_HuoJia_ShangXia = 0;                  // 区分上下货架
 
 u8 Infoflag                = 0; // 现存信息
 unsigned char hou[30][5]   = {{1, 0, 0, 255, 0}, {0, 3, 0, 255, 0}, {1, 1, 140, 68, 1}, {1, 0, 0, 255, 0}, {0, 4, 0, 255, 0}};
@@ -35,25 +39,31 @@ char zhiling[][20] = {
 // 指令组下标为A,B,C,D对应各个区域，255为空,S为上，X为下，I为初始位置，1为轮盘复位
 // 五个一组分别表示格数，方向，延时停车的延时时长ms，指令数组下标，等待机械臂延时s
 unsigned char a[][5] = {
-    {0, 1, 42, 255, 0},
+    {0, 1, 22, 255, 0},
     {0, 6, 0, 255, 70},
-    {0, 2, 10, 255, 0},
+    {0, 2, 10, 255, 0}, // 平移出去等一会儿
+    {1, 1, 0, 255, 0},  // 前移一格
+    {0, 6, 0, 255, 5},  // 平移一点
+    {0, 2, 0, 'A', 0},  // 发A拍照
+    {0, 2, 0, 255, 10}, // 停一会儿
     {1, 1, 0, 255, 0},
     {0, 6, 0, 255, 5},
-    {0, 2, 0, 255, 10},
-    {1, 1, 0, 255, 0},
-    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'A', 0},
     {0, 2, 0, 255, 20},
     {1, 1, 0, 255, 0},
     {0, 6, 0, 255, 5},
+    {0, 2, 0, 'A', 0},
     {0, 2, 0, 255, 20},
     {1, 1, 0, 255, 0},
     {0, 6, 0, 255, 5},
+    {0, 2, 0, 'A', 0},
     {0, 2, 0, 255, 20},
     {1, 1, 0, 255, 0},
     {0, 6, 0, 255, 5},
+    {0, 2, 0, 'A', 0},
     {0, 2, 0, 255, 20},
-    {5, 0, 0, 255, 0},
+    {0, 2, 0, 'X', 1}, // 轮盘到下层
+    {0, 2, 0, 'P', 10},
     // {0, 5, 0, 255, 16},
     // {0, 4, 0, 255, 0},
     // {0, 6, 0, 255, 4},
@@ -68,35 +78,35 @@ unsigned char a[][5] = {
 
     {0, 0, 0, 0, 0}};
 
-unsigned char b[][5] = { 
+unsigned char b[][5] = {
 
     {0, 0, 0, 0, 0}};
 
-unsigned char c[][5] = { 
+unsigned char c[][5] = {
 
     {0, 0, 0, 0, 0}};
 
-unsigned char d[][5] = { 
+unsigned char d[][5] = {
 
     {0, 0, 0, 0, 0}};
 
-unsigned char e[][5] = { 
+unsigned char e[][5] = {
 
     {0, 0, 0, 0, 0}};
 
 // 中键
-unsigned char a1[][5] = { 
+unsigned char a1[][5] = {
 
     {0, 0, 0, 0, 0}};
 
-unsigned char b1[][5] = { 
+unsigned char b1[][5] = {
 
     {0, 0, 0, 0, 0}};
 
-unsigned char c1[][5] = { 
+unsigned char c1[][5] = {
     {0, 0, 0, 0, 0}};
 
-unsigned char d1[][5] = { 
+unsigned char d1[][5] = {
 
     {0, 0, 0, 0, 0}};
 
@@ -104,18 +114,17 @@ unsigned char e1[][5] = {
 
     {0, 0, 0, 0, 0}};
 // 重启路线
-unsigned char a2[][5] = { 
+unsigned char a2[][5] = {
     {0, 0, 0, 0, 0}};
 
-unsigned char c2[][5] = { 
+unsigned char c2[][5] = {
 
     {0, 0, 0, 0, 0}};
 
-unsigned char d2[][5] = { 
+unsigned char d2[][5] = {
     {0, 0, 0, 0, 0}};
 
-unsigned char e2[][5] = { 
-  
+unsigned char e2[][5] = {
 
     {0, 0, 0, 0, 0}};
 
@@ -230,6 +239,8 @@ void change(unsigned char (*a)[5], unsigned char len)
             // 			delay_ms(1000);
             // //			for(j=0;j<10;j++)//开车延时，正式比赛时解开注释
             // //			delay_ms(1000);
+            memset(LunPan, 0, 6);
+            LunPani=0;
             BMQ_MOVE(a[i][1], a[i][2], 0);
         } else {
             if (a[i][2] != 0) {
@@ -244,45 +255,167 @@ void change(unsigned char (*a)[5], unsigned char len)
                 DJ_MOVE_BUFF_SET(a[i][0], a[i][1], a[i][4]); // 循迹移动函数   格数  方向  平移延时
             if (a[i][3] != 255) {
                 stop();
-                if (a[i][3] == 'I') {
-
-                } 
-				else if(a[i][3]=='1')
-				{
-
-				}
-				else {
-
-                    memset(USART3_RX_BUF, 0, 100); // 将数组清0
+                if (a[i][3] == 'I' || a[i][3] == 'S' || a[i][3] == 'X' || a[i][3] == 'Z') {
+                    switch (a[i][3]) {
+                        case 'X':
+                            BuJin_Zhuan('X');
+                            Flag_HuoJia_ShangXia = 'X';
+                            break;
+                        case 'S':
+                            BuJin_Zhuan('S');
+                            Flag_HuoJia_ShangXia = 'S';
+                            break;
+                        case 'I':
+                            BuJin_Zhuan('I');
+                            Flag_HuoJia_ShangXia = 0;
+                            break;
+                        case 'Z':
+                            LunPan_Zhuan();
+                            break;
+                        default:
+                            break;
+                    }
+                    for (u8 it = 0; it < a[i][4]; it++)
+                        delay_ms(100);
+                } else if (a[i][3] == 'P') // 算法
+                {
+                    if (Flag_HuoJia == 'A') {
+                        memset(USART3_RX_BUF, 0, 10); // 将数组清0
+                        Printf(USART3, "%c", 'A');
+                        while (1) {
+                            if (USART3_RX_STA & 0x8000) // 接收完成
+                            {
+                                if (Flag_HuoJia_ShangXia == 'X') {
+                                    if (USART3_RX_BUF[1] == 'r') // 货架为空，要推
+                                    {
+                                        for (u8 i = 0; i <= 5; i++) {
+                                            if (LunPan[i] == 'r') {
+                                                while (LunPani != i) {
+                                                    LunPan_Zhuan();
+                                                    LunPani++;
+                                                    if (LunPani == 6)
+                                                        LunPani = 0;
+                                                }
+                                                Printf(USART2, zhiling[1]);
+                                            }
+                                        }
+                                        for (u8 itt = 0; itt < 15; itt++)
+                                            delay_ms(100);
+                                        break;
+                                    } else if (USART3_RX_BUF[1] == 'g') {
+                                        for (u8 i = 0; i <= 5; i++) {
+                                            if (LunPan[i] == 'g') {
+                                                while (LunPani != i) {
+                                                    LunPan_Zhuan();
+                                                    LunPani++;
+                                                    if (LunPani == 6)
+                                                        LunPani = 0;
+                                                }
+                                                Printf(USART2, zhiling[1]);
+                                            }
+                                        }
+                                        for (u8 itt = 0; itt < 15; itt++)
+                                            delay_ms(100);
+                                        break;
+                                    } else if (USART3_RX_BUF[1] == 'b') {
+                                        for (u8 i = 0; i <= 5; i++) {
+                                            if (LunPan[i] == 'b') {
+                                                while (LunPani != i) {
+                                                    LunPan_Zhuan();
+                                                    LunPani++;
+                                                    if (LunPani == 6)
+                                                        LunPani = 0;
+                                                }
+                                                Printf(USART2, zhiling[1]);
+                                            }
+                                        }
+                                        for (u8 itt = 0; itt < 15; itt++)
+                                            delay_ms(100);
+                                        break;
+                                    }
+                                }
+                                if (Flag_HuoJia_ShangXia == 'S') {
+                                    if (USART3_RX_BUF[1] == 'r') // 货架为空，要推
+                                    {
+                                        for (u8 i = 0; i <= 5; i++) {
+                                            if (LunPan[i] == 'r') {
+                                                while (LunPani != i) {
+                                                    LunPan_Zhuan();
+                                                    LunPani++;
+                                                    if (LunPani == 6)
+                                                        LunPani = 0;
+                                                }
+                                                Printf(USART2, zhiling[1]);
+                                            }
+                                        }
+                                        for (u8 itt = 0; itt < 15; itt++)
+                                            delay_ms(100);
+                                        break;
+                                    } else if (USART3_RX_BUF[1] == 'g') {
+                                        for (u8 i = 0; i <= 5; i++) {
+                                            if (LunPan[i] == 'g') {
+                                                while (LunPani != i) {
+                                                    LunPan_Zhuan();
+                                                    LunPani++;
+                                                    if (LunPani == 6)
+                                                        LunPani = 0;
+                                                }
+                                                Printf(USART2, zhiling[1]);
+                                            }
+                                        }
+                                        for (u8 itt = 0; itt < 15; itt++)
+                                            delay_ms(100);
+                                        break;
+                                    } else if (USART3_RX_BUF[1] == 'b') {
+                                        for (u8 i = 0; i <= 5; i++) {
+                                            if (LunPan[i] == 'b') {
+                                                while (LunPani != i) {
+                                                    LunPan_Zhuan();
+                                                    LunPani++;
+                                                    if (LunPani == 6)
+                                                        LunPani = 0;
+                                                }
+                                                Printf(USART2, zhiling[1]);
+                                            }
+                                        }
+                                        for (u8 itt = 0; itt < 15; itt++)
+                                            delay_ms(100);
+                                        break;
+                                    } else
+                                        break;
+                                }
+                            }
+                            delay_ms(10);
+                        }
+                    }
+                } else if (a[i][3] == 'A' || a[i][3] == 'B' || a[i][3] == 'C' || a[i][3] == 'D') {
+                    memset(USART3_RX_BUF, 0, 10); // 将数组清0
                     memset(s, 0, 100);
-
                     USART3_RX_STA = 0;
                     LED           = 1;
-
                     switch (a[i][3]) {
-
                         case 'A':
                             delay_ms(500);
                             USART3_Putc('A');
-                            Infoflag = 1;
+                            Flag_HuoJia = 'A';
                             break;
                         case 'B':
                             delay_ms(1000);
                             USART3_Putc('B');
-                            Infoflag = 2;
+                            Flag_HuoJia = 'B';
                             break;
                         case 'C':
                             delay_ms(1000);
                             USART3_Putc('C');
-                            Infoflag = 3;
+                            Flag_HuoJia = 'C';
                             break;
                         case 'D':
                             delay_ms(1000);
                             USART3_Putc('D');
-                            Infoflag = 4;
+                            Flag_HuoJia = 'D';
                             break;
                         default:
-                            Infoflag = 0; // break;
+                            Flag_HuoJia = 0; // break;
                     }
 
                     breakcnt = 0;
@@ -310,65 +443,74 @@ void change(unsigned char (*a)[5], unsigned char len)
 
                             if (a[i][3] == 'A') // 货架
                             {
-								switch (USART3_RX_BUF[0])//上层
-								{
-                                    case 'r':
-										Zhua();
-                                        break;
-                                    case 'g':
-										Zhua();
-                                        break;
-                                    case 'b':
-										Zhua();
-                                        break;
-                                    default:
-                                        break;
-                                }
-								switch (USART3_RX_BUF[1])//下层
-								{
-                                    case 'r':
-										Zhua();
-                                        break;
-                                    case 'g':
-										Zhua();
-                                        break;
-                                    case 'b':
-										Zhua();
-                                        break;
-                                    default:
-                                        break;
-                                }
-                              
-                                //						pinf_qian=(USART3_RX_BUF[2]-'0')*16+(USART3_RX_BUF[3]-'0');//读取后摄像头位置
-                                //						sprintf(OLED_BUF,"%d 	",pinf_hou);
-                                //						LCD_16_HanZi_ASCII(0,0,OLED_BUF);
-                                //						sprintf(OLED_BUF,"%d 	",pinf_qian);
-                                //						LCD_16_HanZi_ASCII(0,2,OLED_BUF);
-
-                                if (pinf != 0 || pinf != 0) // a[i][4]>=32
+                                switch (USART3_RX_BUF[0]) // 上层
                                 {
-                                    LED = 0;
-                                    Zhua(pinf);
-                                    pinf = 0;
+                                    case 'r':
+                                        Printf(USART2, "%s", zhiling[1]);
+                                        LunPan[LunPani] = 'r';
+                                        LunPani++;
+                                        LunPan_Zhuan();
+                                        break;
+                                    case 'g':
+                                        Printf(USART2, "%s", zhiling[1]);
+                                        LunPan[LunPani] = 'g';
+                                        LunPani++;
+                                        LunPan_Zhuan();
+                                        break;
+                                    case 'b':
+                                        Printf(USART2, "%s", zhiling[1]);
+                                        LunPan[LunPani] = 'b';
+                                        LunPani++;
+                                        LunPan_Zhuan();
+                                        break;
+                                    default:
+                                        break;
                                 }
-                            } else if (a[i][3] == 'B') // 仓库 det[0] status[1] dis[23] 偏移x[45]
+                                switch (USART3_RX_BUF[1]) // 下层
+                                {
+                                    case 'r':
+                                        Printf(USART2, "%s", zhiling[1]);
+                                        LunPan[LunPani] = 'r';
+                                        LunPani++;
+                                        LunPan_Zhuan();
+                                        break;
+                                    case 'g':
+                                        Printf(USART2, "%s", zhiling[1]);
+                                        LunPan[LunPani] = 'g';
+                                        LunPani++;
+                                        LunPan_Zhuan();
+                                        break;
+                                    case 'b':
+                                        Printf(USART2, "%s", zhiling[1]);
+                                        LunPan[LunPani] = 'b';
+                                        LunPani++;
+                                        LunPan_Zhuan();
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                            //						pinf_qian=(USART3_RX_BUF[2]-'0')*16+(USART3_RX_BUF[3]-'0');//读取后摄像头位置
+                            //						sprintf(OLED_BUF,"%d 	",pinf_hou);
+                            //						LCD_16_HanZi_ASCII(0,0,OLED_BUF);
+                            //						sprintf(OLED_BUF,"%d 	",pinf_qian);
+                            //						LCD_16_HanZi_ASCII(0,2,OLED_BUF);
+                            else if (a[i][3] == 'B') // 仓库 det[0] status[1] dis[23] 偏移x[45]
                             {
-
                             } else if (a[i][3] == 'C') {
-
                             } else if (a[i][3] == 'D') {
-
                             }
                             USART3_RX_STA = 0;
                             break;
                         }
                     }
+                    for (u8 it = 0; it < a[i][4]; it++)
+                        delay_ms(100);
                 }
             }
-            if(a[i][1]==2&&a[i][4]!=0&&a[i][3]==255)//啥都不做时延时
+            if (a[i][1] == 2 && a[i][4] != 0 && a[i][3] == 255) // 啥都不做时延时
             {
-                for(u8 it=0;it<=a[i][4];it++)
-                {
+                for (u8 it = 0; it <= a[i][4]; it++) {
                     delay_ms(100);
                 }
             }
@@ -379,7 +521,7 @@ void change(unsigned char (*a)[5], unsigned char len)
 
 void change_uart(unsigned char (*a)[5], unsigned char len)
 {
-;
+    ;
 }
 
 void OLED_tou(void)
@@ -2412,15 +2554,15 @@ void Clock_e(void)
                 switch (move_BUFF_SET[i][1]) {
                     case 1:
                         OLED_DrawHanzi(i * 32, 16, "前", 1);
-                        //BuJin_Zhuan('S');
+                        // BuJin_Zhuan('S');
                         break;
                     case 0:
                         OLED_DrawHanzi(i * 32, 16, "后", 1);
-                        //BuJin_Zhuan('I');
+                        // BuJin_Zhuan('I');
                         break;
                     case 3:
                         OLED_DrawHanzi(i * 32, 16, "左", 1);
-                        //BuJin_Zhuan('T');
+                        // BuJin_Zhuan('T');
                         break;
                     case 4:
                         OLED_DrawHanzi(i * 32, 16, "右", 1);
@@ -3809,7 +3951,6 @@ void MenuOperate(void) // 运行菜单
             KeyFuncIndex = KeyTab[KeyFuncIndex].KeyBackStatus; // 向左按键
             break;
         default:
-
             break;
     }
     //	if(SHAUNG_UI == 1)                //双车时使用

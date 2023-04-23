@@ -988,3 +988,2037 @@ Finished: 1 information, 0 warning and 1 error messages.
 [2023-04-22 20:21:39]	[done]
 	build successfully !
 
+[2023-04-22 20:41:13]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 247: Error:  #127: expected a statement
+  				else {
+  				^
+".\HARDWARE\SRC\ui.c", line 268: Warning:  #12-D: parsing restarts here after previous syntax error
+                              USART3_Putc('C');
+                                              ^
+".\HARDWARE\SRC\ui.c", line 271: Error:  #121: a case label may only be used within a switch
+                          case 'D':
+                          ^
+".\HARDWARE\SRC\ui.c", line 276: Error:  #122: a default label may only be used within a switch
+                          default:
+                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 215: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 216: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 218: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 219: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 368: Error:  #169: expected a declaration
+      }
+      ^
+".\HARDWARE\SRC\ui.c", line 370: Error:  #169: expected a declaration
+  }
+  ^
+".\HARDWARE\SRC\ui.c", line 402: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 403: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 404: Error:  #169: expected a declaration
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 413: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "设置");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 414: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 415: Error:  #169: expected a declaration
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 417: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 418: Error:  #169: expected a declaration
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 423: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "路线");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 424: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 425: Error:  #169: expected a declaration
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 428: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "双车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 429: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 430: Error:  #169: expected a declaration
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 433: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "开车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 434: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 436: Error:  #169: expected a declaration
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 438: Error:  #169: expected a declaration
+      }
+      ^
+".\HARDWARE\SRC\ui.c", line 497: Warning:  #12-D: parsing restarts here after previous syntax error
+              Keykey_Flag = 0;
+                             ^
+".\HARDWARE\SRC\ui.c", line 498: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 500: Error:  #169: expected a declaration
+          }
+          ^
+".\HARDWARE\SRC\ui.c", line 595: Warning:  #12-D: parsing restarts here after previous syntax error
+      OLED_Refresh();
+                    ^
+".\HARDWARE\SRC\ui.c", line 597: Error:  #169: expected a declaration
+      while (1) {
+      ^
+".\HARDWARE\SRC\ui.c", line 633: Warning:  #12-D: parsing restarts here after previous syntax error
+      OLED_Refresh();
+                    ^
+".\HARDWARE\SRC\ui.c", line 635: Error:  #169: expected a declaration
+      while (1) {
+      ^
+".\HARDWARE\SRC\ui.c", line 672: Warning:  #12-D: parsing restarts here after previous syntax error
+                  ce_1();
+                        ^
+".\HARDWARE\SRC\ui.c", line 673: Error:  #79: expected a type specifier
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                     ^
+".\HARDWARE\SRC\ui.c", line 673: Error:  #79: expected a type specifier
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                         ^
+".\HARDWARE\SRC\ui.c", line 673: Error:  #79: expected a type specifier
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 673: Error:  #260-D: explicit type is missing ("int" assumed)
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                  ^
+".\HARDWARE\SRC\ui.c", line 673: Error:  #147: declaration is incompatible with "void LCD_16_HanZi_ASCII(u8, u8, char *)" (declared at line 70 of "HARDWARE/INC/oled.h")
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                  ^
+".\HARDWARE\SRC\ui.c", line 674: Error:  #169: expected a declaration
+              } else
+              ^
+".\HARDWARE\SRC\ui.c", line 677: Error:  #169: expected a declaration
+          }
+          ^
+".\HARDWARE\SRC\ui.c", line 702: Warning:  #12-D: parsing restarts here after previous syntax error
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                                 ^
+".\HARDWARE\SRC\ui.c", line 703: Error:  #169: expected a declaration
+              } else
+              ^
+.\HARDWARE\SRC\ui.c: 22 warnings, 30 errors
+
+[2023-04-22 20:41:54]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 247: Error:  #127: expected a statement
+  				else {
+  				^
+".\HARDWARE\SRC\ui.c", line 268: Warning:  #12-D: parsing restarts here after previous syntax error
+                              delay_ms(1000);
+                                            ^
+".\HARDWARE\SRC\ui.c", line 272: Error:  #121: a case label may only be used within a switch
+                          case 'D':
+                          ^
+".\HARDWARE\SRC\ui.c", line 277: Error:  #122: a default label may only be used within a switch
+                          default:
+                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 215: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 216: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 218: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 219: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 369: Error:  #169: expected a declaration
+      }
+      ^
+".\HARDWARE\SRC\ui.c", line 371: Error:  #169: expected a declaration
+  }
+  ^
+".\HARDWARE\SRC\ui.c", line 403: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 404: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 405: Error:  #169: expected a declaration
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 414: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "设置");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 415: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 416: Error:  #169: expected a declaration
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 418: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 419: Error:  #169: expected a declaration
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 424: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "路线");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 425: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 426: Error:  #169: expected a declaration
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 429: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "双车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 430: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 431: Error:  #169: expected a declaration
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 434: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "开车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 435: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 437: Error:  #169: expected a declaration
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 439: Error:  #169: expected a declaration
+      }
+      ^
+".\HARDWARE\SRC\ui.c", line 498: Warning:  #12-D: parsing restarts here after previous syntax error
+              Keykey_Flag = 0;
+                             ^
+".\HARDWARE\SRC\ui.c", line 499: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 501: Error:  #169: expected a declaration
+          }
+          ^
+".\HARDWARE\SRC\ui.c", line 596: Warning:  #12-D: parsing restarts here after previous syntax error
+      OLED_Refresh();
+                    ^
+".\HARDWARE\SRC\ui.c", line 598: Error:  #169: expected a declaration
+      while (1) {
+      ^
+".\HARDWARE\SRC\ui.c", line 634: Warning:  #12-D: parsing restarts here after previous syntax error
+      OLED_Refresh();
+                    ^
+".\HARDWARE\SRC\ui.c", line 636: Error:  #169: expected a declaration
+      while (1) {
+      ^
+".\HARDWARE\SRC\ui.c", line 673: Warning:  #12-D: parsing restarts here after previous syntax error
+                  ce_1();
+                        ^
+".\HARDWARE\SRC\ui.c", line 674: Error:  #79: expected a type specifier
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                     ^
+".\HARDWARE\SRC\ui.c", line 674: Error:  #79: expected a type specifier
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                         ^
+".\HARDWARE\SRC\ui.c", line 674: Error:  #79: expected a type specifier
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 674: Error:  #260-D: explicit type is missing ("int" assumed)
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                  ^
+".\HARDWARE\SRC\ui.c", line 674: Error:  #147: declaration is incompatible with "void LCD_16_HanZi_ASCII(u8, u8, char *)" (declared at line 70 of "HARDWARE/INC/oled.h")
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                  ^
+".\HARDWARE\SRC\ui.c", line 675: Error:  #169: expected a declaration
+              } else
+              ^
+".\HARDWARE\SRC\ui.c", line 678: Error:  #169: expected a declaration
+          }
+          ^
+".\HARDWARE\SRC\ui.c", line 703: Warning:  #12-D: parsing restarts here after previous syntax error
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                                 ^
+".\HARDWARE\SRC\ui.c", line 704: Error:  #169: expected a declaration
+              } else
+              ^
+.\HARDWARE\SRC\ui.c: 22 warnings, 30 errors
+
+[2023-04-22 20:43:03]	[done]
+	build successfully !
+
+[2023-04-22 20:53:49]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 305: Error:  #29: expected an expression
+                                      Printf(USART1,"%s",zhiling[][2]);
+                                                                 ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 214: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 217: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 218: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 219: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2640: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2641: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2836: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2837: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3025: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3026: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 16 warnings, 1 error
+
+[2023-04-22 20:54:30]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 305: Error:  #29: expected an expression
+                                      Printf(USART1,"%s",zhiling[1][]);
+                                                                    ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 212: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 214: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 217: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 218: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 219: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2640: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2641: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2836: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2837: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3025: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3026: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 16 warnings, 1 error
+
+[2023-04-22 20:57:19]	[done]
+	build successfully !
+
+[2023-04-22 21:00:42]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 11: Error:  #146: too many initializer values
+  u8 LunPan[5]={0,0,0,0,0,0};//轮盘存放的东西
+                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 215: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 218: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 219: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2642: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2643: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2838: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2839: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3027: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3028: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 16 warnings, 1 error
+
+[2023-04-22 21:01:01]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 11: Error:  #146: too many initializer values
+  char LunPan[5]={0,0,0,0,0,0};//轮盘存放的东西
+                            ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 215: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 218: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 219: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2642: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2643: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2838: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2839: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3027: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3028: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 16 warnings, 1 error
+
+[2023-04-22 21:01:22]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 11: Error:  #146: too many initializer values
+  char LunPan[5]={0,0,0,0,0,0};//轮盘存放的东西
+                            ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 215: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 218: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 219: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2642: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2643: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2838: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2839: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3027: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3028: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 16 warnings, 1 error
+
+[2023-04-22 21:01:41]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 11: Error:  #146: too many initializer values
+  u8 LunPan[5]={0,0,0,0,0,0};//轮盘存放的东西
+                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 215: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 218: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 219: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2642: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2643: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2838: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2839: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3027: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3028: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 16 warnings, 1 error
+
+[2023-04-22 21:01:57]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 11: Error:  #146: too many initializer values
+  char LunPan[5]={0,0,0,0,0,0};//轮盘存放的东西
+                            ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 213: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 215: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 218: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 219: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2642: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2643: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2838: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2839: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3027: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3028: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 16 warnings, 1 error
+
+[2023-04-22 21:02:11]	[done]
+	build successfully !
+
+[2023-04-22 21:02:17]	[done]
+	build successfully !
+
+[2023-04-22 21:02:46]	[done]
+	build successfully !
+
+[2023-04-22 22:16:52]	[done]
+	build successfully !
+
+[2023-04-22 22:45:08]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 77: Error:  #253: expected a ","
+      {0, 0, 0, 0, 0}};
+      ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 220: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 221: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 225: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 226: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 227: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2660: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2661: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2856: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2857: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3045: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3046: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 17 warnings, 1 error
+
+[2023-04-22 22:50:55]	[done]
+	build successfully !
+
+[2023-04-22 23:36:36]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 285: Error:  #167: argument of type "int" is incompatible with parameter of type "char *"
+                      Printf(USART3, 'A');
+                                     ^
+".\HARDWARE\SRC\ui.c", line 292: Warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                          Printf(USART3, a[1]);
+                                                         ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 223: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 224: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 227: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 228: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 229: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2700: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2701: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2896: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2897: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3085: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3086: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 18 warnings, 1 error
+
+[2023-04-22 23:37:37]	[done]
+	build successfully !
+
+[2023-04-22 23:48:00]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 291: Warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                          Printf(USART1, a[1]);
+                                                         ^
+".\HARDWARE\SRC\ui.c", line 297: Warning:  #111-D: statement is unreachable
+                                  if (Flag_HuoJia_ShangXia == 'S') {
+                                  ^
+".\HARDWARE\SRC\ui.c", line 300: Warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                          Printf(USART1, a[1]);
+                                                         ^
+".\HARDWARE\SRC\ui.c", line 439: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 468: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 469: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 470: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 471: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 472: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 473: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 474: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 475: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 476: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 477: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 478: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 480: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 481: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 483: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 484: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 485: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 486: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 487: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+".\HARDWARE\SRC\ui.c", line 488: Error:  #121: a case label may only be used within a switch
+          case 20:
+          ^
+".\HARDWARE\SRC\ui.c", line 490: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 491: Error:  #121: a case label may only be used within a switch
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 492: Error:  #121: a case label may only be used within a switch
+          case 22:
+          ^
+".\HARDWARE\SRC\ui.c", line 493: Error:  #121: a case label may only be used within a switch
+          case 23:
+          ^
+".\HARDWARE\SRC\ui.c", line 495: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 496: Error:  #121: a case label may only be used within a switch
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 497: Error:  #121: a case label may only be used within a switch
+          case 25:
+          ^
+".\HARDWARE\SRC\ui.c", line 498: Error:  #121: a case label may only be used within a switch
+          case 26:
+          ^
+".\HARDWARE\SRC\ui.c", line 500: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 502: Error:  #122: a default label may only be used within a switch
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 503: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+.\HARDWARE\SRC\ui.c: 4 warnings, 30 errors
+
+[2023-04-22 23:48:24]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 290: Warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                          Printf(USART1, a[1]);
+                                                         ^
+".\HARDWARE\SRC\ui.c", line 296: Warning:  #111-D: statement is unreachable
+                                  if (Flag_HuoJia_ShangXia == 'S') {
+                                  ^
+".\HARDWARE\SRC\ui.c", line 299: Warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                          Printf(USART1, a[1]);
+                                                         ^
+".\HARDWARE\SRC\ui.c", line 438: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 467: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 468: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 469: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 470: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 471: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 472: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 473: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 474: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 475: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 476: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 477: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 479: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 480: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 482: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 483: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 484: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 485: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 486: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+".\HARDWARE\SRC\ui.c", line 487: Error:  #121: a case label may only be used within a switch
+          case 20:
+          ^
+".\HARDWARE\SRC\ui.c", line 489: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 490: Error:  #121: a case label may only be used within a switch
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 491: Error:  #121: a case label may only be used within a switch
+          case 22:
+          ^
+".\HARDWARE\SRC\ui.c", line 492: Error:  #121: a case label may only be used within a switch
+          case 23:
+          ^
+".\HARDWARE\SRC\ui.c", line 494: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 495: Error:  #121: a case label may only be used within a switch
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 496: Error:  #121: a case label may only be used within a switch
+          case 25:
+          ^
+".\HARDWARE\SRC\ui.c", line 497: Error:  #121: a case label may only be used within a switch
+          case 26:
+          ^
+".\HARDWARE\SRC\ui.c", line 499: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 501: Error:  #122: a default label may only be used within a switch
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 502: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+.\HARDWARE\SRC\ui.c: 4 warnings, 30 errors
+
+[2023-04-22 23:48:49]	[done]
+	build successfully !
+
+[2023-04-22 23:49:35]	[done]
+	build successfully !
+
+[2023-04-23 00:12:29]	[done]
+	build successfully !
+
+[2023-04-23 00:16:32]	[done]
+	build successfully !
+
+[2023-04-23 00:17:50]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 336: Warning:  #111-D: statement is unreachable
+                                     if (Flag_HuoJia_ShangXia == 'S') {
+                                     ^
+".\HARDWARE\SRC\ui.c", line 523: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 552: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 553: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 554: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 555: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 556: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 558: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 559: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 560: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 562: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 564: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 565: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 567: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 568: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 569: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 570: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 571: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+".\HARDWARE\SRC\ui.c", line 572: Error:  #121: a case label may only be used within a switch
+          case 20:
+          ^
+".\HARDWARE\SRC\ui.c", line 574: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 575: Error:  #121: a case label may only be used within a switch
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 576: Error:  #121: a case label may only be used within a switch
+          case 22:
+          ^
+".\HARDWARE\SRC\ui.c", line 577: Error:  #121: a case label may only be used within a switch
+          case 23:
+          ^
+".\HARDWARE\SRC\ui.c", line 579: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 580: Error:  #121: a case label may only be used within a switch
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 581: Error:  #121: a case label may only be used within a switch
+          case 25:
+          ^
+".\HARDWARE\SRC\ui.c", line 582: Error:  #121: a case label may only be used within a switch
+          case 26:
+          ^
+".\HARDWARE\SRC\ui.c", line 584: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 586: Error:  #122: a default label may only be used within a switch
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 587: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+.\HARDWARE\SRC\ui.c: 2 warnings, 30 errors
+
+[2023-04-23 00:18:12]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 336: Warning:  #111-D: statement is unreachable
+                                     if (Flag_HuoJia_ShangXia == 'S') {
+                                     ^
+".\HARDWARE\SRC\ui.c", line 496: Error:  #127: expected a statement
+                               else if (a[i][3] == 'B') // 仓库 det[0] status[1] dis[23] 偏移x[45]
+                               ^
+".\HARDWARE\SRC\ui.c", line 503: Warning:  #12-D: parsing restarts here after previous syntax error
+                              USART3_RX_STA = 0;
+                                               ^
+".\HARDWARE\SRC\ui.c", line 523: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 552: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 554: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 555: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 556: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 558: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 559: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 560: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 562: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 565: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 568: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 569: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 570: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 571: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+".\HARDWARE\SRC\ui.c", line 572: Error:  #121: a case label may only be used within a switch
+          case 20:
+          ^
+".\HARDWARE\SRC\ui.c", line 575: Error:  #121: a case label may only be used within a switch
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 576: Error:  #121: a case label may only be used within a switch
+          case 22:
+          ^
+".\HARDWARE\SRC\ui.c", line 577: Error:  #121: a case label may only be used within a switch
+          case 23:
+          ^
+".\HARDWARE\SRC\ui.c", line 580: Error:  #121: a case label may only be used within a switch
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 581: Error:  #121: a case label may only be used within a switch
+          case 25:
+          ^
+".\HARDWARE\SRC\ui.c", line 582: Error:  #121: a case label may only be used within a switch
+          case 26:
+          ^
+".\HARDWARE\SRC\ui.c", line 586: Error:  #122: a default label may only be used within a switch
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 223: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 224: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 227: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 228: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 229: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 603: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 627: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 655: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 678: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 701: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 735: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 772: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 803: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 832: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 861: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 890: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 965: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 1026: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 1087: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 1132: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 1204: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2307: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2388: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2467: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2546: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2799: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2796: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2797: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2994: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2992: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2993: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3183: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 3181: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3182: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3372: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 3423: Warning:  #676-D: using out-of-scope declaration of function "change_uart" (declared at line 522)
+                              change_uart(b, 0);
+                              ^
+".\HARDWARE\SRC\ui.c", line 3455: Warning:  #676-D: using out-of-scope declaration of function "change_uart" (declared at line 522)
+                              change_uart(a1, 0);
+                              ^
+".\HARDWARE\SRC\ui.c", line 3559: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 3599: Warning:  #676-D: using out-of-scope declaration of function "change_uart" (declared at line 522)
+                              change_uart(a2, 0);
+                              ^
+".\HARDWARE\SRC\ui.c", line 3746: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+.\HARDWARE\SRC\ui.c: 49 warnings, 24 errors
+
+[2023-04-23 00:20:59]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 497: Error:  #127: expected a statement
+                                      else if (a[i][3] == 'B') // 仓库 det[0] status[1] dis[23] 偏移x[45]
+                                      ^
+".\HARDWARE\SRC\ui.c", line 506: Warning:  #12-D: parsing restarts here after previous syntax error
+                                      USART3_RX_STA = 0;
+                                                       ^
+".\HARDWARE\SRC\ui.c", line 526: Error:  #65: expected a ";"
+          {
+          ^
+".\HARDWARE\SRC\ui.c", line 555: Warning:  #12-D: parsing restarts here after previous syntax error
+                      LCD_16_HanZi_ASCII(6, 0, "底车");
+                                                    ^
+".\HARDWARE\SRC\ui.c", line 556: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #121: a case label may only be used within a switch
+                  case 5:
+                  ^
+".\HARDWARE\SRC\ui.c", line 558: Error:  #121: a case label may only be used within a switch
+                  case 6:
+                  ^
+".\HARDWARE\SRC\ui.c", line 559: Error:  #121: a case label may only be used within a switch
+                  case 7:
+                  ^
+".\HARDWARE\SRC\ui.c", line 560: Error:  #121: a case label may only be used within a switch
+                  case 8:
+                  ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #121: a case label may only be used within a switch
+                  case 9:
+                  ^
+".\HARDWARE\SRC\ui.c", line 562: Error:  #121: a case label may only be used within a switch
+                  case 10:
+                  ^
+".\HARDWARE\SRC\ui.c", line 563: Error:  #121: a case label may only be used within a switch
+                  case 11:
+                  ^
+".\HARDWARE\SRC\ui.c", line 564: Error:  #121: a case label may only be used within a switch
+                  case 12:
+                  ^
+".\HARDWARE\SRC\ui.c", line 565: Error:  #121: a case label may only be used within a switch
+                  case 13:
+                  ^
+".\HARDWARE\SRC\ui.c", line 567: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 568: Error:  #121: a case label may only be used within a switch
+                  case 15:
+                  ^
+".\HARDWARE\SRC\ui.c", line 570: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 571: Error:  #121: a case label may only be used within a switch
+                  case 16:
+                  ^
+".\HARDWARE\SRC\ui.c", line 572: Error:  #121: a case label may only be used within a switch
+                  case 17:
+                  ^
+".\HARDWARE\SRC\ui.c", line 573: Error:  #121: a case label may only be used within a switch
+                  case 18:
+                  ^
+".\HARDWARE\SRC\ui.c", line 574: Error:  #121: a case label may only be used within a switch
+                  case 19:
+                  ^
+".\HARDWARE\SRC\ui.c", line 575: Error:  #121: a case label may only be used within a switch
+                  case 20:
+                  ^
+".\HARDWARE\SRC\ui.c", line 577: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 578: Error:  #121: a case label may only be used within a switch
+                  case 21:
+                  ^
+".\HARDWARE\SRC\ui.c", line 579: Error:  #121: a case label may only be used within a switch
+                  case 22:
+                  ^
+".\HARDWARE\SRC\ui.c", line 580: Error:  #121: a case label may only be used within a switch
+                  case 23:
+                  ^
+".\HARDWARE\SRC\ui.c", line 582: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 583: Error:  #121: a case label may only be used within a switch
+                  case 24:
+                  ^
+".\HARDWARE\SRC\ui.c", line 584: Error:  #121: a case label may only be used within a switch
+                  case 25:
+                  ^
+".\HARDWARE\SRC\ui.c", line 585: Error:  #121: a case label may only be used within a switch
+                  case 26:
+                  ^
+".\HARDWARE\SRC\ui.c", line 587: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 589: Error:  #122: a default label may only be used within a switch
+                  default:
+                  ^
+.\HARDWARE\SRC\ui.c: 2 warnings, 30 errors
+
+[2023-04-23 00:21:04]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 498: Error:  #127: expected a statement
+                                      else if (a[i][3] == 'B') // 仓库 det[0] status[1] dis[23] 偏移x[45]
+                                      ^
+".\HARDWARE\SRC\ui.c", line 507: Warning:  #12-D: parsing restarts here after previous syntax error
+                                      USART3_RX_STA = 0;
+                                                       ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 222: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 223: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 224: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 227: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 228: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 229: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2800: Warning:  #177-D: variable "luxian" was declared but never referenced
+              u8 luxian;
+                 ^
+".\HARDWARE\SRC\ui.c", line 2801: Warning:  #177-D: variable "a" was declared but never referenced
+              u8 a = 0;
+                 ^
+".\HARDWARE\SRC\ui.c", line 2996: Warning:  #177-D: variable "luxian" was declared but never referenced
+              u8 luxian;
+                 ^
+".\HARDWARE\SRC\ui.c", line 2997: Warning:  #177-D: variable "a" was declared but never referenced
+              u8 a = 0;
+                 ^
+".\HARDWARE\SRC\ui.c", line 3185: Warning:  #177-D: variable "luxian" was declared but never referenced
+              u8 luxian;
+                 ^
+".\HARDWARE\SRC\ui.c", line 3186: Warning:  #177-D: variable "a" was declared but never referenced
+              u8 a = 0;
+                 ^
+.\HARDWARE\SRC\ui.c: 18 warnings, 1 error
+
+[2023-04-23 00:21:13]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 498: Error:  #127: expected a statement
+                                      else if (a[i][3] == 'B') // 仓库 det[0] status[1] dis[23] 偏移x[45]
+                                      ^
+".\HARDWARE\SRC\ui.c", line 507: Warning:  #12-D: parsing restarts here after previous syntax error
+                                      USART3_RX_STA = 0;
+                                                       ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+          {
+          ^
+".\HARDWARE\SRC\ui.c", line 556: Warning:  #12-D: parsing restarts here after previous syntax error
+                      LCD_16_HanZi_ASCII(6, 0, "底车");
+                                                    ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 558: Error:  #121: a case label may only be used within a switch
+                  case 5:
+                  ^
+".\HARDWARE\SRC\ui.c", line 559: Error:  #121: a case label may only be used within a switch
+                  case 6:
+                  ^
+".\HARDWARE\SRC\ui.c", line 560: Error:  #121: a case label may only be used within a switch
+                  case 7:
+                  ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #121: a case label may only be used within a switch
+                  case 8:
+                  ^
+".\HARDWARE\SRC\ui.c", line 562: Error:  #121: a case label may only be used within a switch
+                  case 9:
+                  ^
+".\HARDWARE\SRC\ui.c", line 563: Error:  #121: a case label may only be used within a switch
+                  case 10:
+                  ^
+".\HARDWARE\SRC\ui.c", line 564: Error:  #121: a case label may only be used within a switch
+                  case 11:
+                  ^
+".\HARDWARE\SRC\ui.c", line 565: Error:  #121: a case label may only be used within a switch
+                  case 12:
+                  ^
+".\HARDWARE\SRC\ui.c", line 566: Error:  #121: a case label may only be used within a switch
+                  case 13:
+                  ^
+".\HARDWARE\SRC\ui.c", line 568: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 569: Error:  #121: a case label may only be used within a switch
+                  case 15:
+                  ^
+".\HARDWARE\SRC\ui.c", line 571: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 572: Error:  #121: a case label may only be used within a switch
+                  case 16:
+                  ^
+".\HARDWARE\SRC\ui.c", line 573: Error:  #121: a case label may only be used within a switch
+                  case 17:
+                  ^
+".\HARDWARE\SRC\ui.c", line 574: Error:  #121: a case label may only be used within a switch
+                  case 18:
+                  ^
+".\HARDWARE\SRC\ui.c", line 575: Error:  #121: a case label may only be used within a switch
+                  case 19:
+                  ^
+".\HARDWARE\SRC\ui.c", line 576: Error:  #121: a case label may only be used within a switch
+                  case 20:
+                  ^
+".\HARDWARE\SRC\ui.c", line 578: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 579: Error:  #121: a case label may only be used within a switch
+                  case 21:
+                  ^
+".\HARDWARE\SRC\ui.c", line 580: Error:  #121: a case label may only be used within a switch
+                  case 22:
+                  ^
+".\HARDWARE\SRC\ui.c", line 581: Error:  #121: a case label may only be used within a switch
+                  case 23:
+                  ^
+".\HARDWARE\SRC\ui.c", line 583: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 584: Error:  #121: a case label may only be used within a switch
+                  case 24:
+                  ^
+".\HARDWARE\SRC\ui.c", line 585: Error:  #121: a case label may only be used within a switch
+                  case 25:
+                  ^
+".\HARDWARE\SRC\ui.c", line 586: Error:  #121: a case label may only be used within a switch
+                  case 26:
+                  ^
+".\HARDWARE\SRC\ui.c", line 588: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 590: Error:  #122: a default label may only be used within a switch
+                  default:
+                  ^
+.\HARDWARE\SRC\ui.c: 2 warnings, 30 errors
+
+[2023-04-23 00:22:12]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 499: Error:  #127: expected a statement
+                                      else if (a[i][3] == 'B') // 仓库 det[0] status[1] dis[23] 偏移x[45]
+                                      ^
+".\HARDWARE\SRC\ui.c", line 508: Warning:  #12-D: parsing restarts here after previous syntax error
+                                      USART3_RX_STA = 0;
+                                                       ^
+".\HARDWARE\SRC\ui.c", line 528: Error:  #65: expected a ";"
+          {
+          ^
+".\HARDWARE\SRC\ui.c", line 557: Warning:  #12-D: parsing restarts here after previous syntax error
+                      LCD_16_HanZi_ASCII(6, 0, "底车");
+                                                    ^
+".\HARDWARE\SRC\ui.c", line 558: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 559: Error:  #121: a case label may only be used within a switch
+                  case 5:
+                  ^
+".\HARDWARE\SRC\ui.c", line 560: Error:  #121: a case label may only be used within a switch
+                  case 6:
+                  ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #121: a case label may only be used within a switch
+                  case 7:
+                  ^
+".\HARDWARE\SRC\ui.c", line 562: Error:  #121: a case label may only be used within a switch
+                  case 8:
+                  ^
+".\HARDWARE\SRC\ui.c", line 563: Error:  #121: a case label may only be used within a switch
+                  case 9:
+                  ^
+".\HARDWARE\SRC\ui.c", line 564: Error:  #121: a case label may only be used within a switch
+                  case 10:
+                  ^
+".\HARDWARE\SRC\ui.c", line 565: Error:  #121: a case label may only be used within a switch
+                  case 11:
+                  ^
+".\HARDWARE\SRC\ui.c", line 566: Error:  #121: a case label may only be used within a switch
+                  case 12:
+                  ^
+".\HARDWARE\SRC\ui.c", line 567: Error:  #121: a case label may only be used within a switch
+                  case 13:
+                  ^
+".\HARDWARE\SRC\ui.c", line 569: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 570: Error:  #121: a case label may only be used within a switch
+                  case 15:
+                  ^
+".\HARDWARE\SRC\ui.c", line 572: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 573: Error:  #121: a case label may only be used within a switch
+                  case 16:
+                  ^
+".\HARDWARE\SRC\ui.c", line 574: Error:  #121: a case label may only be used within a switch
+                  case 17:
+                  ^
+".\HARDWARE\SRC\ui.c", line 575: Error:  #121: a case label may only be used within a switch
+                  case 18:
+                  ^
+".\HARDWARE\SRC\ui.c", line 576: Error:  #121: a case label may only be used within a switch
+                  case 19:
+                  ^
+".\HARDWARE\SRC\ui.c", line 577: Error:  #121: a case label may only be used within a switch
+                  case 20:
+                  ^
+".\HARDWARE\SRC\ui.c", line 579: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 580: Error:  #121: a case label may only be used within a switch
+                  case 21:
+                  ^
+".\HARDWARE\SRC\ui.c", line 581: Error:  #121: a case label may only be used within a switch
+                  case 22:
+                  ^
+".\HARDWARE\SRC\ui.c", line 582: Error:  #121: a case label may only be used within a switch
+                  case 23:
+                  ^
+".\HARDWARE\SRC\ui.c", line 584: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 585: Error:  #121: a case label may only be used within a switch
+                  case 24:
+                  ^
+".\HARDWARE\SRC\ui.c", line 586: Error:  #121: a case label may only be used within a switch
+                  case 25:
+                  ^
+".\HARDWARE\SRC\ui.c", line 587: Error:  #121: a case label may only be used within a switch
+                  case 26:
+                  ^
+".\HARDWARE\SRC\ui.c", line 589: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 591: Error:  #122: a default label may only be used within a switch
+                  default:
+                  ^
+.\HARDWARE\SRC\ui.c: 2 warnings, 30 errors
+
+[2023-04-23 00:22:39]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 496: Error:  #127: expected a statement
+                                      else if (a[i][3] == 'B') // 仓库 det[0] status[1] dis[23] 偏移x[45]
+                                      ^
+".\HARDWARE\SRC\ui.c", line 505: Warning:  #12-D: parsing restarts here after previous syntax error
+                                      USART3_RX_STA = 0;
+                                                       ^
+".\HARDWARE\SRC\ui.c", line 525: Error:  #65: expected a ";"
+          {
+          ^
+".\HARDWARE\SRC\ui.c", line 554: Warning:  #12-D: parsing restarts here after previous syntax error
+                      LCD_16_HanZi_ASCII(6, 0, "底车");
+                                                    ^
+".\HARDWARE\SRC\ui.c", line 555: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 556: Error:  #121: a case label may only be used within a switch
+                  case 5:
+                  ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #121: a case label may only be used within a switch
+                  case 6:
+                  ^
+".\HARDWARE\SRC\ui.c", line 558: Error:  #121: a case label may only be used within a switch
+                  case 7:
+                  ^
+".\HARDWARE\SRC\ui.c", line 559: Error:  #121: a case label may only be used within a switch
+                  case 8:
+                  ^
+".\HARDWARE\SRC\ui.c", line 560: Error:  #121: a case label may only be used within a switch
+                  case 9:
+                  ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #121: a case label may only be used within a switch
+                  case 10:
+                  ^
+".\HARDWARE\SRC\ui.c", line 562: Error:  #121: a case label may only be used within a switch
+                  case 11:
+                  ^
+".\HARDWARE\SRC\ui.c", line 563: Error:  #121: a case label may only be used within a switch
+                  case 12:
+                  ^
+".\HARDWARE\SRC\ui.c", line 564: Error:  #121: a case label may only be used within a switch
+                  case 13:
+                  ^
+".\HARDWARE\SRC\ui.c", line 566: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 567: Error:  #121: a case label may only be used within a switch
+                  case 15:
+                  ^
+".\HARDWARE\SRC\ui.c", line 569: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 570: Error:  #121: a case label may only be used within a switch
+                  case 16:
+                  ^
+".\HARDWARE\SRC\ui.c", line 571: Error:  #121: a case label may only be used within a switch
+                  case 17:
+                  ^
+".\HARDWARE\SRC\ui.c", line 572: Error:  #121: a case label may only be used within a switch
+                  case 18:
+                  ^
+".\HARDWARE\SRC\ui.c", line 573: Error:  #121: a case label may only be used within a switch
+                  case 19:
+                  ^
+".\HARDWARE\SRC\ui.c", line 574: Error:  #121: a case label may only be used within a switch
+                  case 20:
+                  ^
+".\HARDWARE\SRC\ui.c", line 576: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 577: Error:  #121: a case label may only be used within a switch
+                  case 21:
+                  ^
+".\HARDWARE\SRC\ui.c", line 578: Error:  #121: a case label may only be used within a switch
+                  case 22:
+                  ^
+".\HARDWARE\SRC\ui.c", line 579: Error:  #121: a case label may only be used within a switch
+                  case 23:
+                  ^
+".\HARDWARE\SRC\ui.c", line 581: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 582: Error:  #121: a case label may only be used within a switch
+                  case 24:
+                  ^
+".\HARDWARE\SRC\ui.c", line 583: Error:  #121: a case label may only be used within a switch
+                  case 25:
+                  ^
+".\HARDWARE\SRC\ui.c", line 584: Error:  #121: a case label may only be used within a switch
+                  case 26:
+                  ^
+".\HARDWARE\SRC\ui.c", line 586: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 588: Error:  #122: a default label may only be used within a switch
+                  default:
+                  ^
+.\HARDWARE\SRC\ui.c: 2 warnings, 30 errors
+
+[2023-04-23 00:24:02]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 497: Error:  #127: expected a statement
+                                      else if (a[i][3] == 'B') // 仓库 det[0] status[1] dis[23] 偏移x[45]
+                                      ^
+".\HARDWARE\SRC\ui.c", line 506: Warning:  #12-D: parsing restarts here after previous syntax error
+                                      USART3_RX_STA = 0;
+                                                       ^
+".\HARDWARE\SRC\ui.c", line 526: Error:  #65: expected a ";"
+          {
+          ^
+".\HARDWARE\SRC\ui.c", line 555: Warning:  #12-D: parsing restarts here after previous syntax error
+                      LCD_16_HanZi_ASCII(6, 0, "底车");
+                                                    ^
+".\HARDWARE\SRC\ui.c", line 556: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #121: a case label may only be used within a switch
+                  case 5:
+                  ^
+".\HARDWARE\SRC\ui.c", line 558: Error:  #121: a case label may only be used within a switch
+                  case 6:
+                  ^
+".\HARDWARE\SRC\ui.c", line 559: Error:  #121: a case label may only be used within a switch
+                  case 7:
+                  ^
+".\HARDWARE\SRC\ui.c", line 560: Error:  #121: a case label may only be used within a switch
+                  case 8:
+                  ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #121: a case label may only be used within a switch
+                  case 9:
+                  ^
+".\HARDWARE\SRC\ui.c", line 562: Error:  #121: a case label may only be used within a switch
+                  case 10:
+                  ^
+".\HARDWARE\SRC\ui.c", line 563: Error:  #121: a case label may only be used within a switch
+                  case 11:
+                  ^
+".\HARDWARE\SRC\ui.c", line 564: Error:  #121: a case label may only be used within a switch
+                  case 12:
+                  ^
+".\HARDWARE\SRC\ui.c", line 565: Error:  #121: a case label may only be used within a switch
+                  case 13:
+                  ^
+".\HARDWARE\SRC\ui.c", line 567: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 568: Error:  #121: a case label may only be used within a switch
+                  case 15:
+                  ^
+".\HARDWARE\SRC\ui.c", line 570: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 571: Error:  #121: a case label may only be used within a switch
+                  case 16:
+                  ^
+".\HARDWARE\SRC\ui.c", line 572: Error:  #121: a case label may only be used within a switch
+                  case 17:
+                  ^
+".\HARDWARE\SRC\ui.c", line 573: Error:  #121: a case label may only be used within a switch
+                  case 18:
+                  ^
+".\HARDWARE\SRC\ui.c", line 574: Error:  #121: a case label may only be used within a switch
+                  case 19:
+                  ^
+".\HARDWARE\SRC\ui.c", line 575: Error:  #121: a case label may only be used within a switch
+                  case 20:
+                  ^
+".\HARDWARE\SRC\ui.c", line 577: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 578: Error:  #121: a case label may only be used within a switch
+                  case 21:
+                  ^
+".\HARDWARE\SRC\ui.c", line 579: Error:  #121: a case label may only be used within a switch
+                  case 22:
+                  ^
+".\HARDWARE\SRC\ui.c", line 580: Error:  #121: a case label may only be used within a switch
+                  case 23:
+                  ^
+".\HARDWARE\SRC\ui.c", line 582: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 583: Error:  #121: a case label may only be used within a switch
+                  case 24:
+                  ^
+".\HARDWARE\SRC\ui.c", line 584: Error:  #121: a case label may only be used within a switch
+                  case 25:
+                  ^
+".\HARDWARE\SRC\ui.c", line 585: Error:  #121: a case label may only be used within a switch
+                  case 26:
+                  ^
+".\HARDWARE\SRC\ui.c", line 587: Error:  #116: a break statement may only be used within a loop or switch
+                      break;
+                      ^
+".\HARDWARE\SRC\ui.c", line 589: Error:  #122: a default label may only be used within a switch
+                  default:
+                  ^
+.\HARDWARE\SRC\ui.c: 2 warnings, 30 errors
+
+[2023-04-23 00:24:42]	[done]
+	build successfully !
+
+[2023-04-23 00:25:12]	[done]
+	build successfully !
+
+[2023-04-23 00:40:26]	[done]
+	build successfully !
+
+[2023-04-23 00:51:21]	[done]
+	build successfully !
+
+[2023-04-23 00:54:32]	[done]
+	build successfully !
+

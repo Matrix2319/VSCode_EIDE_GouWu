@@ -49,7 +49,7 @@ int main(void)
     delay_ms(100);
     LunPan_Zhuan();
     delay_ms(100);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-
+Printf(USART2,"%s","tlcdb");
     while (1) {
         // Printf(USART1, "%s\r\n", "TLCDB1!");
         // delay_ms(500);

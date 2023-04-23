@@ -4,7 +4,6 @@
 #include "sys.h"
 
 
-//´«ËÍ´ø
 //void CSD(void);
 
 	
