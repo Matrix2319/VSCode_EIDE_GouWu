@@ -377,26 +377,9 @@ void USART3_IRQHandler(void) // 串口1中断服务程序
                 if (Res != 0x0a) // 接收错误,重新开始
                 {
                     USART3_RX_STA = 0;
-                    switch (Infoflag) {
-                        case 1:
-                            USART3_Puts("1error");
-                            break;
-                        case 2:
-                            USART3_Puts("2error");
-                            break;
-                        default:
-                            USART3_Puts("Error");
-                            break;
-                    }
 
                 } else {
-
-                    tx_qian = (USART3_RX_BUF[0] - '0') * 16 + (USART3_RX_BUF[1] - '0');
-                    tx_hou  = (USART3_RX_BUF[2] - '0') * 16 + (USART3_RX_BUF[3] - '0');
-                    //					sprintf(OLED_BUF,"%d 	",tx_qian);
-                    //					LCD_16_HanZi_ASCII(0,0,OLED_BUF);
-                    //					sprintf(OLED_BUF,"%d 	",tx_hou);
-                    //					LCD_16_HanZi_ASCII(0,2,OLED_BUF);	                                                                      //接收部分
+                                                                                //接收部分
                     USART3_RX_STA |= 0x8000;
                 }  // 接收完成了
             } else // 还没收到0X0D
@@ -409,17 +392,7 @@ void USART3_IRQHandler(void) // 串口1中断服务程序
                     if (USART3_RX_STA > (USART3_REC_LEN - 1)) // 接收数据错误,重新开始接收
                     {
                         USART3_RX_STA = 0;
-                        switch (Infoflag) {
-                            case 1:
-                                USART3_Puts("1error");
-                                break;
-                            case 2:
-                                USART3_Puts("2error");
-                                break;
-                            default:
-                                USART3_Puts("Error");
-                                break;
-                        }
+                       
                     }
                 }
             }

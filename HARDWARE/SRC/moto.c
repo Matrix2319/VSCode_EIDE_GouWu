@@ -289,17 +289,17 @@ void TIM7_IRQHandler(void)      //调整轮子PID、PWM定时器7中断函数
 				sum_value2+=Pid_bl.sample;//
 				sum_cha=abs(sum_value1)-abs(sum_value2);
 			}
-			
-			// sprintf(OLED_BUF,"%.0f 	",Pid_bl.sample);//显示
-			// LCD_16_HanZi_ASCII(0,6,OLED_BUF);	
-			// sprintf(OLED_BUF,"%.0f  ",Pid_br.sample);
-			// LCD_16_HanZi_ASCII(8,6,OLED_BUF);				
-			// sprintf(OLED_BUF,"%.0f  ",Pid_fl.sample);
-			// LCD_16_HanZi_ASCII(0,4,OLED_BUF);				
-			// sprintf(OLED_BUF,"%.0f  ",Pid_fr.sample);
-			// LCD_16_HanZi_ASCII(8,4,OLED_BUF);	
-			
-			TIM2->CNT=0;
+
+            // sprintf(OLED_BUF,"%.0f 	",Pid_bl.sample);//显示
+            // LCD_16_HanZi_ASCII(0,6,OLED_BUF);
+            // sprintf(OLED_BUF,"%.0f  ",Pid_br.sample);
+            // LCD_16_HanZi_ASCII(8,6,OLED_BUF);
+            // sprintf(OLED_BUF,"%.0f  ",Pid_fl.sample);
+            // LCD_16_HanZi_ASCII(0,4,OLED_BUF);
+            // sprintf(OLED_BUF,"%.0f  ",Pid_fr.sample);
+            // LCD_16_HanZi_ASCII(8,4,OLED_BUF);
+
+            TIM2->CNT=0;
 			TIM3->CNT=0;
 			TIM4->CNT=0;
 			TIM5->CNT=0;

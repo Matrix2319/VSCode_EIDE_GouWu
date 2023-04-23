@@ -1,5 +1,6 @@
 #include "hand.h"
 #include "timer.h"
+#include "ui.h"
 #include "math.h"
 #include <stdlib.h>
 #include "gpio.h"
@@ -31,6 +32,7 @@ void BuJin_GPIO_Init()
 void BuJin_Zhuan(u8 flag)
 {
     if (flag == 'I') {
+        Flag_HuoJia_ShangXia=0;
         PEout(12) = 0;//上下动标志位（0为下）
         TIM_Cmd(TIM1, ENABLE);
         TIM_SetCompare2(TIM1, 700);
@@ -41,6 +43,7 @@ void BuJin_Zhuan(u8 flag)
         TIM_Cmd(TIM1, DISABLE);
     }
     if (flag == 'S') {
+        Flag_HuoJia_ShangXia='S';
         PEout(12) = 1;
         TIM_Cmd(TIM1, ENABLE);
         TIM_SetCompare2(TIM1, 700);
@@ -51,6 +54,7 @@ void BuJin_Zhuan(u8 flag)
         TIM_Cmd(TIM1, DISABLE);
     }
     if (flag == 'X') {
+        Flag_HuoJia_ShangXia='X';
         if (PFin(8) == 1) // 在下面
         {
             delay_ms(200);

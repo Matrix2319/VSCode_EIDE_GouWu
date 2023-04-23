@@ -43,13 +43,14 @@ int main(void)
     read_from_flash(); // 从flash中读取数据
 
     LCD_CLS();
-    //BuJin_Zhuan('S');
+    // BuJin_Zhuan('S');
     delay_ms(100);
     BuJin_Zhuan('I');
     delay_ms(100);
     LunPan_Zhuan();
-    delay_ms(100);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-Printf(USART2,"%s","tlcdb");
+    delay_ms(100);
+    Printf(USART2, "%s\r\n", "tlcdb");
+     Printf(USART3, "%s\r\n", "tlcdb");
     while (1) {
         // Printf(USART1, "%s\r\n", "TLCDB1!");
         // delay_ms(500);

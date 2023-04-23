@@ -47,3 +47,4 @@
 ..\obj\usart.o: ..\HARDWARE\INC\move.h
 ..\obj\usart.o: D:\Files\Keil\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\usart.o: ..\HARDWARE\INC\stmflash.h
+..\obj\usart.o: D:\Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h

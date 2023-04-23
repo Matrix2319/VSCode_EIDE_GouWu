@@ -21,56 +21,140 @@ Target DLL:      Segger\JL2CM3.dll V2.99.42.0
 Dialog DLL:      TARMSTM.DLL V1.67.1.0
  
 <h2>Project:</h2>
-D:\Others\VsCode\EIDE\场地二\USER\Template.uvprojx
-Project File Date:  04/06/2023
+D:\Others\VsCode\EIDE\gouwu4.17\USER\Template.uvprojx
+Project File Date:  04/23/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.05 update 1 (build 106)', folder: 'D:\Files\Keil\ARM\ARMCC\Bin'
 Build target 'Template'
-assembling startup_stm32f10x_hd.s...
-compiling stm32f10x_it.c...
 compiling core_cm3.c...
+compiling system_stm32f10x.c...
+assembling startup_stm32f10x_hd.s...
+compiling delay.c...
+compiling stm32f10x_bkp.c...
+compiling usart.c...
+..\HARDWARE\INC\hand.h(10): warning:  #1295-D: Deprecated declaration Zhua - give arg types
+  void Zhua();
+..\HARDWARE\INC\hand.h(11): warning:  #1295-D: Deprecated declaration BuJin_GPIO_Init - give arg types
+  void BuJin_GPIO_Init();
+..\HARDWARE\INC\hand.h(13): warning:  #1295-D: Deprecated declaration LunPan_Zhuan - give arg types
+  void LunPan_Zhuan();
+..\SYSTEM\usart\usart.c(365): warning:  #177-D: variable "Lcnt" was declared but never referenced
+      static u8 Lcnt = 0, Rcnt = 0;
+..\SYSTEM\usart\usart.c(365): warning:  #177-D: variable "Rcnt" was declared but never referenced
+      static u8 Lcnt = 0, Rcnt = 0;
+..\SYSTEM\usart\usart.c(472): error:  #268: declaration may not appear after executable statement in block
+      va_list ap;
+..\SYSTEM\usart\usart.c(481): warning:  #1-D: last line of file ends without a newline
+  }
+..\SYSTEM\usart\usart.c: 6 warnings, 1 error
+compiling stm32f10x_it.c...
+compiling misc.c...
+compiling main.c...
+..\HARDWARE\INC\hand.h(10): warning:  #1295-D: Deprecated declaration Zhua - give arg types
+  void Zhua();
+..\HARDWARE\INC\hand.h(11): warning:  #1295-D: Deprecated declaration BuJin_GPIO_Init - give arg types
+  void BuJin_GPIO_Init();
+..\HARDWARE\INC\hand.h(13): warning:  #1295-D: Deprecated declaration LunPan_Zhuan - give arg types
+  void LunPan_Zhuan();
+main.c(23): warning:  #177-D: variable "tx_flag" was declared but never referenced
+      int tx_flag = 0;
+main.c: 4 warnings, 0 errors
 compiling stm32f10x_adc.c...
 compiling sys.c...
-compiling stm32f10x_bkp.c...
-compiling delay.c...
-compiling misc.c...
-compiling system_stm32f10x.c...
-compiling main.c...
-main.c(23): warning:  #177-D: variable "tx_flag" was declared but never referenced
-  		int tx_flag=0;
-main.c: 1 warning, 0 errors
-compiling usart.c...
-..\SYSTEM\usart\usart.c(350): warning:  #177-D: variable "Lcnt" was declared but never referenced
-  	static u8 Lcnt=0,Rcnt=0;
-..\SYSTEM\usart\usart.c(350): warning:  #177-D: variable "Rcnt" was declared but never referenced
-  	static u8 Lcnt=0,Rcnt=0;
-..\SYSTEM\usart\usart.c: 2 warnings, 0 errors
-compiling stm32f10x_can.c...
 compiling stm32f10x_crc.c...
-compiling stm32f10x_cec.c...
 compiling stm32f10x_dac.c...
+compiling stm32f10x_cec.c...
+compiling stm32f10x_can.c...
 compiling stm32f10x_dbgmcu.c...
 compiling stm32f10x_exti.c...
 compiling stm32f10x_dma.c...
 compiling stm32f10x_flash.c...
 compiling stm32f10x_fsmc.c...
 compiling stm32f10x_gpio.c...
-compiling stm32f10x_iwdg.c...
 compiling stm32f10x_i2c.c...
+compiling stm32f10x_iwdg.c...
 compiling stm32f10x_pwr.c...
 compiling stm32f10x_rcc.c...
 compiling stm32f10x_rtc.c...
 compiling stm32f10x_sdio.c...
 compiling stm32f10x_spi.c...
 compiling stm32f10x_usart.c...
-compiling stm32f10x_wwdg.c...
-compiling timer.c...
 compiling stm32f10x_tim.c...
+compiling stm32f10x_wwdg.c...
 compiling gpio.c...
 compiling oled.c...
+compiling timer.c...
 compiling oled2.c...
 compiling ADC_Config.c...
+compiling ui.c...
+..\HARDWARE\INC\hand.h(10): warning:  #1295-D: Deprecated declaration Zhua - give arg types
+  void Zhua();
+..\HARDWARE\INC\hand.h(11): warning:  #1295-D: Deprecated declaration BuJin_GPIO_Init - give arg types
+  void BuJin_GPIO_Init();
+..\HARDWARE\INC\hand.h(13): warning:  #1295-D: Deprecated declaration LunPan_Zhuan - give arg types
+  void LunPan_Zhuan();
+..\HARDWARE\SRC\ui.c(316): error:  #254: type name is not allowed
+                      for (u8 it = 0; it < a[i][4]; it++)
+..\HARDWARE\SRC\ui.c(316): error:  #65: expected a ";"
+                      for (u8 it = 0; it < a[i][4]; it++)
+..\HARDWARE\SRC\ui.c(316): error:  #20: identifier "it" is undefined
+                      for (u8 it = 0; it < a[i][4]; it++)
+..\HARDWARE\SRC\ui.c(336): error:  #254: type name is not allowed
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(336): error:  #65: expected a ";"
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(348): error:  #254: type name is not allowed
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(348): error:  #65: expected a ";"
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(348): error:  #20: identifier "itt" is undefined
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(352): error:  #254: type name is not allowed
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(352): error:  #65: expected a ";"
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(364): error:  #254: type name is not allowed
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(364): error:  #65: expected a ";"
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(364): error:  #20: identifier "itt" is undefined
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(368): error:  #254: type name is not allowed
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(368): error:  #65: expected a ";"
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(380): error:  #254: type name is not allowed
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(380): error:  #65: expected a ";"
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(380): error:  #20: identifier "itt" is undefined
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(389): error:  #254: type name is not allowed
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(389): error:  #65: expected a ";"
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(401): error:  #254: type name is not allowed
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(401): error:  #65: expected a ";"
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(401): error:  #20: identifier "itt" is undefined
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(405): error:  #254: type name is not allowed
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(405): error:  #65: expected a ";"
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(417): error:  #254: type name is not allowed
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(417): error:  #65: expected a ";"
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(417): error:  #20: identifier "itt" is undefined
+                                          for (u8 itt = 0; itt < 15; itt++)
+..\HARDWARE\SRC\ui.c(421): error:  #254: type name is not allowed
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c(421): error:  #65: expected a ";"
+                                          for (u8 i = 0; i <= 5; i++) {
+..\HARDWARE\SRC\ui.c: 3 warnings, 30 errors
 compiling st178.c...
 compiling moto.c...
 ..\HARDWARE\INC\exti.h(8): warning:  #1295-D: Deprecated declaration fzopen - give arg types
@@ -79,32 +163,48 @@ compiling moto.c...
   void fzclose();
 ..\HARDWARE\INC\exti.h(12): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\HARDWARE\SRC\moto.c(551): warning:  #550-D: variable "at" was set but never used
+..\HARDWARE\SRC\moto.c(554): warning:  #550-D: variable "at" was set but never used
   	u8 at = 0;		
-..\HARDWARE\SRC\moto.c(769): warning:  #940-D: missing return statement at end of non-void function "BMQ_MOVE"
+..\HARDWARE\SRC\moto.c(772): warning:  #940-D: missing return statement at end of non-void function "BMQ_MOVE"
   }
-..\HARDWARE\SRC\moto.c: 5 warnings, 0 errors
+..\HARDWARE\SRC\moto.c(830): warning:  #174-D: expression has no effect
+  		angle_6 == 0;
+..\HARDWARE\SRC\moto.c: 6 warnings, 0 errors
 compiling move.c...
-..\HARDWARE\SRC\move.c(222): warning:  #550-D: variable "n" was set but never used
+..\HARDWARE\SRC\move.c(195): warning:  #175-D: subscript out of range
+  		DJ_MOVE_BUFF_SET(a[i][0],a[i][1],a[i][4]);
+..\HARDWARE\SRC\move.c(226): warning:  #550-D: variable "n" was set but never used
   	u8 n,m;
-..\HARDWARE\SRC\move.c(222): warning:  #550-D: variable "m" was set but never used
+..\HARDWARE\SRC\move.c(226): warning:  #550-D: variable "m" was set but never used
   	u8 n,m;
-..\HARDWARE\SRC\move.c: 2 warnings, 0 errors
+..\HARDWARE\SRC\move.c: 3 warnings, 0 errors
 compiling stmflash.c...
 compiling hand.c...
-..\HARDWARE\SRC\hand.c(31): warning:  #111-D: statement is unreachable
-  			break;
-..\HARDWARE\SRC\hand.c(61): warning:  #111-D: statement is unreachable
-  			break;
-..\HARDWARE\SRC\hand.c(91): warning:  #111-D: statement is unreachable
-  			break;
-..\HARDWARE\SRC\hand.c(121): warning:  #111-D: statement is unreachable
-  			break;
-..\HARDWARE\SRC\hand.c(134): warning:  #177-D: variable "pianyi" was declared but never referenced
-  	int pianyi=0;//便宜x量
-..\HARDWARE\SRC\hand.c(138): warning:  #177-D: variable "real_x" was declared but never referenced
-  	int real_x=20;//舵机所在的位置(x位置)
-..\HARDWARE\SRC\hand.c: 6 warnings, 0 errors
+..\HARDWARE\INC\hand.h(10): warning:  #1295-D: Deprecated declaration Zhua - give arg types
+  void Zhua();
+..\HARDWARE\INC\hand.h(11): warning:  #1295-D: Deprecated declaration BuJin_GPIO_Init - give arg types
+  void BuJin_GPIO_Init();
+..\HARDWARE\INC\hand.h(13): warning:  #1295-D: Deprecated declaration LunPan_Zhuan - give arg types
+  void LunPan_Zhuan();
+..\HARDWARE\SRC\hand.c(67): error:  #254: type name is not allowed
+              for (u8 it = 0; it < 81; it++)
+..\HARDWARE\SRC\hand.c(67): error:  #65: expected a ";"
+              for (u8 it = 0; it < 81; it++)
+..\HARDWARE\SRC\hand.c(67): error:  #20: identifier "it" is undefined
+              for (u8 it = 0; it < 81; it++)
+..\HARDWARE\SRC\hand.c(81): error:  #254: type name is not allowed
+              for (u8 it = 0; it < 235; it++) delay_ms(100);
+..\HARDWARE\SRC\hand.c(81): error:  #65: expected a ";"
+              for (u8 it = 0; it < 235; it++) delay_ms(100);
+..\HARDWARE\SRC\hand.c(81): error:  #20: identifier "it" is undefined
+              for (u8 it = 0; it < 235; it++) delay_ms(100);
+..\HARDWARE\SRC\hand.c(102): error:  #254: type name is not allowed
+              for (u8 it = 0; it < 82; it++)
+..\HARDWARE\SRC\hand.c(102): error:  #65: expected a ";"
+              for (u8 it = 0; it < 82; it++)
+..\HARDWARE\SRC\hand.c(102): error:  #20: identifier "it" is undefined
+              for (u8 it = 0; it < 82; it++)
+..\HARDWARE\SRC\hand.c: 3 warnings, 9 errors
 compiling exti.c...
 ..\HARDWARE\INC\exti.h(8): warning:  #1295-D: Deprecated declaration fzopen - give arg types
   void fzopen();
@@ -112,59 +212,22 @@ compiling exti.c...
   void fzclose();
 ..\HARDWARE\INC\exti.h(12): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\HARDWARE\SRC\exti.c(63): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\HARDWARE\INC\hand.h(10): warning:  #1295-D: Deprecated declaration Zhua - give arg types
+  void Zhua();
+..\HARDWARE\INC\hand.h(11): warning:  #1295-D: Deprecated declaration BuJin_GPIO_Init - give arg types
+  void BuJin_GPIO_Init();
+..\HARDWARE\INC\hand.h(13): warning:  #1295-D: Deprecated declaration LunPan_Zhuan - give arg types
+  void LunPan_Zhuan();
+..\HARDWARE\SRC\exti.c(62): warning:  #186-D: pointless comparison of unsigned integer with zero
   		if(z_cha<0)
-..\HARDWARE\SRC\exti.c(66): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\HARDWARE\SRC\exti.c(65): warning:  #186-D: pointless comparison of unsigned integer with zero
   		if(y_cha<0)
-..\HARDWARE\SRC\exti.c(69): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\HARDWARE\SRC\exti.c(68): warning:  #186-D: pointless comparison of unsigned integer with zero
   		if(q_cha<0)
-..\HARDWARE\SRC\exti.c(72): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\HARDWARE\SRC\exti.c(71): warning:  #186-D: pointless comparison of unsigned integer with zero
   		if(h_cha<0)
-..\HARDWARE\SRC\exti.c: 7 warnings, 0 errors
-compiling ui.c...
-..\HARDWARE\SRC\ui.c(512): warning:  #177-D: variable "j" was declared but never referenced
-  uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(512): warning:  #177-D: variable "pinf_qian" was declared but never referenced
-  uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(512): warning:  #177-D: variable "num" was declared but never referenced
-  uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(512): warning:  #177-D: variable "relen" was declared but never referenced
-  uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(512): warning:  #177-D: variable "index" was declared but never referenced
-  uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(512): warning:  #177-D: variable "ret" was declared but never referenced
-  uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(514): warning:  #177-D: variable "dist" was declared but never referenced
-  	u8 dist[9]={0};
-..\HARDWARE\SRC\ui.c(672): warning:  #177-D: variable "pinf_qian" was declared but never referenced
-  	uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(672): warning:  #177-D: variable "num" was declared but never referenced
-  	uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(672): warning:  #177-D: variable "relen" was declared but never referenced
-  	uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(672): warning:  #177-D: variable "index" was declared but never referenced
-  	uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(672): warning:  #177-D: variable "ret" was declared but never referenced
-  	uchar i,j,pinf_qian=0,num=0,relen=0,index=0,ret=1;
-..\HARDWARE\SRC\ui.c(674): warning:  #177-D: variable "dist" was declared but never referenced
-  	u8 dist[9]={0};
-..\HARDWARE\SRC\ui.c(3308): warning:  #177-D: variable "luxian" was declared but never referenced
-  	u8 luxian;
-..\HARDWARE\SRC\ui.c(3309): warning:  #177-D: variable "a" was declared but never referenced
-  	u8 a = 0;
-..\HARDWARE\SRC\ui.c(3505): warning:  #177-D: variable "luxian" was declared but never referenced
-  	u8 luxian;
-..\HARDWARE\SRC\ui.c(3506): warning:  #177-D: variable "a" was declared but never referenced
-  	u8 a = 0;
-..\HARDWARE\SRC\ui.c(3695): warning:  #177-D: variable "luxian" was declared but never referenced
-  	u8 luxian;
-..\HARDWARE\SRC\ui.c(3696): warning:  #177-D: variable "a" was declared but never referenced
-  	u8 a = 0;
-..\HARDWARE\SRC\ui.c: 19 warnings, 0 errors
-linking...
-Program Size: Code=60290 RO-data=20398 RW-data=10832 ZI-data=9816  
-FromELF: creating hex file...
-"..\OBJ\Template.axf" - 0 Error(s), 42 Warning(s).
+..\HARDWARE\SRC\exti.c: 10 warnings, 0 errors
+"..\OBJ\Template.axf" - 40 Error(s), 35 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -177,7 +240,8 @@ Package Vendor: Keil
   D:/Files/Keil/ARM/Pack/Keil/STM32F1xx_DFP/1.0.5/Device/Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:02
+Target not created.
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

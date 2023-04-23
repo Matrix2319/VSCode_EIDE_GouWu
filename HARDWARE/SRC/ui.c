@@ -8,10 +8,10 @@
 extern short int sum_value1, sum_value2;
 extern u16 sum_flag;
 u8 j                    = 0;
-u8 LunPan[6]            = {0, 0, 0, 0, 0, 0}; // 轮盘存放的东西
-u8 LunPani              = 0;                  // 轮盘的下标
-u8 Flag_HuoJia          = 0;                  // A,B,C,D区域
-u8 Flag_HuoJia_ShangXia = 0;                  // 区分上下货架
+u8 LunPan[10]           = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // 轮盘存放的东西
+u8 LunPani              = 0;                              // 轮盘的下标
+u8 Flag_HuoJia          = 0;                              // A,B,C,D区域
+u8 Flag_HuoJia_ShangXia = 0;                              // 区分上下货架
 
 u8 Infoflag                = 0; // 现存信息
 unsigned char hou[30][5]   = {{1, 0, 0, 255, 0}, {0, 3, 0, 255, 0}, {1, 1, 140, 68, 1}, {1, 0, 0, 255, 0}, {0, 4, 0, 255, 0}};
@@ -39,9 +39,11 @@ char zhiling[][20] = {
 // 指令组下标为A,B,C,D对应各个区域，255为空,S为上，X为下，I为初始位置，1为轮盘复位
 // 五个一组分别表示格数，方向，延时停车的延时时长ms，指令数组下标，等待机械臂延时s
 unsigned char a[][5] = {
-    {0, 1, 22, 255, 0},
-    {0, 6, 0, 255, 70},
-    {0, 2, 10, 255, 0}, // 平移出去等一会儿
+    {0, 1, 39, 255, 0},
+    {0, 6, 0, 255, 78},
+    {0, 2, 0, 255, 10}, // 平移出去等一会儿
+    {0, 2, 0, 'A', 0},  // 发A拍照
+    {0, 2, 0, 255, 10}, // 停一会儿
     {1, 1, 0, 255, 0},  // 前移一格
     {0, 6, 0, 255, 5},  // 平移一点
     {0, 2, 0, 'A', 0},  // 发A拍照
@@ -62,8 +64,44 @@ unsigned char a[][5] = {
     {0, 6, 0, 255, 5},
     {0, 2, 0, 'A', 0},
     {0, 2, 0, 255, 20},
+    {0, 2, 0, 'Z', 2}, // 因为抓的是1位置，所以要转一下才正确
     {0, 2, 0, 'X', 1}, // 轮盘到下层
     {0, 2, 0, 'P', 10},
+    {1, 0, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'P', 10},
+    {1, 0, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'P', 10},
+    {1, 0, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'P', 10},
+    {1, 0, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'P', 10},
+    {1, 0, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'P', 10},
+    {0, 5, 0, 255, 5},  // 退一下
+    {0, 2, 0, 'S', 10}, // 升
+    {0, 6, 0, 255, 5},  // 进去
+    {0, 2, 0, 'P', 10},
+    {1, 1, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'P', 10},
+    {1, 1, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'P', 10},
+    {1, 1, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'P', 10},
+    {1, 1, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'P', 10},
+    {1, 1, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'P', 10},
+
     // {0, 5, 0, 255, 16},
     // {0, 4, 0, 255, 0},
     // {0, 6, 0, 255, 4},
@@ -239,8 +277,8 @@ void change(unsigned char (*a)[5], unsigned char len)
             // 			delay_ms(1000);
             // //			for(j=0;j<10;j++)//开车延时，正式比赛时解开注释
             // //			delay_ms(1000);
-            memset(LunPan, 0, 6);
-            LunPani=0;
+            memset(LunPan, 0, 10);
+            LunPani = 0;
             BMQ_MOVE(a[i][1], a[i][2], 0);
         } else {
             if (a[i][2] != 0) {
@@ -279,17 +317,27 @@ void change(unsigned char (*a)[5], unsigned char len)
                         delay_ms(100);
                 } else if (a[i][3] == 'P') // 算法
                 {
+
                     if (Flag_HuoJia == 'A') {
                         memset(USART3_RX_BUF, 0, 10); // 将数组清0
+                        USART3_RX_STA = 0;
+                        delay_ms(10);
                         Printf(USART3, "%c", 'A');
                         while (1) {
+                            delay_ms(100);
                             if (USART3_RX_STA & 0x8000) // 接收完成
                             {
+                                LCD_CLS();
+                                sprintf(OLED_BUF, "%c %c!", USART3_RX_BUF[0], USART3_RX_BUF[1]); // 显示
+                                LCD_16_HanZi_ASCII(0, 4, OLED_BUF);
+                                sprintf(OLED_BUF, "%c", Flag_HuoJia_ShangXia); // 显示
+                                LCD_16_HanZi_ASCII(0, 2, OLED_BUF);
                                 if (Flag_HuoJia_ShangXia == 'X') {
                                     if (USART3_RX_BUF[1] == 'r') // 货架为空，要推
                                     {
                                         for (u8 i = 0; i <= 5; i++) {
                                             if (LunPan[i] == 'r') {
+                                                LunPan[i] = 'k';
                                                 while (LunPani != i) {
                                                     LunPan_Zhuan();
                                                     LunPani++;
@@ -297,6 +345,7 @@ void change(unsigned char (*a)[5], unsigned char len)
                                                         LunPani = 0;
                                                 }
                                                 Printf(USART2, zhiling[1]);
+                                                break;
                                             }
                                         }
                                         for (u8 itt = 0; itt < 15; itt++)
@@ -305,6 +354,7 @@ void change(unsigned char (*a)[5], unsigned char len)
                                     } else if (USART3_RX_BUF[1] == 'g') {
                                         for (u8 i = 0; i <= 5; i++) {
                                             if (LunPan[i] == 'g') {
+                                                LunPan[i] = 'k';
                                                 while (LunPani != i) {
                                                     LunPan_Zhuan();
                                                     LunPani++;
@@ -312,6 +362,7 @@ void change(unsigned char (*a)[5], unsigned char len)
                                                         LunPani = 0;
                                                 }
                                                 Printf(USART2, zhiling[1]);
+                                                break;
                                             }
                                         }
                                         for (u8 itt = 0; itt < 15; itt++)
@@ -320,6 +371,7 @@ void change(unsigned char (*a)[5], unsigned char len)
                                     } else if (USART3_RX_BUF[1] == 'b') {
                                         for (u8 i = 0; i <= 5; i++) {
                                             if (LunPan[i] == 'b') {
+                                                LunPan[i] = 'k';
                                                 while (LunPani != i) {
                                                     LunPan_Zhuan();
                                                     LunPani++;
@@ -327,55 +379,7 @@ void change(unsigned char (*a)[5], unsigned char len)
                                                         LunPani = 0;
                                                 }
                                                 Printf(USART2, zhiling[1]);
-                                            }
-                                        }
-                                        for (u8 itt = 0; itt < 15; itt++)
-                                            delay_ms(100);
-                                        break;
-                                    }
-                                }
-                                if (Flag_HuoJia_ShangXia == 'S') {
-                                    if (USART3_RX_BUF[1] == 'r') // 货架为空，要推
-                                    {
-                                        for (u8 i = 0; i <= 5; i++) {
-                                            if (LunPan[i] == 'r') {
-                                                while (LunPani != i) {
-                                                    LunPan_Zhuan();
-                                                    LunPani++;
-                                                    if (LunPani == 6)
-                                                        LunPani = 0;
-                                                }
-                                                Printf(USART2, zhiling[1]);
-                                            }
-                                        }
-                                        for (u8 itt = 0; itt < 15; itt++)
-                                            delay_ms(100);
-                                        break;
-                                    } else if (USART3_RX_BUF[1] == 'g') {
-                                        for (u8 i = 0; i <= 5; i++) {
-                                            if (LunPan[i] == 'g') {
-                                                while (LunPani != i) {
-                                                    LunPan_Zhuan();
-                                                    LunPani++;
-                                                    if (LunPani == 6)
-                                                        LunPani = 0;
-                                                }
-                                                Printf(USART2, zhiling[1]);
-                                            }
-                                        }
-                                        for (u8 itt = 0; itt < 15; itt++)
-                                            delay_ms(100);
-                                        break;
-                                    } else if (USART3_RX_BUF[1] == 'b') {
-                                        for (u8 i = 0; i <= 5; i++) {
-                                            if (LunPan[i] == 'b') {
-                                                while (LunPani != i) {
-                                                    LunPan_Zhuan();
-                                                    LunPani++;
-                                                    if (LunPani == 6)
-                                                        LunPani = 0;
-                                                }
-                                                Printf(USART2, zhiling[1]);
+                                                break;
                                             }
                                         }
                                         for (u8 itt = 0; itt < 15; itt++)
@@ -384,8 +388,64 @@ void change(unsigned char (*a)[5], unsigned char len)
                                     } else
                                         break;
                                 }
+                                if (Flag_HuoJia_ShangXia == 'S') {
+                                    if (USART3_RX_BUF[0] == 'r') // 货架为空，要推
+                                    {
+                                        for (u8 i = 0; i <= 5; i++) {
+                                            if (LunPan[i] == 'r') {
+                                                LunPan[i] = 'k';
+                                                while (LunPani != i) {
+                                                    LunPan_Zhuan();
+                                                    LunPani++;
+                                                    if (LunPani == 6)
+                                                        LunPani = 0;
+                                                }
+                                                Printf(USART2, zhiling[1]);
+                                                break;
+                                            }
+                                        }
+                                        for (u8 itt = 0; itt < 15; itt++)
+                                            delay_ms(100);
+                                        break;
+                                    } else if (USART3_RX_BUF[0] == 'g') {
+                                        for (u8 i = 0; i <= 5; i++) {
+                                            if (LunPan[i] == 'g') {
+                                                LunPan[i] = 'k';
+                                                while (LunPani != i) {
+                                                    LunPan_Zhuan();
+                                                    LunPani++;
+                                                    if (LunPani == 6)
+                                                        LunPani = 0;
+                                                }
+                                                Printf(USART2, zhiling[1]);
+                                                break;
+                                            }
+                                        }
+                                        for (u8 itt = 0; itt < 15; itt++)
+                                            delay_ms(100);
+                                        break;
+                                    } else if (USART3_RX_BUF[0] == 'b') {
+                                        for (u8 i = 0; i <= 5; i++) {
+                                            if (LunPan[i] == 'b') {
+                                                LunPan[i] = 'k';
+                                                while (LunPani != i) {
+                                                    LunPan_Zhuan();
+                                                    LunPani++;
+                                                    if (LunPani == 6)
+                                                        LunPani = 0;
+                                                }
+                                                Printf(USART2, zhiling[1]);
+                                                break;
+                                            }
+                                        }
+                                        for (u8 itt = 0; itt < 15; itt++)
+                                            delay_ms(100);
+                                        break;
+                                    } else
+                                        break;
+                                }
+                                break;
                             }
-                            delay_ms(10);
                         }
                     }
                 } else if (a[i][3] == 'A' || a[i][3] == 'B' || a[i][3] == 'C' || a[i][3] == 'D') {
@@ -418,29 +478,9 @@ void change(unsigned char (*a)[5], unsigned char len)
                             Flag_HuoJia = 0; // break;
                     }
 
-                    breakcnt = 0;
                     while (1) {
-                        breakcnt++;
-                        sprintf(OLED_BUF, "%6d", breakcnt);
-                        LCD_16_HanZi_ASCII(0, 6, OLED_BUF);
-                        //					if(a[i][3]==1)
-                        //						if (breakcnt>=7000) {breakcnt=0;USART3_Puts("time error");break;}//通信错误跳出1
-                        //					if(a[i][3]==2)
-                        //						if (breakcnt>=4000) {breakcnt=0;USART3_Puts("time error");break;}//通信错误跳出2
-                        //					if(a[i][3]==3)
-                        //						if (breakcnt>=4000) {breakcnt=0;USART3_Puts("time error");break;}//通信错误跳出3
-
-                        // 在调试时使用这一组延时
-                        if (a[i][3] == 'A' || a[i][3] == 'B' || a[i][3] == 'C' || a[i][3] == 'D')
-                            if (breakcnt >= 200) {
-                                breakcnt = 0;
-                                USART3_Puts("time error");
-                                break;
-                            } // 通信错误跳出
-
                         if (USART3_RX_STA & 0x8000) // 接收完成
                         {
-
                             if (a[i][3] == 'A') // 货架
                             {
                                 switch (USART3_RX_BUF[0]) // 上层
@@ -449,18 +489,21 @@ void change(unsigned char (*a)[5], unsigned char len)
                                         Printf(USART2, "%s", zhiling[1]);
                                         LunPan[LunPani] = 'r';
                                         LunPani++;
+                                        if (LunPani == 6) LunPani = 0;
                                         LunPan_Zhuan();
                                         break;
                                     case 'g':
                                         Printf(USART2, "%s", zhiling[1]);
                                         LunPan[LunPani] = 'g';
                                         LunPani++;
+                                        if (LunPani == 6) LunPani = 0;
                                         LunPan_Zhuan();
                                         break;
                                     case 'b':
                                         Printf(USART2, "%s", zhiling[1]);
                                         LunPan[LunPani] = 'b';
                                         LunPani++;
+                                        if (LunPani == 6) LunPani = 0;
                                         LunPan_Zhuan();
                                         break;
                                     default:
@@ -472,29 +515,27 @@ void change(unsigned char (*a)[5], unsigned char len)
                                         Printf(USART2, "%s", zhiling[1]);
                                         LunPan[LunPani] = 'r';
                                         LunPani++;
+                                        if (LunPani == 6) LunPani = 0;
                                         LunPan_Zhuan();
                                         break;
                                     case 'g':
                                         Printf(USART2, "%s", zhiling[1]);
                                         LunPan[LunPani] = 'g';
                                         LunPani++;
+                                        if (LunPani == 6) LunPani = 0;
                                         LunPan_Zhuan();
                                         break;
                                     case 'b':
                                         Printf(USART2, "%s", zhiling[1]);
                                         LunPan[LunPani] = 'b';
                                         LunPani++;
+                                        if (LunPani == 6) LunPani = 0;
                                         LunPan_Zhuan();
                                         break;
                                     default:
                                         break;
                                 }
                             }
-                            //						pinf_qian=(USART3_RX_BUF[2]-'0')*16+(USART3_RX_BUF[3]-'0');//读取后摄像头位置
-                            //						sprintf(OLED_BUF,"%d 	",pinf_hou);
-                            //						LCD_16_HanZi_ASCII(0,0,OLED_BUF);
-                            //						sprintf(OLED_BUF,"%d 	",pinf_qian);
-                            //						LCD_16_HanZi_ASCII(0,2,OLED_BUF);
                             else if (a[i][3] == 'B') // 仓库 det[0] status[1] dis[23] 偏移x[45]
                             {
                             } else if (a[i][3] == 'C') {
@@ -508,6 +549,11 @@ void change(unsigned char (*a)[5], unsigned char len)
                         delay_ms(100);
                 }
             }
+            LCD_CLS();
+            sprintf(OLED_BUF, "%c %c %c %c %c %c", LunPan[0], LunPan[1], LunPan[2], LunPan[3], LunPan[4], LunPan[5]); // 显示
+            LCD_16_HanZi_ASCII(0, 6, OLED_BUF);
+            sprintf(OLED_BUF, "%c %c", USART3_RX_BUF[0], USART3_RX_BUF[1]); // 显示
+            LCD_16_HanZi_ASCII(0, 4, OLED_BUF);
             if (a[i][1] == 2 && a[i][4] != 0 && a[i][3] == 255) // 啥都不做时延时
             {
                 for (u8 it = 0; it <= a[i][4]; it++) {

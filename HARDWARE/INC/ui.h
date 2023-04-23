@@ -19,6 +19,7 @@
 #include "hand.h"
 
 extern u8 Infoflag;
+extern u8 Flag_HuoJia_ShangXia;
 
 void buff(void);
 
