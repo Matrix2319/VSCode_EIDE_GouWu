@@ -4512,3 +4512,110 @@ command:
 [2023-04-24 21:55:35]	[done]
 	build successfully !
 
+[2023-04-24 22:17:40]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 185: Error:  #65: expected a ";"
+      {
+      ^
+".\HARDWARE\SRC\hand.c", line 206: Warning:  #12-D: parsing restarts here after previous syntax error
+                              LunPan[LunPani] = 'g';
+                                                   ^
+".\HARDWARE\SRC\hand.c", line 210: Error:  #116: a break statement may only be used within a loop or switch
+                              break;
+                              ^
+".\HARDWARE\SRC\hand.c", line 211: Error:  #121: a case label may only be used within a switch
+                          case 'b':
+                          ^
+".\HARDWARE\SRC\hand.c", line 217: Error:  #116: a break statement may only be used within a loop or switch
+                              break;
+                              ^
+".\HARDWARE\SRC\hand.c", line 218: Error:  #122: a default label may only be used within a switch
+                          default:
+                          ^
+".\HARDWARE\SRC\hand.c", line 219: Error:  #116: a break statement may only be used within a loop or switch
+                              break;
+                              ^
+".\HARDWARE\SRC\hand.c", line 221: Error:  #169: expected a declaration
+                      switch (USART3_RX_BUF[1]) // об╡Ц
+                      ^
+".\HARDWARE\SRC\hand.c", line 243: Warning:  #12-D: parsing restarts here after previous syntax error
+                              break;
+                                   ^
+".\HARDWARE\SRC\hand.c", line 244: Error:  #169: expected a declaration
+                          default:
+                          ^
+".\HARDWARE\SRC\hand.c", line 246: Error:  #169: expected a declaration
+                      }
+                      ^
+".\HARDWARE\SRC\hand.c", line 248: Error:  #169: expected a declaration
+                      break;
+                      ^
+".\HARDWARE\SRC\hand.c", line 249: Error:  #169: expected a declaration
+                  }
+                  ^
+".\HARDWARE\SRC\hand.c", line 267: Warning:  #12-D: parsing restarts here after previous syntax error
+          USART3_RX_STA = 0;
+                           ^
+".\HARDWARE\SRC\hand.c", line 268: Error:  #169: expected a declaration
+      }
+      ^
+".\HARDWARE\SRC\hand.c", line 275: Warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+.\HARDWARE\SRC\hand.c: 4 warnings, 12 errors
+
+[2023-04-24 22:17:52]	[done]
+	build successfully !
+
+[2023-04-24 22:26:00]	[done]
+	build successfully !
+
+[2023-04-24 22:26:10]	[done]
+	build successfully !
+
+[2023-04-24 22:29:55]	[done]
+	build successfully !
+
+[2023-04-24 22:32:32]	[done]
+	build successfully !
+
+[2023-04-24 22:39:49]	[done]
+	build successfully !
+
+[2023-04-24 22:40:15]	[done]
+	build successfully !
+
+[2023-04-24 22:41:29]	[done]
+	build successfully !
+
+[2023-04-24 22:43:22]	[done]
+	build successfully !
+
+[2023-04-24 22:45:47]	[done]
+	build successfully !
+
+[2023-04-24 22:46:54]	[done]
+	build successfully !
+
+[2023-04-24 22:47:48]	[done]
+	build successfully !
+
+[2023-04-24 22:49:30]	[done]
+	build successfully !
+
+[2023-04-24 23:08:53]	[done]
+	build successfully !
+
+[2023-04-24 23:09:17]	[done]
+	build successfully !
+
+[2023-04-24 23:12:12]	[done]
+	build successfully !
+
+[2023-04-24 23:13:10]	[done]
+	build successfully !
+
+[2023-04-24 23:16:45]	[done]
+	build successfully !
+

@@ -9,10 +9,14 @@
 #include "usart.h"
 #include "delay.h"
 
-u8 LunPan[10]           = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // 轮盘存放的东西
-u8 LunPani              = 0;                              // 轮盘的下标
-u8 Flag_HuoJia          = 0;                              // A,B,C,D区域
-u8 Flag_HuoJia_ShangXia = 0;                              // 区分上下货架
+u8 Flag_HuoJia          = 0; // A,B,C,D区域
+u8 Flag_HuoJia_ShangXia = 0; // 区分上下货架
+
+u8 LunPan[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // 轮盘存放的东西
+u8 LunPani    = 0;                              // 轮盘的下标
+
+u8 Tui[2][6];
+u8 Tuii = 0;
 
 void BuJin_GPIO_Init()
 {
@@ -87,23 +91,15 @@ void BuJin_Zhuan(u8 flag)
             TIM_Cmd(TIM1, DISABLE);
         } else // 哪都不在就先下后上
         {
-            delay_ms(200);
-            PEout(12) = 0;
+            BuJin_Zhuan('I');
+            Flag_HuoJia_ShangXia = 'X';//调用了I所以要重新给
+            PEout(12) = 1;
             delay_ms(200);
             TIM_Cmd(TIM1, ENABLE);
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
-            while (PFin(8) == 0) {
-                ;
-            }
             delay_ms(200);
-            TIM_SetCompare2(TIM1, 0);
-            delay_ms(200);
-            PEout(12) = 1;
-            delay_ms(200);
-            TIM_SetCompare2(TIM1, 700);
-            delay_ms(200);
-            for (u8 it = 0; it < 82; it++)
+            for (u8 it = 0; it < 83; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
@@ -138,124 +134,42 @@ void Zhua(u8 Flag_HuoJia)
             delay_ms(100);
             if (USART3_RX_STA & 0x8000) // 接收完成
             {
-                LCD_CLS();
-                sprintf(OLED_BUF, "%c %c!", USART3_RX_BUF[0], USART3_RX_BUF[1]); // 显示
-                LCD_16_HanZi_ASCII(0, 4, OLED_BUF);
-                sprintf(OLED_BUF, "%c", Flag_HuoJia_ShangXia); // 显示
-                LCD_16_HanZi_ASCII(0, 2, OLED_BUF);
                 if (Flag_HuoJia_ShangXia == 'X') {
-                    if (USART3_RX_BUF[1] == 'r') // 货架为空，要推
-                    {
-                        for (u8 i = 0; i <= 5; i++) {
-                            if (LunPan[i] == 'r') {
-                                LunPan[i] = 'k';
-                                while (LunPani != i) {
-                                    LunPan_Zhuan();
-                                    LunPani++;
-                                    if (LunPani == 6)
-                                        LunPani = 0;
-                                }
-                                Printf(USART2, zhiling[1]);
-                                break;
+                    for (u8 i = 0; i <= 5; i++) {
+                        if (LunPan[i] == USART3_RX_BUF[1]) {
+                            LunPan[i] = 'k';
+                            while (LunPani != i) {
+                                LunPan_Zhuan();
+                                LunPani++;
+                                if (LunPani == 6)
+                                    LunPani = 0;
                             }
+                            Printf(USART2, zhiling[1]);
+                            break;
                         }
-                        for (u8 itt = 0; itt < 15; itt++)
-                            delay_ms(100);
-                        break;
-                    } else if (USART3_RX_BUF[1] == 'g') {
-                        for (u8 i = 0; i <= 5; i++) {
-                            if (LunPan[i] == 'g') {
-                                LunPan[i] = 'k';
-                                while (LunPani != i) {
-                                    LunPan_Zhuan();
-                                    LunPani++;
-                                    if (LunPani == 6)
-                                        LunPani = 0;
-                                }
-                                Printf(USART2, zhiling[1]);
-                                break;
-                            }
-                        }
-                        for (u8 itt = 0; itt < 15; itt++)
-                            delay_ms(100);
-                        break;
-                    } else if (USART3_RX_BUF[1] == 'b') {
-                        for (u8 i = 0; i <= 5; i++) {
-                            if (LunPan[i] == 'b') {
-                                LunPan[i] = 'k';
-                                while (LunPani != i) {
-                                    LunPan_Zhuan();
-                                    LunPani++;
-                                    if (LunPani == 6)
-                                        LunPani = 0;
-                                }
-                                Printf(USART2, zhiling[1]);
-                                break;
-                            }
-                        }
-                        for (u8 itt = 0; itt < 15; itt++)
-                            delay_ms(100);
-                        break;
-                    } else
-                        break;
+                    }
+                    for (u8 itt = 0; itt < 15; itt++)
+                        delay_ms(100);
+                    break;
                 }
                 if (Flag_HuoJia_ShangXia == 'S') {
-                    if (USART3_RX_BUF[0] == 'r') // 货架为空，要推
-                    {
-                        for (u8 i = 0; i <= 5; i++) {
-                            if (LunPan[i] == 'r') {
-                                LunPan[i] = 'k';
-                                while (LunPani != i) {
-                                    LunPan_Zhuan();
-                                    LunPani++;
-                                    if (LunPani == 6)
-                                        LunPani = 0;
-                                }
-                                Printf(USART2, zhiling[1]);
-                                break;
+                    for (u8 i = 0; i <= 5; i++) {
+                        if (LunPan[i] == USART3_RX_BUF[0]) {
+                            LunPan[i] = 'k';
+                            while (LunPani != i) {
+                                LunPan_Zhuan();
+                                LunPani++;
+                                if (LunPani == 6)
+                                    LunPani = 0;
                             }
+                            Printf(USART2, zhiling[1]);
+                            break;
                         }
-                        for (u8 itt = 0; itt < 15; itt++)
-                            delay_ms(100);
-                        break;
-                    } else if (USART3_RX_BUF[0] == 'g') {
-                        for (u8 i = 0; i <= 5; i++) {
-                            if (LunPan[i] == 'g') {
-                                LunPan[i] = 'k';
-                                while (LunPani != i) {
-                                    LunPan_Zhuan();
-                                    LunPani++;
-                                    if (LunPani == 6)
-                                        LunPani = 0;
-                                }
-                                Printf(USART2, zhiling[1]);
-                                break;
-                            }
-                        }
-                        for (u8 itt = 0; itt < 15; itt++)
-                            delay_ms(100);
-                        break;
-                    } else if (USART3_RX_BUF[0] == 'b') {
-                        for (u8 i = 0; i <= 5; i++) {
-                            if (LunPan[i] == 'b') {
-                                LunPan[i] = 'k';
-                                while (LunPani != i) {
-                                    LunPan_Zhuan();
-                                    LunPani++;
-                                    if (LunPani == 6)
-                                        LunPani = 0;
-                                }
-                                Printf(USART2, zhiling[1]);
-                                break;
-                            }
-                        }
-                        for (u8 itt = 0; itt < 15; itt++)
-                            delay_ms(100);
-                        break;
-                    } else
-                        break;
+                    }
+                    for (u8 itt = 0; itt < 15; itt++)
+                        delay_ms(100);
+                    break;
                 }
-                break;
             }
         }
     }
@@ -267,72 +181,63 @@ void Nano_ChuLi(u8 Flag_HuoJia)
         USART3_RX_STA = 0;
         delay_ms(500);
         USART3_Putc('A');
-        Flag_HuoJia = 'A';
         while (1) {
             if (USART3_RX_STA & 0x8000) // 接收完成
             {
 
-                switch (USART3_RX_BUF[0]) // 上层
+                if (USART3_RX_BUF[0] != '1') // 上层要抓
                 {
-                    case 'r':
-                        Printf(USART2, "%s", zhiling[1]);
-                        LunPan[LunPani] = 'r';
-                        LunPani++;
-                        if (LunPani == 6) LunPani = 0;
-                        LunPan_Zhuan();
-                        break;
-                    case 'g':
-                        Printf(USART2, "%s", zhiling[1]);
-                        LunPan[LunPani] = 'g';
-                        LunPani++;
-                        if (LunPani == 6) LunPani = 0;
-                        LunPan_Zhuan();
-                        break;
-                    case 'b':
-                        Printf(USART2, "%s", zhiling[1]);
-                        LunPan[LunPani] = 'b';
-                        LunPani++;
-                        if (LunPani == 6) LunPani = 0;
-                        LunPan_Zhuan();
-                        break;
-                    default:
-                        break;
+                    Printf(USART2, "%s", zhiling[1]); // 抓上中间木块
+                    LunPan[LunPani] = USART3_RX_BUF[0];
+                    LunPani++;
+                    if (LunPani == 6) LunPani = 0;
+                    LunPan_Zhuan();
+                } else {
+                    LunPan[LunPani] = 'k';
+                    LunPani++;
+                    if (LunPani == 6) LunPani = 0;
+                    LunPan_Zhuan();
                 }
-                switch (USART3_RX_BUF[1]) // 下层
+
+                 if (USART3_RX_BUF[1] != '1') // 下层要抓
                 {
-                    case 'r':
-                        Printf(USART2, "%s", zhiling[1]);
-                        LunPan[LunPani] = 'r';
-                        LunPani++;
-                        if (LunPani == 6) LunPani = 0;
-                        LunPan_Zhuan();
-                        break;
-                    case 'g':
-                        Printf(USART2, "%s", zhiling[1]);
-                        LunPan[LunPani] = 'g';
-                        LunPani++;
-                        if (LunPani == 6) LunPani = 0;
-                        LunPan_Zhuan();
-                        break;
-                    case 'b':
-                        Printf(USART2, "%s", zhiling[1]);
-                        LunPan[LunPani] = 'b';
-                        LunPani++;
-                        if (LunPani == 6) LunPani = 0;
-                        LunPan_Zhuan();
-                        break;
-                    default:
-                        break;
-                }
+                    Printf(USART2, "%s", zhiling[1]); // 抓下中间木块
+                    LunPan[LunPani] = USART3_RX_BUF[1];
+                    LunPani++;
+                    if (LunPani == 6) LunPani = 0;
+                    LunPan_Zhuan();
+                } else {
+                    LunPan[LunPani] = 'k';
+                    LunPani++;
+                    if (LunPani == 6) LunPani = 0;
+                    LunPan_Zhuan();
+                }             
                 USART3_RX_STA = 0;
                 break;
             }
         }
     }
+    if (Flag_HuoJia == 'B') {
+        memset(USART3_RX_BUF, 0, 10); // 将数组清0
+        USART3_RX_STA = 0;
+        delay_ms(500);
+        USART3_Putc('B');
+        while (1) {
+            delay_ms(50);
+            if (USART3_RX_STA & 0x8000) // 接收完成
+            {
+                Tui[0][Tuii] = USART3_RX_BUF[0];
+                Tui[1][Tuii] = USART3_RX_BUF[1];
+                Tuii++;
+            }
+        }
+    }
+    USART3_RX_STA = 0;
 }
-
 void HandInit()
 {
-            memset(LunPan, 0, 10);
-            LunPani = 0;
+    memset(LunPan, 0, 10);
+    memset(Tui, 0, 12);
+    LunPani = 0;
+    Tuii    = 0;
 }

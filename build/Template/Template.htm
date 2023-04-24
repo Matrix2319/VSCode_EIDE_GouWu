@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build\Template\Template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\Template\Template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Apr 24 21:55:35 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Apr 24 23:16:44 2023
 <BR><P>
 <H3>Maximum Stack Usage =        568 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -12,6 +12,7 @@ Net_d &rArr; change &rArr; DJ_MOVE_BUFF_SET &rArr; DJ_MOVE &rArr; St178_Scanf &r
 <H3>
 Mutually Recursive functions
 </H3> <LI><a href="#[37]">ADC1_2_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[37]">ADC1_2_IRQHandler</a><BR>
+ <LI><a href="#[a5]">BuJin_Zhuan</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[a5]">BuJin_Zhuan</a><BR>
 </UL>
 <P>
 <H3>
@@ -834,14 +835,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a5]"></a>BuJin_Zhuan</STRONG> (Thumb, 476 bytes, Stack size 16 bytes, hand.o(i.BuJin_Zhuan))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BuJin_Zhuan
+<P><STRONG><a name="[a5]"></a>BuJin_Zhuan</STRONG> (Thumb, 430 bytes, Stack size 16 bytes, hand.o(i.BuJin_Zhuan))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16 + In Cycle
+<LI>Call Chain = BuJin_Zhuan &rArr;  BuJin_Zhuan (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetCompare2
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BuJin_Zhuan
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BuJin_Zhuan
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -864,7 +868,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 448<LI>Call Chain = Clock_a &rArr; DJ_MOVE_BUFF_shuzu &rArr; DJ_MOVE_BUFF_SET &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DJ_MOVE_BUFF_shuzu
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowxcString
@@ -872,6 +875,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -918,7 +922,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 400<LI>Call Chain = Clock_e &rArr; DJ_MOVE_BUFF_shuzu &rArr; DJ_MOVE_BUFF_SET &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DJ_MOVE_BUFF_shuzu
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowxcString
@@ -926,6 +929,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -1051,7 +1055,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = Debug_Set &rArr; ce_1 &rArr; shuzu &rArr; DJ_MOVE_ZONG &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ce_1
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowxcString
@@ -1059,6 +1062,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -1201,7 +1205,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 </UL>
 
-<P><STRONG><a name="[131]"></a>HandInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, hand.o(i.HandInit))
+<P><STRONG><a name="[131]"></a>HandInit</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, hand.o(i.HandInit))
 <BR><BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
 </UL>
 
@@ -1292,7 +1296,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;St188_Scanf
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;St178_Scanf
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Zhua
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
 <LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_g
 <LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_f
@@ -1315,8 +1318,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_WrDat
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_WrCmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Zhua
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
+<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
 <LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_188_a
 <LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clock_a
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1371,11 +1373,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLCD_Fill
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Set_Pos
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS_06
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
 </UL>
 
 <P><STRONG><a name="[c6]"></a>LCD_WrDat</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, oled.o(i.LCD_WrDat))
@@ -1384,11 +1386,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLCD_Fill
+<BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLCD_Fill
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_P8x16Str
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_P16x16Str
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS_06
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Draw_BMP
 </UL>
 
@@ -1402,7 +1404,6 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Zhua
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nano_ChuLi
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[1e]"></a>MemManage_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.MemManage_Handler))
@@ -1426,7 +1427,7 @@ Global Symbols
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
 </UL>
 
-<P><STRONG><a name="[e9]"></a>Nano_ChuLi</STRONG> (Thumb, 400 bytes, Stack size 8 bytes, hand.o(i.Nano_ChuLi))
+<P><STRONG><a name="[e9]"></a>Nano_ChuLi</STRONG> (Thumb, 352 bytes, Stack size 8 bytes, hand.o(i.Nano_ChuLi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = Nano_ChuLi &rArr; Printf &rArr; vsprintf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
@@ -1476,8 +1477,7 @@ Global Symbols
 <P><STRONG><a name="[18]"></a>Net_d</STRONG> (Thumb, 1532 bytes, Stack size 16 bytes, ui.o(i.Net_d))
 <BR><BR>[Stack]<UL><LI>Max Depth = 568<LI>Call Chain = Net_d &rArr; change &rArr; DJ_MOVE_BUFF_SET &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change_uart
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
@@ -1485,6 +1485,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
@@ -1493,7 +1494,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = Net_e &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DJ_MOVE
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change_uart
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
@@ -1501,6 +1501,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -1509,13 +1510,13 @@ Global Symbols
 <P><STRONG><a name="[1a]"></a>Net_f</STRONG> (Thumb, 1376 bytes, Stack size 16 bytes, ui.o(i.Net_f))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = Net_f &rArr; OLED_tou &rArr; Draw_Power &rArr; LCD_P8x16Str &rArr; LCD_Set_Pos &rArr; LCD_WrCmd
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowxcString
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
@@ -1740,8 +1741,8 @@ Global Symbols
 <P><STRONG><a name="[a9]"></a>OLED_tou</STRONG> (Thumb, 312 bytes, Stack size 8 bytes, ui.o(i.OLED_tou))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = OLED_tou &rArr; Draw_Power &rArr; LCD_P8x16Str &rArr; LCD_Set_Pos &rArr; LCD_WrCmd
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS_06
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS_06
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Draw_Power
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Draw_BMP
 </UL>
@@ -1922,8 +1923,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;St188_Scanf
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;St178_Scanf
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -1931,7 +1932,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = Set_a &rArr; ce_2 &rArr; shuzu &rArr; DJ_MOVE_ZONG &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ce_2
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowxcString
@@ -1939,6 +1939,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -1946,7 +1947,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = Set_b &rArr; ce_1 &rArr; shuzu &rArr; DJ_MOVE_ZONG &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ce_1
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowxcString
@@ -1954,6 +1954,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -1961,7 +1962,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = Set_c &rArr; ce_1 &rArr; shuzu &rArr; DJ_MOVE_ZONG &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ce_1
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowxcString
@@ -1969,6 +1969,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -1976,7 +1977,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = Set_d &rArr; ce_1 &rArr; shuzu &rArr; DJ_MOVE_ZONG &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ce_1
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowxcString
@@ -1984,6 +1984,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -1991,7 +1992,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = Set_e &rArr; ce_1 &rArr; shuzu &rArr; DJ_MOVE_ZONG &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ce_1
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;save_to_flash
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
@@ -2001,6 +2001,7 @@ Global Symbols
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS_67
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -2008,7 +2009,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = Set_f &rArr; ce_1 &rArr; shuzu &rArr; DJ_MOVE_ZONG &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ce_1
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;save_to_flash
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
@@ -2017,6 +2017,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -2024,7 +2025,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = Set_g &rArr; ce_1 &rArr; shuzu &rArr; DJ_MOVE_ZONG &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ce_1
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 <LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;save_to_flash
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_tou
@@ -2033,6 +2033,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawHanzi
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui.o(.data)
 </UL>
@@ -2043,9 +2044,9 @@ Global Symbols
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pow
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
@@ -2414,15 +2415,12 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM7_IRQHandler
 </UL>
 
-<P><STRONG><a name="[11e]"></a>Zhua</STRONG> (Thumb, 756 bytes, Stack size 16 bytes, hand.o(i.Zhua))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = Zhua &rArr; LCD_16_HanZi_ASCII &rArr; LCD_P8x16Str &rArr; LCD_Set_Pos &rArr; LCD_WrCmd
+<P><STRONG><a name="[11e]"></a>Zhua</STRONG> (Thumb, 280 bytes, Stack size 16 bytes, hand.o(i.Zhua))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = Zhua &rArr; Printf &rArr; vsprintf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Printf
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LunPan_Zhuan
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
 </UL>
@@ -2458,7 +2456,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;St188_Scanf
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;St178_Scanf
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Zhua
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Net_e
 </UL>
@@ -2585,14 +2582,14 @@ Global Symbols
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DJ_MOVE_YS
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BMQ_MOVE
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Zhua
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nano_ChuLi
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LunPan_Zhuan
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HandInit
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BuJin_Zhuan
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stop
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_16_HanZi_ASCII
 <LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
@@ -2639,13 +2636,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_SET
 </UL>
 
-<P><STRONG><a name="[61]"></a>main</STRONG> (Thumb, 152 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[61]"></a>main</STRONG> (Thumb, 156 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = main &rArr; uart3_init &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Printf
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LunPan_Zhuan
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BuJin_Zhuan
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BuJin_GPIO_Init
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SHOP_GPIO_init
@@ -2658,6 +2653,7 @@ Global Symbols
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_TIM1_PWM
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_BMQ
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_CLS
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart3_init
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart2_init
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
