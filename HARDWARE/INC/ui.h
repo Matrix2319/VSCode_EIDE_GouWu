@@ -19,8 +19,7 @@
 #include "hand.h"
 
 extern u8 Infoflag;
-extern u8 Flag_HuoJia_ShangXia;
-
+extern char zhiling[][20];
 void buff(void);
 
 void Drive(void);                //初始化主菜单界面	默认时钟

@@ -3272,3 +3272,1243 @@ command:
 [2023-04-24 20:28:04]	[done]
 	build successfully !
 
+[2023-04-24 20:45:11]	[done]
+	build successfully !
+
+[2023-04-24 21:06:36]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\exti.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\exti.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\exti.d .\HARDWARE\SRC\exti.c
+   at unify_builder.Program.Main(String[] args_)
+---
+"HARDWARE/INC/hand.h", line 11: Error:  #130: expected a "{"
+  void BuJin_GPIO_Init();
+  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #12-D: parsing restarts here after previous syntax error
+  char cunchu[4]={0,0,0,0};
+                 ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Error:  #65: expected a ";"
+  char cunchu[4]={0,0,0,0};
+                         ^
+".\HARDWARE\SRC\exti.c", line 62: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(z_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 65: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(y_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 68: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(q_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 71: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(h_cha<0)
+  		        ^
+.\HARDWARE\SRC\exti.c: 9 warnings, 2 errors
+
+[2023-04-24 21:06:55]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 145: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'r') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 147: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 153: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 162: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'g') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 164: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 170: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 179: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'b') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 181: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 187: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 201: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'r') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 203: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 209: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 218: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'g') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 220: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 226: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 235: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'b') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 237: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 243: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 18 errors
+
+[2023-04-24 21:08:56]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 145: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'r') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 147: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 153: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 162: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'g') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 164: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 170: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 179: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'b') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 181: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 187: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 201: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'r') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 203: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 209: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 218: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'g') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 220: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 226: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 235: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'b') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 237: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 243: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 18 errors
+
+[2023-04-24 21:09:25]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 145: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'r') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 147: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 153: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 162: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'g') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 164: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 170: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 179: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'b') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 181: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 187: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 201: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'r') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 203: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 209: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 218: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'g') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 220: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 226: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 235: Error:  #20: identifier "LunPan" is undefined
+                                              if (LunPan[i] == 'b') {
+                                                  ^
+".\HARDWARE\SRC\hand.c", line 237: Error:  #20: identifier "LunPani" is undefined
+                                                  while (LunPani != i) {
+                                                         ^
+".\HARDWARE\SRC\hand.c", line 243: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 18 errors
+
+[2023-04-24 21:18:41]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 153: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 170: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 187: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 209: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 226: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 243: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 6 errors
+
+[2023-04-24 21:19:12]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol zhiling multiply defined (by hand.o and exti.o).
+Error: L6200E: Symbol zhiling multiply defined (by ui.o and exti.o).
+Error: L6200E: Symbol zhiling multiply defined (by usart.o and exti.o).
+Error: L6200E: Symbol zhiling multiply defined (by main.o and exti.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 4 error messages.
+
+
+[2023-04-24 21:19:50]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 153: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 170: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 187: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 209: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 226: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+".\HARDWARE\SRC\hand.c", line 243: Error:  #20: identifier "zhiling" is undefined
+                                                  Printf(USART2, zhiling[1]);
+                                                                 ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 6 errors
+
+[2023-04-24 21:20:56]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol zhiling multiply defined (by hand.o and exti.o).
+Error: L6200E: Symbol zhiling multiply defined (by ui.o and exti.o).
+Error: L6200E: Symbol zhiling multiply defined (by usart.o and exti.o).
+Error: L6200E: Symbol zhiling multiply defined (by main.o and exti.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 4 error messages.
+
+
+[2023-04-24 21:21:59]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol zhiling multiply defined (by hand.o and exti.o).
+Error: L6200E: Symbol zhiling multiply defined (by ui.o and exti.o).
+Error: L6200E: Symbol zhiling multiply defined (by usart.o and exti.o).
+Error: L6200E: Symbol zhiling multiply defined (by main.o and exti.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 4 error messages.
+
+
+[2023-04-24 21:26:24]	[done]
+	build successfully !
+
+[2023-04-24 21:32:52]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 264: Error:  #20: identifier "a" is undefined
+                      switch (a[i][3]) {
+                              ^
+".\HARDWARE\SRC\hand.c", line 264: Error:  #20: identifier "i" is undefined
+                      switch (a[i][3]) {
+                                ^
+".\HARDWARE\SRC\hand.c", line 291: Error:  #20: identifier "a" is undefined
+                              if (a[i][3] == 'A') // 货架
+                                  ^
+".\HARDWARE\SRC\hand.c", line 291: Error:  #20: identifier "i" is undefined
+                              if (a[i][3] == 'A') // 货架
+                                    ^
+".\HARDWARE\SRC\hand.c", line 355: Error: At end of source:  #67: expected a "}"
+.\HARDWARE\SRC\hand.c: 0 warnings, 5 errors
+
+[2023-04-24 21:33:52]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 271: Error:  #20: identifier "a" is undefined
+                              if (a[i][3] == 'A') // 货架
+                                  ^
+".\HARDWARE\SRC\hand.c", line 271: Error:  #20: identifier "i" is undefined
+                              if (a[i][3] == 'A') // 货架
+                                    ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-04-24 21:34:09]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 271: Error:  #20: identifier "a" is undefined
+                              if (a[i][3] == 'A') // 货架
+                                  ^
+".\HARDWARE\SRC\hand.c", line 271: Error:  #20: identifier "i" is undefined
+                              if (a[i][3] == 'A') // 货架
+                                    ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-04-24 21:34:39]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 261: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 262: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 263: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 264: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 265: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 266: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 267: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 342: Error:  #260-D: explicit type is missing ("int" assumed)
+      stop();
+      ^
+".\HARDWARE\SRC\ui.c", line 342: Error:  #147: declaration is incompatible with "void stop(void)" (declared at line 79 of "HARDWARE/INC/moto.h")
+      stop();
+      ^
+".\HARDWARE\SRC\ui.c", line 343: Error:  #169: expected a declaration
+  }
+  ^
+".\HARDWARE\SRC\ui.c", line 375: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 376: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 377: Error:  #169: expected a declaration
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 386: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "设置");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 387: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 388: Error:  #169: expected a declaration
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 390: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 391: Error:  #169: expected a declaration
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 396: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "路线");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 397: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 398: Error:  #169: expected a declaration
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 401: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "双车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 402: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 403: Error:  #169: expected a declaration
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 406: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "开车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 407: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 409: Error:  #169: expected a declaration
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 411: Error:  #169: expected a declaration
+      }
+      ^
+".\HARDWARE\SRC\ui.c", line 470: Warning:  #12-D: parsing restarts here after previous syntax error
+              Keykey_Flag = 0;
+                             ^
+".\HARDWARE\SRC\ui.c", line 471: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 473: Error:  #169: expected a declaration
+          }
+          ^
+".\HARDWARE\SRC\ui.c", line 568: Warning:  #12-D: parsing restarts here after previous syntax error
+      OLED_Refresh();
+                    ^
+".\HARDWARE\SRC\ui.c", line 570: Error:  #169: expected a declaration
+      while (1) {
+      ^
+".\HARDWARE\SRC\ui.c", line 606: Warning:  #12-D: parsing restarts here after previous syntax error
+      OLED_Refresh();
+                    ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #169: expected a declaration
+      while (1) {
+      ^
+".\HARDWARE\SRC\ui.c", line 645: Warning:  #12-D: parsing restarts here after previous syntax error
+                  ce_1();
+                        ^
+".\HARDWARE\SRC\ui.c", line 646: Error:  #79: expected a type specifier
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                     ^
+".\HARDWARE\SRC\ui.c", line 646: Error:  #79: expected a type specifier
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                         ^
+".\HARDWARE\SRC\ui.c", line 646: Error:  #79: expected a type specifier
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 646: Error:  #260-D: explicit type is missing ("int" assumed)
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                  ^
+".\HARDWARE\SRC\ui.c", line 646: Error:  #147: declaration is incompatible with "void LCD_16_HanZi_ASCII(u8, u8, char *)" (declared at line 70 of "HARDWARE/INC/oled.h")
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                  ^
+".\HARDWARE\SRC\ui.c", line 647: Error:  #169: expected a declaration
+              } else
+              ^
+".\HARDWARE\SRC\ui.c", line 650: Error:  #169: expected a declaration
+          }
+          ^
+".\HARDWARE\SRC\ui.c", line 675: Warning:  #12-D: parsing restarts here after previous syntax error
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                                 ^
+".\HARDWARE\SRC\ui.c", line 676: Error:  #169: expected a declaration
+              } else
+              ^
+".\HARDWARE\SRC\ui.c", line 679: Error:  #169: expected a declaration
+          }
+          ^
+".\HARDWARE\SRC\ui.c", line 704: Warning:  #12-D: parsing restarts here after previous syntax error
+                  LCD_16_HanZi_ASCII(12, 4, "  ");
+                                                 ^
+".\HARDWARE\SRC\ui.c", line 705: Error:  #169: expected a declaration
+              } else
+              ^
+.\HARDWARE\SRC\ui.c: 24 warnings, 30 errors
+
+[2023-04-24 21:36:10]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 344: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 373: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 375: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 376: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 377: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 378: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 379: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 380: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 381: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 382: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 383: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 386: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 389: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 390: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 391: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 392: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+".\HARDWARE\SRC\ui.c", line 393: Error:  #121: a case label may only be used within a switch
+          case 20:
+          ^
+".\HARDWARE\SRC\ui.c", line 396: Error:  #121: a case label may only be used within a switch
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 397: Error:  #121: a case label may only be used within a switch
+          case 22:
+          ^
+".\HARDWARE\SRC\ui.c", line 398: Error:  #121: a case label may only be used within a switch
+          case 23:
+          ^
+".\HARDWARE\SRC\ui.c", line 401: Error:  #121: a case label may only be used within a switch
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 402: Error:  #121: a case label may only be used within a switch
+          case 25:
+          ^
+".\HARDWARE\SRC\ui.c", line 403: Error:  #121: a case label may only be used within a switch
+          case 26:
+          ^
+".\HARDWARE\SRC\ui.c", line 407: Error:  #122: a default label may only be used within a switch
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 261: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 262: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 263: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 264: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 265: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 266: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 267: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 424: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 448: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 476: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 499: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 522: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 556: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 593: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 624: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 653: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 682: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 711: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 786: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 847: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 908: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 953: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 1025: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2128: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2209: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2288: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2367: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2620: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2617: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2618: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2815: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 2813: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2814: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3004: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 3002: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3003: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3193: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 3244: Warning:  #676-D: using out-of-scope declaration of function "change_uart" (declared at line 343)
+                              change_uart(b, 0);
+                              ^
+".\HARDWARE\SRC\ui.c", line 3276: Warning:  #676-D: using out-of-scope declaration of function "change_uart" (declared at line 343)
+                              change_uart(a1, 0);
+                              ^
+".\HARDWARE\SRC\ui.c", line 3380: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+".\HARDWARE\SRC\ui.c", line 3420: Warning:  #676-D: using out-of-scope declaration of function "change_uart" (declared at line 343)
+                              change_uart(a2, 0);
+                              ^
+".\HARDWARE\SRC\ui.c", line 3567: Warning:  #223-D: function "OLED_tou" declared implicitly
+      OLED_tou();
+      ^
+.\HARDWARE\SRC\ui.c: 49 warnings, 23 errors
+
+[2023-04-24 21:37:17]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 343: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 372: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 373: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 374: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 375: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 376: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 377: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 378: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 379: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 380: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 381: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 382: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 384: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 385: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 387: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 388: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 389: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 390: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 391: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+".\HARDWARE\SRC\ui.c", line 392: Error:  #121: a case label may only be used within a switch
+          case 20:
+          ^
+".\HARDWARE\SRC\ui.c", line 394: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 395: Error:  #121: a case label may only be used within a switch
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 396: Error:  #121: a case label may only be used within a switch
+          case 22:
+          ^
+".\HARDWARE\SRC\ui.c", line 397: Error:  #121: a case label may only be used within a switch
+          case 23:
+          ^
+".\HARDWARE\SRC\ui.c", line 399: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 400: Error:  #121: a case label may only be used within a switch
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 401: Error:  #121: a case label may only be used within a switch
+          case 25:
+          ^
+".\HARDWARE\SRC\ui.c", line 402: Error:  #121: a case label may only be used within a switch
+          case 26:
+          ^
+".\HARDWARE\SRC\ui.c", line 404: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 406: Error:  #122: a default label may only be used within a switch
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 407: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+.\HARDWARE\SRC\ui.c: 1 warning, 30 errors
+
+[2023-04-24 21:37:32]	[done]
+	build successfully !
+
+[2023-04-24 21:40:55]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 298: Error:  #20: identifier "q" is undefined
+                              BuJin_Zhuan(q[i][3]);        
+                                          ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 261: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 262: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 263: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 264: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 265: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 266: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 267: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2606: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2607: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2802: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2803: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2991: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2992: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 1 error
+
+[2023-04-24 21:41:05]	[done]
+	build successfully !
+
+[2023-04-24 21:44:08]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 275: Error:  #20: identifier "LunPan" is undefined
+              memset(LunPan, 0, 10);
+                     ^
+".\HARDWARE\SRC\ui.c", line 276: Error:  #20: identifier "LunPani" is undefined
+              LunPani = 0;
+              ^
+".\HARDWARE\SRC\ui.c", line 301: Error:  #20: identifier "Flag_HuoJia" is undefined
+                      Zhua(Flag_HuoJia);
+                           ^
+".\HARDWARE\SRC\ui.c", line 308: Error:  #20: identifier "LunPan" is undefined
+                  sprintf(OLED_BUF, "%c %c %c %c %c %c", LunPan[0], LunPan[1], LunPan[2], LunPan[3], LunPan[4], LunPan[5]); // 显示
+                                                         ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 256: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 257: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 258: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 259: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 261: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 262: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2597: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2598: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2793: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2794: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2982: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2983: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 4 errors
+
+[2023-04-24 21:45:22]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 299: Error:  #20: identifier "Flag_HuoJia" is undefined
+                      Zhua(Flag_HuoJia);
+                           ^
+".\HARDWARE\SRC\ui.c", line 306: Error:  #20: identifier "LunPan" is undefined
+                  sprintf(OLED_BUF, "%c %c %c %c %c %c", LunPan[0], LunPan[1], LunPan[2], LunPan[3], LunPan[4], LunPan[5]); // 显示
+                                                         ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 256: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 257: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 258: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 259: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 261: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 262: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2595: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2596: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2791: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2792: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2980: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2981: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 2 errors
+
+[2023-04-24 21:46:13]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 300: Error:  #20: identifier "Flag_HuoJia" is undefined
+                      Zhua(Flag_HuoJia);
+                           ^
+".\HARDWARE\SRC\ui.c", line 307: Error:  #20: identifier "LunPan" is undefined
+                  sprintf(OLED_BUF, "%c %c %c %c %c %c", LunPan[0], LunPan[1], LunPan[2], LunPan[3], LunPan[4], LunPan[5]); // 显示
+                                                         ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 256: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 257: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 258: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 259: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 261: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 262: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2596: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2597: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2792: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2793: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2981: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2982: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 2 errors
+
+[2023-04-24 21:47:05]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 307: Error:  #20: identifier "LunPan" is undefined
+                  sprintf(OLED_BUF, "%c %c %c %c %c %c", LunPan[0], LunPan[1], LunPan[2], LunPan[3], LunPan[4], LunPan[5]); // 显示
+                                                         ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 256: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 257: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 258: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 259: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 261: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 262: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2596: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2597: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2792: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2793: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2981: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2982: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 1 error
+
+[2023-04-24 21:47:50]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\exti.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\exti.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\exti.d .\HARDWARE\SRC\exti.c
+   at unify_builder.Program.Main(String[] args_)
+---
+"HARDWARE/INC/hand.h", line 14: Error:  #65: expected a ";"
+  void Zhua(u8 Flag_HuoJia);
+  ^
+".\HARDWARE\SRC\exti.c", line 62: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(z_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 65: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(y_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 68: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(q_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 71: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(h_cha<0)
+  		        ^
+.\HARDWARE\SRC\exti.c: 4 warnings, 1 error
+
+[2023-04-24 21:48:00]	[done]
+	build successfully !
+
+[2023-04-24 21:52:29]	[done]
+	build successfully !
+
+[2023-04-24 21:55:35]	[done]
+	build successfully !
+

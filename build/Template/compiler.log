@@ -1,10 +1,65 @@
 >>> cc
 
-".\USER\main.c", line 23: Warning:  #177-D: variable "tx_flag" was declared but never referenced
-      int tx_flag = 0;
+
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 255: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 256: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
           ^
-.\USER\main.c: 1 warning, 0 errors
+".\HARDWARE\SRC\ui.c", line 257: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 258: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 259: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 260: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 261: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 262: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2596: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2597: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2792: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2793: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2981: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2982: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 0 errors
 
 >>> ld
 
-Program Size: Code=54644 RO-data=20220 RW-data=5016 ZI-data=9320  
+Program Size: Code=54504 RO-data=20216 RW-data=5012 ZI-data=9324  
