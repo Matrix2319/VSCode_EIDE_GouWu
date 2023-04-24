@@ -308,9 +308,32 @@
         },
         "proType": 1,
         "speed": 8000,
-        "otherCmds": ""
+        "otherCmds": "IP 192.168.0.112"
       },
-      "uploadConfigMap": {},
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "ST",
+            "cpuName": "STM32F103ZE"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        },
+        "OpenOCD": {
+          "bin": "",
+          "target": "stm32f1x",
+          "interface": "jlink",
+          "baseAddr": "0x08000000"
+        },
+        "Custom": {
+          "bin": "",
+          "commandLine": "",
+          "eraseChipCommand": ""
+        }
+      },
       "custom_dep": {
         "name": "default",
         "incList": [

@@ -11,6 +11,19 @@
             "executable": "build\\Template\\Template.elf",
             "runToEntryPoint": "main",
             "device": "STM32F103ZE"
+        },
+        {
+            "cwd": "${workspaceRoot}",
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "openocd",
+            "servertype": "openocd",
+            "executable": "build\\Template\\Template.elf",
+            "runToEntryPoint": "main",
+            "configFiles": [
+                "interface/jlink.cfg",
+                "target/stm32f1x.cfg"
+            ]
         }
     ]
 }
