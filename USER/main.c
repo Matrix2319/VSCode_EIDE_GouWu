@@ -33,7 +33,7 @@ int main(void)
     uart3_init(9600);   // 串口3
 
     Init_BMQ();               // 编码器初始化
-    Init_TIM1_PWM(1499, 109); // 步进电机1499,69为600HZ,数字越打越慢
+    Init_TIM1_PWM(1199, 89); // 步进电机1499,69为600HZ,数字越大越慢
     ADC_DMA_Configuration();  // ADC1初始化(不知道有没有用到，上车调试)
     ADKey_Init();             // ACD3初始化(用到)
 
@@ -47,10 +47,11 @@ int main(void)
     delay_ms(100);
     BuJin_Zhuan('S');
     delay_ms(100);
-    //LunPan_Zhuan();
+    LunPan_Zhuan();
     delay_ms(100);
     delay_ms(100);
-    Printf(USART2, "%s\r\n", "tlcdb");
+     BuJin_Zhuan('X');
+    //Printf(USART2, "%s\r\n", "tlcdb");
      Printf(USART3, "%s\r\n", "tlcdb");
     while (1) {
         // Printf(USART1, "%s\r\n", "TLCDB1!");
@@ -60,9 +61,13 @@ int main(void)
         // Printf(USART3, "%s\r\n", "TLCDB3!");
         // sprintf(OLED_BUF, "E7=%d", 1);
         // LCD_16_HanZi_ASCII(10, 6, OLED_BUF);
-
+           Printf(USART2, zhiling[1]);
+                            delay_ms(500);
+                            delay_ms(500);
+                            Printf(USART2, zhiling[2]);
          delay_ms(500);
+            delay_ms(500);
         //LunPan_Zhuan();
-       MenuOperate();
+       //MenuOperate();
     }
 }

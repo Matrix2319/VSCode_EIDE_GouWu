@@ -4619,3 +4619,140 @@ command:
 [2023-04-24 23:16:45]	[done]
 	build successfully !
 
+[2023-04-25 00:25:35]	[done]
+	build successfully !
+
+[2023-04-25 00:25:48]	[done]
+	build successfully !
+
+[2023-04-25 00:26:00]	[done]
+	build successfully !
+
+[2023-04-25 00:26:02]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 181: Error:  #29: expected an expression
+              Printf(USART2,"%s",zhiling[][1]);
+                                         ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 1 error
+
+[2023-04-25 00:27:17]	[done]
+	build successfully !
+
+[2023-04-25 11:38:33]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 182: Error:  #165: too few arguments in function call
+                  BMQ_MOVE(1, 30);//ÍùÓÒ×ß
+                                ^
+".\HARDWARE\SRC\hand.c", line 191: Error:  #165: too few arguments in function call
+                  BMQ_MOVE(0, 30);//Íù×ó×ß
+                                ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-04-25 11:38:47]	[done]
+	build successfully !
+
+[2023-04-25 11:42:42]	[done]
+	build successfully !
+
+[2023-04-25 11:57:58]	[done]
+	build successfully !
+
+[2023-04-25 11:58:09]	[done]
+	build successfully !
+
+[2023-04-25 12:15:09]	[done]
+	build successfully !
+
+[2023-04-25 12:27:22]	[done]
+	build successfully !
+
+[2023-04-25 12:44:42]	[done]
+	build successfully !
+
+[2023-04-25 12:45:11]	[done]
+	build successfully !
+
+[2023-04-25 14:43:31]	[done]
+	build successfully !
+
+[2023-04-25 14:44:09]	[done]
+	build successfully !
+
+[2023-04-25 15:48:51]	[done]
+	build successfully !
+
+[2023-04-25 15:49:57]	[done]
+	build successfully !
+
+[2023-04-25 15:50:33]	[done]
+	build successfully !
+
+[2023-04-25 15:51:23]	[done]
+	build successfully !
+
+[2023-04-25 15:52:24]	[done]
+	build successfully !
+
+[2023-04-25 15:53:49]	[done]
+	build successfully !
+
+[2023-04-25 16:03:29]	[done]
+	build successfully !
+
+[2023-04-25 16:05:15]	[done]
+	build successfully !
+
+[2023-04-25 16:05:34]	[done]
+	build successfully !
+
+[2023-04-25 16:08:22]	[done]
+	build successfully !
+
+[2023-04-25 16:08:47]	[done]
+	build successfully !
+
+[2023-04-25 16:09:19]	[done]
+	build successfully !
+
+[2023-04-25 16:09:53]	[done]
+	build successfully !
+
+[2023-04-25 16:11:36]	[done]
+	build successfully !
+
+[2023-04-25 16:11:49]	[done]
+	build successfully !
+
+[2023-04-25 16:13:28]	[done]
+	build successfully !
+
+[2023-04-25 16:13:56]	[done]
+	build successfully !
+
+[2023-04-25 16:15:10]	[done]
+	build successfully !
+
+[2023-04-25 16:16:14]	[done]
+	build successfully !
+
+[2023-04-25 16:17:22]	[done]
+	build successfully !
+
+[2023-04-25 16:18:31]	[done]
+	build successfully !
+
+[2023-04-25 16:19:14]	[done]
+	build successfully !
+
+[2023-04-25 16:19:23]	[done]
+	build successfully !
+
+[2023-04-25 16:20:22]	[done]
+	build successfully !
+

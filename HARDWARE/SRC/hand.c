@@ -72,7 +72,7 @@ void BuJin_Zhuan(u8 flag)
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 81; it++)
+            for (u8 it = 0; it < 52; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
@@ -86,20 +86,20 @@ void BuJin_Zhuan(u8 flag)
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 235; it++) delay_ms(100);
+            for (u8 it = 0; it < 153; it++) delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
         } else // 哪都不在就先下后上
         {
             BuJin_Zhuan('I');
-            Flag_HuoJia_ShangXia = 'X';//调用了I所以要重新给
-            PEout(12) = 1;
+            Flag_HuoJia_ShangXia = 'X'; // 调用了I所以要重新给
+            PEout(12)            = 1;
             delay_ms(200);
             TIM_Cmd(TIM1, ENABLE);
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 83; it++)
+            for (u8 it = 0; it < 52; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
@@ -145,6 +145,9 @@ void Zhua(u8 Flag_HuoJia)
                                     LunPani = 0;
                             }
                             Printf(USART2, zhiling[1]);
+                            delay_ms(500);
+                            delay_ms(500);
+                            Printf(USART2, zhiling[2]);
                             break;
                         }
                     }
@@ -163,6 +166,9 @@ void Zhua(u8 Flag_HuoJia)
                                     LunPani = 0;
                             }
                             Printf(USART2, zhiling[1]);
+                            delay_ms(500);
+                            delay_ms(500);
+                            Printf(USART2, zhiling[2]);
                             break;
                         }
                     }
@@ -170,6 +176,21 @@ void Zhua(u8 Flag_HuoJia)
                         delay_ms(100);
                     break;
                 }
+            }
+        }
+    }
+    if (Flag_HuoJia == 'B') {
+        if (Flag_HuoJia_ShangXia == 'X') {
+            if (Tui[0][Tuii] == 'r') {
+                // BMQ_MOVE(1, 30);//往右走
+                Printf(USART2, "%s", zhiling[1]); // 推中间
+            }
+            if (Tui[0][Tuii] == 'm') {
+                Printf(USART2, "%s", zhiling[1]); // 推中间
+            }
+            if (Tui[0][Tuii] == 'l') {
+                // BMQ_MOVE(0, 30);//往左走
+                Printf(USART2, "%s", zhiling[1]); // 推中间
             }
         }
     }
@@ -199,7 +220,7 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                     LunPan_Zhuan();
                 }
 
-                 if (USART3_RX_BUF[1] != '1') // 下层要抓
+                if (USART3_RX_BUF[1] != '1') // 下层要抓
                 {
                     Printf(USART2, "%s", zhiling[1]); // 抓下中间木块
                     LunPan[LunPani] = USART3_RX_BUF[1];
@@ -211,7 +232,7 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                     LunPani++;
                     if (LunPani == 6) LunPani = 0;
                     LunPan_Zhuan();
-                }             
+                }
                 USART3_RX_STA = 0;
                 break;
             }
@@ -229,6 +250,8 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                 Tui[0][Tuii] = USART3_RX_BUF[0];
                 Tui[1][Tuii] = USART3_RX_BUF[1];
                 Tuii++;
+                USART3_RX_STA = 0;
+                break;
             }
         }
     }
