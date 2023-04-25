@@ -4,7 +4,7 @@
 #include "sys.h"
 
 // A,B,C,D区域
-extern u8 Flag_HuoJia;    
+extern u8 exFlag_HuoJia;    
 //存放轮盘内的信息
 extern u8 LunPan[10];
 
