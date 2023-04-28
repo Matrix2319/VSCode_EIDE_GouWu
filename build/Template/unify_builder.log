@@ -4834,3 +4834,159 @@ command:
 [2023-04-25 22:03:20]	[done]
 	build successfully !
 
+[2023-04-26 19:47:24]	[done]
+	build successfully !
+
+[2023-04-26 19:47:54]	[done]
+	build successfully !
+
+[2023-04-26 19:53:02]	[done]
+	build successfully !
+
+[2023-04-26 19:55:11]	[done]
+	build successfully !
+
+[2023-04-26 19:59:20]	[done]
+	build successfully !
+
+[2023-04-26 20:48:10]	[done]
+	build successfully !
+
+[2023-04-26 20:48:51]	[done]
+	build successfully !
+
+[2023-04-26 20:52:00]	[done]
+	build successfully !
+
+[2023-04-26 23:33:54]	[done]
+	build successfully !
+
+[2023-04-26 23:41:19]	[done]
+	build successfully !
+
+[2023-04-26 23:54:36]	[done]
+	build successfully !
+
+[2023-04-27 00:03:46]	[done]
+	build successfully !
+
+[2023-04-27 00:04:22]	[done]
+	build successfully !
+
+[2023-04-27 00:28:44]	[done]
+	build successfully !
+
+[2023-04-27 00:32:59]	[done]
+	build successfully !
+
+[2023-04-27 00:33:20]	[done]
+	build successfully !
+
+[2023-04-27 00:33:43]	[done]
+	build successfully !
+
+[2023-04-27 00:51:04]	[done]
+	build successfully !
+
+[2023-04-27 00:54:02]	[done]
+	build successfully !
+
+[2023-04-27 00:54:12]	[done]
+	build successfully !
+
+[2023-04-27 00:55:08]	[done]
+	build successfully !
+
+[2023-04-27 00:56:08]	[done]
+	build successfully !
+
+[2023-04-27 00:57:36]	[done]
+	build successfully !
+
+[2023-04-27 01:07:49]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\st178.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\st178.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\st178.d .\HARDWARE\SRC\st178.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\st178.c", line 186: Error:  #20: identifier "a" is undefined
+      if (Flag_PingYi == 1&&a[i][4]) {
+                            ^
+.\HARDWARE\SRC\st178.c: 0 warnings, 1 error
+
+[2023-04-27 01:07:57]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\st178.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\st178.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\st178.d .\HARDWARE\SRC\st178.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\st178.c", line 186: Error:  #20: identifier "a" is undefined
+      if (Flag_PingYi == 1&&a[4][i]) {
+                            ^
+.\HARDWARE\SRC\st178.c: 0 warnings, 1 error
+
+[2023-04-27 01:11:51]	[done]
+	build successfully !
+
+[2023-04-27 01:12:34]	[done]
+	build successfully !
+
+[2023-04-27 01:31:18]	[done]
+	build successfully !
+
+[2023-04-27 01:34:11]	[done]
+	build successfully !
+
+[2023-04-27 01:36:32]	[done]
+	build successfully !
+
+[2023-04-27 02:39:27]	[done]
+	build successfully !
+
+[2023-04-27 13:57:18]	[done]
+	build successfully !
+
+[2023-04-27 14:24:20]	[done]
+	build successfully !
+
+[2023-04-27 14:26:15]	[done]
+	build successfully !
+
+[2023-04-27 14:43:13]	[done]
+	build successfully !
+
+[2023-04-27 14:43:42]	[done]
+	build successfully !
+
+[2023-04-27 14:59:10]	[done]
+	build successfully !
+
+[2023-04-27 15:14:26]	[done]
+	build successfully !
+
+[2023-04-27 15:20:00]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\moto.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\moto.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\moto.d .\HARDWARE\SRC\moto.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\moto.c", line 555: Warning:  #550-D: variable "at" was set but never used
+  	u8 at = 0;		
+  	   ^
+".\HARDWARE\SRC\moto.c", line 773: Warning:  #940-D: missing return statement at end of non-void function "BMQ_MOVE"
+  }
+  ^
+".\HARDWARE\SRC\moto.c", line 953: Error:  #147-D: declaration is incompatible with "void DJ_MOVE_PingYi(u8, u32)" (declared at line 77 of "HARDWARE/INC/moto.h")
+  void DJ_MOVE_PingYi(u8 f, u8 t)
+       ^
+.\HARDWARE\SRC\moto.c: 2 warnings, 1 error
+
+[2023-04-27 15:20:16]	[done]
+	build successfully !
+
+[2023-04-27 15:23:22]	[done]
+	build successfully !
+
+[2023-04-27 15:28:16]	[done]
+	build successfully !
+
+[2023-04-27 15:29:39]	[done]
+	build successfully !
+

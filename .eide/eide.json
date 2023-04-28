@@ -308,7 +308,7 @@
         },
         "proType": 1,
         "speed": 8000,
-        "otherCmds": "IP 192.168.0.112"
+        "otherCmds": "IP 192.168.0.108"
       },
       "uploadConfigMap": {
         "JLink": {

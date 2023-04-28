@@ -4,6 +4,7 @@
 
 
 int ii = 0;
+u8 Flag_PingYi=0;
 
 s16 tt;//读取前后的循迹返回是经过了几个路口
 s8  aa;//读取左右循迹值返回是否停车准确
@@ -949,16 +950,16 @@ void DJ_MOVE_YS(u8 t,u8 f,u8 sp,u16 tim)	//延时停车
 }
 
 
-void DJ_MOVE_PingYi(u8 f, u32 t)
+void DJ_MOVE_PingYi(u8 f, u8 t)
 {
 	u32 yanshi = t * 50000;
 	PWM_SET();
 	if (f == 5)
 	{
+		Flag_PingYi=1;
 		// aa = St178_Scanf(1);
 		while (yanshi >= 5)
 		{
-
 			CAR_FL = 1;
 			TIM_SetCompare4(TIM8, 370);
 			CAR_FR = 0;
@@ -969,34 +970,51 @@ void DJ_MOVE_PingYi(u8 f, u32 t)
 			TIM_SetCompare2(TIM8, 370);
 			yanshi--;
 		}
-
 		TIM_SetCompare4(TIM8, 0);
 		TIM_SetCompare3(TIM8, 0);
 		TIM_SetCompare1(TIM8, 0);
 		TIM_SetCompare2(TIM8, 0);
-		stop();
 	}
 	if (f == 6)
 	{
-		// aa = St178_Scanf(1);
+		u8 aax=0;
+		Flag_PingYi=1;
 		while (yanshi >= 5)
 		{
 			CAR_FL = 0;
-			TIM_SetCompare4(TIM8, 370);
+			TIM_SetCompare4(TIM8, 430);
 			CAR_FR = 1;
-			TIM_SetCompare3(TIM8, 370);
+			TIM_SetCompare3(TIM8, 390);
 			CAR_BL = 0;
-			TIM_SetCompare1(TIM8, 370);
+			TIM_SetCompare1(TIM8, 390);
 			CAR_BR = 1;
-			TIM_SetCompare2(TIM8, 370);
+			TIM_SetCompare2(TIM8, 390);
 			yanshi--;
 		}
 		TIM_SetCompare4(TIM8, 0);
-		TIM_SetCompare3(TIM8, 0);
-		TIM_SetCompare1(TIM8, 0);
-		TIM_SetCompare2(TIM8, 0);
-		stop();
-	}
+        TIM_SetCompare3(TIM8, 0);
+        TIM_SetCompare1(TIM8, 0);
+        TIM_SetCompare2(TIM8, 0);
+        delay_ms(50);
+        if (t>=10) {
+            CAR_FL = 1;
+            TIM_SetCompare4(TIM8, 430);
+            CAR_FR = 1;
+            TIM_SetCompare3(TIM8, 390);
+            CAR_BL = 0;
+            TIM_SetCompare1(TIM8, 390);
+            CAR_BR = 0;
+            TIM_SetCompare2(TIM8, 390); // 前进
+			delay_ms(200);
+            aax = St178_Scanf(1);
+            while (!aax) {
+                aax = St178_Scanf(1);
+            }
+        }
+        stop();
+        Flag_PingYi = 0;
+    }
+	stop();
 }
 
 

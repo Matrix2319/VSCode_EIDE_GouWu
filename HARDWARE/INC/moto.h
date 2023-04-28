@@ -65,6 +65,7 @@ extern s8  aa;
 extern u8 ZK;
 
 extern u8 FX;
+extern u8 Flag_PingYi;
 
 void PWM_SET(void);
 
@@ -73,7 +74,7 @@ void DJ_MOVE_YS(u8 t,u8 f,u8 sp,u16 tim);
 void DJ_MOVE_ZHUAN(u8 r,u8 f);
 u8 BMQ_MOVE(u8 f,u16 d,u8 mod);
 //向左/右(5/6)   平移时间
-void DJ_MOVE_PingYi(u8 f,u32 t);
+void DJ_MOVE_PingYi(u8 f,u8 t);
 
 
 void stop(void);
