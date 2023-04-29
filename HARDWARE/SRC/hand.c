@@ -15,7 +15,7 @@ u8 Flag_HuoJia_ShangXia = 0; // 区分上下货架
 u8 LunPan[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // 轮盘存放的东西
 u8 LunPani    = 0;                              // 轮盘的下标
 
-u8 Tui[2][6];
+u8 Tui[2][10];
 u8 Tuii = 0;
 
 void BuJin_GPIO_Init()
@@ -131,10 +131,10 @@ void Zhua(u8 Flag_HuoJia)
         delay_ms(10);
         Printf(USART3, "%c", 'A');
         while (1) {
-            delay_ms(200);
+            delay_ms(10);
             if (USART3_RX_STA & 0x8000) // 接收完成
             {
-                    delay_ms(200);
+                    delay_ms(10);
                 if (Flag_HuoJia_ShangXia == 'X') {
                     for (u8 i = 0; i <= 5; i++) {
                         if (LunPan[i] == USART3_RX_BUF[1]) {
@@ -149,13 +149,10 @@ void Zhua(u8 Flag_HuoJia)
                             delay_ms(500);
                             delay_ms(500);
                             delay_ms(500);
-                            delay_ms(500);
                             Printf(USART2, zhiling[2]);
                             break;
                         }
                     }
-                    for (u8 itt = 0; itt < 15; itt++)
-                        delay_ms(100);
                     break;
                 }
                 if (Flag_HuoJia_ShangXia == 'S') {
@@ -172,13 +169,10 @@ void Zhua(u8 Flag_HuoJia)
                             delay_ms(500);
                             delay_ms(500);
                             delay_ms(500);
-                            delay_ms(500);
                             Printf(USART2, zhiling[2]);
                             break;
                         }
                     }
-                    for (u8 itt = 0; itt < 15; itt++)
-                        delay_ms(100);
                     break;
                 }
             }
@@ -187,18 +181,48 @@ void Zhua(u8 Flag_HuoJia)
     }
     if (Flag_HuoJia == 'B') {
         if (Flag_HuoJia_ShangXia == 'X') {
-            if (Tui[0][Tuii] == 'r') {
-                // BMQ_MOVE(1, 30);//往右走
-                Printf(USART2, "%s", zhiling[1]); // 推中间
+            delay_ms(100);
+            Tuii=Tuii-1;
+            delay_ms(100);
+            LCD_CLS();
+            sprintf(OLED_BUF, "%c %c %c %c %c %c", Tui[1][0], Tui[1][1], Tui[1][2], Tui[1][3], Tui[1][4], Tui[1][5]); // 显示
+            LCD_16_HanZi_ASCII(0, 4, OLED_BUF);
+            sprintf(OLED_BUF, "%c %c %c %c %c %c", Tui[0][0], Tui[0][1], Tui[0][2], Tui[0][3], Tui[0][4], Tui[0][5]); // 显示
+            LCD_16_HanZi_ASCII(0, 2, OLED_BUF);
+            sprintf(OLED_BUF, "%c %c", USART3_RX_BUF[0], USART3_RX_BUF[1]); // 显示
+            LCD_16_HanZi_ASCII(0, 0, OLED_BUF);
+            sprintf(OLED_BUF, "%d %c %c", Tuii,Tui[0][Tuii],Tui[1][Tuii]); // 显示
+            LCD_16_HanZi_ASCII(6, 0, OLED_BUF);
+            delay_ms(50);
+            if(Tui[1][Tuii]!='o')
+            {
+            if (Tui[1][Tuii] == 'r')
+                    BMQ_MOVE(0, 15, 0); // 往右走
+            else if (Tui[1][Tuii] == 'l')
+                    BMQ_MOVE(1, 15, 0); // 往左走
+            Printf(USART2, "%s", zhiling[3]); // 推中间
+            delay_ms(500);
+            delay_ms(500);
+            delay_ms(500);
+            Printf(USART2, "%s", zhiling[2]); 
             }
-            if (Tui[0][Tuii] == 'm') {
-                Printf(USART2, "%s", zhiling[1]); // 推中间
+
+        } else if (Flag_HuoJia_ShangXia == 'S') {
+            if(Tui[0][Tuii]!='o')
+            {
+            if (Tui[0][Tuii] == 'r')
+                BMQ_MOVE(0, 15, 0); // 往右走
+            else if (Tui[0][Tuii] == 'l')
+                BMQ_MOVE(1, 15, 0); // 往左走
+            Printf(USART2, "%s", zhiling[3]); // 推中间
+            delay_ms(500);
+            delay_ms(500);
+            delay_ms(500);
+            Printf(USART2, "%s", zhiling[2]); // 推中间
             }
-            if (Tui[0][Tuii] == 'l') {
-                // BMQ_MOVE(0, 30);//往左走
-                Printf(USART2, "%s", zhiling[1]); // 推中间
-            }
+            Tuii++;
         }
+        stop();
     }
 }
 void Nano_ChuLi(u8 Flag_HuoJia)
@@ -241,12 +265,13 @@ void Nano_ChuLi(u8 Flag_HuoJia)
         }
     }
     if (Flag_HuoJia == 'B') {
+        exFlag_HuoJia = 'B';
         memset(USART3_RX_BUF, 0, 10); // 将数组清0
         USART3_RX_STA = 0;
-        delay_ms(500);
-        USART3_Putc('B');
+        delay_ms(100);
+        Printf(USART3,"%c",'B');
         while (1) {
-            delay_ms(50);
+            delay_ms(10);
             if (USART3_RX_STA & 0x8000) // 接收完成
             {
                 Tui[0][Tuii] = USART3_RX_BUF[0];

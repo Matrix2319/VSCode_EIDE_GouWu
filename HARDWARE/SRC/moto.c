@@ -956,18 +956,18 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 	PWM_SET();
 	if (f == 5)
 	{
-		Flag_PingYi=1;
+		//Flag_PingYi=1;
 		// aa = St178_Scanf(1);
 		while (yanshi >= 5)
 		{
 			CAR_FL = 1;
-			TIM_SetCompare4(TIM8, 370);
+			TIM_SetCompare4(TIM8, 470);
 			CAR_FR = 0;
-			TIM_SetCompare3(TIM8, 370);
+			TIM_SetCompare3(TIM8, 450);
 			CAR_BL = 1;
-			TIM_SetCompare1(TIM8, 370);
+			TIM_SetCompare1(TIM8, 450);
 			CAR_BR = 0;
-			TIM_SetCompare2(TIM8, 370);
+			TIM_SetCompare2(TIM8, 450);
 			yanshi--;
 		}
 		TIM_SetCompare4(TIM8, 0);
@@ -982,13 +982,13 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 		while (yanshi >= 5)
 		{
 			CAR_FL = 0;
-			TIM_SetCompare4(TIM8, 430);
+			TIM_SetCompare4(TIM8, 470);
 			CAR_FR = 1;
-			TIM_SetCompare3(TIM8, 390);
+			TIM_SetCompare3(TIM8, 450);
 			CAR_BL = 0;
-			TIM_SetCompare1(TIM8, 390);
+			TIM_SetCompare1(TIM8, 450);
 			CAR_BR = 1;
-			TIM_SetCompare2(TIM8, 390);
+			TIM_SetCompare2(TIM8, 450);
 			yanshi--;
 		}
 		TIM_SetCompare4(TIM8, 0);
@@ -996,16 +996,16 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
         TIM_SetCompare1(TIM8, 0);
         TIM_SetCompare2(TIM8, 0);
         delay_ms(50);
-        if (t>=10) {
+        if (t>=30) {
             CAR_FL = 1;
-            TIM_SetCompare4(TIM8, 430);
             CAR_FR = 1;
-            TIM_SetCompare3(TIM8, 390);
             CAR_BL = 0;
-            TIM_SetCompare1(TIM8, 390);
             CAR_BR = 0;
-            TIM_SetCompare2(TIM8, 390); // 前进
-			delay_ms(200);
+            TIM_SetCompare4(TIM8, 430);
+            TIM_SetCompare3(TIM8, 390);
+            TIM_SetCompare1(TIM8, 390);
+            TIM_SetCompare2(TIM8, 390); // 前进,轮子一一对应
+            delay_ms(200);
             aax = St178_Scanf(1);
             while (!aax) {
                 aax = St178_Scanf(1);

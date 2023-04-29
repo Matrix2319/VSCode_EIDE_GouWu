@@ -5,6 +5,18 @@
             "cwd": "${workspaceRoot}",
             "type": "cortex-debug",
             "request": "launch",
+            "name": "jlink_remote",
+            "servertype": "jlink",
+            "interface": "swd",
+            "executable": "build\\Template\\Template.elf",
+            "runToEntryPoint": "main",
+            "device": "STM32F103ZE",
+            "ipAddress": "192.168.0.106"
+        },
+        {
+            "cwd": "${workspaceRoot}",
+            "type": "cortex-debug",
+            "request": "launch",
             "name": "jlink",
             "servertype": "jlink",
             "interface": "swd",

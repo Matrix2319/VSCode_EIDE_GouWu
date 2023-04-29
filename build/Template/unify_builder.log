@@ -4990,3 +4990,697 @@ command:
 [2023-04-27 15:29:39]	[done]
 	build successfully !
 
+[2023-04-28 23:08:18]	[done]
+	build successfully !
+
+[2023-04-28 23:08:49]	[done]
+	build successfully !
+
+[2023-04-28 23:14:59]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 295: Error:  #20: identifier "Tui" is undefined
+                  sprintf(OLED_BUF, "%c %c %c %c %c %c", Tui[1][0], Tui[1][1], Tui[1][2], Tui[1][3], Tui[1][4], Tui[1][5]); // 显示
+                                                         ^
+".\HARDWARE\SRC\ui.c", line 243: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 243: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 243: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 243: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 243: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 243: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 244: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 245: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 246: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 247: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 248: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 249: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 250: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2586: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2587: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2782: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2783: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2971: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2972: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 1 error
+
+[2023-04-28 23:16:22]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 18: Error:  #147: declaration is incompatible with "u8 Tui[2][10]" (declared at line 10 of "HARDWARE/INC/hand.h")
+  u8 Tui[2][6];
+     ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 1 error
+
+[2023-04-28 23:16:35]	[done]
+	build successfully !
+
+[2023-04-28 23:18:40]	[done]
+	build successfully !
+
+[2023-04-28 23:22:41]	[done]
+	build successfully !
+
+[2023-04-28 23:26:42]	[done]
+	build successfully !
+
+[2023-04-28 23:33:55]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 191: Error:  #165: too few arguments in function call
+                   BMQ_MOVE(1, 30);//往右走
+                                 ^
+".\HARDWARE\SRC\hand.c", line 198: Error:  #165: too few arguments in function call
+                   BMQ_MOVE(0, 30);//往左走
+                                 ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-04-28 23:35:14]	[done]
+	build successfully !
+
+[2023-04-28 23:35:34]	[done]
+	build successfully !
+
+[2023-04-28 23:36:11]	[done]
+	build successfully !
+
+[2023-04-28 23:36:34]	[done]
+	build successfully !
+
+[2023-04-28 23:39:07]	[done]
+	build successfully !
+
+[2023-04-28 23:40:56]	[done]
+	build successfully !
+
+[2023-04-28 23:53:57]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 190: Error:  #137: expression must be a modifiable lvalue
+              Tui--;
+              ^
+".\HARDWARE\SRC\hand.c", line 232: Error:  #137: expression must be a modifiable lvalue
+                  Tui++;
+                  ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-04-28 23:54:18]	[done]
+	build successfully !
+
+[2023-04-28 23:58:00]	[done]
+	build successfully !
+
+[2023-04-28 23:58:24]	[done]
+	build successfully !
+
+[2023-04-29 00:15:29]	[done]
+	build successfully !
+
+[2023-04-29 15:55:26]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 198: Error:  #116: a break statement may only be used within a loop or switch
+                  break;
+                  ^
+".\HARDWARE\SRC\hand.c", line 214: Error:  #116: a break statement may only be used within a loop or switch
+                  break;
+                  ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-04-29 16:02:33]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6218E: Undefined symbol CD_CLS (referred from ui.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+
+
+[2023-04-29 16:02:43]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6218E: Undefined symbol CD_CLS (referred from ui.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+
+
+[2023-04-29 16:03:04]	[done]
+	build successfully !
+
+[2023-04-29 16:05:12]	[done]
+	build successfully !
+
+[2023-04-29 16:15:01]	[done]
+	build successfully !
+
+[2023-04-29 16:15:26]	[done]
+	build successfully !
+
+[2023-04-29 16:17:28]	[done]
+	build successfully !
+
+[2023-04-29 16:18:05]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 154: Error:  #253: expected a ","
+      {0, 2, 0, 'P', 10},
+      ^
+".\HARDWARE\SRC\ui.c", line 155: Error:  #146: too many initializer values
+      {1, 1, 0, 255, 0},
+          ^
+".\HARDWARE\SRC\ui.c", line 156: Error:  #146: too many initializer values
+      {0, 6, 0, 255, 10},
+          ^
+".\HARDWARE\SRC\ui.c", line 157: Error:  #146: too many initializer values
+      {0, 2, 0, 'P', 10},
+          ^
+".\HARDWARE\SRC\ui.c", line 159: Error:  #146: too many initializer values
+      {0, 0, 0, 0, 0}};
+          ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 303: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 304: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 305: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 306: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 307: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 308: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 309: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2647: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2648: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2843: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2844: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3032: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3033: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 5 errors
+
+[2023-04-29 16:18:08]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 154: Error:  #253: expected a ","
+      {0, 2, 0, 'P', 10},
+      ^
+".\HARDWARE\SRC\ui.c", line 155: Error:  #146: too many initializer values
+      {1, 1, 0, 255, 0},
+          ^
+".\HARDWARE\SRC\ui.c", line 156: Error:  #146: too many initializer values
+      {0, 6, 0, 255, 10},
+          ^
+".\HARDWARE\SRC\ui.c", line 157: Error:  #146: too many initializer values
+      {0, 2, 0, 'P', 10},
+          ^
+".\HARDWARE\SRC\ui.c", line 159: Error:  #146: too many initializer values
+      {0, 0, 0, 0, 0}};
+          ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 303: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 304: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 305: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 306: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 307: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 308: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 309: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2647: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2648: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2843: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2844: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3032: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3033: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 5 errors
+
+[2023-04-29 16:18:14]	[done]
+	build successfully !
+
+[2023-04-29 16:21:07]	[done]
+	build successfully !
+
+[2023-04-29 16:26:04]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 370: Error:  #20: identifier "Tuii" is undefined
+                      sprintf(OLED_BUF, "%d", Tuii); // 显示
+                                              ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 302: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 303: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 304: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 305: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 306: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 307: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 308: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 309: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2649: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2650: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2845: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2846: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3034: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3035: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 1 error
+
+[2023-04-29 16:26:52]	[done]
+	build successfully !
+
+[2023-04-29 16:27:12]	[done]
+	build successfully !
+
+[2023-04-29 16:29:37]	[done]
+	build successfully !
+
+[2023-04-29 16:31:07]	[done]
+	build successfully !
+
+[2023-04-29 16:39:35]	[done]
+	build successfully !
+
+[2023-04-29 16:41:55]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 371: Error:  #142: expression must have pointer-to-object type
+              sprintf(OLED_BUF, "%d %c %c", Tuii,Tui[1][Tuii],Tuii[1][Tuii]); // 显示
+                                                                   ^
+".\HARDWARE\SRC\ui.c", line 303: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 303: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 303: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 303: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 303: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 303: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 304: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 305: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 306: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 307: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 308: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 309: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 310: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2650: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2651: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2846: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2847: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3035: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3036: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 19 warnings, 1 error
+
+[2023-04-29 16:42:26]	[done]
+	build successfully !
+
+[2023-04-29 16:50:11]	[done]
+	build successfully !
+
+[2023-04-29 16:58:22]	[done]
+	build successfully !
+
+[2023-04-29 17:05:17]	[done]
+	build successfully !
+
+[2023-04-29 17:08:31]	[done]
+	build successfully !
+
+[2023-04-29 17:08:51]	[done]
+	build successfully !
+
+[2023-04-29 17:15:49]	[done]
+	build successfully !
+
+[2023-04-29 19:14:32]	[done]
+	build successfully !
+
+[2023-04-29 19:14:49]	[done]
+	build successfully !
+
+[2023-04-29 19:15:18]	[done]
+	build successfully !
+
+[2023-04-29 19:18:45]	[done]
+	build successfully !
+
+[2023-04-29 19:24:14]	[done]
+	build successfully !
+
+[2023-04-29 19:26:31]	[done]
+	build successfully !
+
+[2023-04-29 19:50:28]	[done]
+	build successfully !
+
+[2023-04-29 19:53:23]	[done]
+	build successfully !
+
+[2023-04-29 19:54:40]	[done]
+	build successfully !
+
+[2023-04-29 19:54:56]	[done]
+	build successfully !
+
+[2023-04-29 19:58:31]	[done]
+	build successfully !
+
+[2023-04-29 20:10:26]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol SystemInit multiply defined (by system_stm32f10x.o and sys.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 1 error messages.
+
+
+[2023-04-29 20:10:34]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol SystemInit multiply defined (by system_stm32f10x.o and sys.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 1 error messages.
+
+
+[2023-04-29 20:12:05]	[done]
+	build successfully !
+
+[2023-04-29 20:12:17]	[done]
+	build successfully !
+
+[2023-04-29 20:14:21]	[done]
+	build successfully !
+
+[2023-04-29 20:14:46]	[done]
+	build successfully !
+
+[2023-04-29 20:15:08]	[done]
+	build successfully !
+
+[2023-04-29 20:15:46]	[done]
+	build successfully !
+
+[2023-04-29 20:23:21]	[done]
+	build successfully !
+
+[2023-04-29 20:23:33]	[done]
+	build successfully !
+
+[2023-04-29 20:29:43]	[done]
+	build successfully !
+
+[2023-04-29 20:29:59]	[done]
+	build successfully !
+
+[2023-04-29 20:30:26]	[done]
+	build successfully !
+
+[2023-04-29 20:31:34]	[done]
+	build successfully !
+
+[2023-04-29 20:37:55]	[done]
+	build successfully !
+
+[2023-04-29 21:04:40]	[done]
+	build successfully !
+
+[2023-04-29 21:11:02]	[done]
+	build successfully !
+
+[2023-04-29 21:12:03]	[done]
+	build successfully !
+
+[2023-04-29 21:20:50]	[done]
+	build successfully !
+
+[2023-04-29 21:23:26]	[done]
+	build successfully !
+
+[2023-04-29 21:24:20]	[done]
+	build successfully !
+
+[2023-04-29 21:25:41]	[done]
+	build successfully !
+
+[2023-04-29 21:26:32]	[done]
+	build successfully !
+
+[2023-04-29 21:26:43]	[done]
+	build successfully !
+
+[2023-04-29 21:34:24]	[done]
+	build successfully !
+
+[2023-04-29 21:35:27]	[done]
+	build successfully !
+
+[2023-04-29 21:36:47]	[done]
+	build successfully !
+
+[2023-04-29 21:52:27]	[done]
+	build successfully !
+
+[2023-04-29 23:31:17]	[done]
+	build successfully !
+
+[2023-04-29 23:31:37]	[done]
+	build successfully !
+
+[2023-04-29 23:32:19]	[done]
+	build successfully !
+
+[2023-04-29 23:33:04]	[done]
+	build successfully !
+
+[2023-04-29 23:33:55]	[done]
+	build successfully !
+
+[2023-04-29 23:34:00]	[done]
+	build successfully !
+
+[2023-04-29 23:34:26]	[done]
+	build successfully !
+
+[2023-04-29 23:34:59]	[done]
+	build successfully !
+
+[2023-04-29 23:38:17]	[done]
+	build successfully !
+
+[2023-04-29 23:47:56]	[done]
+	build successfully !
+
+[2023-04-29 23:48:12]	[done]
+	build successfully !
+
+[2023-04-29 23:49:03]	[done]
+	build successfully !
+

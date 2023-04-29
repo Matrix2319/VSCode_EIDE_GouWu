@@ -7,6 +7,8 @@
 extern u8 exFlag_HuoJia;    
 //存放轮盘内的信息
 extern u8 LunPan[10];
+extern u8 Tui[2][10];
+extern u8 Tuii;
 
 //void CSD(void);
 
