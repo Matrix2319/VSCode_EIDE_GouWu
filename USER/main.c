@@ -43,9 +43,9 @@ int main(void)
     read_from_flash(); // 从flash中读取数据
 
     LCD_CLS();
-    // BuJin_Zhuan('S');
+    //BuJin_Zhuan('S');
     delay_ms(10);
-    BuJin_Zhuan('X');
+   BuJin_Zhuan('I');
     delay_ms(10);
     Printf(USART2, zhiling[0]);
     delay_ms(10);
@@ -66,6 +66,6 @@ int main(void)
 
         // LunPan_Zhuan();
          MenuOperate();
-      
+         //DJ_MOVE_PingYi(5,100);
     }
 }

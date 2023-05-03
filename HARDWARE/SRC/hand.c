@@ -72,7 +72,7 @@ void BuJin_Zhuan(u8 flag)
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 52; it++)
+            for (u8 it = 0; it < 49; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
@@ -99,7 +99,7 @@ void BuJin_Zhuan(u8 flag)
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 52; it++)
+            for (u8 it = 0; it < 49; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);

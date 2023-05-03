@@ -5,10 +5,10 @@
 
 #define   S_D_LED   PBout(14)
 
-#define   CAR_BL   PDout(0) //电机方向
-#define   CAR_FL   PDout(3) //电机方向
-#define   CAR_FR   PDout(2) //电机方向
-#define   CAR_BR   PDout(1) //电机方向
+#define   CAR_BL   PDout(2) //电机方向
+#define   CAR_FL   PDout(1) //电机方向
+#define   CAR_FR   PDout(0) //电机方向
+#define   CAR_BR   PDout(3) //电机方向
 
 #define   Bluetooth2   PFin(11)//串口2使能
 #define   Bluetooth3   PDin(10)//串口3使能
