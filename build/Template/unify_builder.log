@@ -5799,3 +5799,68 @@ command:
 [2023-05-03 00:33:45]	[done]
 	build successfully !
 
+[2023-05-03 21:51:26]	[done]
+	build successfully !
+
+[2023-05-03 21:55:28]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\USER\main.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\USER\main.o --no_depend_system_headers --depend .\build\Template\USER\main.d .\USER\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\USER\main.c", line 63: Error:  #18: expected a ")"
+          sprintf(OLED_BUF, "%d", 1  Get_Key_Adc_Average(ADC_Channel_4, 1));
+                                     ^
+".\USER\main.c", line 23: Warning:  #177-D: variable "tx_flag" was declared but never referenced
+      int tx_flag = 0;
+          ^
+.\USER\main.c: 1 warning, 1 error
+
+[2023-05-03 21:55:45]	[done]
+	build successfully !
+
+[2023-05-03 21:57:39]	[done]
+	build successfully !
+
+[2023-05-03 21:58:03]	[done]
+	build successfully !
+
+[2023-05-03 22:00:59]	[done]
+	build successfully !
+
+[2023-05-03 22:02:01]	[done]
+	build successfully !
+
+[2023-05-03 22:03:03]	[done]
+	build successfully !
+
+[2023-05-03 22:05:11]	[done]
+	build successfully !
+
+[2023-05-03 22:06:06]	[done]
+	build successfully !
+
+[2023-05-03 22:13:03]	[done]
+	build successfully !
+
+[2023-05-03 22:13:41]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\USER\main.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\USER\main.o --no_depend_system_headers --depend .\build\Template\USER\main.d .\USER\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\USER\main.c", line 64: Error:  #18: expected a ")"
+                   sprintf(OLED_BUF, "%c",ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4,1)););
+                                                                                          ^
+".\USER\main.c", line 64: Error:  #29: expected an expression
+                   sprintf(OLED_BUF, "%c",ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4,1)););
+                                                                                           ^
+".\USER\main.c", line 23: Warning:  #177-D: variable "tx_flag" was declared but never referenced
+      int tx_flag = 0;
+          ^
+.\USER\main.c: 1 warning, 2 errors
+
+[2023-05-03 22:13:45]	[done]
+	build successfully !
+
+[2023-05-03 22:14:46]	[done]
+	build successfully !
+

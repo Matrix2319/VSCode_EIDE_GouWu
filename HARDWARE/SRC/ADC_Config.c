@@ -160,23 +160,23 @@ u8 ADKey_Deal(u16 ADKey_Value)
 //	ADKey_Value = ADKey_Value/10;
 
 	
-	if(ADKey_Value > 2360 && ADKey_Value < 2470)return '*';   //.
-	else if(ADKey_Value > 2780 && ADKey_Value < 2890)return '#';	   //#
-	else if(ADKey_Value > 3600 && ADKey_Value < 3700)return 'y';   //右
-	else if(ADKey_Value > 3190 && ADKey_Value < 3290)return 'x';   //下
-	else if(ADKey_Value > 3380 && ADKey_Value < 3490)return 'z';   //左
-	else if(ADKey_Value > 3800 && ADKey_Value < 3900)return 'o';  //中
-	else if(ADKey_Value > 3000 && ADKey_Value < 3100)return 's'; //上
-	else if(ADKey_Value > 2560 && ADKey_Value < 2670)return '0';
-	else if(ADKey_Value > 2170 && ADKey_Value < 2280)return '9';
-	else if(ADKey_Value > 1560 && ADKey_Value < 1670)return '6';
-	else if(ADKey_Value > 960 && ADKey_Value < 1060)return '3';
-	else if(ADKey_Value > 750 && ADKey_Value < 860)return '2';
-	else if(ADKey_Value > 1390 && ADKey_Value < 1500)return '5';
-	else if(ADKey_Value > 1970 && ADKey_Value < 2080)return '8';
-	else if(ADKey_Value > 1780 && ADKey_Value < 1890)return '7';
-	else if(ADKey_Value > 1170 && ADKey_Value < 1280)return '4';
-	else if(ADKey_Value > 540 && ADKey_Value < 650)return '1';
+	if(ADKey_Value > 2398 && ADKey_Value < 2498)return '*';   //.
+	else if(ADKey_Value > 2830 && ADKey_Value < 2930)return '#';	   //#
+	else if(ADKey_Value > 3665 && ADKey_Value < 3765)return 'y';   //右
+	else if(ADKey_Value > 3251 && ADKey_Value < 3351)return 'x';   //下
+	else if(ADKey_Value > 3447 && ADKey_Value < 3547)return 'z';   //左
+	else if(ADKey_Value > 3870 && ADKey_Value < 3970)return 'o';  //中
+	else if(ADKey_Value > 3064 && ADKey_Value < 3164)return 's'; //上
+	else if(ADKey_Value > 2610 && ADKey_Value < 2710)return '0';
+	else if(ADKey_Value > 2211 && ADKey_Value < 2311)return '9';
+	else if(ADKey_Value > 1589 && ADKey_Value < 1689)return '6';
+	else if(ADKey_Value > 970 && ADKey_Value < 1070)return '3';
+	else if(ADKey_Value > 764 && ADKey_Value < 864)return '2';
+	else if(ADKey_Value > 1417 && ADKey_Value < 1517)return '5';
+	else if(ADKey_Value > 2011 && ADKey_Value < 2111)return '8';
+	else if(ADKey_Value > 1812 && ADKey_Value < 1912)return '7';
+	else if(ADKey_Value > 1188 && ADKey_Value < 1288)return '4';
+	else if(ADKey_Value > 557 && ADKey_Value < 657)return '1';
 	else return 0;
 
 //	if(ADKey_Value > 2410 && ADKey_Value < 2470)return '*';   //.

@@ -45,7 +45,7 @@ int main(void)
     LCD_CLS();
     // BuJin_Zhuan('S');
     delay_ms(10);
-    BuJin_Zhuan('I');
+    BuJin_Zhuan('X');
     delay_ms(10);
     Printf(USART2, zhiling[0]);
     delay_ms(10);
@@ -60,10 +60,12 @@ int main(void)
         // Printf(USART2, "%s\r\n", "TLCDB2!");
         // delay_ms(500);
         // Printf(USART3, "%s\r\n", "TLCDB3!");
-        // sprintf(OLED_BUF, "E7=%d", 1);
-        // LCD_16_HanZi_ASCII(10, 6, OLED_BUF);
-        // LunPan_Zhuan();
-        MenuOperate();
 
+        // sprintf(OLED_BUF, "%c", ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)));
+        // LCD_16_HanZi_ASCII(0, 0, OLED_BUF);
+
+        // LunPan_Zhuan();
+         MenuOperate();
+      
     }
 }
