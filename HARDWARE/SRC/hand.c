@@ -224,6 +224,40 @@ void Zhua(u8 Flag_HuoJia)
         }
         stop();
     }
+    if (Flag_HuoJia == 'C') {
+        memset(USART3_RX_BUF, 0, 10); // 将数组清0
+        USART3_RX_STA = 0;
+        delay_ms(10);
+        Printf(USART3, "%c", 'C');
+        while (1) {
+            delay_ms(10);
+            if (USART3_RX_STA & 0x8000) // 接收完成
+            {
+            delay_ms(10);
+            if (Flag_HuoJia_ShangXia == 'X') {
+                if (USART3_RX_BUF[1] == 'k') {
+                        Printf(USART2, zhiling[1]);
+                        delay_ms(500);
+                        delay_ms(500);
+                        delay_ms(500);
+                        Printf(USART2, zhiling[2]);
+                        LunPan_Zhuan();
+                }
+            }
+            if (Flag_HuoJia_ShangXia == 'S') {
+                if (USART3_RX_BUF[0] == 'k') {
+                        Printf(USART2, zhiling[1]);
+                        delay_ms(500);
+                        delay_ms(500);
+                        delay_ms(500);
+                        Printf(USART2, zhiling[2]);
+                        LunPan_Zhuan();
+                }
+            }
+            break;
+            }
+        }
+    }
 }
 void Nano_ChuLi(u8 Flag_HuoJia)
 {
@@ -277,6 +311,44 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                 Tui[0][Tuii] = USART3_RX_BUF[0];
                 Tui[1][Tuii] = USART3_RX_BUF[1];
                 Tuii++;
+                USART3_RX_STA = 0;
+                break;
+            }
+        }
+    }
+    if (Flag_HuoJia == 'C') {
+        exFlag_HuoJia = 'C';
+        memset(USART3_RX_BUF, 0, 10); // 将数组清0
+        USART3_RX_STA = 0;
+        delay_ms(100);
+        Printf(USART3, "%c", 'C');
+        while (1) {
+            delay_ms(10);
+            if (USART3_RX_STA & 0x8000) // 接收完成
+            {
+
+                if (USART3_RX_BUF[0] == 'm') // 上层要抓
+                {
+                    Printf(USART2, "%s", zhiling[4]); // 抓上中间木块
+                    for (u8 t = 0; t < 10; t++)
+                        delay_ms(1000);
+                    Printf(USART2, "%s", zhiling[0]); // 复位
+                    LunPan[LunPani] = USART3_RX_BUF[0];
+                    LunPani+=2;
+                    if (LunPani == 6) LunPani = 0;
+                    LunPan_Zhuan();
+                }
+                if (USART3_RX_BUF[1] == 'm') // 下层要抓
+                {
+                    Printf(USART2, "%s", zhiling[5]); // 抓下中间木块
+                    for (u8 t = 0; t < 10; t++)
+                        delay_ms(1000);
+                    Printf(USART2, "%s", zhiling[0]); // 复位
+                    LunPan[LunPani] = USART3_RX_BUF[1];
+                    LunPani+=2;
+                    if (LunPani == 6) LunPani = 0;
+                    LunPan_Zhuan();
+                }
                 USART3_RX_STA = 0;
                 break;
             }

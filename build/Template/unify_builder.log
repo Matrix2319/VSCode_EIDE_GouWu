@@ -5684,3 +5684,118 @@ Finished: 2 information, 0 warning and 1 error messages.
 [2023-04-29 23:49:03]	[done]
 	build successfully !
 
+[2023-04-30 23:48:39]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 239: Error:  #29: expected an expression
+                      if()
+                         ^
+".\HARDWARE\SRC\hand.c", line 240: Error:  #127: expected a statement
+                  }
+                  ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-04-30 23:50:12]	[done]
+	build successfully !
+
+[2023-04-30 23:51:55]	[done]
+	build successfully !
+
+[2023-04-30 23:52:26]	[done]
+	build successfully !
+
+[2023-04-30 23:52:37]	[done]
+	build successfully !
+
+[2023-05-01 00:01:29]	[done]
+	build successfully !
+
+[2023-05-01 00:01:34]	[done]
+	build successfully !
+
+[2023-05-01 00:42:37]	[done]
+	build successfully !
+
+[2023-05-01 00:43:53]	[done]
+	build successfully !
+
+[2023-05-01 00:44:36]	[done]
+	build successfully !
+
+[2023-05-01 00:48:40]	[done]
+	build successfully !
+
+[2023-05-01 00:48:53]	[done]
+	build successfully !
+
+[2023-05-01 00:50:21]	[done]
+	build successfully !
+
+[2023-05-01 14:53:31]	[done]
+	build successfully !
+
+[2023-05-01 15:02:43]	[done]
+	build successfully !
+
+[2023-05-01 15:03:59]	[done]
+	build successfully !
+
+[2023-05-01 15:04:09]	[done]
+	build successfully !
+
+[2023-05-01 15:05:49]	[done]
+	build successfully !
+
+[2023-05-01 15:07:48]	[done]
+	build successfully !
+
+[2023-05-01 15:09:34]	[done]
+	build successfully !
+
+[2023-05-01 15:12:08]	[done]
+	build successfully !
+
+[2023-05-01 15:22:36]	[done]
+	build successfully !
+
+[2023-05-01 15:24:10]	[done]
+	build successfully !
+
+[2023-05-01 15:28:24]	[done]
+	build successfully !
+
+[2023-05-01 15:28:34]	[done]
+	build successfully !
+
+[2023-05-01 15:32:08]	[done]
+	build successfully !
+
+[2023-05-01 15:36:12]	[done]
+	build successfully !
+
+[2023-05-01 15:47:59]	[done]
+	build successfully !
+
+[2023-05-01 16:03:42]	[done]
+	build successfully !
+
+[2023-05-01 16:15:00]	[done]
+	build successfully !
+
+[2023-05-01 16:15:07]	[done]
+	build successfully !
+
+[2023-05-01 16:15:34]	[done]
+	build successfully !
+
+[2023-05-02 14:28:49]	[done]
+	build successfully !
+
+[2023-05-02 14:29:12]	[done]
+	build successfully !
+
+[2023-05-03 00:33:45]	[done]
+	build successfully !
+
