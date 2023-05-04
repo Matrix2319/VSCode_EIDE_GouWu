@@ -9,6 +9,7 @@ extern u8 exFlag_HuoJia;
 extern u8 LunPan[10];
 extern u8 Tui[2][10];
 extern u8 Tuii;
+extern u8 Flag_CiShu_C;
 
 //void CSD(void);
 
