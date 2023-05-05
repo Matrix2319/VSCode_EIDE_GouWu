@@ -6250,3 +6250,181 @@ command:
 [2023-05-04 17:23:00]	[done]
 	build successfully !
 
+[2023-05-05 11:52:44]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 358: Error:  #20: identifier "Flag_CiShu_C" is undefined
+                      if (Flag_CiShu_C == 1 || Flag_CiShu_C == 2||Flag_CiShu_C==3) {
+                          ^
+".\HARDWARE\SRC\hand.c", line 390: Error:  #20: identifier "Flag_CiShu_C" is undefined
+      Flag_CiShu_C=0;
+      ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-05-05 11:52:46]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 358: Error:  #20: identifier "Flag_CiShu_C" is undefined
+                      if (Flag_CiShu_C == 1 || Flag_CiShu_C == 2||Flag_CiShu_C==3) {
+                          ^
+".\HARDWARE\SRC\hand.c", line 390: Error:  #20: identifier "Flag_CiShu_C" is undefined
+      Flag_CiShu_C=0;
+      ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-05-05 11:53:04]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 382: Error:  #20: identifier "Flag_CiShu_C" is undefined
+      Flag_CiShu_C=0;
+      ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 1 error
+
+[2023-05-05 11:53:13]	[done]
+	build successfully !
+
+[2023-05-05 11:55:26]	[done]
+	build successfully !
+
+[2023-05-05 12:07:38]	[done]
+	build successfully !
+
+[2023-05-05 12:09:24]	[done]
+	build successfully !
+
+[2023-05-05 12:13:24]	[done]
+	build successfully !
+
+[2023-05-05 12:18:55]	[done]
+	build successfully !
+
+[2023-05-05 12:28:53]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 100: Error:  #67: expected a "}"
+      {0,2,0,'I',10};
+                    ^
+".\HARDWARE\SRC\ui.c", line 101: Error:  #169: expected a declaration
+      {0, 6, 0, 255, 40},
+      ^
+".\HARDWARE\SRC\ui.c", line 101: Error:  #169: expected a declaration
+      {0, 6, 0, 255, 40},
+                        ^
+".\HARDWARE\SRC\ui.c", line 205: Warning:  #12-D: parsing restarts here after previous syntax error
+      };
+       ^
+".\HARDWARE\SRC\ui.c", line 348: Warning:  #177-D: variable "j" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+               ^
+".\HARDWARE\SRC\ui.c", line 348: Warning:  #177-D: variable "pinf_qian" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                  ^
+".\HARDWARE\SRC\ui.c", line 348: Warning:  #177-D: variable "num" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                 ^
+".\HARDWARE\SRC\ui.c", line 348: Warning:  #177-D: variable "relen" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                          ^
+".\HARDWARE\SRC\ui.c", line 348: Warning:  #177-D: variable "index" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 348: Warning:  #177-D: variable "ret" was declared but never referenced
+      uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
+                                                                ^
+".\HARDWARE\SRC\ui.c", line 349: Warning:  #177-D: variable "pinf" was declared but never referenced
+      int pinf       = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 350: Warning:  #177-D: variable "dist" was declared but never referenced
+      u8 dist[9]     = {0};
+         ^
+".\HARDWARE\SRC\ui.c", line 351: Warning:  #177-D: variable "s" was declared but never referenced
+      char s[100]    = "";
+           ^
+".\HARDWARE\SRC\ui.c", line 352: Warning:  #177-D: variable "breakcnt" was declared but never referenced
+      int breakcnt   = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 353: Warning:  #177-D: variable "real_dis_x" was declared but never referenced
+      int real_dis_x = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 354: Warning:  #550-D: variable "xx" was set but never used
+      int xx         = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 355: Warning:  #177-D: variable "count_once" was declared but never referenced
+      int count_once = 0;
+          ^
+".\HARDWARE\SRC\ui.c", line 2687: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2688: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2883: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2884: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3072: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3073: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+.\HARDWARE\SRC\ui.c: 20 warnings, 3 errors
+
+[2023-05-05 12:29:09]	[done]
+	build successfully !
+
+[2023-05-05 12:31:14]	[done]
+	build successfully !
+
+[2023-05-05 12:32:32]	[done]
+	build successfully !
+
+[2023-05-05 12:33:40]	[done]
+	build successfully !
+
+[2023-05-05 12:37:18]	[done]
+	build successfully !
+
+[2023-05-05 12:37:42]	[done]
+	build successfully !
+
+[2023-05-05 12:42:13]	[done]
+	build successfully !
+
+[2023-05-05 12:46:51]	[done]
+	build successfully !
+
+[2023-05-05 12:56:49]	[done]
+	build successfully !
+
+[2023-05-05 12:56:55]	[done]
+	build successfully !
+
+[2023-05-05 12:58:47]	[done]
+	build successfully !
+
+[2023-05-05 12:59:37]	[done]
+	build successfully !
+
+[2023-05-05 13:02:57]	[done]
+	build successfully !
+
+[2023-05-05 13:06:35]	[done]
+	build successfully !
+
+[2023-05-05 13:07:18]	[done]
+	build successfully !
+
+[2023-05-05 13:08:50]	[done]
+	build successfully !
+

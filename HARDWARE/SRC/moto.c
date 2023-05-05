@@ -963,11 +963,11 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 			CAR_FL = 1;
 			TIM_SetCompare2(TIM8, 470);
 			CAR_FR = 0;
-			TIM_SetCompare1(TIM8, 450);
+			TIM_SetCompare1(TIM8, 390);
 			CAR_BL = 1;
-			TIM_SetCompare3(TIM8, 450);
+			TIM_SetCompare3(TIM8, 390);
 			CAR_BR = 0;
-			TIM_SetCompare4(TIM8, 450);
+			TIM_SetCompare4(TIM8, 390);
 			yanshi--;
 		}
 		TIM_SetCompare4(TIM8, 0);
@@ -984,11 +984,11 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 			CAR_FL = 0;
 			TIM_SetCompare2(TIM8, 470);
 			CAR_FR = 1;
-			TIM_SetCompare1(TIM8, 450);
+			TIM_SetCompare1(TIM8, 390);
 			CAR_BL = 0;
-			TIM_SetCompare3(TIM8, 450);
+			TIM_SetCompare3(TIM8, 390);
 			CAR_BR = 1;
-			TIM_SetCompare4(TIM8, 450);
+			TIM_SetCompare4(TIM8, 390);
 			yanshi--;
 		}
 		TIM_SetCompare4(TIM8, 0);
@@ -1001,7 +1001,7 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
             CAR_FR = 1;
             CAR_BL = 0;
             CAR_BR = 0;
-            TIM_SetCompare2(TIM8, 430);
+            TIM_SetCompare2(TIM8, 390);
             TIM_SetCompare1(TIM8, 390);
             TIM_SetCompare3(TIM8, 390);
             TIM_SetCompare4(TIM8, 390); // 前进,轮子一一对应

@@ -18,7 +18,6 @@ u8 LunPani    = 0;                              // 轮盘的下标
 u8 Tui[2][10];
 u8 Tuii = 0;
 
-u8 Flag_CiShu_C = 0;//C区域每次转的不一样，第几次抓
 
 void BuJin_GPIO_Init()
 {
@@ -186,16 +185,6 @@ void Zhua(u8 Flag_HuoJia)
             delay_ms(100);
             Tuii = Tuii - 1;
             delay_ms(100);
-            LCD_CLS();
-            sprintf(OLED_BUF, "%c %c %c %c %c %c", Tui[1][0], Tui[1][1], Tui[1][2], Tui[1][3], Tui[1][4], Tui[1][5]); // 显示
-            LCD_16_HanZi_ASCII(0, 4, OLED_BUF);
-            sprintf(OLED_BUF, "%c %c %c %c %c %c", Tui[0][0], Tui[0][1], Tui[0][2], Tui[0][3], Tui[0][4], Tui[0][5]); // 显示
-            LCD_16_HanZi_ASCII(0, 2, OLED_BUF);
-            sprintf(OLED_BUF, "%c %c", USART3_RX_BUF[0], USART3_RX_BUF[1]); // 显示
-            LCD_16_HanZi_ASCII(0, 0, OLED_BUF);
-            sprintf(OLED_BUF, "%d %c %c", Tuii, Tui[0][Tuii], Tui[1][Tuii]); // 显示
-            LCD_16_HanZi_ASCII(6, 0, OLED_BUF);
-            delay_ms(50);
             if (Tui[1][Tuii] != 'o') {
                 if (Tui[1][Tuii] == 'r')
                     BMQ_MOVE(0, 15, 0); // 往右走
@@ -295,18 +284,18 @@ void Nano_ChuLi(u8 Flag_HuoJia)
 
                 if (USART3_RX_BUF[0] != '1') // 上层要抓
                 {
-                    Printf(USART2, "%s", zhiling[4]); // 抓上中间木块
+                    Printf(USART2, "%s", zhiling[5]); // 抓上中间木块
                     for (u8 t = 0; t < 10; t++)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位
                     LunPan[LunPani] = USART3_RX_BUF[0];
-                    LunPani++;
+                    LunPani++; 
                     if (LunPani == 6) LunPani = 0;
                     LunPan_Zhuan();
                 } 
                 if (USART3_RX_BUF[1] != '1') // 下层要抓
                 {
-                    Printf(USART2, "%s", zhiling[5]); // 抓下中间木块
+                    Printf(USART2, "%s", zhiling[7]); // 抓下中间木块
                     for (u8 t = 0; t < 10; t++)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位
@@ -350,55 +339,21 @@ void Nano_ChuLi(u8 Flag_HuoJia)
             {
                 if (USART3_RX_BUF[0] == 'm') // 上层要抓
                 {
-                    Flag_CiShu_C++;
-                    if (Flag_CiShu_C == 3 || Flag_CiShu_C == 4) {
-                        for (u8 i = 0; i < 5; i++) {
-                            LunPan_Zhuan();
-                            LunPani++;
-                            if (LunPani == 6) LunPani = 0;
-                            delay_ms(10);
-                        }
-                    }
                     Printf(USART2, "%s", zhiling[5]); // 抓上中间饮料
                     for (u8 t = 0; t < 9; t++)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位
                     LunPan[LunPani] = USART3_RX_BUF[0];
                     delay_ms(10);
-                    if (Flag_CiShu_C == 1 || Flag_CiShu_C == 2||Flag_CiShu_C==3) {
-                        for (u8 i = 0; i < 2; i++) {
-                            LunPan_Zhuan();
-                            LunPani++;
-                            if (LunPani == 6) LunPani = 0;
-                            delay_ms(10);
-                        }
-                    }
                 }
                 if (USART3_RX_BUF[1] == 'm') // 下层要抓
                 {
-                    Flag_CiShu_C++;
-                    if (Flag_CiShu_C == 3 || Flag_CiShu_C == 4) {
-                        for (u8 i = 0; i < 5; i++) {
-                            LunPan_Zhuan();
-                            LunPani++;
-                            if (LunPani == 6) LunPani = 0;
-                            delay_ms(10);
-                        }
-                    }
                     Printf(USART2, "%s", zhiling[7]); // 抓下中间木块
                     for (u8 t = 0; t < 11; t++)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位
                     LunPan[LunPani] = USART3_RX_BUF[1];
                     delay_ms(10);
-                    if (Flag_CiShu_C == 1 || Flag_CiShu_C == 2||Flag_CiShu_C==3) {
-                        for (u8 i = 0; i < 2; i++) {
-                            LunPan_Zhuan();
-                            LunPani++;
-                            if (LunPani == 6) LunPani = 0;
-                            delay_ms(10);
-                        }
-                    }
                 }
                 USART3_RX_STA = 0;
                 break;
@@ -414,5 +369,4 @@ void HandInit()
     memset(Tui, 0, 12);
     LunPani = 0;
     Tuii    = 0;
-    Flag_CiShu_C=0;
 }
