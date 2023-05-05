@@ -49,7 +49,7 @@ int main(void)
     delay_ms(10);
     Printf(USART2, zhiling[0]);
     delay_ms(10);
-    //LunPan_Zhuan();
+    LunPan_Zhuan();
     delay_ms(100);
     // Printf(USART2, "%s\r\n", "tlcdb");
   
@@ -66,7 +66,8 @@ int main(void)
         // LCD_16_HanZi_ASCII(0, 0, OLED_BUF);
 
         // LunPan_Zhuan();
+    
          MenuOperate();
-         //DJ_MOVE_PingYi(5,100);
+        // DJ_MOVE_PingYi(5,100);
     }
 }

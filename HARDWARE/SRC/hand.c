@@ -344,6 +344,9 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位
                     LunPan[LunPani] = USART3_RX_BUF[0];
+                    LunPani++;
+                    if (LunPani == 6) LunPani = 0;
+                    LunPan_Zhuan();
                     delay_ms(10);
                 }
                 if (USART3_RX_BUF[1] == 'm') // 下层要抓
@@ -353,6 +356,9 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位
                     LunPan[LunPani] = USART3_RX_BUF[1];
+                    LunPani++;
+                    if (LunPani == 6) LunPani = 0;
+                    LunPan_Zhuan();
                     delay_ms(10);
                 }
                 USART3_RX_STA = 0;

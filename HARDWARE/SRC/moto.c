@@ -953,12 +953,12 @@ void DJ_MOVE_YS(u8 t,u8 f,u8 sp,u16 tim)	//ÑÓÊ±Í£³µ
 void DJ_MOVE_PingYi(u8 f, u8 t)
 {
 	u32 yanshi = t * 50000;
-	PWM_SET();
 	if (f == 5)
 	{
+		stop();
 		//Flag_PingYi=1;
 		// aa = St178_Scanf(1);
-		while (yanshi >= 5)
+		while (yanshi >= 5)		
 		{
 			CAR_FL = 1;
 			TIM_SetCompare2(TIM8, 470);
@@ -997,10 +997,10 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
         TIM_SetCompare2(TIM8, 0);
         delay_ms(50);
         if (t>=30) {
-            CAR_FL = 1;
-            CAR_FR = 1;
-            CAR_BL = 0;
-            CAR_BR = 0;
+            CAR_FL = 0;
+            CAR_FR = 0;
+            CAR_BL = 1;
+            CAR_BR = 1;
             TIM_SetCompare2(TIM8, 390);
             TIM_SetCompare1(TIM8, 390);
             TIM_SetCompare3(TIM8, 390);
