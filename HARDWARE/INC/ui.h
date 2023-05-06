@@ -71,5 +71,6 @@ void read_from_flash(void);
 void save_to_flash(void);
 
 void change(unsigned char (*a)[5],unsigned char len);
+void change_DongTai(unsigned char (*a)[5],unsigned char len);
 
 #endif 

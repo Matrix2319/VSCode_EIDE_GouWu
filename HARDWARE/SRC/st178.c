@@ -185,7 +185,10 @@ s8 St178_Scanf(u8 fi)		//1可以转弯0
     you_sum = st188_date3sum[0];
     if (Flag_PingYi == 1) {
         if (zuo_sum >= -3 && zuo_sum <= 3&&bx1>0)
-            return 1;
+		{
+			Flag_PingYi=0;
+			 return 1;
+		}         
         else
             return 0;
     } else {
@@ -224,17 +227,17 @@ s8 St178_Scanf(u8 fi)		//1可以转弯0
             if (((z_z >= 1 && z_z < 5) && (y_y >= 1 && y_y < 5)) || ((z_z >= 1 && z_z < 5) && y_y > 4)) //&& temp == 0||
             {
                 // temp = bx1;
-                if ((zuo_sum < 2 && zuo_sum > -3)) //||(you_sum <= 3 && you_sum >= 0)
+                if ((zuo_sum <= 6 && zuo_sum >= -6)) //||(you_sum <= 3 && you_sum >= 0)
 
                     return 1; // 可以转弯
 
-                if (zuo_sum >= 3)
-
-                    return 3; // 过于靠后
-
-                if (zuo_sum <= -3)
+                if (zuo_sum > 6)
 
                     return 4; // 过于靠前
+
+                if (zuo_sum < -6)
+
+                    return 3; // 过于靠后
 
             } else if ((y_y >= 1 && y_y < 5) && z_z > 4) {
                 if ((you_sum < 2 && you_sum >= -3)) //||(you_sum <= 3 && you_sum >= 0)||(you_sum < 2 && you_sum >-3)
@@ -243,11 +246,11 @@ s8 St178_Scanf(u8 fi)		//1可以转弯0
 
                 if (you_sum >= 3)
 
-                    return 3; // 过于靠后
+                    return 4; // 过于靠前
 
                 if (you_sum <= -3)
 
-                    return 4; // 过于靠前
+                    return 3; // 过于靠后
             }
 
             //		if(FX_flag==3||FX_flag==0||FX_flag==1)

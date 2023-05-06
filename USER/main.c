@@ -54,6 +54,7 @@ int main(void)
     // Printf(USART2, "%s\r\n", "tlcdb");
   
     Printf(USART3, "%s\r\n", "tlcdb");
+     
     while (1) {
 
         // Printf(USART1, "%s\r\n", "TLCDB1!");

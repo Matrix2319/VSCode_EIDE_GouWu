@@ -3,12 +3,27 @@
 
 #include "sys.h"
 
+
+//动态路线
+extern u8 LuXian_DongTai[20][5];
+extern u8 LuXian_DongTaii;
+
+//统计前进的格数
+extern u8 Sum_Qian;
+
 // A,B,C,D区域
 extern u8 exFlag_HuoJia;    
+
 //存放轮盘内的信息
 extern u8 LunPan[7];
 extern u8 Tui[2][7];
 extern u8 Tuii;
+
+//A区域数组
+extern u8 A_S[7];
+extern u8 A_X[7];
+extern u8 A_i;
+
 //D区域的数组
 extern u8 D_S[3][7];
 extern u8 D_X[3][7];
@@ -26,5 +41,7 @@ void LunPan_Zhuan();
 void Nano_ChuLi(u8 Flag_HuoJia);
 //初始化一些参数
 void HandInit();
+//轮盘找东西然后推(c/d 方块/饮料 r/g/b)
+void LunPan_Zhao_Tui(u8 f);
 #endif 
 

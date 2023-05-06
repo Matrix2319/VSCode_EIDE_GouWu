@@ -50,7 +50,7 @@ int bl_PWM = 0;
 int br_PWM = 0;
 
 int speed=0;
-u8 speed_carrage[10]={0,25,20,25,25,25,10};
+u8 speed_carrage[10]={0,25,27,29,15,25,10};
 
 int16_t a_pwm[6];
 
@@ -541,7 +541,7 @@ void PWM_SET(void)      //开启定时器7并且进行一些PID参数设置
 	
 	tim7_start = 1;
 	
-	TIM7_BaseTime_Init(2000,720-1);		//100 	
+	TIM7_BaseTime_Init(1500,720-1);		//100 	
 	fzopen();                         //防撞打开
 }
 
@@ -582,7 +582,7 @@ void DJ_MOVE(u8 t,u8 f,u8 sp,u8 dj_1,u8 dj_2,u8 dj_3,u8 dj_4,u8 YS)
 		}
 		else if(aa == 3)     //过于靠后
 		{
-//			FX = 1;
+			//FX = 1;
 			while(1)
 			{
 				if(aa == 1 && stop_TIM)
@@ -592,7 +592,7 @@ void DJ_MOVE(u8 t,u8 f,u8 sp,u8 dj_1,u8 dj_2,u8 dj_3,u8 dj_4,u8 YS)
 		}
 		else if(aa == 4)     //过于靠前
 		{
-//			FX = 0;
+			//FX = 0;
 			while(1)
 			{
 				if(aa == 1 && stop_TIM)
@@ -634,7 +634,7 @@ void DJ_MOVE(u8 t,u8 f,u8 sp,u8 dj_1,u8 dj_2,u8 dj_3,u8 dj_4,u8 YS)
 		}
 		else if(aa == 3)
 		{
-//			FX = 1;			
+			//FX = 1;			
 			while(1)
 			{
 				if(aa == 1 && stop_TIM)
@@ -644,7 +644,7 @@ void DJ_MOVE(u8 t,u8 f,u8 sp,u8 dj_1,u8 dj_2,u8 dj_3,u8 dj_4,u8 YS)
 		}
 		else if(aa == 4)
 		{
-//			FX = 0;			
+			//FX = 0;			
 			while(1)
 			{
 				if(aa == 1 && stop_TIM)
@@ -659,14 +659,14 @@ void DJ_MOVE(u8 t,u8 f,u8 sp,u8 dj_1,u8 dj_2,u8 dj_3,u8 dj_4,u8 YS)
 	}
 	else if(t >= 3)          //当需要走三格及以上时
 	{
-		speed = 2;	
+		speed = 3;	
 		PWM_SET();
-		while(tt < 1 && stop_TIM)	//第一格用2档速度
+		while(tt < 1 && stop_TIM)	//第一格用3档速度
 		{		
 			;
 		}
 		
-		speed = sp;		
+		speed = 2;		
 		while(t-1 > tt && stop_TIM)	//中间用设定速度
 		{
 			;
@@ -692,7 +692,7 @@ void DJ_MOVE(u8 t,u8 f,u8 sp,u8 dj_1,u8 dj_2,u8 dj_3,u8 dj_4,u8 YS)
 		}
 		else if(aa == 3)
 		{
-			FX = 1;		
+			//FX = 1;		
 			while(1)
 			{
 				if(aa == 1 && stop_TIM)
@@ -702,7 +702,7 @@ void DJ_MOVE(u8 t,u8 f,u8 sp,u8 dj_1,u8 dj_2,u8 dj_3,u8 dj_4,u8 YS)
 		}
 		else if(aa == 4)
 		{
-//			FX = 0;			
+			//FX = 0;			
 			while(1)
 			{
 				if(aa == 1 && stop_TIM)
@@ -801,7 +801,7 @@ void DJ_MOVE_ZHUAN(u8 r,u8 f)		//r3左转4右转,f1前进0后退
 //		}
 //	}
 	/*编码器转弯*/
-	speed=1;
+	speed=4;
 	if (r == 3)
 	{
 		float angle1 = 0;
@@ -1011,8 +1011,8 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
                 aax = St178_Scanf(1);
             }
         }
+		Flag_PingYi = 0;
         stop();
-        Flag_PingYi = 0;
     }
 	stop();
 }

@@ -22,41 +22,41 @@ char zhiling[][20] = {
     "$DGT:5-5,1!",   // 轻推饮料    		                4
     "$DGT:7-16,1!",  // 上中抓饮料    		                5
     "$DGT:17-26,1!", // 上中抓木块  		                6
-    "$DGT:27-38,1!" // 下中抓饮料    		                7
+    "$DGT:27-39,1!",  // 下中抓饮料    		                7
+    "$DGT:40-54,1!"  // 下中抓木块    		                8
 };
 
 // 方向0后退1前进2无3左4右5左移6右移
 // 指令组下标为A,B,C,D对应各个区域，255为空,S为上，X为下，I为初始位置，1为轮盘复位
 // 五个一组分别表示格数，方向，延时停车的延时时长ms，指令数组下标，等待机械臂延时s
 unsigned char a[][5] = {
-    // {0, 1, 10, 255, 0},
-    // {0, 6, 0, 255, 56},
-    // {0, 2, 0, 255, 10}, // 平移出去等一会儿
-    // {0, 2, 0, 'A', 0},  // 发A拍照
-    // {0, 2, 0, 255, 10}, // 停一会儿
-    // {1, 1, 0, 255, 0},  // 前移一格
-    // {0, 6, 0, 255, 5},  // 平移一点
-    // {0, 2, 0, 'A', 0},  // 发A拍照
-    // {0, 2, 0, 255, 10}, // 停一会儿
-    // {1, 1, 0, 255, 0},
-    // {0, 6, 0, 255, 5},
-    // {0, 2, 0, 'A', 0},
-    // {0, 2, 0, 255, 20},
-    // {1, 1, 0, 255, 0},
-    // {0, 6, 0, 255, 5},
-    // {0, 2, 0, 'A', 0},
-    // {0, 2, 0, 255, 20},
-    // {1, 1, 0, 255, 0},
-    // {0, 6, 0, 255, 5},
-    // {0, 2, 0, 'A', 0},
-    // {0, 2, 0, 255, 20},
-    // {1, 1, 0, 255, 0},
-    // {0, 6, 0, 255, 5},
-    // {0, 2, 0, 'A', 0},
-    // {0, 2, 0, 255, 20},
-    // {0, 2, 0, 'Z', 2}, // 因为抓的是1位置，所以要转一下才正确
-    // {0, 2, 0, 'X', 1}, // 轮盘到下层
-    // {0, 2, 0, 'P', 10},
+
+    {0, 1, 3, 255, 0},
+    {0, 6, 0, 255, 56},
+    {0, 2, 0, 255, 1}, // 平移出去等一会儿
+    {0, 2, 0, 'A', 0}, // 发A拍照
+    {1, 1, 0, 255, 0}, // 前移一格
+    {0, 6, 0, 255, 5}, // 平移一点
+    {0, 2, 0, 'A', 0}, // 发A拍照
+    {1, 1, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'A', 0},
+    {1, 1, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'A', 0},
+    {1, 1, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'A', 0},
+    {1, 1, 0, 255, 0},
+    {0, 6, 0, 255, 5},
+    {0, 2, 0, 'A', 0},
+    {0, 2, 0, 'Z', 0}, // 因为抓的是1位置，所以要转一下才正确
+    {0, 2, 0, 'X', 0}, // 轮盘到下层
+    {0, 2, 0, 'P', 0},
+    {0, 5, 0, 255, 5},
+    {0, 2, 0, 'S', 0},
+    {0, 6, 0, 255, 8},
+    {0, 2, 0, 'P', 0},
     // {1, 0, 0, 255, 0},
     // {0, 6, 0, 255, 5},
     // {0, 2, 0, 'P', 10},
@@ -239,18 +239,18 @@ unsigned char a[][5] = {
     // {1, 1, 0, 255, 0},
     // {0, 6, 0, 255, 5},
     // {0, 2, 0, 'P', 10}, // COK!
-    {0, 2, 0, 255, 0}, // 跳过i==0i
-    {0, 5, 0, 255, 15},
-    {0, 0, 35, 255, 0},
-    {0, 0, 35, 255, 0},
-    {0, 0, 8, 255, 0},
-    {0, 6, 0, 255, 10},
-    {1, 0, 0, 255, 0},
-    {0, 6, 0, 255, 5},
-    {0, 2, 0, 'D', 5},
-      {1, 0, 0, 255, 0},
-    {0, 6, 0, 255, 5},
-    {0, 2, 0, 'D', 5},
+    // {0, 2, 0, 255, 0}, // 跳过i==0i
+    // {0, 5, 0, 255, 15},
+    // {0, 0, 35, 255, 0},
+    // {0, 0, 35, 255, 0},
+    // {0, 0, 8, 255, 0},
+    // {0, 6, 0, 255, 10},
+    // {1, 0, 0, 255, 0},
+    // {0, 6, 0, 255, 5},
+    // {0, 2, 0, 'D', 5},
+    // {1, 0, 0, 255, 0},
+    // {0, 6, 0, 255, 5},
+    // {0, 2, 0, 'D', 5},
 
     {0, 0, 0, 0, 0}};
 
@@ -395,18 +395,9 @@ StatusTab KeyTab[MENU_SIZE] =
 // 路线数组五个一组分别表示格数，方向，延时停车的延时时长ms，指令数组下标，等待机械臂延时s
 void change(unsigned char (*a)[5], unsigned char len)
 {
-    uchar i, j, pinf_qian = 0, num = 0, relen = 0, index = 0, ret = 1;
-    int pinf       = 0;
-    u8 dist[9]     = {0};
-    char s[100]    = "";
-    int breakcnt   = 0;
-    int real_dis_x = 0;
-    int xx         = 0;
-    int count_once = 0;
-
+   
     // printf("$DGT:11-11,1!");
-    for (i = 0; a[i][0] + a[i][1] + a[i][2] + a[i][3] + a[i][4] > 0; i++) {
-        xx  = 0;
+    for (u8 i = 0; a[i][0] + a[i][1] + a[i][2] + a[i][3] + a[i][4] > 0; i++) {
         LED = 0;
         if (i == 0) {
             // 			printf("$DGT:10-10,1!");
@@ -416,52 +407,98 @@ void change(unsigned char (*a)[5], unsigned char len)
             // //			for(j=0;j<10;j++)//开车延时，正式比赛时解开注释
             // //			delay_ms(1000);
             HandInit();
-        } else {
-            if (a[i][2] != 0) {
-                if (a[i][2] > 58)
-                    DJ_MOVE_YS(a[i][0], a[i][1], 1, a[i][2]);
-                else {
-                    BMQ_MOVE(a[i][1], a[i][2], 0);
-                    xx = a[i][2];
-                }
-
-            } else if (a[i][1] != 2)               
-                DJ_MOVE_BUFF_SET(a[i][0], a[i][1], a[i][4]); // 循迹移动函数   格数  方向  平移延时
-            if (a[i][3] != 255) {
-                stop();
-                if (a[i][3] == 'I' || a[i][3] == 'S' || a[i][3] == 'X') {//步进电机
-                    BuJin_Zhuan(a[i][3]);
-                    for (u8 it = 0; it < a[i][4]; it++)
-                        delay_ms(100);
-                } else if (a[i][3] == 'Z') { // 轮盘转
-                    LunPan_Zhuan();
-                    for (u8 it = 0; it < a[i][4]; it++)
-                        delay_ms(100);
-                } else if (a[i][3] == 'P') // 算法
-                {
-                    Zhua(exFlag_HuoJia);
-                    for (u8 it = 0; it < a[i][4]; it++)
-                        delay_ms(100);
-                } else if (a[i][3] == 'A' || a[i][3] == 'B' || a[i][3] == 'C' || a[i][3] == 'D') { // 给nano发数据
-                    Nano_ChuLi(a[i][3]);
-                    for (u8 it = 0; it < a[i][4]; it++)
-                        delay_ms(100);
-                }
-            }
-            if (a[i][1] == 2 && a[i][4] != 0 && a[i][3] == 255) // 啥都不做时延时
-            {
-                for (u8 it = 0; it <= a[i][4]; it++) {
-                    delay_ms(100);
-                }
-            }
-            stop();
-
         }
+        if (a[i][2] != 0) {
+            if (a[i][2] > 58)
+                DJ_MOVE_YS(a[i][0], a[i][1], 1, a[i][2]);
+            else {
+                BMQ_MOVE(a[i][1], a[i][2], 0);
+            }
+
+        } else if (a[i][1] != 2)
+            DJ_MOVE_BUFF_SET(a[i][0], a[i][1], a[i][4]); // 循迹移动函数   格数  方向  平移延时
+        if (a[i][3] != 255) {
+            stop();
+            if (a[i][3] == 'I' || a[i][3] == 'S' || a[i][3] == 'X') { // 步进电机
+                BuJin_Zhuan(a[i][3]);
+                for (u8 it = 0; it < a[i][4]; it++)
+                    delay_ms(100);
+            } else if (a[i][3] == 'Z') { // 轮盘转
+                LunPan_Zhuan();
+                for (u8 it = 0; it < a[i][4]; it++)
+                    delay_ms(100);
+            } else if (a[i][3] == 'P') // 算法
+            {
+                Zhua(exFlag_HuoJia);
+                for (u8 it = 0; it < a[i][4]; it++)
+                    delay_ms(100);
+            } else if (a[i][3] == 'A' || a[i][3] == 'B' || a[i][3] == 'C' || a[i][3] == 'D') { // 给nano发数据
+                Nano_ChuLi(a[i][3]);
+                for (u8 it = 0; it < a[i][4]; it++)
+                    delay_ms(100);
+            } else if (a[i][3] == 'r' || a[i][3] == 'g' || a[i][3] == 'b') {
+                LunPan_Zhao_Tui(a[i][3]);
+                for (u8 it = 0; it < a[i][4]; it++)
+                    delay_ms(100);
+            }
+        }
+        if (a[i][1] == 2 && a[i][4] != 0 && a[i][3] == 255) // 啥都不做时延时
+        {
+            for (u8 it = 0; it <= a[i][4]; it++) {
+                delay_ms(100);
+            }
+        }
+        stop();
     }
 }
-void change_uart(unsigned char (*a)[5], unsigned char len)
+void change_DongTai(unsigned char (*a)[5], unsigned char len)
 {
-    ;
+
+    for (u8 i = 0; a[i][0] + a[i][1] + a[i][2] + a[i][3] + a[i][4] > 0; i++) {
+        LED = 0;     
+        LCD_CLS();
+    // sprintf(OLED_BUF,"%d %d %d %d %d",LuXian_DongTai[i][0],LuXian_DongTai[i][1],LuXian_DongTai[i][2],LuXian_DongTai[i][3],LuXian_DongTai[i][4]);//显示
+    // LCD_16_HanZi_ASCII(0,0,OLED_BUF);
+        if (a[i][2] != 0) {
+            if (a[i][2] > 58)
+                DJ_MOVE_YS(a[i][0], a[i][1], 1, a[i][2]);
+            else 
+                BMQ_MOVE(a[i][1], a[i][2], 0);
+        } else if (a[i][1] != 2)
+            DJ_MOVE_BUFF_SET(a[i][0], a[i][1], a[i][4]); // 循迹移动函数   格数  方向  平移延时
+        if (a[i][3] != 255) {
+            stop();
+            if (a[i][3] == 'I' || a[i][3] == 'S' || a[i][3] == 'X') { // 步进电机
+                BuJin_Zhuan(a[i][3]);
+                for (u8 it = 0; it < a[i][4]; it++)
+                    delay_ms(100);
+            } else if (a[i][3] == 'Z') { // 轮盘转
+                LunPan_Zhuan();
+                for (u8 it = 0; it < a[i][4]; it++)
+                    delay_ms(100);
+            } else if (a[i][3] == 'P') // 算法
+            {
+                Zhua(exFlag_HuoJia);
+                for (u8 it = 0; it < a[i][4]; it++)
+                    delay_ms(100);
+            } else if (a[i][3] == 'A' || a[i][3] == 'B' || a[i][3] == 'C' || a[i][3] == 'D') { // 给nano发数据
+                Nano_ChuLi(a[i][3]);
+                for (u8 it = 0; it < a[i][4]; it++)
+                    delay_ms(100);
+            } else if (a[i][3] == 'r' || a[i][3] == 'g' || a[i][3] == 'b') {
+                LunPan_Zhao_Tui(a[i][3]);
+                for (u8 it = 0; it < a[i][4]; it++)
+                    delay_ms(100);
+            }
+        }
+        if (a[i][1] == 2 && a[i][4] != 0 && a[i][3] == 255) // 啥都不做时延时
+        {
+            for (u8 it = 0; it <= a[i][4]; it++) {
+                delay_ms(100);
+            }
+        }
+        stop();
+    }
 }
 
 void OLED_tou(void)
@@ -3359,23 +3396,21 @@ void Net_d(void)
                             LCD_16_HanZi_ASCII(9, 4, "  ");
                             break;
                         case 3:
-                            LCD_16_HanZi_ASCII(9, 4, "go");
-                            change_uart(b, 0);
+                            LCD_16_HanZi_ASCII(9, 4, "go");                  
                             LCD_16_HanZi_ASCII(9, 4, "  ");
                             break;
                         case 4:
                             LCD_16_HanZi_ASCII(14, 4, "go");
-                            change_uart(c, 0);
                             LCD_16_HanZi_ASCII(14, 4, "  ");
                             break;
                         case 5:
                             LCD_16_HanZi_ASCII(9, 6, "go");
-                            change_uart(d, 0);
+                   
                             LCD_16_HanZi_ASCII(9, 6, "  ");
                             break;
                         case 6:
                             LCD_16_HanZi_ASCII(14, 6, "go");
-                            change_uart(e, 0);
+                    
                             LCD_16_HanZi_ASCII(14, 6, "  ");
                             break;
 
@@ -3392,22 +3427,22 @@ void Net_d(void)
                             break;
                         case 2:
                             LCD_16_HanZi_ASCII(14, 2, "go"); // 路线1
-                            change_uart(a1, 0);
+                             (a1, 0);
                             LCD_16_HanZi_ASCII(14, 2, "  ");
                             break;
                         case 3:
                             LCD_16_HanZi_ASCII(9, 4, "go"); // 路线1
-                            change_uart(b1, 0);
+                             (b1, 0);
                             LCD_16_HanZi_ASCII(9, 4, "  ");
                             break;
                         case 4:
                             LCD_16_HanZi_ASCII(14, 4, "go"); // 路线1
-                            change_uart(c1, 0);
+                             (c1, 0);
                             LCD_16_HanZi_ASCII(14, 4, "  ");
                             break;
                         case 5:
                             LCD_16_HanZi_ASCII(9, 6, "go"); // 路线1
-                            change_uart(d1, 0);
+                             (d1, 0);
                             LCD_16_HanZi_ASCII(9, 6, "  ");
                             break;
                         case 6:
@@ -3536,27 +3571,27 @@ void Net_e(void)
                             break;
                         case 2:
                             LCD_16_HanZi_ASCII(14, 2, "go"); // 路线1
-                            change_uart(a2, 0);
+                             (a2, 0);
                             LCD_16_HanZi_ASCII(14, 2, "  ");
                             break;
                         case 3:
                             LCD_16_HanZi_ASCII(9, 4, "go"); // 路线1
-                            change_uart(a2, 0);
+                             (a2, 0);
                             LCD_16_HanZi_ASCII(9, 4, "  ");
                             break;
                         case 4:
                             LCD_16_HanZi_ASCII(14, 4, "go"); // 路线1
-                            change_uart(c2, 0);
+                             (c2, 0);
                             LCD_16_HanZi_ASCII(14, 4, "  ");
                             break;
                         case 5:
                             LCD_16_HanZi_ASCII(9, 6, "go"); // 路线1
-                            change_uart(d2, 0);
+                             (d2, 0);
                             LCD_16_HanZi_ASCII(9, 6, "  ");
                             break;
                         case 6:
                             LCD_16_HanZi_ASCII(14, 6, "go"); // 路线1
-                            change_uart(e2, 0);
+                             (e2, 0);
                             LCD_16_HanZi_ASCII(14, 6, "  ");
                             break;
 
