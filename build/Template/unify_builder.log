@@ -6575,3 +6575,169 @@ command:
 [2023-05-05 20:38:56]	[done]
 	build successfully !
 
+[2023-05-05 22:30:55]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 390: Error:  #77-D: this declaration has no storage class or type specifier
+     USART3_RX_STA = 0;
+     ^
+".\HARDWARE\SRC\hand.c", line 390: Error:  #147: declaration is incompatible with "u16 USART3_RX_STA" (declared at line 21 of "SYSTEM/usart/usart.h")
+     USART3_RX_STA = 0;
+     ^
+".\HARDWARE\SRC\hand.c", line 391: Error:  #169: expected a declaration
+  }
+  ^
+".\HARDWARE\SRC\hand.c", line 400: Warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+.\HARDWARE\SRC\hand.c: 1 warning, 3 errors
+
+[2023-05-05 22:35:05]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 396: Error:  #77-D: this declaration has no storage class or type specifier
+     USART3_RX_STA = 0;
+     ^
+".\HARDWARE\SRC\hand.c", line 396: Error:  #147: declaration is incompatible with "u16 USART3_RX_STA" (declared at line 21 of "SYSTEM/usart/usart.h")
+     USART3_RX_STA = 0;
+     ^
+".\HARDWARE\SRC\hand.c", line 397: Error:  #169: expected a declaration
+  }
+  ^
+".\HARDWARE\SRC\hand.c", line 408: Warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+.\HARDWARE\SRC\hand.c: 1 warning, 3 errors
+
+[2023-05-05 22:35:23]	[done]
+	build successfully !
+
+[2023-05-05 22:35:32]	[done]
+	build successfully !
+
+[2023-05-05 22:42:00]	[done]
+	build successfully !
+
+[2023-05-05 22:43:31]	[done]
+	build successfully !
+
+[2023-05-05 22:48:16]	[done]
+	build successfully !
+
+[2023-05-05 22:50:24]	[done]
+	build successfully !
+
+[2023-05-05 22:52:54]	[done]
+	build successfully !
+
+[2023-05-05 22:53:58]	[done]
+	build successfully !
+
+[2023-05-05 22:55:34]	[done]
+	build successfully !
+
+[2023-05-05 22:56:16]	[done]
+	build successfully !
+
+[2023-05-05 23:00:42]	[done]
+	build successfully !
+
+[2023-05-05 23:01:00]	[done]
+	build successfully !
+
+[2023-05-06 13:26:29]	[done]
+	build successfully !
+
+[2023-05-06 13:32:20]	[done]
+	build successfully !
+
+[2023-05-06 13:49:50]	[done]
+	build successfully !
+
+[2023-05-06 13:50:11]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 15: Error:  #147: declaration is incompatible with "u8 LunPan[10]" (declared at line 9 of "HARDWARE/INC/hand.h")
+  u8 LunPan[7] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // 轮盘存放的东西
+     ^
+".\HARDWARE\SRC\hand.c", line 15: Error:  #146: too many initializer values
+  u8 LunPan[7] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // 轮盘存放的东西
+                                       ^
+".\HARDWARE\SRC\hand.c", line 18: Error:  #147: declaration is incompatible with "u8 Tui[2][10]" (declared at line 10 of "HARDWARE/INC/hand.h")
+  u8 Tui[2][7];
+     ^
+".\HARDWARE\SRC\hand.c", line 21: Error:  #147: declaration is incompatible with "u8 D_S[3][10]" (declared at line 13 of "HARDWARE/INC/hand.h")
+  u8 D_S[3][7];
+     ^
+".\HARDWARE\SRC\hand.c", line 22: Error:  #147: declaration is incompatible with "u8 D_X[3][10]" (declared at line 14 of "HARDWARE/INC/hand.h")
+  u8 D_X[3][7];
+     ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 5 errors
+
+[2023-05-06 13:50:23]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 15: Error:  #146: too many initializer values
+  u8 LunPan[7] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // 轮盘存放的东西
+                                       ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 1 error
+
+[2023-05-06 13:50:47]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 16: Error:  #65: expected a ";"
+  u8 LunPani    = 0;                              // 轮盘的下标
+  ^
+".\HARDWARE\SRC\hand.c", line 147: Error:  #20: identifier "LunPani" is undefined
+                              while (LunPani != i) {
+                                     ^
+".\HARDWARE\SRC\hand.c", line 167: Error:  #20: identifier "LunPani" is undefined
+                              while (LunPani != i) {
+                                     ^
+".\HARDWARE\SRC\hand.c", line 235: Error:  #20: identifier "LunPani" is undefined
+                                  while (LunPani != i) {
+                                         ^
+".\HARDWARE\SRC\hand.c", line 256: Error:  #20: identifier "LunPani" is undefined
+                                  while (LunPani != i) {
+                                         ^
+".\HARDWARE\SRC\hand.c", line 295: Error:  #20: identifier "LunPani" is undefined
+                      LunPan[LunPani] = USART3_RX_BUF[0];
+                             ^
+".\HARDWARE\SRC\hand.c", line 306: Error:  #20: identifier "LunPani" is undefined
+                      LunPan[LunPani] = USART3_RX_BUF[1];
+                             ^
+".\HARDWARE\SRC\hand.c", line 350: Error:  #20: identifier "LunPani" is undefined
+                      LunPan[LunPani] = USART3_RX_BUF[0];
+                             ^
+".\HARDWARE\SRC\hand.c", line 362: Error:  #20: identifier "LunPani" is undefined
+                      LunPan[LunPani] = USART3_RX_BUF[1];
+                             ^
+".\HARDWARE\SRC\hand.c", line 402: Error:  #20: identifier "LunPani" is undefined
+      LunPani = 0;
+      ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 10 errors
+
+[2023-05-06 13:50:51]	[done]
+	build successfully !
+
+[2023-05-06 13:51:56]	[done]
+	build successfully !
+
+[2023-05-06 13:54:22]	[done]
+	build successfully !
+
+[2023-05-06 14:23:29]	[done]
+	build successfully !
+
+[2023-05-06 14:28:37]	[done]
+	build successfully !
+
+[2023-05-06 14:29:52]	[done]
+	build successfully !
+

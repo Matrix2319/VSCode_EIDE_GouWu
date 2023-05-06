@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build\Template\Template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\Template\Template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Fri May 05 20:38:56 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sat May 06 14:29:52 2023
 <BR><P>
 <H3>Maximum Stack Usage =        560 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -341,6 +341,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Printf
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HandInit
 </UL>
 
 <P><STRONG><a name="[131]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
@@ -1207,10 +1208,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD_AnJian
 </UL>
 
-<P><STRONG><a name="[d0]"></a>HandInit</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, hand.o(i.HandInit))
+<P><STRONG><a name="[d0]"></a>HandInit</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, hand.o(i.HandInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = HandInit &rArr; Printf &rArr; vsprintf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Printf
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;change
 </UL>
@@ -1219,7 +1221,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
 <P><STRONG><a name="[d2]"></a>Init_BMQ</STRONG> (Thumb, 564 bytes, Stack size 32 bytes, timer.o(i.Init_BMQ))
-<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = Init_BMQ &rArr; TIM_ICInit &rArr; TI4_Config
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = Init_BMQ &rArr; TIM_ICInit &rArr; TI3_Config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
@@ -1432,7 +1434,7 @@ Global Symbols
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
 </UL>
 
-<P><STRONG><a name="[eb]"></a>Nano_ChuLi</STRONG> (Thumb, 632 bytes, Stack size 16 bytes, hand.o(i.Nano_ChuLi))
+<P><STRONG><a name="[eb]"></a>Nano_ChuLi</STRONG> (Thumb, 770 bytes, Stack size 16 bytes, hand.o(i.Nano_ChuLi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = Nano_ChuLi &rArr; Printf &rArr; vsprintf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
@@ -2182,16 +2184,16 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[d9]"></a>TIM_ICInit</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, stm32f10x_tim.o(i.TIM_ICInit))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = TIM_ICInit &rArr; TI4_Config
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = TIM_ICInit &rArr; TI3_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI4_Config
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI3_Config
+<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI3_Config
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI2_Config
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI1_Config
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC4Prescaler
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC3Prescaler
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC2Prescaler
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC1Prescaler
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI4_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_BMQ
 </UL>
@@ -2582,7 +2584,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_a
 </UL>
 
-<P><STRONG><a name="[ed]"></a>change</STRONG> (Thumb, 610 bytes, Stack size 168 bytes, ui.o(i.change))
+<P><STRONG><a name="[ed]"></a>change</STRONG> (Thumb, 588 bytes, Stack size 168 bytes, ui.o(i.change))
 <BR><BR>[Stack]<UL><LI>Max Depth = 544<LI>Call Chain = change &rArr; DJ_MOVE_BUFF_SET &rArr; DJ_MOVE &rArr; St178_Scanf &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DJ_MOVE_BUFF_SET

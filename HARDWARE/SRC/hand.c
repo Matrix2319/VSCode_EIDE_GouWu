@@ -12,11 +12,15 @@
 u8 exFlag_HuoJia          = 0; // 全局的A,B,C,D区域
 u8 Flag_HuoJia_ShangXia = 0; // 区分上下货架
 
-u8 LunPan[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // 轮盘存放的东西
+u8 LunPan[7]; // 轮盘存放的东西
 u8 LunPani    = 0;                              // 轮盘的下标
 
-u8 Tui[2][10];
+u8 Tui[2][7];
 u8 Tuii = 0;
+
+u8 D_S[3][7];
+u8 D_X[3][7];
+u8 D_i;
 
 
 void BuJin_GPIO_Init()
@@ -135,7 +139,7 @@ void Zhua(u8 Flag_HuoJia)
             delay_ms(10);
             if (USART3_RX_STA & 0x8000) // 接收完成
             {
-                    delay_ms(10);
+                delay_ms(10);
                 if (Flag_HuoJia_ShangXia == 'X') {
                     for (u8 i = 0; i <= 5; i++) {
                         if (LunPan[i] == USART3_RX_BUF[1]) {
@@ -269,6 +273,10 @@ void Zhua(u8 Flag_HuoJia)
             }
         }
     }
+if(Flag_HuoJia=='D')
+{
+    
+}
 }
 void Nano_ChuLi(u8 Flag_HuoJia)
 {
@@ -289,10 +297,10 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位
                     LunPan[LunPani] = USART3_RX_BUF[0];
-                    LunPani++; 
+                    LunPani++;
                     if (LunPani == 6) LunPani = 0;
                     LunPan_Zhuan();
-                } 
+                }
                 if (USART3_RX_BUF[1] != '1') // 下层要抓
                 {
                     Printf(USART2, "%s", zhiling[7]); // 抓下中间木块
@@ -303,7 +311,7 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                     LunPani++;
                     if (LunPani == 6) LunPani = 0;
                     LunPan_Zhuan();
-                } 
+                }
                 USART3_RX_STA = 0;
                 break;
             }
@@ -314,7 +322,7 @@ void Nano_ChuLi(u8 Flag_HuoJia)
         memset(USART3_RX_BUF, 0, 10); // 将数组清0
         USART3_RX_STA = 0;
         delay_ms(100);
-        Printf(USART3,"%c",'B');
+        Printf(USART3, "%c", 'B');
         while (1) {
             delay_ms(10);
             if (USART3_RX_STA & 0x8000) // 接收完成
@@ -366,6 +374,27 @@ void Nano_ChuLi(u8 Flag_HuoJia)
             }
         }
     }
+    if (Flag_HuoJia == 'D') {
+        exFlag_HuoJia = 'D';
+        memset(USART3_RX_BUF, 0, 10); // 将数组清0
+        USART3_RX_STA = 0;
+        delay_ms(100);
+        Printf(USART3, "%c", 'D');
+        while (1) {
+            delay_ms(10);
+            if (USART3_RX_STA & 0x8000) // 接收完成
+            {
+                for (u8 i = 0; i < 3; i++) {
+                    D_S[i][D_i] = USART3_RX_BUF[i];
+                }
+                for (u8 i = 3; i < 6; i++) {
+                    D_X[i-3][D_i] = USART3_RX_BUF[i];
+                }
+                D_i++;
+                break;
+            }
+        }
+    }
     USART3_RX_STA = 0;
 }
 void HandInit()
@@ -373,6 +402,9 @@ void HandInit()
     Printf(USART2, "%s", zhiling[0]); // 复位
     memset(LunPan, 0, 10);
     memset(Tui, 0, 12);
+    memset(D_S, 0, 30);
+    memset(D_X, 0, 30);
     LunPani = 0;
     Tuii    = 0;
+    D_i     = 0;
 }
