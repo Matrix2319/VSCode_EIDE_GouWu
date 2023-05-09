@@ -145,208 +145,80 @@ void Zhua(u8 Flag_HuoJia)
         memset(LuXian_DongTai, 0, 100);
         if (Flag_HuoJia_ShangXia == 'X') {
             if (A_X[5] != 'r') {
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'r';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(0, 2, 0, 'r', 0);
             }
             Sum_Qian++;
             if (A_X[4] != 'r') {
-                LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-                LuXian_DongTai[LuXian_DongTaii][1] = 0;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 255;
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                Sum_Qian                           = 0;
-                LuXian_DongTaii++;
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'r';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'r', 0);
             }
             Sum_Qian++;
             if (A_X[3] != 'g') {
-                LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-                LuXian_DongTai[LuXian_DongTaii][1] = 0;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 255;
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                Sum_Qian                           = 0;
-                LuXian_DongTaii++;
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'g';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'g', 0);
             }
             Sum_Qian++;
             if (A_X[2] != 'g') {
-                LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-                LuXian_DongTai[LuXian_DongTaii][1] = 0;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 255;
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                Sum_Qian                           = 0;
-                LuXian_DongTaii++;
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'g';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'g', 0);
             }
             Sum_Qian++;
             if (A_X[1] != 'b') {
-                LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-                LuXian_DongTai[LuXian_DongTaii][1] = 0;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 255;
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                Sum_Qian                           = 0;
-                LuXian_DongTaii++;
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'b';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'b', 0);
             }
             Sum_Qian++;
             if (A_X[0] != 'b') {
-                LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-                LuXian_DongTai[LuXian_DongTaii][1] = 0;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 255;
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                Sum_Qian                           = 0;
-                LuXian_DongTaii++;
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'b';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'b', 0);
             }
-            LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-            LuXian_DongTai[LuXian_DongTaii][1] = 0;
-            LuXian_DongTai[LuXian_DongTaii][2] = 0;
-            LuXian_DongTai[LuXian_DongTaii][3] = 255;
-            LuXian_DongTai[LuXian_DongTaii][4] = 0;
-            Sum_Qian                           = 0;
-            LuXian_DongTaii++;
-            LuXian_DongTai[LuXian_DongTaii][0] = 0;
-            LuXian_DongTai[LuXian_DongTaii][1] = 0;
-            LuXian_DongTai[LuXian_DongTaii][2] = 0;
-            LuXian_DongTai[LuXian_DongTaii][3] = 0;
-            LuXian_DongTai[LuXian_DongTaii][4] = 0;
+            Routecpy(Sum_Qian, 0, 0, 255, 0);
+            Sum_Qian = 0;
+            Routecpy(0, 0, 0, 0, 0);
             delay_ms(10);
             change_DongTai(LuXian_DongTai, 10);
         } else if (Flag_HuoJia_ShangXia == 'S') {
             if (A_S[0] != 'b') {
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'b';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(0, 2, 0, 'b', 0);
             }
             Sum_Qian++;
             if (A_S[1] != 'b') {
-                LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-                LuXian_DongTai[LuXian_DongTaii][1] = 1;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 255;
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                Sum_Qian                           = 0;
-                LuXian_DongTaii++;
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'b';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'b', 0);
             }
             Sum_Qian++;
             if (A_S[2] != 'g') {
-                LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-                LuXian_DongTai[LuXian_DongTaii][1] = 1;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 255;
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                Sum_Qian                           = 0;
-                LuXian_DongTaii++;
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'g';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'g', 0);
             }
             Sum_Qian++;
             if (A_S[3] != 'g') {
-                LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-                LuXian_DongTai[LuXian_DongTaii][1] = 1;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 255;
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                Sum_Qian                           = 0;
-                LuXian_DongTaii++;
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'g';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'g', 0);
             }
             Sum_Qian++;
             if (A_S[4] != 'r') {
-                LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-                LuXian_DongTai[LuXian_DongTaii][1] = 1;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 255;
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                Sum_Qian                           = 0;
-                LuXian_DongTaii++;
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'r';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'r', 0);
             }
             Sum_Qian++;
             if (A_S[5] != 'r') {
-                LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-                LuXian_DongTai[LuXian_DongTaii][1] = 1;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 255;
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                Sum_Qian                           = 0;
-                LuXian_DongTaii++;
-                LuXian_DongTai[LuXian_DongTaii][0] = 0;
-                LuXian_DongTai[LuXian_DongTaii][1] = 2;
-                LuXian_DongTai[LuXian_DongTaii][2] = 0;
-                LuXian_DongTai[LuXian_DongTaii][3] = 'r';
-                LuXian_DongTai[LuXian_DongTaii][4] = 0;
-                LuXian_DongTaii++;
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'r', 0);
             }
-            LuXian_DongTai[LuXian_DongTaii][0] = Sum_Qian;
-            LuXian_DongTai[LuXian_DongTaii][1] = 1;
-            LuXian_DongTai[LuXian_DongTaii][2] = 0;
-            LuXian_DongTai[LuXian_DongTaii][3] = 255;
-            LuXian_DongTai[LuXian_DongTaii][4] = 0;
-            Sum_Qian                           = 0;
-            LuXian_DongTaii++;
-            LuXian_DongTai[LuXian_DongTaii][0] = 0;
-            LuXian_DongTai[LuXian_DongTaii][1] = 0;
-            LuXian_DongTai[LuXian_DongTaii][2] = 0;
-            LuXian_DongTai[LuXian_DongTaii][3] = 0;
-            LuXian_DongTai[LuXian_DongTaii][4] = 0;
+            Routecpy(Sum_Qian, 0, 0, 255, 0);
+            Sum_Qian = 0;
+            Routecpy(0, 0, 0, 0, 0);
             delay_ms(10);
             change_DongTai(LuXian_DongTai, 10);
         }
@@ -599,9 +471,19 @@ void LunPan_Zhao_Tui(u8 f)
                 delay_ms(500);
                 delay_ms(500);
                 Printf(USART2, zhiling[2]);
-                delay_ms(300);
+                delay_ms(500);
                 break;
             }
         }
     }
+}
+
+void Routecpy(u8 st1, u8 ed2, u8 rd3, u8 th4, u8 th5)
+{
+    LuXian_DongTai[LuXian_DongTaii][0] = st1;
+    LuXian_DongTai[LuXian_DongTaii][1] = ed2;
+    LuXian_DongTai[LuXian_DongTaii][2] = rd3;
+    LuXian_DongTai[LuXian_DongTaii][3] = th4;
+    LuXian_DongTai[LuXian_DongTaii][4] = th5;
+    LuXian_DongTaii++;
 }

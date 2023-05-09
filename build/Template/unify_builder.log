@@ -1,179 +1,934 @@
-[2023-05-06 19:21:03]	link failed !, exit code: 1
+[2023-05-07 01:43:56]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
    at unify_builder.Program.Main(String[] args_)
 ---
-Error: L6218E: Undefined symbol change_uart (referred from ui.o).
-Not enough information to list image symbols.
-Finished: 1 information, 0 warning and 1 error messages.
+"HARDWARE/INC/timer.h", line 10: Error:  #130: expected a "{"
+  void Init_TIM8_PWM(u16 arr ,u16 psc);
+  ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 119: Error:  #20: identifier "clock_t" is undefined
+  extern _ARMABI clock_t clock(void);
+                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 127: Error:  #100: duplicate parameter name
+  extern _ARMABI double difftime(time_t /*time1*/, time_t /*time0*/);
+                                                   ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 127: Error:  #92: identifier-list parameters may only be used in a function definition
+  extern _ARMABI double difftime(time_t /*time1*/, time_t /*time0*/);
+                        ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 132: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI time_t mktime(struct tm * /*timeptr*/) __attribute__((__nonnull__(1)));
+                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 148: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI time_t time(time_t * /*timer*/);
+                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 148: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI time_t time(time_t * /*timer*/);
+                             ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 170: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI char *ctime(const time_t * /*timer*/) __attribute__((__nonnull__(1)));
+                                   ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 177: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI struct tm *gmtime(const time_t * /*timer*/) __attribute__((__nonnull__(1)));
+                                         ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 183: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI struct tm *localtime(const time_t * /*timer*/) __attribute__((__nonnull__(1)));
+                                            ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 184: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI struct tm *_localtime_r(const time_t * __restrict /*timer*/,
+                                               ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 187: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI struct tm *localtime_r(const time_t * __restrict /*timer*/,
+                                              ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 195: Error:  #20: identifier "size_t" is undefined
+  extern _ARMABI size_t strftime(char * __restrict /*s*/, size_t /*maxsize*/,
+                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 195: Error:  #20: identifier "size_t" is undefined
+  extern _ARMABI size_t strftime(char * __restrict /*s*/, size_t /*maxsize*/,
+                                                          ^
+".\HARDWARE\SRC\hand.c", line 82: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(200);
+              ^
+".\HARDWARE\SRC\hand.c", line 96: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(200); // 延时是必要的
+              ^
+".\HARDWARE\SRC\hand.c", line 111: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(200);
+              ^
+".\HARDWARE\SRC\hand.c", line 133: Warning:  #223-D: function "delay_ms" declared implicitly
+      delay_ms(500);
+      ^
+".\HARDWARE\SRC\hand.c", line 158: Error:  #29: expected an expression
+                  LuXian_Rev[5] = {Sum_Qian, 0, 0, 255, 0};
+                                  ^
+".\HARDWARE\SRC\hand.c", line 158: Warning:  #175-D: subscript out of range
+                  LuXian_Rev[5] = {Sum_Qian, 0, 0, 255, 0};
+                  ^
+".\HARDWARE\SRC\hand.c", line 250: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(10);
+              ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #109: expression preceding parentheses of apparent call must have (pointer-to-) function type
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #29: expected an expression
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                                                        ^
+".\HARDWARE\SRC\hand.c", line 354: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(10);
+              ^
+".\HARDWARE\SRC\hand.c", line 361: Warning:  #223-D: function "delay_us" declared implicitly
+              delay_us(100);
+              ^
+".\HARDWARE\SRC\hand.c", line 370: Warning:  #223-D: function "delay_ms" declared implicitly
+                  delay_ms(500);
+                  ^
+".\HARDWARE\SRC\hand.c", line 383: Warning:  #223-D: function "delay_ms" declared implicitly
+                  delay_ms(500);
+                  ^
+".\HARDWARE\SRC\hand.c", line 395: Warning:  #223-D: function "delay_us" declared implicitly
+          delay_us(10);
+          ^
+".\HARDWARE\SRC\hand.c", line 398: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(10);
+              ^
+".\HARDWARE\SRC\hand.c", line 457: Warning:  #223-D: function "delay_ms" declared implicitly
+          delay_ms(5);
+          ^
+".\HARDWARE\SRC\hand.c", line 497: Warning:  #223-D: function "delay_ms" declared implicitly
+          delay_ms(5);
+          ^
+".\HARDWARE\SRC\hand.c", line 515: Warning:  #223-D: function "delay_ms" declared implicitly
+          delay_ms(5);
+          ^
+".\HARDWARE\SRC\hand.c", line 554: Warning:  #223-D: function "delay_ms" declared implicitly
+          delay_ms(5);
+          ^
+".\HARDWARE\SRC\hand.c", line 602: Warning:  #223-D: function "delay_ms" declared implicitly
+                  delay_ms(500);
+                  ^
+".\HARDWARE\SRC\hand.c", line 613: Error:  #247: function "Routecpy" has already been defined
+  void Routecpy(u8 Reved[][5],u8 row ,u8 *Rev)
+       ^
+.\HARDWARE\SRC\hand.c: 17 warnings, 18 errors
+"HARDWARE/INC/oled2.h", line 80: Error:  #130: expected a "{"
+  extern char OLED2_BUF[100];
+  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #12-D: parsing restarts here after previous syntax error
+  char cunchu[4]={0,0,0,0};
+                 ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Error:  #65: expected a ";"
+  char cunchu[4]={0,0,0,0};
+                         ^
+".\HARDWARE\SRC\exti.c", line 62: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(z_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 65: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(y_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 68: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(q_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 71: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(h_cha<0)
+  		        ^
+.\HARDWARE\SRC\exti.c: 9 warnings, 2 errors
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 53: Error:  #130: expected a "{"
+      typedef unsigned int size_t;   /* see <stddef.h> */
+      ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 546: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int vfscanf(FILE * __restrict /*stream*/, const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1,2)));
+                                                                                               ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 547: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int vscanf(const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1)));
+                                                                ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 548: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int vsscanf(const char * __restrict /*s*/, const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1,2)));
+                                                                                                ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 550: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int _vfscanf(FILE * __restrict /*stream*/, const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1,2)));
+                                                                                                ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 551: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int _vscanf(const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1)));
+                                                                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 552: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int _vsscanf(const char * __restrict /*s*/, const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1,2)));
+                                                                                                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 554: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int vprintf(const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1)));
+                                                                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 562: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int _vprintf(const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1)));
+                                                                  ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 569: Error:  #20: identifier "__va_list" is undefined
+                      const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1,2)));
+                                                          ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 579: Error:  #20: identifier "__va_list" is undefined
+                       const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1,2)));
+                                                           ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 590: Error:  #20: identifier "__va_list" is undefined
+                       const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(3)));
+                                                           ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 602: Error:  #20: identifier "__va_list" is undefined
+                        const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1,2)));
+                                                            ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 609: Error:  #20: identifier "__va_list" is undefined
+                       const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1,2)));
+                                                           ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 616: Error:  #20: identifier "__va_list" is undefined
+                        const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(3)));
+                                                            ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 795: Error:  #757: variable "fpos_t" is not a type name
+  extern _ARMABI int fgetpos(FILE * __restrict /*stream*/, fpos_t * __restrict /*pos*/) __attribute__((__nonnull__(1,2)));
+                                                           ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 823: Error:  #757: variable "fpos_t" is not a type name
+  extern _ARMABI int fsetpos(FILE * __restrict /*stream*/, const fpos_t * __restrict /*pos*/) __attribute__((__nonnull__(1,2)));
+                                                                 ^
+".\HARDWARE\SRC\ui.c", line 2773: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2774: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2969: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2970: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3158: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3159: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3430: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3430: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3435: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3435: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3440: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3440: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3445: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3445: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3574: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3574: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3579: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3579: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3584: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3584: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3589: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3589: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3594: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3594: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                               ^
+.\HARDWARE\SRC\ui.c: 24 warnings, 17 errors
 
+[2023-05-07 01:44:20]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+"HARDWARE/INC/oled2.h", line 80: Error:  #130: expected a "{"
+  extern char OLED2_BUF[100];
+  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #12-D: parsing restarts here after previous syntax error
+  char cunchu[4]={0,0,0,0};
+                 ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Error:  #65: expected a ";"
+  char cunchu[4]={0,0,0,0};
+                         ^
+".\HARDWARE\SRC\exti.c", line 62: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(z_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 65: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(y_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 68: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(q_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 71: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(h_cha<0)
+  		        ^
+.\HARDWARE\SRC\exti.c: 9 warnings, 2 errors
+"HARDWARE/INC/timer.h", line 10: Error:  #130: expected a "{"
+  void Init_TIM8_PWM(u16 arr ,u16 psc);
+  ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 119: Error:  #20: identifier "clock_t" is undefined
+  extern _ARMABI clock_t clock(void);
+                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 127: Error:  #100: duplicate parameter name
+  extern _ARMABI double difftime(time_t /*time1*/, time_t /*time0*/);
+                                                   ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 127: Error:  #92: identifier-list parameters may only be used in a function definition
+  extern _ARMABI double difftime(time_t /*time1*/, time_t /*time0*/);
+                        ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 132: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI time_t mktime(struct tm * /*timeptr*/) __attribute__((__nonnull__(1)));
+                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 148: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI time_t time(time_t * /*timer*/);
+                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 148: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI time_t time(time_t * /*timer*/);
+                             ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 170: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI char *ctime(const time_t * /*timer*/) __attribute__((__nonnull__(1)));
+                                   ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 177: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI struct tm *gmtime(const time_t * /*timer*/) __attribute__((__nonnull__(1)));
+                                         ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 183: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI struct tm *localtime(const time_t * /*timer*/) __attribute__((__nonnull__(1)));
+                                            ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 184: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI struct tm *_localtime_r(const time_t * __restrict /*timer*/,
+                                               ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 187: Error:  #20: identifier "time_t" is undefined
+  extern _ARMABI struct tm *localtime_r(const time_t * __restrict /*timer*/,
+                                              ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 195: Error:  #20: identifier "size_t" is undefined
+  extern _ARMABI size_t strftime(char * __restrict /*s*/, size_t /*maxsize*/,
+                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\time.h", line 195: Error:  #20: identifier "size_t" is undefined
+  extern _ARMABI size_t strftime(char * __restrict /*s*/, size_t /*maxsize*/,
+                                                          ^
+".\HARDWARE\SRC\hand.c", line 82: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(200);
+              ^
+".\HARDWARE\SRC\hand.c", line 96: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(200); // 延时是必要的
+              ^
+".\HARDWARE\SRC\hand.c", line 111: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(200);
+              ^
+".\HARDWARE\SRC\hand.c", line 133: Warning:  #223-D: function "delay_ms" declared implicitly
+      delay_ms(500);
+      ^
+".\HARDWARE\SRC\hand.c", line 158: Error:  #29: expected an expression
+                  LuXian_Rev[5] = {Sum_Qian, 0, 0, 255, 0};
+                                  ^
+".\HARDWARE\SRC\hand.c", line 158: Warning:  #175-D: subscript out of range
+                  LuXian_Rev[5] = {Sum_Qian, 0, 0, 255, 0};
+                  ^
+".\HARDWARE\SRC\hand.c", line 250: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(10);
+              ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #109: expression preceding parentheses of apparent call must have (pointer-to-) function type
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #29: expected an expression
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                                                        ^
+".\HARDWARE\SRC\hand.c", line 354: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(10);
+              ^
+".\HARDWARE\SRC\hand.c", line 361: Warning:  #223-D: function "delay_us" declared implicitly
+              delay_us(100);
+              ^
+".\HARDWARE\SRC\hand.c", line 370: Warning:  #223-D: function "delay_ms" declared implicitly
+                  delay_ms(500);
+                  ^
+".\HARDWARE\SRC\hand.c", line 383: Warning:  #223-D: function "delay_ms" declared implicitly
+                  delay_ms(500);
+                  ^
+".\HARDWARE\SRC\hand.c", line 395: Warning:  #223-D: function "delay_us" declared implicitly
+          delay_us(10);
+          ^
+".\HARDWARE\SRC\hand.c", line 398: Warning:  #223-D: function "delay_ms" declared implicitly
+              delay_ms(10);
+              ^
+".\HARDWARE\SRC\hand.c", line 457: Warning:  #223-D: function "delay_ms" declared implicitly
+          delay_ms(5);
+          ^
+".\HARDWARE\SRC\hand.c", line 497: Warning:  #223-D: function "delay_ms" declared implicitly
+          delay_ms(5);
+          ^
+".\HARDWARE\SRC\hand.c", line 515: Warning:  #223-D: function "delay_ms" declared implicitly
+          delay_ms(5);
+          ^
+".\HARDWARE\SRC\hand.c", line 554: Warning:  #223-D: function "delay_ms" declared implicitly
+          delay_ms(5);
+          ^
+".\HARDWARE\SRC\hand.c", line 602: Warning:  #223-D: function "delay_ms" declared implicitly
+                  delay_ms(500);
+                  ^
+".\HARDWARE\SRC\hand.c", line 613: Error:  #247: function "Routecpy" has already been defined
+  void Routecpy(u8 Reved[][5],u8 row ,u8 *Rev)
+       ^
+.\HARDWARE\SRC\hand.c: 17 warnings, 18 errors
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 53: Error:  #130: expected a "{"
+      typedef unsigned int size_t;   /* see <stddef.h> */
+      ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 546: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int vfscanf(FILE * __restrict /*stream*/, const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1,2)));
+                                                                                               ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 547: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int vscanf(const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1)));
+                                                                ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 548: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int vsscanf(const char * __restrict /*s*/, const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1,2)));
+                                                                                                ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 550: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int _vfscanf(FILE * __restrict /*stream*/, const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1,2)));
+                                                                                                ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 551: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int _vscanf(const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1)));
+                                                                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 552: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int _vsscanf(const char * __restrict /*s*/, const char * __restrict /*format*/, __va_list) __attribute__((__nonnull__(1,2)));
+                                                                                                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 554: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int vprintf(const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1)));
+                                                                 ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 562: Error:  #20: identifier "__va_list" is undefined
+  extern _ARMABI int _vprintf(const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1)));
+                                                                  ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 569: Error:  #20: identifier "__va_list" is undefined
+                      const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1,2)));
+                                                          ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 579: Error:  #20: identifier "__va_list" is undefined
+                       const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1,2)));
+                                                           ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 590: Error:  #20: identifier "__va_list" is undefined
+                       const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(3)));
+                                                           ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 602: Error:  #20: identifier "__va_list" is undefined
+                        const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1,2)));
+                                                            ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 609: Error:  #20: identifier "__va_list" is undefined
+                       const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(1,2)));
+                                                           ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 616: Error:  #20: identifier "__va_list" is undefined
+                        const char * __restrict /*format*/, __va_list /*arg*/) __attribute__((__nonnull__(3)));
+                                                            ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 795: Error:  #757: variable "fpos_t" is not a type name
+  extern _ARMABI int fgetpos(FILE * __restrict /*stream*/, fpos_t * __restrict /*pos*/) __attribute__((__nonnull__(1,2)));
+                                                           ^
+"D:\Files\Keil\ARM\ARMCC\bin\..\include\stdio.h", line 823: Error:  #757: variable "fpos_t" is not a type name
+  extern _ARMABI int fsetpos(FILE * __restrict /*stream*/, const fpos_t * __restrict /*pos*/) __attribute__((__nonnull__(1,2)));
+                                                                 ^
+".\HARDWARE\SRC\ui.c", line 2773: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2774: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2969: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2970: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3158: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3159: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3430: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3430: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3435: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3435: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3440: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3440: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3445: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3445: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3574: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3574: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3579: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3579: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3584: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3584: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3589: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3589: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3594: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3594: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                               ^
+.\HARDWARE\SRC\ui.c: 24 warnings, 17 errors
 
-[2023-05-06 19:22:05]	[done]
+[2023-05-07 01:44:45]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 158: Error:  #29: expected an expression
+                  LuXian_Rev[5] = {Sum_Qian, 0, 0, 255, 0};
+                                  ^
+".\HARDWARE\SRC\hand.c", line 158: Warning:  #175-D: subscript out of range
+                  LuXian_Rev[5] = {Sum_Qian, 0, 0, 255, 0};
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #109: expression preceding parentheses of apparent call must have (pointer-to-) function type
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #29: expected an expression
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                                                        ^
+.\HARDWARE\SRC\hand.c: 1 warning, 3 errors
+
+[2023-05-07 01:45:04]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 158: Error:  #29: expected an expression
+                  LuXian_Rev[5] = {1, 0, 0, 255, 0};
+                                  ^
+".\HARDWARE\SRC\hand.c", line 158: Warning:  #175-D: subscript out of range
+                  LuXian_Rev[5] = {1, 0, 0, 255, 0};
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #109: expression preceding parentheses of apparent call must have (pointer-to-) function type
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #29: expected an expression
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                                                        ^
+.\HARDWARE\SRC\hand.c: 1 warning, 3 errors
+
+[2023-05-07 01:45:20]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 158: Error:  #29: expected an expression
+                  LuXian_Rev = {1, 0, 0, 255, 0};
+                               ^
+".\HARDWARE\SRC\hand.c", line 158: Error:  #137: expression must be a modifiable lvalue
+                  LuXian_Rev = {1, 0, 0, 255, 0};
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #109: expression preceding parentheses of apparent call must have (pointer-to-) function type
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #29: expected an expression
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                                                        ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 4 errors
+
+[2023-05-07 01:46:09]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 158: Error:  #146: too many initializer values
+                  u8 LuXian_Rev = {1, 0, 0, 255, 0};
+                                      ^
+".\HARDWARE\SRC\hand.c", line 159: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 *"
+                  Routecpy(LuXian_DongTai, LuXian_DongTaii,LuXian_Rev);
+                                                           ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #109: expression preceding parentheses of apparent call must have (pointer-to-) function type
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #29: expected an expression
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                                                        ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 4 errors
+
+[2023-05-07 01:46:26]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 158: Error:  #146: too many initializer values
+                  u8 LuXian_Rev = {1, 0, 0, 255, 0};
+                                      ^
+".\HARDWARE\SRC\hand.c", line 159: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 *"
+                  Routecpy(LuXian_DongTai, LuXian_DongTaii,LuXian_Rev);
+                                                           ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #109: expression preceding parentheses of apparent call must have (pointer-to-) function type
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #29: expected an expression
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                                                        ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 4 errors
+
+[2023-05-07 01:46:35]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 276: Error:  #109: expression preceding parentheses of apparent call must have (pointer-to-) function type
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                  ^
+".\HARDWARE\SRC\hand.c", line 276: Error:  #29: expected an expression
+                  aa(LuXian_DongTai[LuXian_DongTaii][0],{0,0,0,0,0});
+                                                        ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-05-07 01:46:44]	[done]
 	build successfully !
 
-[2023-05-06 19:22:14]	[done]
+[2023-05-07 01:46:54]	[done]
 	build successfully !
 
-[2023-05-06 19:27:09]	[done]
+[2023-05-07 01:47:49]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 161: Error:  #101: "LuXian_Rev" has already been declared in the current scope
+                  u8 LuXian_Rev[5] = {Sum_Qian, 1, 0, 255, 0};
+                     ^
+".\HARDWARE\SRC\hand.c", line 161: Warning:  #177-D: variable "LuXian_Rev" was declared but never referenced
+                  u8 LuXian_Rev[5] = {Sum_Qian, 1, 0, 255, 0};
+                     ^
+.\HARDWARE\SRC\hand.c: 1 warning, 1 error
+
+[2023-05-08 16:01:20]	[done]
 	build successfully !
 
-[2023-05-06 19:28:20]	[done]
+[2023-05-08 16:12:43]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 159: Error:  #29: expected an expression
+                  Routecpy(LuXian_DongTai, LuXian_DongTaii,{Sum_Qian, 0, 0, 255, 0});
+                                                           ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 1 error
+
+[2023-05-08 16:12:54]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 159: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 *"
+                  Routecpy(LuXian_DongTai, LuXian_DongTaii,Sum_Qian, 0, 0, 255, 0);
+                                                           ^
+".\HARDWARE\SRC\hand.c", line 159: Error:  #140: too many arguments in function call
+                  Routecpy(LuXian_DongTai, LuXian_DongTaii,Sum_Qian, 0, 0, 255, 0);
+                                                                     ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 2 errors
+
+[2023-05-08 16:21:12]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 159: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 *"
+                  Routecpy(LuXian_DongTai, LuXian_DongTaii,Sum_Qian, 0, 0, 255, 0);
+                                                           ^
+".\HARDWARE\SRC\hand.c", line 159: Error:  #140: too many arguments in function call
+                  Routecpy(LuXian_DongTai, LuXian_DongTaii,Sum_Qian, 0, 0, 255, 0);
+                                                                     ^
+".\HARDWARE\SRC\hand.c", line 607: Error:  #147-D: declaration is incompatible with "void Routecpy(u8 (*)[5], u8, u8 *)" (declared at line 48 of "HARDWARE/INC/hand.h")
+  void Routecpy(u8 Reved[][5],u8 row ,u8 st1,u8 ed2,u8 rd3,u8 th4,u8 th5)
+       ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 3 errors
+
+[2023-05-08 16:21:27]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\exti.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\exti.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\exti.d .\HARDWARE\SRC\exti.c
+   at unify_builder.Program.Main(String[] args_)
+---
+"HARDWARE/INC/oled2.h", line 80: Error:  #130: expected a "{"
+  extern char OLED2_BUF[100];
+  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #12-D: parsing restarts here after previous syntax error
+  char cunchu[4]={0,0,0,0};
+                 ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Error:  #65: expected a ";"
+  char cunchu[4]={0,0,0,0};
+                         ^
+".\HARDWARE\SRC\exti.c", line 62: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(z_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 65: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(y_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 68: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(q_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 71: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(h_cha<0)
+  		        ^
+.\HARDWARE\SRC\exti.c: 9 warnings, 2 errors
+
+[2023-05-08 16:22:03]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\exti.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\exti.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\exti.d .\HARDWARE\SRC\exti.c
+   at unify_builder.Program.Main(String[] args_)
+---
+"HARDWARE/INC/oled2.h", line 80: Error:  #130: expected a "{"
+  extern char OLED2_BUF[100];
+  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #12-D: parsing restarts here after previous syntax error
+  char cunchu[4]={0,0,0,0};
+                 ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Warning:  #174-D: expression has no effect
+  char cunchu[4]={0,0,0,0};
+                  ^
+".\HARDWARE\SRC\exti.c", line 8: Error:  #65: expected a ";"
+  char cunchu[4]={0,0,0,0};
+                         ^
+".\HARDWARE\SRC\exti.c", line 62: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(z_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 65: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(y_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 68: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(q_cha<0)
+  		        ^
+".\HARDWARE\SRC\exti.c", line 71: Warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(h_cha<0)
+  		        ^
+.\HARDWARE\SRC\exti.c: 9 warnings, 2 errors
+
+[2023-05-08 16:22:13]	[done]
 	build successfully !
 
-[2023-05-06 19:35:08]	[done]
-	build successfully !
+[2023-05-09 12:43:37]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 148: Error:  #165: too few arguments in function call
+                  Routecpy(0, 2, 0, 'r', 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 152: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 (*)[5]"
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                           ^
+".\HARDWARE\SRC\hand.c", line 152: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 154: Error:  #165: too few arguments in function call
+                  Routecpy(0, 2, 0, 'r', 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 158: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 (*)[5]"
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                           ^
+".\HARDWARE\SRC\hand.c", line 158: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 160: Error:  #165: too few arguments in function call
+                  Routecpy(0, 2, 0, 'g', 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 164: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 (*)[5]"
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                           ^
+".\HARDWARE\SRC\hand.c", line 164: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 166: Error:  #165: too few arguments in function call
+                  Routecpy(0, 2, 0, 'g', 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 170: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 (*)[5]"
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                           ^
+".\HARDWARE\SRC\hand.c", line 170: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 172: Error:  #165: too few arguments in function call
+                  Routecpy(0, 2, 0, 'b', 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 176: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 (*)[5]"
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                           ^
+".\HARDWARE\SRC\hand.c", line 176: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 178: Error:  #165: too few arguments in function call
+                  Routecpy(0, 2, 0, 'b', 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 180: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 (*)[5]"
+              Routecpy(Sum_Qian, 0, 255, 0);
+                       ^
+".\HARDWARE\SRC\hand.c", line 180: Error:  #165: too few arguments in function call
+              Routecpy(Sum_Qian, 0, 255, 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 182: Error:  #165: too few arguments in function call
+              Routecpy(0, 0, 0, 0, 0);
+                                    ^
+".\HARDWARE\SRC\hand.c", line 187: Error:  #165: too few arguments in function call
+                  Routecpy(0, 2, 0, 'b', 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 191: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 (*)[5]"
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                           ^
+".\HARDWARE\SRC\hand.c", line 191: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 193: Error:  #165: too few arguments in function call
+                  Routecpy(0, 2, 0, 'b', 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 197: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 (*)[5]"
+                  Routecpy(Sum_Qian, 0, 0, 255, 0);
+                           ^
+".\HARDWARE\SRC\hand.c", line 197: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 0, 255, 0);
+                                                 ^
+".\HARDWARE\SRC\hand.c", line 199: Error:  #165: too few arguments in function call
+                  Routecpy(0, 2, 0, 'g', 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 203: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 (*)[5]"
+                  Routecpy(Sum_Qian, 0, 0, 255, 0);
+                           ^
+".\HARDWARE\SRC\hand.c", line 203: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 0, 255, 0);
+                                                 ^
+".\HARDWARE\SRC\hand.c", line 205: Error:  #165: too few arguments in function call
+                  Routecpy(0, 2, 0, 'g', 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 209: Error:  #167: argument of type "u8" is incompatible with parameter of type "u8 (*)[5]"
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                           ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 30 errors
 
-[2023-05-06 19:46:34]	[done]
-	build successfully !
+[2023-05-09 12:44:08]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\hand.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\hand.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\hand.d .\HARDWARE\SRC\hand.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\hand.c", line 152: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 158: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 164: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 170: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 176: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 180: Error:  #165: too few arguments in function call
+              Routecpy(Sum_Qian, 0, 255, 0);
+                                          ^
+".\HARDWARE\SRC\hand.c", line 191: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 209: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 215: Error:  #165: too few arguments in function call
+                  Routecpy(Sum_Qian, 0, 255, 0);
+                                              ^
+".\HARDWARE\SRC\hand.c", line 219: Error:  #165: too few arguments in function call
+              Routecpy(Sum_Qian, 0, 255, 0);
+                                          ^
+.\HARDWARE\SRC\hand.c: 0 warnings, 10 errors
 
-[2023-05-06 19:46:54]	[done]
-	build successfully !
-
-[2023-05-06 20:02:33]	[done]
-	build successfully !
-
-[2023-05-06 20:04:03]	[done]
-	build successfully !
-
-[2023-05-06 20:06:40]	[done]
-	build successfully !
-
-[2023-05-06 20:12:35]	[done]
-	build successfully !
-
-[2023-05-06 20:17:23]	[done]
-	build successfully !
-
-[2023-05-06 20:20:38]	[done]
-	build successfully !
-
-[2023-05-06 20:21:37]	[done]
-	build successfully !
-
-[2023-05-06 20:36:21]	[done]
-	build successfully !
-
-[2023-05-06 20:37:20]	[done]
-	build successfully !
-
-[2023-05-06 20:45:14]	[done]
-	build successfully !
-
-[2023-05-06 20:45:39]	[done]
-	build successfully !
-
-[2023-05-06 20:59:42]	[done]
-	build successfully !
-
-[2023-05-06 21:01:32]	[done]
-	build successfully !
-
-[2023-05-06 21:05:23]	[done]
-	build successfully !
-
-[2023-05-06 21:11:05]	[done]
-	build successfully !
-
-[2023-05-06 21:11:33]	[done]
-	build successfully !
-
-[2023-05-06 21:11:45]	[done]
-	build successfully !
-
-[2023-05-06 21:13:23]	[done]
-	build successfully !
-
-[2023-05-06 21:13:26]	[done]
-	build successfully !
-
-[2023-05-06 21:27:48]	[done]
-	build successfully !
-
-[2023-05-06 21:28:35]	[done]
-	build successfully !
-
-[2023-05-06 21:44:03]	[done]
-	build successfully !
-
-[2023-05-06 21:53:03]	[done]
-	build successfully !
-
-[2023-05-06 21:53:39]	[done]
-	build successfully !
-
-[2023-05-06 22:12:24]	[done]
-	build successfully !
-
-[2023-05-06 22:27:50]	[done]
-	build successfully !
-
-[2023-05-06 22:28:51]	[done]
-	build successfully !
-
-[2023-05-06 22:29:41]	[done]
-	build successfully !
-
-[2023-05-06 22:29:44]	[done]
-	build successfully !
-
-[2023-05-06 22:30:54]	[done]
-	build successfully !
-
-[2023-05-06 22:31:12]	[done]
-	build successfully !
-
-[2023-05-06 22:38:34]	[done]
-	build successfully !
-
-[2023-05-06 22:39:12]	[done]
-	build successfully !
-
-[2023-05-06 22:44:57]	[done]
-	build successfully !
-
-[2023-05-06 22:46:40]	[done]
-	build successfully !
-
-[2023-05-06 22:49:18]	[done]
-	build successfully !
-
-[2023-05-06 22:49:21]	[done]
-	build successfully !
-
-[2023-05-06 22:49:29]	[done]
-	build successfully !
-
-[2023-05-06 22:51:38]	[done]
-	build successfully !
-
-[2023-05-06 22:51:49]	[done]
-	build successfully !
-
-[2023-05-06 22:52:57]	[done]
-	build successfully !
-
-[2023-05-06 23:24:32]	[done]
-	build successfully !
-
-[2023-05-06 23:26:11]	[done]
-	build successfully !
-
-[2023-05-06 23:41:55]	[done]
-	build successfully !
-
-[2023-05-06 23:48:05]	[done]
-	build successfully !
-
-[2023-05-06 23:55:33]	[done]
-	build successfully !
-
-[2023-05-06 23:56:02]	[done]
-	build successfully !
-
-[2023-05-07 00:21:16]	[done]
-	build successfully !
-
-[2023-05-07 00:31:34]	[done]
-	build successfully !
-
-[2023-05-07 00:32:19]	[done]
+[2023-05-09 12:45:42]	[done]
 	build successfully !
 

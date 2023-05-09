@@ -43,5 +43,8 @@ void Nano_ChuLi(u8 Flag_HuoJia);
 void HandInit();
 //轮盘找东西然后推(c/d 方块/饮料 r/g/b)
 void LunPan_Zhao_Tui(u8 f);
+//给二维数组按行幅值
+//二维数组，哪一行，传入的行
+void Routecpy(u8 st1,u8 ed2,u8 rd3,u8 th4,u8 th5);
 #endif 
 
