@@ -11,7 +11,7 @@
             "executable": "build\\Template\\Template.elf",
             "runToEntryPoint": "main",
             "device": "STM32F103ZE",
-            "ipAddress": "192.168.0.106"
+            "ipAddress": "192.168.0.112"
         },
         {
             "cwd": "${workspaceRoot}",

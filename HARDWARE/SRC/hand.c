@@ -85,7 +85,7 @@ void BuJin_Zhuan(u8 flag)
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 49; it++)
+            for (u8 it = 0; it < 45; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
@@ -112,7 +112,7 @@ void BuJin_Zhuan(u8 flag)
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 49; it++)
+            for (u8 it = 0; it < 45; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
@@ -126,7 +126,7 @@ void BuJin_Zhuan(u8 flag)
 void LunPan_Zhuan()
 {
     TIM_Cmd(TIM1, ENABLE);
-    TIM_SetCompare3(TIM1, 660);
+    TIM_SetCompare3(TIM1, 680);
     while (PFin(9) == 1)
         ;
     delay_ms(500);

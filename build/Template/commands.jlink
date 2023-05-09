@@ -1,0 +1,6 @@
+r
+halt
+loadfile "d:\Others\VsCode\EIDE\gouwu4.17\build\Template\Template.hex"
+r
+go
+exit

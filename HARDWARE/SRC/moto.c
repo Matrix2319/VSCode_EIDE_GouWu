@@ -279,10 +279,10 @@ void TIM7_IRQHandler(void)      //调整轮子PID、PWM定时器7中断函数
 		if(tim7_start)
 		{
 			/*读取四个轮子当时的PID参考值*/
-			Pid_fl.sample =((s16)TIM4->CNT);//5
-			Pid_bl.sample =-((s16)TIM5->CNT);
-			Pid_fr.sample =-((s16)TIM2->CNT);
-			Pid_br.sample =-((s16)TIM3->CNT);
+			Pid_fl.sample =((s16)TIM3->CNT);//5
+			Pid_bl.sample =((s16)TIM4->CNT);
+			Pid_fr.sample =((s16)TIM5->CNT);
+			Pid_br.sample =-((s16)TIM2->CNT);
 			if(sum_flag)                    //编码器转弯计数
 			{
 				sum_value+=Pid_fr.sample;
@@ -469,14 +469,14 @@ void TIM7_IRQHandler(void)      //调整轮子PID、PWM定时器7中断函数
 			t8pwm_3后右
 			t8pwm_4前右
 			*/
-			if(Pid_fl.pwm>=0){CAR_FL=0;TIM_SetCompare2(TIM8,Pid_fl.pwm);}  //前左   
-			else{CAR_FL=1;TIM_SetCompare2(TIM8,-Pid_fl.pwm);}
-			if(Pid_fr.pwm>=0){CAR_FR=0;TIM_SetCompare1(TIM8,Pid_fr.pwm);}	 //前右		
-			else{CAR_FR=1;TIM_SetCompare1(TIM8,-Pid_fr.pwm);}
-			if(Pid_bl.pwm>=0){CAR_BL=1;TIM_SetCompare3(TIM8,Pid_bl.pwm);}  //后左  
-			else{CAR_BL=0;TIM_SetCompare3(TIM8,-Pid_bl.pwm);}
-			if(Pid_br.pwm>=0){CAR_BR=1;TIM_SetCompare4(TIM8,Pid_br.pwm);}	 //后右		
-			else{CAR_BR=0;TIM_SetCompare4(TIM8,-Pid_br.pwm);}
+			if(Pid_fl.pwm>=0){CAR_FL=0;TIM_SetCompare4(TIM8,Pid_fl.pwm);}  
+			else{CAR_FL=1;TIM_SetCompare4(TIM8,-Pid_fl.pwm);}
+			if(Pid_fr.pwm>=0){CAR_FR=0;TIM_SetCompare3(TIM8,Pid_fr.pwm);}	 	
+			else{CAR_FR=1;TIM_SetCompare3(TIM8,-Pid_fr.pwm);}
+			if(Pid_bl.pwm>=0){CAR_BL=0;TIM_SetCompare2(TIM8,Pid_bl.pwm);}   
+			else{CAR_BL=1;TIM_SetCompare2(TIM8,-Pid_bl.pwm);}
+			if(Pid_br.pwm>=0){CAR_BR=0;TIM_SetCompare1(TIM8,Pid_br.pwm);}	 
+			else{CAR_BR=1;TIM_SetCompare1(TIM8,-Pid_br.pwm);}
 			
 		}	
 		
@@ -960,16 +960,16 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 		// aa = St178_Scanf(1);
 		while (yanshi >= 5)		
 		{
-			CAR_FL = 1;
-			TIM_SetCompare2(TIM8, 470);
-			CAR_FR = 0;
-			TIM_SetCompare1(TIM8, 390);
-			CAR_BL = 1;
-			TIM_SetCompare3(TIM8, 390);
-			CAR_BR = 0;
-			TIM_SetCompare4(TIM8, 390);
-			yanshi--;
-		}
+            CAR_FL = 1;
+            TIM_SetCompare4(TIM8, 470);
+            CAR_FR = 0;
+            TIM_SetCompare3(TIM8, 390);
+            CAR_BL = 0;
+            TIM_SetCompare2(TIM8, 390);
+            CAR_BR = 1;
+            TIM_SetCompare1(TIM8, 390);
+            yanshi--;
+        }
 		TIM_SetCompare4(TIM8, 0);
 		TIM_SetCompare3(TIM8, 0);
 		TIM_SetCompare1(TIM8, 0);
@@ -982,13 +982,13 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 		while (yanshi >= 5)
 		{
 			CAR_FL = 0;
-			TIM_SetCompare2(TIM8, 470);
+			TIM_SetCompare4(TIM8, 470);
 			CAR_FR = 1;
-			TIM_SetCompare1(TIM8, 390);
-			CAR_BL = 0;
 			TIM_SetCompare3(TIM8, 390);
-			CAR_BR = 1;
-			TIM_SetCompare4(TIM8, 390);
+			CAR_BL = 1;
+			TIM_SetCompare2(TIM8, 390);
+			CAR_BR = 0;
+			TIM_SetCompare1(TIM8, 390);
 			yanshi--;
 		}
 		TIM_SetCompare4(TIM8, 0);
@@ -997,14 +997,14 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
         TIM_SetCompare2(TIM8, 0);
         delay_ms(50);
         if (t>=30) {
-            CAR_FL = 0;
-            CAR_FR = 0;
+            CAR_FL = 1;
+            CAR_FR = 1;
             CAR_BL = 1;
             CAR_BR = 1;
-            TIM_SetCompare2(TIM8, 390);
-            TIM_SetCompare1(TIM8, 390);
+            TIM_SetCompare4(TIM8, 390);
             TIM_SetCompare3(TIM8, 390);
-            TIM_SetCompare4(TIM8, 390); // 前进,轮子一一对应
+            TIM_SetCompare2(TIM8, 390);
+            TIM_SetCompare1(TIM8, 390); // 前进,轮子一一对应
             delay_ms(200);
             aax = St178_Scanf(1);
             while (!aax) {

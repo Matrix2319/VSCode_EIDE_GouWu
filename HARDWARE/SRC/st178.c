@@ -76,25 +76,25 @@ s8 St178_Scanf(u8 fi)		//1可以转弯0
 			St188_CS3=1;
 
 			if(St188_Y2_1==1)	{    //1是黑
-				shu_y[i] = 0;
+				shu_z[i] = 0;
 			}
 			else{
-				shu_y[i] = 1;
-				if(i == 3||i == 4)y_y_y++;				
-				y_y++;	
+				shu_z[i] = 1;
+				if(i == 3||i == 4)z_z_z++;	
+				bx1++;			
+				z_z++;	
 			}
 
 			St188_CS2=1;
 			St188_CS3=0;
 
 			if(St188_Y3_1==1){
-				shu_z[i] = 0;
+				shu_y[i] = 0;
 			}
 			else {
-				shu_z[i] = 1;
-				if(i == 3||i == 4)z_z_z++;
-				bx1++;
-				z_z++;	
+				shu_y[i] = 1;
+				if(i == 3||i == 4)y_y_y++;
+				y_y++;	
 			}
 		}
 		
@@ -227,17 +227,17 @@ s8 St178_Scanf(u8 fi)		//1可以转弯0
             if (((z_z >= 1 && z_z < 5) && (y_y >= 1 && y_y < 5)) || ((z_z >= 1 && z_z < 5) && y_y > 4)) //&& temp == 0||
             {
                 // temp = bx1;
-                if ((zuo_sum <= 6 && zuo_sum >= -6)) //||(you_sum <= 3 && you_sum >= 0)
+                if ((zuo_sum < 2 && zuo_sum > -3)) //||(you_sum <= 3 && you_sum >= 0)
 
                     return 1; // 可以转弯
 
-                if (zuo_sum > 6)
-
-                    return 4; // 过于靠前
-
-                if (zuo_sum < -6)
+                if (zuo_sum >= 3)
 
                     return 3; // 过于靠后
+
+                if (zuo_sum <= -3)
+
+                    return 4; // 过于靠前
 
             } else if ((y_y >= 1 && y_y < 5) && z_z > 4) {
                 if ((you_sum < 2 && you_sum >= -3)) //||(you_sum <= 3 && you_sum >= 0)||(you_sum < 2 && you_sum >-3)
@@ -246,11 +246,11 @@ s8 St178_Scanf(u8 fi)		//1可以转弯0
 
                 if (you_sum >= 3)
 
-                    return 4; // 过于靠前
+                    return 3; // 过于靠后
 
                 if (you_sum <= -3)
 
-                    return 3; // 过于靠后
+                    return 4; // 过于靠前
             }
 
             //		if(FX_flag==3||FX_flag==0||FX_flag==1)
@@ -292,7 +292,6 @@ s8 St178_Scanf(u8 fi)		//1可以转弯0
         }
     }
     return 0;
-			
 }
 
 s8 St188_Scanf(u8 forward)		//前后
