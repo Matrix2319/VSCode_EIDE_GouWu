@@ -997,10 +997,10 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
         TIM_SetCompare2(TIM8, 0);
         delay_ms(50);
         if (t>=30) {
-            CAR_FL = 1;
-            CAR_FR = 1;
-            CAR_BL = 1;
-            CAR_BR = 1;
+            CAR_FL = 0;
+            CAR_FR = 0;
+            CAR_BL = 0;
+            CAR_BR = 0;
             TIM_SetCompare4(TIM8, 390);
             TIM_SetCompare3(TIM8, 390);
             TIM_SetCompare2(TIM8, 390);

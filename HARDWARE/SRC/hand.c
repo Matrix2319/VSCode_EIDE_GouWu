@@ -333,7 +333,7 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                 A_i++;
                 if (USART3_RX_BUF[2] == 's' || USART3_RX_BUF[2] == 'd') // 上层要抓
                 {
-                    Printf(USART2, "%s", zhiling[6]); // 抓上中间木块
+                    Printf(USART2, "%s", zhiling[5]); // 抓上中间木块
                     for (u8 t = 0; t < 10; t++)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位
@@ -400,7 +400,7 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                 }
                 if (USART3_RX_BUF[1] == 'm') // 下层要抓
                 {
-                    Printf(USART2, "%s", zhiling[7]); // 抓下中间木块
+                    Printf(USART2, "%s", zhiling[8]); // 抓下中间木块
                     for (u8 t = 0; t < 11; t++)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位

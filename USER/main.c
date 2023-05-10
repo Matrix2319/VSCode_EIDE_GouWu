@@ -49,12 +49,13 @@ int main(void)
     delay_ms(10);
     Printf(USART2, zhiling[0]);
     delay_ms(10);
-    //LunPan_Zhuan();
+    LunPan_Zhuan();
     delay_ms(100);
     // Printf(USART2, "%s\r\n", "tlcdb");
   
     Printf(USART3, "%s\r\n", "tlcdb");
-      
+
+
     while (1) {
 
 
