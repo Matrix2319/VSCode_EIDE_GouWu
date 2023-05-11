@@ -5,6 +5,7 @@
 
 int ii = 0;
 u8 Flag_PingYi=0;
+u8 Flag_KaoBian=0;
 
 s16 tt;//读取前后的循迹返回是经过了几个路口
 s8  aa;//读取左右循迹值返回是否停车准确
@@ -828,7 +829,7 @@ void DJ_MOVE_ZHUAN(u8 r,u8 f)		//r3左转4右转,f1前进0后退
 		float angle1 = 0;
 		USART_ITConfig(USART1, USART_IT_RXNE, ENABLE); // 开启串口接受中断
 		USART_Cmd(USART1, ENABLE);					   // 使能串口1
-		angle_6 == 0;
+		angle_6 = 0;
 		while (angle_6 == 0)						   // 等待数据
 			;
 		angle1 = angle_6;
@@ -1017,5 +1018,122 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 	stop();
 }
 
+void DJ_MOVE_KaoBian(u8 t,u8 f,u8 sp)
+{
+	speed=sp;	
+	FX = f-7;	
+	Flag_KaoBian=1;
+			if(FX)
+		{
+			CAR_FL = 0;
+            CAR_FR = 0;
+            CAR_BL = 0;
+            CAR_BR = 0;
+            TIM_SetCompare4(TIM8, 390);
+            TIM_SetCompare3(TIM8, 390);
+            TIM_SetCompare2(TIM8, 390);
+            TIM_SetCompare1(TIM8, 390); // 前进,轮子一一对应
+		}
+		else
+		{
+			CAR_FL = 1;
+            CAR_FR = 1;
+            CAR_BL = 1;
+            CAR_BR = 1;
+            TIM_SetCompare4(TIM8, 390);
+            TIM_SetCompare3(TIM8, 390);
+            TIM_SetCompare2(TIM8, 390);
+            TIM_SetCompare1(TIM8, 390); // 前进,轮子一一对应
+		}
+	if(t == 1)//当需要走一格时
+	{
 
+		delay_ms(300);	
+		speed=1;
+		PWM_SET();	
+		tt=0;	
+		tt=St188_Scanf(1);
+		while(t > tt && stop_TIM)	       //等待车走过设定格数
+		{		
+			;
+		}	
+			stop();
+	}
+	else if(t == 2)        //当需要走两格时
+	{
+		delay_ms(300);	
+		speed=2;
+		PWM_SET();
+		
+		tt=0;	
+		tt=St188_Scanf(1);
+		while(t-1 > tt && stop_TIM)	//最后一格前的路程用2档
+		{
+			;			
+		}				
+		
+		speed=1;		
+		while(t > tt && stop_TIM)	  //最后一格的路程用1档
+		{		
+			;
+		}
+		stop();
+	}
+	else if(t >= 3)          //当需要走三格及以上时
+	{
+			delay_ms(300);	
+		speed = 3;	
+		PWM_SET();
+
+		tt=0;		
+			tt=St188_Scanf(1);
+		while(tt < 1 && stop_TIM)	//第一格用3档速度
+		{		
+			;
+		}
+		
+		speed = 2;		
+		while(t-1 > tt && stop_TIM)	//中间用设定速度
+		{
+			;
+		}
+	
+		speed=1;
+		while(t > tt && stop_TIM)	  //最后一格用1档速度
+		{		
+			;
+		}
+		stop();
+	}
+	DJ_MOVE_PingYi(6,10);
+	if (FX)
+	{
+			CAR_FL = 1;
+            CAR_FR = 1;
+            CAR_BL = 1;
+            CAR_BR = 1;
+            TIM_SetCompare4(TIM8, 390);
+            TIM_SetCompare3(TIM8, 390);
+            TIM_SetCompare2(TIM8, 390);
+            TIM_SetCompare1(TIM8, 390); // 前进,轮子一一对应
+			delay_ms(120);
+	stop();
+	}
+	else
+	{
+		CAR_FL = 1;
+            CAR_FR = 1;
+            CAR_BL = 1;
+            CAR_BR = 1;
+            TIM_SetCompare4(TIM8, 390);
+            TIM_SetCompare3(TIM8, 390);
+            TIM_SetCompare2(TIM8, 390);
+            TIM_SetCompare1(TIM8, 390); // 前进,轮子一一对应
+			delay_ms(120);
+			stop();
+	}
+
+
+	Flag_KaoBian=0;
+}
 

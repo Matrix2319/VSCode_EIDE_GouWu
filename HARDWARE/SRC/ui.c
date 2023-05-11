@@ -24,8 +24,8 @@ char zhiling[][20] = {
     "$DGT:16-25,1!", // 上右抓  		                6
     "$DGT:26-35,1!", // 上左抓   		                7
     "$DGT:36-45,1!",  // 下中抓    		                8
-    "$DGT:46-55,1!",  // 下右抓    		                8
-    "$DGT:56-65,1!"  // 下左抓    		                8
+    "$DGT:46-55,1!",  // 下右抓    		                9
+    "$DGT:56-65,1!"  // 下左抓    		                10
 };
 
 // 方向0后退1前进2无3左4右5左移6右移
@@ -457,14 +457,21 @@ void change_DongTai(unsigned char (*a)[5], unsigned char len)
 {
 
     for (u8 i = 0; a[i][0] + a[i][1] + a[i][2] + a[i][3] + a[i][4] > 0; i++) {
-        LED = 0;     
-        LCD_CLS();
-    // sprintf(OLED_BUF,"%d %d %d %d %d",LuXian_DongTai[i][0],LuXian_DongTai[i][1],LuXian_DongTai[i][2],LuXian_DongTai[i][3],LuXian_DongTai[i][4]);//显示
-    // LCD_16_HanZi_ASCII(0,0,OLED_BUF);
+        LED = 0;
+        // LCD_CLS();
+        // sprintf(OLED_BUF,"%d %d %d %d %d",LuXian_DongTai[i][0],LuXian_DongTai[i][1],LuXian_DongTai[i][2],LuXian_DongTai[i][3],LuXian_DongTai[i][4]);//显示
+        // LCD_16_HanZi_ASCII(0,0,OLED_BUF);
+        if (i == 0) {
+            if(exFlag_HuoJia!='A')//CD区域需要清空轮盘
+            {
+                memset(LunPan, 0, 10);
+                LunPani = 0;
+            }
+        }
         if (a[i][2] != 0) {
             if (a[i][2] > 58)
                 DJ_MOVE_YS(a[i][0], a[i][1], 1, a[i][2]);
-            else 
+            else
                 BMQ_MOVE(a[i][1], a[i][2], 0);
         } else if (a[i][1] != 2)
             DJ_MOVE_BUFF_SET(a[i][0], a[i][1], a[i][4]); // 循迹移动函数   格数  方向  平移延时
@@ -491,6 +498,8 @@ void change_DongTai(unsigned char (*a)[5], unsigned char len)
                 LunPan_Zhao_Tui(a[i][3]);
                 for (u8 it = 0; it < a[i][4]; it++)
                     delay_ms(100);
+            } else if (a[i][3] == 'z') { // 抓
+            KaoBian_Zhua(exFlag_HuoJia);
             }
         }
         if (a[i][1] == 2 && a[i][4] != 0 && a[i][3] == 255) // 啥都不做时延时

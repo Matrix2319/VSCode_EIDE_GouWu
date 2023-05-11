@@ -66,10 +66,13 @@ extern u8 ZK;
 
 extern u8 FX;
 extern u8 Flag_PingYi;
+extern u8 Flag_KaoBian;
 
 void PWM_SET(void);
 
 void DJ_MOVE(u8 t,u8 f,u8 sp,u8 dj_1,u8 dj_2,u8 dj_3,u8 dj_4,u8 YS);
+//靠边停的前进函数
+void DJ_MOVE_KaoBian(u8 t,u8 f,u8 sp);
 void DJ_MOVE_YS(u8 t,u8 f,u8 sp,u16 tim);
 void DJ_MOVE_ZHUAN(u8 r,u8 f);
 u8 BMQ_MOVE(u8 f,u16 d,u8 mod);

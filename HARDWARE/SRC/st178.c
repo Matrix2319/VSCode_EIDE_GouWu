@@ -304,7 +304,7 @@ s8 St188_Scanf(u8 forward)		//前后
 	if(forward == 5)
 		baixian = 0;
 	
-	if(FX == 0)
+	if(FX == 0||Flag_KaoBian==1)
 	{
 		for(t=0;t<1;t++)
 		{	 
@@ -487,10 +487,8 @@ s8 St188_Scanf(u8 forward)		//前后
 		}
 		return baixian;	
 		
-	}
-	
-	
-	else if(FX == 1||FX == 2||FX == 3)
+	}	
+	else if((FX == 1||FX == 2||FX == 3)&&!Flag_KaoBian)
 	{
 		for(t=0;t<1;t++)
 		{	 
@@ -674,10 +672,8 @@ s8 St188_Scanf(u8 forward)		//前后
 		if(BX_FLAGE == 1)
 		{
 			baixian++;
-		}
-		
-		return baixian;		
-		
+		}	
+		return baixian;				
 	}
 	if(FX == 2||FX == 3)return 0;
 	return baixian;	

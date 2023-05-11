@@ -1419,3 +1419,2035 @@ command:
 [2023-05-10 11:56:56]	[done]
 	build successfully !
 
+[2023-05-10 13:13:42]	[done]
+	build successfully !
+
+[2023-05-10 13:24:57]	[done]
+	build successfully !
+
+[2023-05-10 13:26:19]	[done]
+	build successfully !
+
+[2023-05-10 13:42:36]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 2847: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2848: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3043: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3044: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3232: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3233: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3504: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3504: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3509: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3509: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3514: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3514: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3519: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3519: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3648: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3648: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3653: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3653: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3658: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3658: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3663: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3663: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3668: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3668: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                               ^
+.\HARDWARE\SRC\ui.c: 24 warnings, 12 errors
+
+[2023-05-10 13:42:58]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 569: Error:  #20: identifier "i" is undefined
+          if (a[i][1] == 2 && a[i][4] != 0 && a[i][3] == 255) // 啥都不做时延时
+                ^
+".\HARDWARE\SRC\ui.c", line 577: Error:  #169: expected a declaration
+  }
+  ^
+".\HARDWARE\SRC\ui.c", line 604: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 605: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 606: Error:  #169: expected a declaration
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 615: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "设置");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 616: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 617: Error:  #169: expected a declaration
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 620: Error:  #169: expected a declaration
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 625: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "路线");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 626: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 627: Error:  #169: expected a declaration
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 630: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "双车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 631: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 632: Error:  #169: expected a declaration
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 635: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "开车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 636: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 638: Error:  #169: expected a declaration
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 640: Error:  #169: expected a declaration
+      }
+      ^
+".\HARDWARE\SRC\ui.c", line 699: Warning:  #12-D: parsing restarts here after previous syntax error
+              Keykey_Flag = 0;
+                             ^
+".\HARDWARE\SRC\ui.c", line 700: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 702: Error:  #169: expected a declaration
+          }
+          ^
+".\HARDWARE\SRC\ui.c", line 797: Warning:  #12-D: parsing restarts here after previous syntax error
+      OLED_Refresh();
+                    ^
+".\HARDWARE\SRC\ui.c", line 799: Error:  #169: expected a declaration
+      while (1) {
+      ^
+.\HARDWARE\SRC\ui.c: 7 warnings, 30 errors
+
+[2023-05-10 13:43:03]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 579: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 603: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 604: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 605: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 606: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 607: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 609: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 610: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 611: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 612: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 613: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 615: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 616: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 618: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 620: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 621: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+.\HARDWARE\SRC\ui.c: 1 warning, 30 errors
+
+[2023-05-10 13:43:41]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 580: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 604: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 605: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 606: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 607: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 609: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 610: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 611: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 612: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 613: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 614: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 616: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 617: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 620: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 621: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 623: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+.\HARDWARE\SRC\ui.c: 1 warning, 30 errors
+
+[2023-05-10 13:44:06]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 2849: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2850: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3045: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3046: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3234: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3235: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3506: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3506: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3511: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3511: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3516: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3516: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3521: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3521: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3650: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3650: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3655: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3655: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3660: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3660: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3665: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3665: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3670: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3670: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                               ^
+.\HARDWARE\SRC\ui.c: 24 warnings, 12 errors
+
+[2023-05-10 13:44:34]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 2849: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2850: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3045: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3046: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3234: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3235: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3506: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3506: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3511: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3511: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3516: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3516: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3521: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3521: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3650: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3650: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3655: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3655: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3660: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3660: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3665: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3665: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3670: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3670: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                               ^
+.\HARDWARE\SRC\ui.c: 24 warnings, 12 errors
+
+[2023-05-10 13:44:48]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 579: Error:  #169: expected a declaration
+  }
+  ^
+".\HARDWARE\SRC\ui.c", line 606: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 607: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #169: expected a declaration
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 617: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "设置");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 618: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #169: expected a declaration
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 621: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #169: expected a declaration
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 627: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "路线");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 628: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 629: Error:  #169: expected a declaration
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 632: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "双车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 633: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 634: Error:  #169: expected a declaration
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 637: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "开车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 638: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 640: Error:  #169: expected a declaration
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 642: Error:  #169: expected a declaration
+      }
+      ^
+".\HARDWARE\SRC\ui.c", line 701: Warning:  #12-D: parsing restarts here after previous syntax error
+              Keykey_Flag = 0;
+                             ^
+".\HARDWARE\SRC\ui.c", line 702: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 704: Error:  #169: expected a declaration
+          }
+          ^
+".\HARDWARE\SRC\ui.c", line 799: Warning:  #12-D: parsing restarts here after previous syntax error
+      OLED_Refresh();
+                    ^
+".\HARDWARE\SRC\ui.c", line 801: Error:  #169: expected a declaration
+      while (1) {
+      ^
+".\HARDWARE\SRC\ui.c", line 837: Warning:  #12-D: parsing restarts here after previous syntax error
+      OLED_Refresh();
+                    ^
+".\HARDWARE\SRC\ui.c", line 839: Error:  #169: expected a declaration
+      while (1) {
+      ^
+.\HARDWARE\SRC\ui.c: 8 warnings, 30 errors
+
+[2023-05-10 13:45:37]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 570: Error:  #20: identifier "i" is undefined
+          if (a[i][1] == 2 && a[i][4] != 0 && a[i][3] == 255) // 啥都不做时延时
+                ^
+".\HARDWARE\SRC\ui.c", line 578: Error:  #169: expected a declaration
+      }
+      ^
+".\HARDWARE\SRC\ui.c", line 606: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 607: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #169: expected a declaration
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 617: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "设置");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 618: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #169: expected a declaration
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 621: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #169: expected a declaration
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 627: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "路线");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 628: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 629: Error:  #169: expected a declaration
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 632: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "双车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 633: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 634: Error:  #169: expected a declaration
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 637: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "开车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 638: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 640: Error:  #169: expected a declaration
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 642: Error:  #169: expected a declaration
+      }
+      ^
+".\HARDWARE\SRC\ui.c", line 701: Warning:  #12-D: parsing restarts here after previous syntax error
+              Keykey_Flag = 0;
+                             ^
+".\HARDWARE\SRC\ui.c", line 702: Error:  #169: expected a declaration
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 704: Error:  #169: expected a declaration
+          }
+          ^
+".\HARDWARE\SRC\ui.c", line 799: Warning:  #12-D: parsing restarts here after previous syntax error
+      OLED_Refresh();
+                    ^
+".\HARDWARE\SRC\ui.c", line 801: Error:  #169: expected a declaration
+      while (1) {
+      ^
+.\HARDWARE\SRC\ui.c: 7 warnings, 30 errors
+
+[2023-05-10 13:45:51]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 570: Error:  #20: identifier "i" is undefined
+          if (a[i][1] == 2 && a[i][4] != 0 && a[i][3] == 255) // 啥都不做时延时
+                ^
+".\HARDWARE\SRC\ui.c", line 2850: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2851: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3046: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3047: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3235: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3236: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3507: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3507: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3512: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3512: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3517: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3517: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3522: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3522: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3651: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3651: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3656: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3656: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3661: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3661: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3666: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3666: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3671: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3671: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                               ^
+.\HARDWARE\SRC\ui.c: 24 warnings, 13 errors
+
+[2023-05-10 13:46:02]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 582: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 606: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 607: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 609: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 610: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 611: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 612: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 613: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 614: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 615: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 616: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 618: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 621: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 623: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 624: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 625: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+.\HARDWARE\SRC\ui.c: 1 warning, 30 errors
+
+[2023-05-10 13:46:05]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 582: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 606: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 609: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 610: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 611: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 612: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 613: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 614: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 615: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 616: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 623: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 624: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 625: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+".\HARDWARE\SRC\ui.c", line 626: Error:  #121: a case label may only be used within a switch
+          case 20:
+          ^
+".\HARDWARE\SRC\ui.c", line 629: Error:  #121: a case label may only be used within a switch
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 630: Error:  #121: a case label may only be used within a switch
+          case 22:
+          ^
+.\HARDWARE\SRC\ui.c: 1 warning, 30 errors
+
+[2023-05-10 13:46:08]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 582: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 606: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 609: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 610: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 611: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 612: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 613: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 614: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 615: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 616: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 623: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 624: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 625: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+".\HARDWARE\SRC\ui.c", line 626: Error:  #121: a case label may only be used within a switch
+          case 20:
+          ^
+".\HARDWARE\SRC\ui.c", line 629: Error:  #121: a case label may only be used within a switch
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 630: Error:  #121: a case label may only be used within a switch
+          case 22:
+          ^
+.\HARDWARE\SRC\ui.c: 1 warning, 30 errors
+
+[2023-05-10 13:46:13]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 570: Error:  #20: identifier "i" is undefined
+          if (a[i][1] == 2 && a[i][4] != 0 && a[i][3] == 255) // 啥都不做时延时
+                ^
+".\HARDWARE\SRC\ui.c", line 2850: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2851: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3046: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3047: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3235: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3236: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3507: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3507: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3512: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3512: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3517: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3517: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3522: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3522: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3651: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3651: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3656: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3656: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3661: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3661: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3666: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3666: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3671: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3671: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                               ^
+.\HARDWARE\SRC\ui.c: 24 warnings, 13 errors
+
+[2023-05-10 13:46:29]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 582: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 606: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 607: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 609: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 610: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 611: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 612: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 613: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 614: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 615: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 616: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 618: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 621: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 623: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 624: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 625: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+.\HARDWARE\SRC\ui.c: 1 warning, 30 errors
+
+[2023-05-10 13:49:00]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 507: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 517: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 527: Error:  #65: expected a ";"
+                          for (u8 i = 0; i < 11 i++)
+                                                ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 537: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 547: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 557: Error:  #65: expected a ";"
+                      for (u8 i = 0; i < 11 i++)
+                                            ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 580: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 604: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 605: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 606: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 607: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 609: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 610: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 611: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 612: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 613: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 614: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 616: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 617: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 620: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 621: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 623: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+.\HARDWARE\SRC\ui.c: 1 warning, 30 errors
+
+[2023-05-10 13:49:43]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 511: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 521: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 531: Error:  #65: expected a ";"
+                          LunPani++ LunPan_Zhuan();
+                                    ^
+".\HARDWARE\SRC\ui.c", line 541: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 551: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 561: Error:  #65: expected a ";"
+                      LunPani++ LunPan_Zhuan();
+                                ^
+".\HARDWARE\SRC\ui.c", line 580: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 604: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 605: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 606: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 607: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 609: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 610: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 611: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 612: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 613: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 614: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 616: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 617: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 620: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 621: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 623: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+".\HARDWARE\SRC\ui.c", line 624: Error:  #121: a case label may only be used within a switch
+          case 20:
+          ^
+".\HARDWARE\SRC\ui.c", line 626: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 627: Error:  #121: a case label may only be used within a switch
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 628: Error:  #121: a case label may only be used within a switch
+          case 22:
+          ^
+".\HARDWARE\SRC\ui.c", line 629: Error:  #121: a case label may only be used within a switch
+          case 23:
+          ^
+".\HARDWARE\SRC\ui.c", line 631: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+.\HARDWARE\SRC\ui.c: 1 warning, 30 errors
+
+[2023-05-10 13:50:13]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 580: Error:  #65: expected a ";"
+  {
+  ^
+".\HARDWARE\SRC\ui.c", line 604: Warning:  #12-D: parsing restarts here after previous syntax error
+              LCD_16_HanZi_ASCII(6, 0, "底车");
+                                            ^
+".\HARDWARE\SRC\ui.c", line 605: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 606: Error:  #121: a case label may only be used within a switch
+          case 5:
+          ^
+".\HARDWARE\SRC\ui.c", line 607: Error:  #121: a case label may only be used within a switch
+          case 6:
+          ^
+".\HARDWARE\SRC\ui.c", line 608: Error:  #121: a case label may only be used within a switch
+          case 7:
+          ^
+".\HARDWARE\SRC\ui.c", line 609: Error:  #121: a case label may only be used within a switch
+          case 8:
+          ^
+".\HARDWARE\SRC\ui.c", line 610: Error:  #121: a case label may only be used within a switch
+          case 9:
+          ^
+".\HARDWARE\SRC\ui.c", line 611: Error:  #121: a case label may only be used within a switch
+          case 10:
+          ^
+".\HARDWARE\SRC\ui.c", line 612: Error:  #121: a case label may only be used within a switch
+          case 11:
+          ^
+".\HARDWARE\SRC\ui.c", line 613: Error:  #121: a case label may only be used within a switch
+          case 12:
+          ^
+".\HARDWARE\SRC\ui.c", line 614: Error:  #121: a case label may only be used within a switch
+          case 13:
+          ^
+".\HARDWARE\SRC\ui.c", line 616: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 617: Error:  #121: a case label may only be used within a switch
+          case 15:
+          ^
+".\HARDWARE\SRC\ui.c", line 619: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 620: Error:  #121: a case label may only be used within a switch
+          case 16:
+          ^
+".\HARDWARE\SRC\ui.c", line 621: Error:  #121: a case label may only be used within a switch
+          case 17:
+          ^
+".\HARDWARE\SRC\ui.c", line 622: Error:  #121: a case label may only be used within a switch
+          case 18:
+          ^
+".\HARDWARE\SRC\ui.c", line 623: Error:  #121: a case label may only be used within a switch
+          case 19:
+          ^
+".\HARDWARE\SRC\ui.c", line 624: Error:  #121: a case label may only be used within a switch
+          case 20:
+          ^
+".\HARDWARE\SRC\ui.c", line 626: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 627: Error:  #121: a case label may only be used within a switch
+          case 21:
+          ^
+".\HARDWARE\SRC\ui.c", line 628: Error:  #121: a case label may only be used within a switch
+          case 22:
+          ^
+".\HARDWARE\SRC\ui.c", line 629: Error:  #121: a case label may only be used within a switch
+          case 23:
+          ^
+".\HARDWARE\SRC\ui.c", line 631: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 632: Error:  #121: a case label may only be used within a switch
+          case 24:
+          ^
+".\HARDWARE\SRC\ui.c", line 633: Error:  #121: a case label may only be used within a switch
+          case 25:
+          ^
+".\HARDWARE\SRC\ui.c", line 634: Error:  #121: a case label may only be used within a switch
+          case 26:
+          ^
+".\HARDWARE\SRC\ui.c", line 636: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 638: Error:  #122: a default label may only be used within a switch
+          default:
+          ^
+".\HARDWARE\SRC\ui.c", line 639: Error:  #116: a break statement may only be used within a loop or switch
+              break;
+              ^
+.\HARDWARE\SRC\ui.c: 1 warning, 30 errors
+
+[2023-05-10 13:50:22]	[done]
+	build successfully !
+
+[2023-05-10 13:50:57]	[done]
+	build successfully !
+
+[2023-05-10 13:54:37]	[done]
+	build successfully !
+
+[2023-05-10 16:50:56]	[done]
+	build successfully !
+
+[2023-05-10 16:52:01]	[done]
+	build successfully !
+
+[2023-05-10 17:03:18]	[done]
+	build successfully !
+
+[2023-05-10 17:03:52]	[done]
+	build successfully !
+
+[2023-05-10 17:07:19]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\moto.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\moto.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\moto.d .\HARDWARE\SRC\moto.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\moto.c", line 556: Warning:  #550-D: variable "at" was set but never used
+  	u8 at = 0;		
+  	   ^
+".\HARDWARE\SRC\moto.c", line 774: Warning:  #940-D: missing return statement at end of non-void function "BMQ_MOVE"
+  }
+  ^
+".\HARDWARE\SRC\moto.c", line 1026: Error:  #101: "t" has already been declared in the current scope
+  	u16 t=600;
+  	    ^
+.\HARDWARE\SRC\moto.c: 2 warnings, 1 error
+
+[2023-05-10 17:08:09]	[done]
+	build successfully !
+
+[2023-05-10 17:08:37]	[done]
+	build successfully !
+
+[2023-05-10 17:08:53]	[done]
+	build successfully !
+
+[2023-05-10 17:09:12]	[done]
+	build successfully !
+
+[2023-05-10 17:10:07]	[done]
+	build successfully !
+
+[2023-05-10 17:10:35]	[done]
+	build successfully !
+
+[2023-05-10 17:10:41]	[done]
+	build successfully !
+
+[2023-05-10 17:11:28]	[done]
+	build successfully !
+
+[2023-05-10 17:11:34]	[done]
+	build successfully !
+
+[2023-05-10 17:14:24]	[done]
+	build successfully !
+
+[2023-05-10 17:15:57]	[done]
+	build successfully !
+
+[2023-05-10 17:17:58]	[done]
+	build successfully !
+
+[2023-05-10 17:19:04]	[done]
+	build successfully !
+
+[2023-05-10 18:26:05]	[done]
+	build successfully !
+
+[2023-05-10 18:28:22]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\moto.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\moto.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\moto.d .\HARDWARE\SRC\moto.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\moto.c", line 556: Warning:  #550-D: variable "at" was set but never used
+  	u8 at = 0;		
+  	   ^
+".\HARDWARE\SRC\moto.c", line 774: Warning:  #940-D: missing return statement at end of non-void function "BMQ_MOVE"
+  }
+  ^
+".\HARDWARE\SRC\moto.c", line 1031: Error:  #165: too few arguments in function call
+  		tt=St188_Scanf();
+  		               ^
+".\HARDWARE\SRC\moto.c", line 1043: Error:  #165: too few arguments in function call
+  				tt=St188_Scanf();
+  				               ^
+".\HARDWARE\SRC\moto.c", line 1061: Error:  #165: too few arguments in function call
+  			tt=St188_Scanf();
+  			               ^
+.\HARDWARE\SRC\moto.c: 2 warnings, 3 errors
+
+[2023-05-10 18:28:38]	[done]
+	build successfully !
+
+[2023-05-10 18:30:00]	[done]
+	build successfully !
+
+[2023-05-10 18:33:22]	[done]
+	build successfully !
+
+[2023-05-10 20:18:31]	[done]
+	build successfully !
+
+[2023-05-10 20:28:38]	[done]
+	build successfully !
+
+[2023-05-10 20:41:44]	[done]
+	build successfully !
+
+[2023-05-10 20:42:48]	[done]
+	build successfully !
+
+[2023-05-10 20:55:33]	[done]
+	build successfully !
+
+[2023-05-10 20:55:36]	[done]
+	build successfully !
+
+[2023-05-10 20:58:23]	[done]
+	build successfully !
+
+[2023-05-10 21:06:39]	[done]
+	build successfully !
+
+[2023-05-10 21:08:41]	[done]
+	build successfully !
+
+[2023-05-10 21:08:46]	[done]
+	build successfully !
+
+[2023-05-10 21:11:53]	[done]
+	build successfully !
+
+[2023-05-10 21:12:57]	[done]
+	build successfully !
+
+[2023-05-10 21:13:24]	[done]
+	build successfully !
+
+[2023-05-10 21:13:42]	[done]
+	build successfully !
+
+[2023-05-10 21:14:00]	[done]
+	build successfully !
+
+[2023-05-10 21:15:28]	[done]
+	build successfully !
+
+[2023-05-10 21:18:16]	[done]
+	build successfully !
+
+[2023-05-10 21:18:36]	[done]
+	build successfully !
+
+[2023-05-10 21:21:57]	[done]
+	build successfully !
+
+[2023-05-10 21:22:44]	[done]
+	build successfully !
+
+[2023-05-10 21:23:44]	[done]
+	build successfully !
+
+[2023-05-10 21:24:28]	[done]
+	build successfully !
+
+[2023-05-10 21:25:23]	[done]
+	build successfully !
+
+[2023-05-10 21:30:01]	[done]
+	build successfully !
+
+[2023-05-10 21:31:09]	[done]
+	build successfully !
+

@@ -18,6 +18,7 @@ extern u8 exFlag_HuoJia;
 extern u8 LunPan[7];
 extern u8 Tui[2][7];
 extern u8 Tuii;
+extern u8 LunPani;
 
 //A区域数组
 extern u8 A_S[7];
@@ -46,5 +47,7 @@ void LunPan_Zhao_Tui(u8 f);
 //给二维数组按行幅值
 //二维数组，哪一行，传入的行
 void Routecpy(u8 st1,u8 ed2,u8 rd3,u8 th4,u8 th5);
+//靠边抓CD货架
+void KaoBian_Zhua(u8 HuoJia_F);
 #endif 
 

@@ -177,6 +177,10 @@ void DJ_MOVE_BUFF_SET(u8 t,u8 f, u8 yanshi)       //只需要看这个函数，车的移动全
 			shijian = yanshi;
 			DJ_MOVE_PingYi(f, shijian);
 		}
+		if(f==7||f==8)
+		{
+			DJ_MOVE_KaoBian(t,f,sp);
+		}
 		DJ_MOVE(t,f,sp,0,0,0,0,0);    //前进函数
 
 //		Hand_SANJIAO();

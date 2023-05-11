@@ -45,17 +45,23 @@ int main(void)
     LCD_CLS();
     //BuJin_Zhuan('S');
     delay_ms(10);
-   BuJin_Zhuan('I');
+   //BuJin_Zhuan('I');
     delay_ms(10);
     Printf(USART2, zhiling[0]);
     delay_ms(10);
-    LunPan_Zhuan();
+    //LunPan_Zhuan();
     delay_ms(100);
     // Printf(USART2, "%s\r\n", "tlcdb");
   
     Printf(USART3, "%s\r\n", "tlcdb");
-
-
+// DJ_MOVE_KaoBian(1,8,1);
+// delay_ms(100);
+Printf(USART2,zhiling[8]);
+for(u8 i=0;i<11;i++)
+{
+    delay_ms(1000);
+}
+Printf(USART2,zhiling[0]);
     while (1) {
 
 
@@ -70,7 +76,7 @@ int main(void)
 
         // LunPan_Zhuan();
     
-        MenuOperate();
+        //MenuOperate();
         // DJ_MOVE_PingYi(5,100);
     }
 }
