@@ -48,6 +48,6 @@ void LunPan_Zhao_Tui(u8 f);
 //二维数组，哪一行，传入的行
 void Routecpy(u8 st1,u8 ed2,u8 rd3,u8 th4,u8 th5);
 //靠边抓CD货架
-void KaoBian_Zhua(u8 HuoJia_F);
+void KaoBian_Zhua(u8 HuoJia_F,u8 HuoJia_i);
 #endif 
 

@@ -314,22 +314,30 @@ void Zhua(u8 Flag_HuoJia)
         }
     }
     if (Flag_HuoJia == 'D') {
-        for (D_i = 5; D_i >= 0; D_i--) {
+        Sum_Qian=0;
+        LuXian_DongTaii=0;
+        u8 Flag_QianJin=0;
+        for (D_i = 5; D_i >= 0&&D_i<10; D_i--) {
             for (u8 i = 0; i < 3; i++) {
                 if (D_S[i][D_i] == 'z' || D_S[i][D_i] == 'h' || D_S[i][D_i] == 'n' || D_S[i][D_i] == 'j'||D_X[i][D_i] == 'z' || D_X[i][D_i] == 'h' || D_X[i][D_i] == 'n' || D_X[i][D_i] == 'j')
                 {
-                    Routecpy(Sum_Qian, 8, 0, 255, 0);
-                    Sum_Qian=0;
-                    Routecpy(0, 2, 0, 'd', 0);
+                    Flag_QianJin=1;
+                    Routecpy(Sum_Qian, 1, 0, 255, 0);
+                    Sum_Qian = 0;
+                    Routecpy(1, 8, 0, 255, 0);
+                    Routecpy(0, 2, 0, D_i+20, 0);
+                    break;
                 }
-                else
-                    Sum_Qian++;
-                    Routecpy(Sum_Qian, 8, 0, 255, 0);
+            }
+            if(!Flag_QianJin)
+            Sum_Qian++;
+            Flag_QianJin=0;
+        }
+                    Routecpy(Sum_Qian, 1, 0, 255, 0);
                     Routecpy(0, 0, 0, 0, 0);
                     change_DongTai(LuXian_DongTai,10);
                     LuXian_DongTaii=0;
-            }
-        }
+        
     }
 }
 void Nano_ChuLi(u8 Flag_HuoJia)
@@ -446,6 +454,22 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                 for (u8 i = 3; i < 6; i++) {
                     D_X[i - 3][D_i] = USART3_RX_BUF[i];
                 }
+                if (D_i == 1) {
+                    D_i = 2;
+                    for (u8 i = 0; i < 3; i++) {
+                        D_S[i][D_i] = 'k';
+                    }
+                    for (u8 i = 3; i < 6; i++) {
+                        D_X[i - 3][D_i] = 'k';
+                    }
+                    D_i = 3;
+                    for (u8 i = 0; i < 3; i++) {
+                        D_S[i][D_i] = 'k';
+                    }
+                    for (u8 i = 3; i < 6; i++) {
+                        D_X[i - 3][D_i] = 'k';
+                    }
+                }
                 D_i++;
                 break;
             }
@@ -471,7 +495,7 @@ void HandInit()
 }
 void LunPan_Zhao_Tui(u8 f)
 {
-    if (f == 'r' || f == 'g' || f == 'b') {
+    if (exFlag_HuoJia=='A') {
         for (u8 i = 0; i <= 5; i++) {
             if (LunPan[i] == f) {
                 LunPan[i] = 'k';
@@ -482,6 +506,26 @@ void LunPan_Zhao_Tui(u8 f)
                         LunPani = 0;
                 }
                 Printf(USART2, zhiling[1]);
+                delay_ms(500);
+                delay_ms(500);
+                delay_ms(500);
+                Printf(USART2, zhiling[2]);
+                delay_ms(500);
+                break;
+            }
+        }
+    }
+    if (exFlag_HuoJia == 'D') {
+        for (u8 i = 0; i <= 5; i++) {
+            if (LunPan[i] == f) {
+                LunPan[i] = 'k';
+                while (LunPani != i) {
+                    LunPan_Zhuan();
+                    LunPani++;
+                    if (LunPani == 6)
+                        LunPani = 0;
+                }
+                Printf(USART2, zhiling[4]);
                 delay_ms(500);
                 delay_ms(500);
                 delay_ms(500);
@@ -503,16 +547,18 @@ void Routecpy(u8 st1, u8 ed2, u8 rd3, u8 th4, u8 th5)
     LuXian_DongTaii++;
 }
 
-void KaoBian_Zhua(u8 HuoJia_F)
+void KaoBian_Zhua(u8 HuoJia_F,u8 HuoJia_i)
 {
     if (HuoJia_F == 'C') {
         ;
     } else if (HuoJia_F == 'D') {
+        D_i = HuoJia_i - 20;
         if (D_X[2][D_i] == 'h' || D_X[2][D_i] == 'z' || D_X[2][D_i] == 'j' || D_X[2][D_i] == 'n') {
-            Printf(USART2, zhiling[1]); // 抓下右
+            Printf(USART2, zhiling[7]); // 抓下右
             for (u8 i = 0; i < 11; i++)
-                delay_ms(100);
-            Printf(USART2, zhiling[1]);
+                delay_ms(1000);
+            Printf(USART2, zhiling[0]);
+            delay_ms(500);
             LunPan[LunPani] = D_X[2][D_i];
             LunPani++;
             LunPan_Zhuan();
@@ -520,10 +566,11 @@ void KaoBian_Zhua(u8 HuoJia_F)
                 LunPani = 0;
         }
         if (D_X[1][D_i] == 'h' || D_X[1][D_i] == 'z' || D_X[1][D_i] == 'j' || D_X[1][D_i] == 'n') {
-            Printf(USART2, zhiling[1]); // 抓下中
+            Printf(USART2, zhiling[6]); // 抓下中
             for (u8 i = 0; i < 11; i++)
-                delay_ms(100);
-            Printf(USART2, zhiling[1]);
+                delay_ms(1000);
+            Printf(USART2, zhiling[0]);
+            delay_ms(500);
             LunPan[LunPani] = D_X[1][D_i];
             LunPani++;
             LunPan_Zhuan();
@@ -531,10 +578,11 @@ void KaoBian_Zhua(u8 HuoJia_F)
                 LunPani = 0;
         }
         if (D_X[0][D_i] == 'h' || D_X[0][D_i] == 'z' || D_X[0][D_i] == 'j' || D_X[0][D_i] == 'n') {
-            Printf(USART2, zhiling[1]); // 抓下左
+            Printf(USART2, zhiling[8]); // 抓下左
             for (u8 i = 0; i < 11; i++)
-                delay_ms(100);
-            Printf(USART2, zhiling[1]);
+                delay_ms(1000);
+            Printf(USART2, zhiling[0]);
+            delay_ms(500);
             LunPan[LunPani] = D_X[0][D_i];
             LunPani++;
             LunPan_Zhuan();
@@ -542,10 +590,11 @@ void KaoBian_Zhua(u8 HuoJia_F)
                 LunPani = 0;
         }
         if (D_S[2][D_i] == 'h' || D_S[2][D_i] == 'z' || D_S[2][D_i] == 'j' || D_S[2][D_i] == 'n') {
-            Printf(USART2, zhiling[1]); // 抓上右
+            Printf(USART2, zhiling[10]); // 抓上右
             for (u8 i = 0; i < 11; i++)
-                delay_ms(100);
-            Printf(USART2, zhiling[1]);
+                delay_ms(1000);
+            Printf(USART2, zhiling[0]);
+            delay_ms(500);
             LunPan[LunPani] = D_S[2][D_i];
             LunPani++;
             LunPan_Zhuan();
@@ -553,10 +602,11 @@ void KaoBian_Zhua(u8 HuoJia_F)
                 LunPani = 0;
         }
         if (D_S[1][D_i] == 'h' || D_S[1][D_i] == 'z' || D_S[1][D_i] == 'j' || D_S[1][D_i] == 'n') {
-            Printf(USART2, zhiling[1]); // 抓上中
+            Printf(USART2, zhiling[5]); // 抓上中
             for (u8 i = 0; i < 11; i++)
-                delay_ms(100);
-            Printf(USART2, zhiling[1]);
+                delay_ms(1000);
+            Printf(USART2, zhiling[0]);
+            delay_ms(500);
             LunPan[LunPani] = D_S[1][D_i];
             LunPani++;
             LunPan_Zhuan();
@@ -564,10 +614,11 @@ void KaoBian_Zhua(u8 HuoJia_F)
                 LunPani = 0;
         }
         if (D_S[0][D_i] == 'h' || D_S[0][D_i] == 'z' || D_S[0][D_i] == 'j' || D_S[0][D_i] == 'n') {
-            Printf(USART2, zhiling[1]); // 抓上左
+            Printf(USART2, zhiling[9]); // 抓上左
             for (u8 i = 0; i < 11; i++)
-                delay_ms(100);
-            Printf(USART2, zhiling[1]);
+                delay_ms(1000);
+            Printf(USART2, zhiling[0]);
+            delay_ms(500);
             LunPan[LunPani] = D_S[0][D_i];
             LunPani++;
             LunPan_Zhuan();
