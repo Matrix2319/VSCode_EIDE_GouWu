@@ -183,10 +183,10 @@ s8 St178_Scanf(u8 fi)		//1¿ÉÒÔ×ªÍä0
 	
 	zuo_sum = st188_date2sum[0];
     you_sum = st188_date3sum[0];
-    if (Flag_PingYi == 1) {
+    if (Flag_XiuZheng == 1) {
         if (zuo_sum >= -3 && zuo_sum <= 3&&bx1>0)
 		{
-			Flag_PingYi=0;
+			Flag_XiuZheng=0;
 			 return 1;
 		}         
         else

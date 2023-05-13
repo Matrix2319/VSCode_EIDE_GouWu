@@ -4,7 +4,7 @@
 
 
 int ii = 0;
-u8 Flag_PingYi=0;
+u8 Flag_XiuZheng=0;
 u8 Flag_KaoBian=0;
 
 s16 tt;//读取前后的循迹返回是经过了几个路口
@@ -957,18 +957,16 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 	if (f == 5)
 	{
 		stop();
-		//Flag_PingYi=1;
-		// aa = St178_Scanf(1);
 		while (yanshi >= 5)		
 		{
             CAR_FL = 1;
-            TIM_SetCompare4(TIM8, 470);
+            TIM_SetCompare4(TIM8, 475);
             CAR_FR = 0;
-            TIM_SetCompare3(TIM8, 390);
+            TIM_SetCompare3(TIM8, 420);
             CAR_BL = 0;
-            TIM_SetCompare2(TIM8, 390);
+            TIM_SetCompare2(TIM8, 420);
             CAR_BR = 1;
-            TIM_SetCompare1(TIM8, 390);
+            TIM_SetCompare1(TIM8, 420);
             yanshi--;
         }
 		TIM_SetCompare4(TIM8, 0);
@@ -978,41 +976,22 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 	}
 	if (f == 6)
 	{
-		u8 aax=0;
-		Flag_PingYi=1;
 		while (yanshi >= 5)
 		{
 			CAR_FL = 0;
-			TIM_SetCompare4(TIM8, 470);
+			TIM_SetCompare4(TIM8, 465);
 			CAR_FR = 1;
-			TIM_SetCompare3(TIM8, 390);
+			TIM_SetCompare3(TIM8, 420);
 			CAR_BL = 1;
-			TIM_SetCompare2(TIM8, 390);
+			TIM_SetCompare2(TIM8, 420);
 			CAR_BR = 0;
-			TIM_SetCompare1(TIM8, 390);
+			TIM_SetCompare1(TIM8, 420);
 			yanshi--;
 		}
 		TIM_SetCompare4(TIM8, 0);
         TIM_SetCompare3(TIM8, 0);
         TIM_SetCompare1(TIM8, 0);
         TIM_SetCompare2(TIM8, 0);
-        delay_ms(50);
-        if (t>=30) {
-            CAR_FL = 0;
-            CAR_FR = 0;
-            CAR_BL = 0;
-            CAR_BR = 0;
-            TIM_SetCompare4(TIM8, 390);
-            TIM_SetCompare3(TIM8, 390);
-            TIM_SetCompare2(TIM8, 390);
-            TIM_SetCompare1(TIM8, 390); // 前进,轮子一一对应
-            delay_ms(200);
-            aax = St178_Scanf(1);
-            while (!aax) {
-                aax = St178_Scanf(1);
-            }
-        }
-		Flag_PingYi = 0;
         stop();
     }
 	stop();
@@ -1063,8 +1042,7 @@ void DJ_MOVE_KaoBian(u8 t,u8 f,u8 sp)
 	{
 		delay_ms(300);	
 		speed=2;
-		PWM_SET();
-		
+		PWM_SET();	
 		tt=0;	
 		tt=St188_Scanf(1);
 		while(t-1 > tt && stop_TIM)	//最后一格前的路程用2档
@@ -1137,3 +1115,42 @@ void DJ_MOVE_KaoBian(u8 t,u8 f,u8 sp)
 	Flag_KaoBian=0;
 }
 
+void DJ_MOVE_XiuZheng(u8 f)
+{
+	u8 aax=0;
+	Flag_XiuZheng=1;
+    if (f == 10) // 向前修正
+    {
+            CAR_FL = 0;
+            CAR_FR = 0;
+            CAR_BL = 0;
+            CAR_BR = 0;
+            TIM_SetCompare4(TIM8, 300);
+            TIM_SetCompare3(TIM8, 300);
+            TIM_SetCompare2(TIM8, 300);
+            TIM_SetCompare1(TIM8, 300); // 前进,轮子一一对应
+            aax = St178_Scanf(1);
+            while (!aax) {
+            aax = St178_Scanf(1);
+            }
+			stop();
+			Flag_XiuZheng=0;
+    }
+	if (f == 9) // 向后修正
+    {
+            CAR_FL = 1;
+            CAR_FR = 1;
+            CAR_BL = 1;
+            CAR_BR = 1;
+            TIM_SetCompare4(TIM8, 300);
+            TIM_SetCompare3(TIM8, 300);
+            TIM_SetCompare2(TIM8, 300);
+            TIM_SetCompare1(TIM8, 300); // 前进,轮子一一对应
+            aax = St178_Scanf(1);
+            while (!aax) {
+            aax = St178_Scanf(1);
+            }
+				stop();
+			Flag_XiuZheng=0;
+    }
+}

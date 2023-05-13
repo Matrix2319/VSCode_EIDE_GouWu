@@ -12,7 +12,7 @@
 u8 exFlag_HuoJia        = 0; // 全局的A,B,C,D区域
 u8 Flag_HuoJia_ShangXia = 0; // 区分上下货架
 
-u8 LuXian_DongTai[20][5];
+u8 LuXian_DongTai[50][5];
 u8 LuXian_DongTaii;
 
 u8 Sum_Qian;
@@ -150,34 +150,40 @@ void Zhua(u8 Flag_HuoJia)
             Sum_Qian++;
             if (A_X[4] != 'r') {
                 Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 10);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'r', 0);
             }
             Sum_Qian++;
             if (A_X[3] != 'g') {
                 Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 10);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'g', 0);
             }
             Sum_Qian++;
             if (A_X[2] != 'g') {
                 Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 10);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'g', 0);
             }
             Sum_Qian++;
             if (A_X[1] != 'b') {
                 Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 10);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'b', 0);
             }
             Sum_Qian++;
             if (A_X[0] != 'b') {
                 Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 10);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'b', 0);
             }
             Routecpy(Sum_Qian, 0, 0, 255, 0);
+            Routecpy(0, 6, 0, 255, 10);
             Sum_Qian = 0;
             Routecpy(0, 0, 0, 0, 0);
             delay_ms(10);
@@ -188,75 +194,88 @@ void Zhua(u8 Flag_HuoJia)
             }
             Sum_Qian++;
             if (A_S[1] != 'b') {
-                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(Sum_Qian, 1, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 10);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'b', 0);
             }
             Sum_Qian++;
             if (A_S[2] != 'g') {
-                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(Sum_Qian, 1, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 10);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'g', 0);
             }
             Sum_Qian++;
             if (A_S[3] != 'g') {
-                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(Sum_Qian, 1, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 10);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'g', 0);
             }
             Sum_Qian++;
             if (A_S[4] != 'r') {
-                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(Sum_Qian, 1, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 10);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'r', 0);
             }
             Sum_Qian++;
             if (A_S[5] != 'r') {
-                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(Sum_Qian, 1, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 10);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'r', 0);
             }
-            Routecpy(Sum_Qian, 0, 0, 255, 0);
+            Routecpy(Sum_Qian, 1, 0, 255, 0);
+            Routecpy(0, 6, 0, 255, 10);
             Sum_Qian = 0;
             Routecpy(0, 0, 0, 0, 0);
             delay_ms(10);
             change_DongTai(LuXian_DongTai, 10);
-            LuXian_DongTaii=0;
+            LuXian_DongTaii = 0;
         }
     }
     if (Flag_HuoJia == 'B') {
         if (Flag_HuoJia_ShangXia == 'X') {
-            delay_us(100);
-            Tuii = Tuii - 1;
-            delay_us(100);
-            if (Tui[1][Tuii] != 'o') {
-                if (Tui[1][Tuii] == 'r')
-                    BMQ_MOVE(0, 15, 0); // 往右走
-                else if (Tui[1][Tuii] == 'l')
-                    BMQ_MOVE(1, 15, 0);           // 往左走
-                Printf(USART2, "%s", zhiling[3]); // 推中间
-                delay_ms(500);
-                delay_ms(500);
-                delay_ms(500);
-                Printf(USART2, "%s", zhiling[2]);
+            Sum_Qian        = 0;
+            LuXian_DongTaii = 0;
+            memset(LuXian_DongTai, 0, 100);
+            for (u8 i = 5; i >= 0 && i < 10; i--) {
+                if(i!=5)
+                  Sum_Qian++;
+                if (Tui[1][i] != 'o') {
+                    Routecpy(Sum_Qian, 0, 0, 255, 0);
+                    Routecpy(0, 6, 0, 255, 15);
+                    Sum_Qian = 0;
+                    Routecpy(0, 2, 0, 20 + i, 0);
+                }           
             }
-
+            Routecpy(Sum_Qian, 0, 0, 255, 15);
+            Routecpy(0, 0, 20, 255, 15);
+            Routecpy(0, 10, 0, 255, 15);
+            Routecpy(0, 6, 0, 255, 10);
+            Routecpy(0, 0, 0, 0, 0);
+            change_DongTai(LuXian_DongTai, 10);
         } else if (Flag_HuoJia_ShangXia == 'S') {
-            if (Tui[0][Tuii] != 'o') {
-                if (Tui[0][Tuii] == 'r')
-                    BMQ_MOVE(0, 15, 0); // 往右走
-                else if (Tui[0][Tuii] == 'l')
-                    BMQ_MOVE(1, 15, 0);           // 往左走
-                Printf(USART2, "%s", zhiling[3]); // 推中间
-                delay_ms(500);
-                delay_ms(500);
-                delay_ms(500);
-                Printf(USART2, "%s", zhiling[2]); // 推中间
+            Sum_Qian        = 0;
+            LuXian_DongTaii = 0;
+            memset(LuXian_DongTai, 0, 100);
+            for (u8 i = 0; i <6; i++) {
+                if(i!=0)
+                Sum_Qian++;
+                if (Tui[0][i] != 'o') {
+                    Routecpy(Sum_Qian, 1, 0, 255, 0);
+                    Routecpy(0, 6, 0, 255, 15);
+                    Sum_Qian=0;
+                    Routecpy(0, 2, 0, 20 + i, 0);
+                } 
             }
-            Tuii++;
+            Routecpy(Sum_Qian, 1, 0, 255, 0);
+            Routecpy(0, 0, 0, 0, 0);
+            change_DongTai(LuXian_DongTai, 10);
         }
-        stop();
-    }   
+    }
     if (Flag_HuoJia == 'C') {
         memset(USART3_RX_BUF, 0, 10); // 将数组清0
         USART3_RX_STA = 0;
@@ -286,6 +305,7 @@ void Zhua(u8 Flag_HuoJia)
                         delay_ms(500);
                         delay_ms(500);
                         Printf(USART2, "%s", zhiling[2]);
+                        delay_ms(1000);
                     }
                 }
                 if (Flag_HuoJia_ShangXia == 'S') {
@@ -307,6 +327,7 @@ void Zhua(u8 Flag_HuoJia)
                         delay_ms(500);
                         delay_ms(500);
                         Printf(USART2, "%s", zhiling[2]);
+                        delay_ms(1000);
                     }
                 }
                 break;
@@ -314,30 +335,28 @@ void Zhua(u8 Flag_HuoJia)
         }
     }
     if (Flag_HuoJia == 'D') {
-        Sum_Qian=0;
-        LuXian_DongTaii=0;
-        u8 Flag_QianJin=0;
-        for (D_i = 5; D_i >= 0&&D_i<10; D_i--) {
+        Sum_Qian        = 0;
+        LuXian_DongTaii = 0;
+        u8 Flag_QianJin = 0;
+        for (D_i = 5; D_i >= 0 && D_i < 10; D_i--) {
             for (u8 i = 0; i < 3; i++) {
-                if (D_S[i][D_i] == 'z' || D_S[i][D_i] == 'h' || D_S[i][D_i] == 'n' || D_S[i][D_i] == 'j'||D_X[i][D_i] == 'z' || D_X[i][D_i] == 'h' || D_X[i][D_i] == 'n' || D_X[i][D_i] == 'j')
-                {
-                    Flag_QianJin=1;
+                if (D_S[i][D_i] == 'z' || D_S[i][D_i] == 'h' || D_S[i][D_i] == 'n' || D_S[i][D_i] == 'j' || D_X[i][D_i] == 'z' || D_X[i][D_i] == 'h' || D_X[i][D_i] == 'n' || D_X[i][D_i] == 'j') {
+                    Flag_QianJin = 1;
                     Routecpy(Sum_Qian, 1, 0, 255, 0);
                     Sum_Qian = 0;
                     Routecpy(1, 8, 0, 255, 0);
-                    Routecpy(0, 2, 0, D_i+20, 0);
+                    Routecpy(0, 2, 0, D_i + 20, 0);
                     break;
                 }
             }
-            if(!Flag_QianJin)
-            Sum_Qian++;
-            Flag_QianJin=0;
+            if (!Flag_QianJin)
+                Sum_Qian++;
+            Flag_QianJin = 0;
         }
-                    Routecpy(Sum_Qian, 1, 0, 255, 0);
-                    Routecpy(0, 0, 0, 0, 0);
-                    change_DongTai(LuXian_DongTai,10);
-                    LuXian_DongTaii=0;
-        
+        Routecpy(Sum_Qian, 1, 0, 255, 0);
+        Routecpy(0, 0, 0, 0, 0);
+        change_DongTai(LuXian_DongTai, 10);
+        LuXian_DongTaii = 0;
     }
 }
 void Nano_ChuLi(u8 Flag_HuoJia)
@@ -356,7 +375,7 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                 A_i++;
                 if (USART3_RX_BUF[2] == 's' || USART3_RX_BUF[2] == 'd') // 上层要抓
                 {
-                    Printf(USART2, "%s", zhiling[5]); // 抓上中间木块
+                    Printf(USART2, "%s", zhiling[11]); // 抓上中间木块
                     for (u8 t = 0; t < 10; t++)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位
@@ -367,7 +386,7 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                 }
                 if (USART3_RX_BUF[2] == 'x' || USART3_RX_BUF[2] == 'd') // 下层要抓
                 {
-                    Printf(USART2, "%s", zhiling[8]); // 抓下中间木块
+                    Printf(USART2, "%s", zhiling[12]); // 抓下中间木块
                     for (u8 t = 0; t < 10; t++)
                         delay_ms(1000);
                     Printf(USART2, "%s", zhiling[0]); // 复位
@@ -495,7 +514,7 @@ void HandInit()
 }
 void LunPan_Zhao_Tui(u8 f)
 {
-    if (exFlag_HuoJia=='A') {
+    if (exFlag_HuoJia == 'A') {
         for (u8 i = 0; i <= 5; i++) {
             if (LunPan[i] == f) {
                 LunPan[i] = 'k';
@@ -510,6 +529,8 @@ void LunPan_Zhao_Tui(u8 f)
                 delay_ms(500);
                 delay_ms(500);
                 Printf(USART2, zhiling[2]);
+                delay_ms(500);
+                delay_ms(500);
                 delay_ms(500);
                 break;
             }
@@ -531,6 +552,8 @@ void LunPan_Zhao_Tui(u8 f)
                 delay_ms(500);
                 Printf(USART2, zhiling[2]);
                 delay_ms(500);
+                delay_ms(500);
+                delay_ms(500);
                 break;
             }
         }
@@ -547,7 +570,7 @@ void Routecpy(u8 st1, u8 ed2, u8 rd3, u8 th4, u8 th5)
     LuXian_DongTaii++;
 }
 
-void KaoBian_Zhua(u8 HuoJia_F,u8 HuoJia_i)
+void KaoBian_Zhua(u8 HuoJia_F, u8 HuoJia_i)
 {
     if (HuoJia_F == 'C') {
         ;
@@ -624,6 +647,45 @@ void KaoBian_Zhua(u8 HuoJia_F,u8 HuoJia_i)
             LunPan_Zhuan();
             if (LunPani == 6)
                 LunPani = 0;
+        }
+    }
+}
+
+void B_Tui(u8 HuoJia_i)
+{
+    if (Flag_HuoJia_ShangXia == 'X') {
+        Tuii = HuoJia_i - 20;
+        delay_us(100);
+        if (Tui[1][Tuii] != 'o') {
+            if (Tui[1][Tuii] == 'r')
+                BMQ_MOVE(0, 17, 0); // 往右走
+            else if (Tui[1][Tuii] == 'l')
+                BMQ_MOVE(1, 17, 0);           // 往左走
+            Printf(USART2, "%s", zhiling[3]); // 推中间
+            delay_ms(500);
+            delay_ms(500);
+            delay_ms(500);
+            Printf(USART2, "%s", zhiling[2]);
+            delay_ms(500);
+            delay_ms(500);
+            delay_ms(500);
+        }
+    } else if (Flag_HuoJia_ShangXia == 'S') {
+        Tuii = HuoJia_i - 20;
+        delay_us(100);
+        if (Tui[0][Tuii] != 'o') {
+            if (Tui[0][Tuii] == 'r')
+                BMQ_MOVE(0, 17, 0); // 往右走
+            else if (Tui[0][Tuii] == 'l')
+                BMQ_MOVE(1, 17, 0);           // 往左走
+            Printf(USART2, "%s", zhiling[3]); // 推中间
+            delay_ms(500);
+            delay_ms(500);
+            delay_ms(500);
+            Printf(USART2, "%s", zhiling[2]);
+            delay_ms(500);
+            delay_ms(500);
+            delay_ms(500);
         }
     }
 }

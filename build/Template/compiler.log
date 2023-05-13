@@ -1,10 +1,79 @@
 >>> cc
 
-".\HARDWARE\SRC\hand.c", line 320: Warning:  #186-D: pointless comparison of unsigned integer with zero
-          for (D_i = 5; D_i >= 0&&D_i<10; D_i--) {
-                            ^
-.\HARDWARE\SRC\hand.c: 1 warning, 0 errors
+".\HARDWARE\SRC\ui.c", line 2745: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2746: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 2941: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 2942: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3130: Warning:  #177-D: variable "luxian" was declared but never referenced
+      u8 luxian;
+         ^
+".\HARDWARE\SRC\ui.c", line 3131: Warning:  #177-D: variable "a" was declared but never referenced
+      u8 a = 0;
+         ^
+".\HARDWARE\SRC\ui.c", line 3402: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3402: Warning:  #174-D: expression has no effect
+                               (a1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3407: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3407: Warning:  #174-D: expression has no effect
+                               (b1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3412: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3412: Warning:  #174-D: expression has no effect
+                               (c1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3417: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3417: Warning:  #174-D: expression has no effect
+                               (d1, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3546: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3546: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3551: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3551: Warning:  #174-D: expression has no effect
+                               (a2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3556: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3556: Warning:  #174-D: expression has no effect
+                               (c2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3561: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3561: Warning:  #174-D: expression has no effect
+                               (d2, 0);
+                               ^
+".\HARDWARE\SRC\ui.c", line 3566: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                                ^
+".\HARDWARE\SRC\ui.c", line 3566: Warning:  #174-D: expression has no effect
+                               (e2, 0);
+                               ^
+.\HARDWARE\SRC\ui.c: 24 warnings, 0 errors
 
 >>> ld
 
-Program Size: Code=59008 RO-data=20216 RW-data=4884 ZI-data=9468  
+Program Size: Code=59808 RO-data=20216 RW-data=4784 ZI-data=9616  

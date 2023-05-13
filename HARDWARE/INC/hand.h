@@ -5,7 +5,7 @@
 
 
 //动态路线
-extern u8 LuXian_DongTai[20][5];
+extern u8 LuXian_DongTai[50][5];
 extern u8 LuXian_DongTaii;
 
 //统计前进的格数
@@ -49,5 +49,7 @@ void LunPan_Zhao_Tui(u8 f);
 void Routecpy(u8 st1,u8 ed2,u8 rd3,u8 th4,u8 th5);
 //靠边抓CD货架
 void KaoBian_Zhua(u8 HuoJia_F,u8 HuoJia_i);
+//B货架推
+void B_Tui(u8 HuoJia_i);
 #endif 
 

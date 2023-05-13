@@ -45,7 +45,7 @@ int main(void)
     LCD_CLS();
     //BuJin_Zhuan('S');
     delay_ms(10);
-   BuJin_Zhuan('I');
+    BuJin_Zhuan('I');
     delay_ms(10);
     Printf(USART2, zhiling[0]);
     delay_ms(10);
@@ -56,7 +56,11 @@ int main(void)
     Printf(USART3, "%s\r\n", "tlcdb");
 // DJ_MOVE_KaoBian(1,8,1);
 // delay_ms(100);
+//DJ_MOVE_PingYi(6,120);
+//DJ_MOVE_PingYi(6,100);
+
     while (1) {
+
 
 
         // Printf(USART1, "%s\r\n", "TLCDB1!");
