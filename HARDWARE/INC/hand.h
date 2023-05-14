@@ -25,6 +25,11 @@ extern u8 A_S[7];
 extern u8 A_X[7];
 extern u8 A_i;
 
+//C区域数组
+extern u8 C_S[7];
+extern u8 C_X[7];
+extern u8 C_i;
+
 //D区域的数组
 extern u8 D_S[3][7];
 extern u8 D_X[3][7];

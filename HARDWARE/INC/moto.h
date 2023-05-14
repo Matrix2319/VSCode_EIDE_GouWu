@@ -13,7 +13,6 @@
 #include "ADC_Config.h"
 
 
-
 //#define Distancenub   1024
 #define   QIAN      1     
 #define   HOU       0
@@ -71,14 +70,14 @@ extern u8 Flag_KaoBian;
 void PWM_SET(void);
 
 void DJ_MOVE(u8 t,u8 f,u8 sp,u8 dj_1,u8 dj_2,u8 dj_3,u8 dj_4,u8 YS);
-//靠边停的前进函数
+//靠边停的前进函数(格数，方向（7/8），速度)
 void DJ_MOVE_KaoBian(u8 t,u8 f,u8 sp);
 void DJ_MOVE_YS(u8 t,u8 f,u8 sp,u16 tim);
 void DJ_MOVE_ZHUAN(u8 r,u8 f);
 u8 BMQ_MOVE(u8 f,u16 d,u8 mod);
 //向左/右(5/6)   平移时间
 void DJ_MOVE_PingYi(u8 f,u8 t);
-void DJ_MOVE_XiuZheng(u8 f);
+void DJ_MOVE_XiuZheng(u8 f); 
 
 
 void stop(void);

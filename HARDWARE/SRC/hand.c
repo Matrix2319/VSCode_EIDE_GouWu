@@ -27,6 +27,10 @@ u8 A_S[7];
 u8 A_X[7];
 u8 A_i;
 
+u8 C_S[7];
+u8 C_X[7];
+u8 C_i;
+
 u8 D_S[3][7];
 u8 D_X[3][7];
 u8 D_i;
@@ -138,7 +142,7 @@ void LunPan_Zhuan()
 }
 void Zhua(u8 Flag_HuoJia)
 {
-    if (Flag_HuoJia == 'A') {
+    if (Flag_HuoJia == 'A') { 
         A_i             = 0;
         Sum_Qian        = 0;
         LuXian_DongTaii = 0;
@@ -277,62 +281,54 @@ void Zhua(u8 Flag_HuoJia)
         }
     }
     if (Flag_HuoJia == 'C') {
-        memset(USART3_RX_BUF, 0, 10); // 将数组清0
-        USART3_RX_STA = 0;
-        delay_us(10);
-        Printf(USART3, "%c", 'C');
-        while (1) {
-            delay_ms(10);
-            if (USART3_RX_STA & 0x8000) // 接收完成
-            {
-                delay_ms(10);
-                if (Flag_HuoJia_ShangXia == 'X') {
-                    if (USART3_RX_BUF[1] == 'k') {
-                        for (u8 i = 0; i < 6; i++) {
-                            if (LunPan[i] == 'm') {
-                                LunPan[i] = 'k';
-                                while (LunPani != i) {
-                                    LunPan_Zhuan();
-                                    LunPani++;
-                                    if (LunPani == 6)
-                                        LunPani = 0;
-                                }
-                                break;
-                            }
-                        }
-                        Printf(USART2, "%s", zhiling[4]); // 推中间
-                        delay_ms(500);
-                        delay_ms(500);
-                        delay_ms(500);
-                        Printf(USART2, "%s", zhiling[2]);
-                        delay_ms(1000);
-                    }
-                }
-                if (Flag_HuoJia_ShangXia == 'S') {
-                    if (USART3_RX_BUF[0] == 'k') {
-                        for (u8 i = 0; i < 6; i++) {
-                            if (LunPan[i] == 'm') {
-                                LunPan[i] = 'k';
-                                while (LunPani != i) {
-                                    LunPan_Zhuan();
-                                    LunPani++;
-                                    if (LunPani == 6)
-                                        LunPani = 0;
-                                }
-                                break;
-                            }
-                        }
-                        Printf(USART2, "%s", zhiling[4]); // 推中间
-                        delay_ms(500);
-                        delay_ms(500);
-                        delay_ms(500);
-                        Printf(USART2, "%s", zhiling[2]);
-                        delay_ms(1000);
-                    }
-                }
-                break;
+        Sum_Qian        = 0;
+        LuXian_DongTaii = 0;
+        for (u8 i = 5; i >= 0 && i < 10; i--) {
+            if (i != 5)
+                Sum_Qian++;
+            if (C_X[i] == 'm' || C_S[i] == 'm') {
+                Routecpy(Sum_Qian, 1, 0, 255, 0);
+                Routecpy(1, 8, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 15);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 20 + i, 0);
             }
         }
+        Routecpy(0, 2, 0, 'Z', 0);
+        Routecpy(0, 2, 0, 'Z', 0);
+        Routecpy(0, 2, 0, 'X', 0);
+        for (u8 i = 0; i < 6; i++) {
+            if (i != 0)
+                Sum_Qian++;
+            if (C_X[i] == 'k') {
+                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 15);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'Z', 0);
+                Routecpy(0, 2, 0, 1, 15);
+                Routecpy(0, 2, 0, 2, 15);
+            }
+        }
+        Routecpy(Sum_Qian, 0, 0, 255, 0); 
+        Sum_Qian=0;
+        Routecpy(0, 5, 0, 255, 10);
+        Routecpy(0, 2, 0, 'S', 0);
+        Routecpy(0, 6, 0, 255, 10);
+        for (u8 i = 5; i >= 0 && i < 10; i--) {
+            if (i != 5)
+                Sum_Qian++;
+            if (C_S[i] == 'k') {
+                Routecpy(Sum_Qian, 1, 0, 255, 0);
+                Routecpy(0, 6, 0, 255, 15);
+                Sum_Qian = 0;
+                Routecpy(0, 2, 0, 'Z', 0);
+                Routecpy(0, 2, 0, 1, 15);
+                Routecpy(0, 2, 0, 2, 15);
+            }
+        }
+          Routecpy(0, 0, 0, 0, 0);
+          change_DongTai(LuXian_DongTai,10);
+
     }
     if (Flag_HuoJia == 'D') {
         Sum_Qian        = 0;
@@ -377,7 +373,7 @@ void Nano_ChuLi(u8 Flag_HuoJia)
                 {
                     Printf(USART2, "%s", zhiling[11]); // 抓上中间木块
                     for (u8 t = 0; t < 10; t++)
-                        delay_ms(1000);
+                        delay_ms(1000); 
                     Printf(USART2, "%s", zhiling[0]); // 复位
                     LunPan[LunPani] = USART3_RX_BUF[0];
                     LunPani++;
@@ -428,30 +424,9 @@ void Nano_ChuLi(u8 Flag_HuoJia)
             delay_ms(10);
             if (USART3_RX_STA & 0x8000) // 接收完成
             {
-                if (USART3_RX_BUF[0] == 'm') // 上层要抓
-                {
-                    Printf(USART2, "%s", zhiling[5]); // 抓上中间饮料
-                    for (u8 t = 0; t < 9; t++)
-                        delay_ms(1000);
-                    Printf(USART2, "%s", zhiling[0]); // 复位
-                    LunPan[LunPani] = USART3_RX_BUF[0];
-                    LunPani++;
-                    if (LunPani == 6) LunPani = 0;
-                    LunPan_Zhuan();
-                    delay_ms(10);
-                }
-                if (USART3_RX_BUF[1] == 'm') // 下层要抓
-                {
-                    Printf(USART2, "%s", zhiling[8]); // 抓下中间木块
-                    for (u8 t = 0; t < 11; t++)
-                        delay_ms(1000);
-                    Printf(USART2, "%s", zhiling[0]); // 复位
-                    LunPan[LunPani] = USART3_RX_BUF[1];
-                    LunPani++;
-                    if (LunPani == 6) LunPani = 0;
-                    LunPan_Zhuan();
-                    delay_ms(10);
-                }
+                C_S[C_i]      = USART3_RX_BUF[0];
+                C_X[C_i]      = USART3_RX_BUF[1];
+                C_i++;
                 USART3_RX_STA = 0;
                 break;
             }
@@ -510,13 +485,14 @@ void HandInit()
     LunPani         = 0;
     Tuii            = 0;
     A_i             = 0;
+    C_i=0;
     D_i             = 0;
 }
 void LunPan_Zhao_Tui(u8 f)
 {
-    if (exFlag_HuoJia == 'A') {
+    if (exFlag_HuoJia == 'A') { 
         for (u8 i = 0; i <= 5; i++) {
-            if (LunPan[i] == f) {
+            if (LunPan[i] == f) { 
                 LunPan[i] = 'k';
                 while (LunPani != i) {
                     LunPan_Zhuan();
@@ -537,7 +513,7 @@ void LunPan_Zhao_Tui(u8 f)
         }
     }
     if (exFlag_HuoJia == 'D') {
-        for (u8 i = 0; i <= 5; i++) {
+        for (u8 i = 0; i <= 5; i++) { 
             if (LunPan[i] == f) {
                 LunPan[i] = 'k';
                 while (LunPani != i) {
@@ -573,12 +549,28 @@ void Routecpy(u8 st1, u8 ed2, u8 rd3, u8 th4, u8 th5)
 void KaoBian_Zhua(u8 HuoJia_F, u8 HuoJia_i)
 {
     if (HuoJia_F == 'C') {
-        ;
+        C_i = HuoJia_i - 20;
+        if (C_X[C_i] == 'm') {
+            Printf(USART2, zhiling[6]); // 抓下右
+            for (u8 i = 0; i < 12; i++)  
+                delay_ms(1000);
+            Printf(USART2, zhiling[0]);
+            delay_ms(500);
+            LunPan_Zhuan();
+        }
+        if (C_S[C_i] == 'm') {
+            Printf(USART2, zhiling[5]); // 抓下右
+            for (u8 i = 0; i < 12; i++)
+                delay_ms(1000);
+            Printf(USART2, zhiling[0]);
+            delay_ms(500);
+            LunPan_Zhuan();
+        }
     } else if (HuoJia_F == 'D') {
         D_i = HuoJia_i - 20;
         if (D_X[2][D_i] == 'h' || D_X[2][D_i] == 'z' || D_X[2][D_i] == 'j' || D_X[2][D_i] == 'n') {
             Printf(USART2, zhiling[7]); // 抓下右
-            for (u8 i = 0; i < 11; i++)
+            for (u8 i = 0; i < 11; i++) 
                 delay_ms(1000);
             Printf(USART2, zhiling[0]);
             delay_ms(500);
@@ -608,7 +600,7 @@ void KaoBian_Zhua(u8 HuoJia_F, u8 HuoJia_i)
             delay_ms(500);
             LunPan[LunPani] = D_X[0][D_i];
             LunPani++;
-            LunPan_Zhuan();
+            LunPan_Zhuan(); 
             if (LunPani == 6)
                 LunPani = 0;
         }

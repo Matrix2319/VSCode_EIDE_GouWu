@@ -952,7 +952,7 @@ void DJ_MOVE_YS(u8 t,u8 f,u8 sp,u16 tim)	//延时停车
 
 
 void DJ_MOVE_PingYi(u8 f, u8 t)
-{
+{ 
 	u32 yanshi = t * 50000;
 	if (f == 5)
 	{
@@ -960,13 +960,13 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 		while (yanshi >= 5)		
 		{
             CAR_FL = 1;
-            TIM_SetCompare4(TIM8, 475);
+            TIM_SetCompare4(TIM8, 410);
             CAR_FR = 0;
-            TIM_SetCompare3(TIM8, 420);
+            TIM_SetCompare3(TIM8, 350);
             CAR_BL = 0;
-            TIM_SetCompare2(TIM8, 420);
+            TIM_SetCompare2(TIM8, 350);
             CAR_BR = 1;
-            TIM_SetCompare1(TIM8, 420);
+            TIM_SetCompare1(TIM8, 350);
             yanshi--;
         }
 		TIM_SetCompare4(TIM8, 0);
@@ -975,17 +975,17 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 		TIM_SetCompare2(TIM8, 0);
 	}
 	if (f == 6)
-	{
+	{ 
 		while (yanshi >= 5)
 		{
 			CAR_FL = 0;
-			TIM_SetCompare4(TIM8, 465);
+			TIM_SetCompare4(TIM8, 380);
 			CAR_FR = 1;
-			TIM_SetCompare3(TIM8, 420);
+			TIM_SetCompare3(TIM8, 350);
 			CAR_BL = 1;
-			TIM_SetCompare2(TIM8, 420);
+			TIM_SetCompare2(TIM8, 350);
 			CAR_BR = 0;
-			TIM_SetCompare1(TIM8, 420);
+			TIM_SetCompare1(TIM8, 350);
 			yanshi--;
 		}
 		TIM_SetCompare4(TIM8, 0);
@@ -1094,7 +1094,7 @@ void DJ_MOVE_KaoBian(u8 t,u8 f,u8 sp)
             TIM_SetCompare3(TIM8, 390);
             TIM_SetCompare2(TIM8, 390);
             TIM_SetCompare1(TIM8, 390); // 前进,轮子一一对应
-			delay_ms(120);
+			delay_ms(90);
 	stop();
 	}
 	else
@@ -1107,7 +1107,7 @@ void DJ_MOVE_KaoBian(u8 t,u8 f,u8 sp)
             TIM_SetCompare3(TIM8, 390);
             TIM_SetCompare2(TIM8, 390);
             TIM_SetCompare1(TIM8, 390); // 前进,轮子一一对应
-			delay_ms(120);
+			delay_ms(90);
 			stop();
 	}
 

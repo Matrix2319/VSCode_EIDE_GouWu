@@ -4486,3 +4486,122 @@ command:
 [2023-05-13 17:57:44]	[done]
 	build successfully !
 
+[2023-05-13 18:49:50]	[done]
+	build successfully !
+
+[2023-05-13 22:51:41]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol C_S multiply defined (by hand.o and exti.o).
+Error: L6200E: Symbol C_S multiply defined (by ui.o and exti.o).
+Error: L6200E: Symbol C_S multiply defined (by usart.o and exti.o).
+Error: L6200E: Symbol C_S multiply defined (by main.o and exti.o).
+Error: L6200E: Symbol C_X multiply defined (by hand.o and exti.o).
+Error: L6200E: Symbol C_X multiply defined (by ui.o and exti.o).
+Error: L6200E: Symbol C_X multiply defined (by usart.o and exti.o).
+Error: L6200E: Symbol C_X multiply defined (by main.o and exti.o).
+Error: L6200E: Symbol C_i multiply defined (by hand.o and exti.o).
+Error: L6200E: Symbol C_i multiply defined (by ui.o and exti.o).
+Error: L6200E: Symbol C_i multiply defined (by usart.o and exti.o).
+Error: L6200E: Symbol C_i multiply defined (by main.o and exti.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 12 error messages.
+
+
+[2023-05-13 22:52:53]	[done]
+	build successfully !
+
+[2023-05-13 23:12:11]	[done]
+	build successfully !
+
+[2023-05-13 23:13:33]	[done]
+	build successfully !
+
+[2023-05-13 23:13:39]	[done]
+	build successfully !
+
+[2023-05-13 23:14:02]	[done]
+	build successfully !
+
+[2023-05-13 23:15:32]	[done]
+	build successfully !
+
+[2023-05-13 23:17:41]	[done]
+	build successfully !
+
+[2023-05-13 23:17:53]	[done]
+	build successfully !
+
+[2023-05-13 23:18:25]	[done]
+	build successfully !
+
+[2023-05-13 23:19:36]	[done]
+	build successfully !
+
+[2023-05-13 23:23:12]	[done]
+	build successfully !
+
+[2023-05-13 23:24:39]	[done]
+	build successfully !
+
+[2023-05-13 23:24:48]	[done]
+	build successfully !
+
+[2023-05-13 23:25:38]	[done]
+	build successfully !
+
+[2023-05-13 23:31:16]	[done]
+	build successfully !
+
+[2023-05-13 23:46:12]	[done]
+	build successfully !
+
+[2023-05-13 23:50:25]	[done]
+	build successfully !
+
+[2023-05-13 23:50:52]	[done]
+	build successfully !
+
+[2023-05-13 23:52:52]	[done]
+	build successfully !
+
+[2023-05-13 23:57:01]	[done]
+	build successfully !
+
+[2023-05-14 00:00:26]	[done]
+	build successfully !
+
+[2023-05-14 00:07:01]	[done]
+	build successfully !
+
+[2023-05-14 00:15:54]	[done]
+	build successfully !
+
+[2023-05-14 00:48:19]	[done]
+	build successfully !
+
+[2023-05-14 00:48:25]	[done]
+	build successfully !
+
+[2023-05-14 01:04:31]	[done]
+	build successfully !
+
+[2023-05-14 01:06:04]	[done]
+	build successfully !
+
+[2023-05-14 14:58:17]	[done]
+	build successfully !
+
+[2023-05-14 14:59:31]	[done]
+	build successfully !
+
+[2023-05-14 14:59:45]	[done]
+	build successfully !
+
+[2023-05-14 15:11:14]	[done]
+	build successfully !
+
+[2023-05-14 15:13:12]	[done]
+	build successfully !
+
