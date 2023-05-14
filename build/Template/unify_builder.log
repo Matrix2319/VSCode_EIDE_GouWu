@@ -4605,3 +4605,76 @@ Finished: 2 information, 0 warning and 12 error messages.
 [2023-05-14 15:13:12]	[done]
 	build successfully !
 
+[2023-05-14 21:38:08]	[done]
+	build successfully !
+
+[2023-05-14 21:45:28]	[done]
+	build successfully !
+
+[2023-05-14 21:46:17]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\USER\main.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\USER\main.o --no_depend_system_headers --depend .\build\Template\USER\main.d .\USER\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\USER\main.c", line 55: Error:  #7: unrecognized token
+    、、DJ_MOVE_KaoBian(1,8,1);
+    ^
+".\USER\main.c", line 55: Error:  #29: expected an expression
+    、、DJ_MOVE_KaoBian(1,8,1);
+    ^
+".\USER\main.c", line 55: Error:  #7: unrecognized token
+    、、DJ_MOVE_KaoBian(1,8,1);
+     ^
+".\USER\main.c", line 23: Warning:  #177-D: variable "tx_flag" was declared but never referenced
+      int tx_flag = 0;
+          ^
+.\USER\main.c: 1 warning, 3 errors
+
+[2023-05-14 21:46:21]	[done]
+	build successfully !
+
+[2023-05-14 21:47:29]	[done]
+	build successfully !
+
+[2023-05-14 21:49:18]	[done]
+	build successfully !
+
+[2023-05-14 22:48:02]	[done]
+	build successfully !
+
+[2023-05-14 22:49:17]	[done]
+	build successfully !
+
+[2023-05-14 22:57:01]	[done]
+	build successfully !
+
+[2023-05-14 22:59:23]	[done]
+	build successfully !
+
+[2023-05-14 23:03:34]	[done]
+	build successfully !
+
+[2023-05-14 23:03:39]	[done]
+	build successfully !
+
+[2023-05-14 23:04:17]	[done]
+	build successfully !
+
+[2023-05-14 23:11:09]	[done]
+	build successfully !
+
+[2023-05-14 23:16:25]	[done]
+	build successfully !
+
+[2023-05-14 23:22:05]	[done]
+	build successfully !
+
+[2023-05-14 23:39:29]	[done]
+	build successfully !
+
+[2023-05-14 23:49:58]	[done]
+	build successfully !
+
+[2023-05-14 23:55:22]	[done]
+	build successfully !
+
