@@ -1,19 +1,7 @@
 >>> cc
 
-".\HARDWARE\SRC\hand.c", line 248: Warning:  #186-D: pointless comparison of unsigned integer with zero
-              for (u8 i = 5; i >= 0 && i < 10; i--) {
-                               ^
-".\HARDWARE\SRC\hand.c", line 286: Warning:  #186-D: pointless comparison of unsigned integer with zero
-          for (u8 i = 5; i >= 0 && i < 10; i--) {
-                           ^
-".\HARDWARE\SRC\hand.c", line 317: Warning:  #186-D: pointless comparison of unsigned integer with zero
-          for (u8 i = 5; i >= 0 && i < 10; i--) {
-                           ^
-".\HARDWARE\SRC\hand.c", line 336: Warning:  #186-D: pointless comparison of unsigned integer with zero
-          for (D_i = 5; D_i >= 0 && D_i < 10; D_i--) {
-                            ^
-.\HARDWARE\SRC\hand.c: 4 warnings, 0 errors
+
 
 >>> ld
 
-Program Size: Code=59912 RO-data=20216 RW-data=4924 ZI-data=9620  
+Program Size: Code=60028 RO-data=20220 RW-data=5344 ZI-data=9616  

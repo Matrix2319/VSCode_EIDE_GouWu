@@ -249,7 +249,7 @@ void Zhua(u8 Flag_HuoJia)
                 if(i!=5)
                   Sum_Qian++;
                 if (Tui[1][i] != 'o') {
-                    Routecpy(Sum_Qian, 0, 0, 255, 0);
+                    Routecpy(Sum_Qian, 0, 0, 255, 5);
                     Routecpy(0, 6, 0, 255, 15);
                     Sum_Qian = 0;
                     Routecpy(0, 2, 0, 20 + i, 0);
@@ -269,13 +269,13 @@ void Zhua(u8 Flag_HuoJia)
                 if(i!=0)
                 Sum_Qian++;
                 if (Tui[0][i] != 'o') {
-                    Routecpy(Sum_Qian, 1, 0, 255, 0);
+                    Routecpy(Sum_Qian, 1, 0, 255,5);
                     Routecpy(0, 6, 0, 255, 15);
                     Sum_Qian=0;
                     Routecpy(0, 2, 0, 20 + i, 0);
                 } 
             }
-            Routecpy(Sum_Qian, 1, 0, 255, 0);
+            Routecpy(Sum_Qian, 1, 0, 255, 5);
             Routecpy(0, 0, 0, 0, 0);
             change_DongTai(LuXian_DongTai, 10);
         }
@@ -287,13 +287,16 @@ void Zhua(u8 Flag_HuoJia)
             if (i != 5)
                 Sum_Qian++;
             if (C_X[i] == 'm' || C_S[i] == 'm') {
-                Routecpy(Sum_Qian, 1, 0, 255, 0);
-                Routecpy(1, 8, 0, 255, 0);
+                Routecpy(Sum_Qian, 1, 0, 255, 10);
+                Routecpy(1, 8, 0, 255, 10);
                 Routecpy(0, 6, 0, 255, 15);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 20 + i, 0);
+                Routecpy(0, 0, 8, 255, 10);
             }
         }
+        Routecpy(Sum_Qian, 1, 0, 255, 10);
+        Sum_Qian=0;
         Routecpy(0, 2, 0, 'Z', 0);
         Routecpy(0, 2, 0, 'Z', 0);
         Routecpy(0, 2, 0, 'X', 0);
@@ -301,7 +304,7 @@ void Zhua(u8 Flag_HuoJia)
             if (i != 0)
                 Sum_Qian++;
             if (C_X[i] == 'k') {
-                Routecpy(Sum_Qian, 0, 0, 255, 0);
+                Routecpy(Sum_Qian, 0, 0, 255, 10);
                 Routecpy(0, 6, 0, 255, 15);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'Z', 0);
@@ -318,7 +321,7 @@ void Zhua(u8 Flag_HuoJia)
             if (i != 5)
                 Sum_Qian++;
             if (C_S[i] == 'k') {
-                Routecpy(Sum_Qian, 1, 0, 255, 0);
+                Routecpy(Sum_Qian, 1, 0, 255, 10);
                 Routecpy(0, 6, 0, 255, 15);
                 Sum_Qian = 0;
                 Routecpy(0, 2, 0, 'Z', 0);
@@ -338,16 +341,16 @@ void Zhua(u8 Flag_HuoJia)
                 Sum_Qian++;
             for (u8 i = 0; i < 3; i++) {
                 if (D_S[i][D_i] == 'z' || D_S[i][D_i] == 'h' || D_S[i][D_i] == 'j' || D_X[i][D_i] == 'z' || D_X[i][D_i] == 'h' || D_X[i][D_i] == 'j') {
-                    Routecpy(Sum_Qian, 1, 0, 255, 0);
+                    Routecpy(Sum_Qian, 1, 0, 255, 10);
                     Sum_Qian = 0;
-                    Routecpy(1, 8, 0, 255, 0);
+                    Routecpy(1, 8, 0, 255, 10);
                     Routecpy(0, 2, 0, D_i + 20, 0);
-                    Routecpy(0, 0, 8, 255, 8);
+                    Routecpy(0, 0, 8, 255, 10);
                     break;
                 }
             }
         }
-        Routecpy(Sum_Qian, 1, 0, 255, 0);
+        Routecpy(Sum_Qian, 1, 0, 255, 10);
         Routecpy(0, 0, 0, 0, 0);
         change_DongTai(LuXian_DongTai, 10);
         LuXian_DongTaii = 0;
