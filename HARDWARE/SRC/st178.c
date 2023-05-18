@@ -184,8 +184,9 @@ s8 St178_Scanf(u8 fi)		//1可以转弯0
 	zuo_sum = st188_date2sum[0];
     you_sum = st188_date3sum[0];
     if (Flag_XiuZheng == 1) {
-        if (zuo_sum >= -3 && zuo_sum <= 3&&bx1>0)
+        if (zuo_sum >= -3 && zuo_sum <= 3&&bx1>1)
 		{
+			bx1=0;
 			Flag_XiuZheng=0;
 			 return 1;
 		}         
@@ -298,6 +299,7 @@ s8 St188_Scanf(u8 forward)		//前后
 {
 	u8 bx = 0;
 	int canshu[8]={-4,-2,-1,1,2,4,6,8};
+	int canshu_h[8]={-8,-6,-4,-2,-1,1,2,3};//后寻迹所用参数
 	int i,t;
 	static u8 tem;
 	

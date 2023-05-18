@@ -51,7 +51,7 @@ int bl_PWM = 0;
 int br_PWM = 0;
 
 int speed=0;
-u8 speed_carrage[10]={0,25,27,29,15,25,10};
+u8 speed_carrage[10]={0,20,23,25,15,25,10};
 
 int16_t a_pwm[6];
 
@@ -542,7 +542,7 @@ void PWM_SET(void)      //开启定时器7并且进行一些PID参数设置
 	
 	tim7_start = 1;
 	
-	TIM7_BaseTime_Init(1500,720-1);		//100 	
+	TIM7_BaseTime_Init(1280,720-1);		//100 	
 	fzopen();                         //防撞打开
 }
 
@@ -960,7 +960,7 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 		while (yanshi >= 5)		
 		{
             CAR_FL = 1;
-            TIM_SetCompare4(TIM8, 410);
+            TIM_SetCompare4(TIM8, 420);
             CAR_FR = 0;
             TIM_SetCompare3(TIM8, 350);
             CAR_BL = 0;
@@ -979,7 +979,7 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
 		while (yanshi >= 5)
 		{
 			CAR_FL = 0;
-			TIM_SetCompare4(TIM8, 380);
+			TIM_SetCompare4(TIM8, 390);
 			CAR_FR = 1;
 			TIM_SetCompare3(TIM8, 350);
 			CAR_BL = 1;

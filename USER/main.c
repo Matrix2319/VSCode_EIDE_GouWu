@@ -56,7 +56,10 @@ int main(void)
     Printf(USART3, "%s\r\n", "tlcdb");
 // DJ_MOVE_KaoBian(1,8,1);
 // delay_ms(100);
-//DJ_MOVE_PingYi(6,120);
+
+// DJ_MOVE_PingYi(6,120);
+// delay_ms(1000);
+// DJ_MOVE_PingYi(5,120);
 //DJ_MOVE_PingYi(6,100);
 
     while (1) {

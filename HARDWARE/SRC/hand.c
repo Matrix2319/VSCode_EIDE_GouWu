@@ -89,7 +89,7 @@ void BuJin_Zhuan(u8 flag)
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 45; it++)
+            for (u8 it = 0; it < 46; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
@@ -116,7 +116,7 @@ void BuJin_Zhuan(u8 flag)
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 45; it++)
+            for (u8 it = 0; it < 46; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
@@ -296,10 +296,13 @@ void Zhua(u8 Flag_HuoJia)
             }
         }
         Routecpy(Sum_Qian, 1, 0, 255, 10);
-        Sum_Qian=0;
+        Sum_Qian = 0;
+        Routecpy(0, 1, 15, 255, 10);
+        Routecpy(0, 9, 0, 255, 10);
         Routecpy(0, 2, 0, 'Z', 0);
         Routecpy(0, 2, 0, 'Z', 0);
         Routecpy(0, 2, 0, 'X', 0);
+        
         for (u8 i = 0; i < 6; i++) {
             if (i != 0)
                 Sum_Qian++;
