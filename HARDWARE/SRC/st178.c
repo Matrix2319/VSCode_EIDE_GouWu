@@ -298,7 +298,8 @@ s8 St178_Scanf(u8 fi)		//1可以转弯0
 s8 St188_Scanf(u8 forward)		//前后
 {
 	u8 bx = 0;
-	int canshu[8]={-4,-2,-1,1,2,4,6,8};
+	//int canshu[8]={-4,-2,-1,1,2,4,6,8};
+	int canshu[8]={-6,-4,-2,-1,1,2,4,6};
 	int canshu_h[8]={-8,-6,-4,-2,-1,1,2,3};//后寻迹所用参数
 	int i,t;
 	static u8 tem;

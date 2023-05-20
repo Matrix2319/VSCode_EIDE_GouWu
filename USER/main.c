@@ -47,7 +47,7 @@ int main(void)
     delay_ms(10);
     BuJin_Zhuan('I');      
     delay_ms(10);
-    Printf(USART2, zhiling[0]);
+    Printf(USART2, zhiling[13]);
     delay_ms(10);
     LunPan_Zhuan();
     delay_ms(100);
@@ -57,11 +57,19 @@ int main(void)
 // DJ_MOVE_KaoBian(1,8,1);
 // delay_ms(100);
 
-// DJ_MOVE_PingYi(6,120);
+ //DJ_MOVE_PingYi(5,120);
 // delay_ms(1000);
 // DJ_MOVE_PingYi(5,120);
 //DJ_MOVE_PingYi(6,100);
+    // DJ_MOVE_KaoBian(1, 8, 1);
+    // DJ_MOVE_PingYi(6, 10);
+    // Printf(USART2, zhiling[6]);
+    // for (u8 i = 0; i < 11; i++) {
+    //     delay_ms(1000);
+    // }
+    // Printf(USART2, zhiling[0]);
 
+      //BMQ_MOVE(0, 18, 0);           // Íù×ó×ß
     while (1) {
 
 

@@ -89,7 +89,7 @@ void BuJin_Zhuan(u8 flag)
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 46; it++)
+            for (u8 it = 0; it < 48; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
@@ -116,7 +116,7 @@ void BuJin_Zhuan(u8 flag)
             delay_ms(200);
             TIM_SetCompare2(TIM1, 700);
             delay_ms(200);
-            for (u8 it = 0; it < 46; it++)
+            for (u8 it = 0; it < 48; it++)
                 delay_ms(100);
             TIM_SetCompare2(TIM1, 0);
             TIM_Cmd(TIM1, DISABLE);
@@ -332,8 +332,11 @@ void Zhua(u8 Flag_HuoJia)
                 Routecpy(0, 2, 0, 2, 15);
             }
         }
-          Routecpy(0, 0, 0, 0, 0);
-          change_DongTai(LuXian_DongTai,10);
+        Routecpy(Sum_Qian, 1, 0, 255, 10);
+        Routecpy(0,6,0,255,10);
+        Sum_Qian = 0;
+        Routecpy(0, 0, 0, 0, 0);
+        change_DongTai(LuXian_DongTai, 10);
 
     }
     if (Flag_HuoJia == 'D') {
@@ -477,7 +480,7 @@ void Nano_ChuLi(u8 Flag_HuoJia)
 }
 void HandInit()
 {
-    Printf(USART2, "%s", zhiling[0]); // 复位
+    //Printf(USART2, "%s", zhiling[0]); // 复位
     memset(A_S, 0, 7);
     memset(A_X, 0, 7);
     memset(LunPan, 0, 10);
@@ -555,7 +558,7 @@ void KaoBian_Zhua(u8 HuoJia_F, u8 HuoJia_i)
     if (HuoJia_F == 'C') {
         C_i = HuoJia_i - 20;
         if (C_X[C_i] == 'm') {
-            Printf(USART2, zhiling[6]); // 抓下右
+            Printf(USART2, zhiling[6]); // 
             for (u8 i = 0; i < 12; i++)  
                 delay_ms(1000);
             Printf(USART2, zhiling[0]);
@@ -563,7 +566,7 @@ void KaoBian_Zhua(u8 HuoJia_F, u8 HuoJia_i)
             LunPan_Zhuan();
         }
         if (C_S[C_i] == 'm') {
-            Printf(USART2, zhiling[5]); // 抓下右
+            Printf(USART2, zhiling[5]); // 
             for (u8 i = 0; i < 12; i++)
                 delay_ms(1000);
             Printf(USART2, zhiling[0]);

@@ -1,30 +1,10 @@
 >>> cc
 
-".\HARDWARE\SRC\hand.c", line 248: Warning:  #186-D: pointless comparison of unsigned integer with zero
-              for (u8 i = 5; i >= 0 && i < 10; i--) {
-                               ^
-".\HARDWARE\SRC\hand.c", line 286: Warning:  #186-D: pointless comparison of unsigned integer with zero
-          for (u8 i = 5; i >= 0 && i < 10; i--) {
-                           ^
-".\HARDWARE\SRC\hand.c", line 321: Warning:  #186-D: pointless comparison of unsigned integer with zero
-          for (u8 i = 5; i >= 0 && i < 10; i--) {
-                           ^
-".\HARDWARE\SRC\hand.c", line 340: Warning:  #186-D: pointless comparison of unsigned integer with zero
-          for (D_i = 5; D_i >= 0 && D_i < 10; D_i--) {
-                            ^
-.\HARDWARE\SRC\hand.c: 4 warnings, 0 errors
-".\HARDWARE\SRC\moto.c", line 556: Warning:  #550-D: variable "at" was set but never used
-  	u8 at = 0;		
-  	   ^
-".\HARDWARE\SRC\moto.c", line 774: Warning:  #940-D: missing return statement at end of non-void function "BMQ_MOVE"
-  }
-  ^
-.\HARDWARE\SRC\moto.c: 2 warnings, 0 errors
-".\HARDWARE\SRC\st178.c", line 302: Warning:  #177-D: variable "canshu_h" was declared but never referenced
-  	int canshu_h[8]={-8,-6,-4,-2,-1,1,2,3};//后寻迹所用参数
-  	    ^
-.\HARDWARE\SRC\st178.c: 1 warning, 0 errors
+".\USER\main.c", line 23: Warning:  #177-D: variable "tx_flag" was declared but never referenced
+      int tx_flag = 0;
+          ^
+.\USER\main.c: 1 warning, 0 errors
 
 >>> ld
 
-Program Size: Code=60048 RO-data=20248 RW-data=5212 ZI-data=9620  
+Program Size: Code=60128 RO-data=20248 RW-data=5256 ZI-data=9616  

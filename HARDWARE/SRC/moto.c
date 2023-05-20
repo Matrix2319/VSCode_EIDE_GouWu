@@ -995,6 +995,8 @@ void DJ_MOVE_PingYi(u8 f, u8 t)
         stop();
     }
 	stop();
+	for(u8 i=0;i<8;i++)
+	delay_ms(100);
 }
 
 void DJ_MOVE_KaoBian(u8 t,u8 f,u8 sp)
