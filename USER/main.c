@@ -54,6 +54,12 @@ int main(void)
     // Printf(USART2, "%s\r\n", "tlcdb");
   //DJ_MOVE_KaoBian(1,8,1);
     Printf(USART3, "%s\r\n", "tlcdb");
+            //   Printf(USART2, zhiling[5]); // ×¥ÉÏ×ó
+            // for (u8 i = 0; i < 11; i++)
+            //     delay_ms(1000);
+            // Printf(USART2, zhiling[0]);
+          
+          
 // DJ_MOVE_KaoBian(1,8,1);
 // delay_ms(100);
 
