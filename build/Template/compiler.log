@@ -1,10 +1,7 @@
 >>> cc
 
-".\USER\main.c", line 23: Warning:  #177-D: variable "tx_flag" was declared but never referenced
-      int tx_flag = 0;
-          ^
-.\USER\main.c: 1 warning, 0 errors
+
 
 >>> ld
 
-Program Size: Code=60172 RO-data=20252 RW-data=5564 ZI-data=9620  
+Program Size: Code=60196 RO-data=20252 RW-data=5564 ZI-data=9620  

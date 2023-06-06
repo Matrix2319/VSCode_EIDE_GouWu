@@ -5152,3 +5152,157 @@ command:
 [2023-05-20 15:59:40]	[done]
 	build successfully !
 
+[2023-05-21 08:43:08]	[done]
+	build successfully !
+
+[2023-05-21 08:47:31]	[done]
+	build successfully !
+
+[2023-05-21 08:54:41]	[done]
+	build successfully !
+
+[2023-05-21 08:55:08]	[done]
+	build successfully !
+
+[2023-05-21 08:56:04]	[done]
+	build successfully !
+
+[2023-05-21 08:56:29]	[done]
+	build successfully !
+
+[2023-05-21 08:59:04]	[done]
+	build successfully !
+
+[2023-05-21 09:00:34]	[done]
+	build successfully !
+
+[2023-05-21 09:01:07]	[done]
+	build successfully !
+
+[2023-05-21 09:58:23]	[done]
+	build successfully !
+
+[2023-05-21 10:01:53]	[done]
+	build successfully !
+
+[2023-05-21 10:02:55]	[done]
+	build successfully !
+
+[2023-05-21 10:03:27]	[done]
+	build successfully !
+
+[2023-05-21 10:03:36]	[done]
+	build successfully !
+
+[2023-05-24 13:09:18]	compilation failed at : "d:\Others\VsCode\EIDE\gouwu4.17\HARDWARE\SRC\ui.c", exit code: 1
+command: 
+  "D:\Files\Keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -IUSER -ICORE -ISTM32F10x_FWLib/inc -ISYSTEM/delay -ISYSTEM/sys -ISYSTEM/usart -IHARDWARE/INC -I.cmsis/include -IUSER/RTE/_Template -I.eide/deps -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER --cpu Cortex-M3 --li --c99 -D__MICROLIB -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Template\HARDWARE\SRC\ui.o --no_depend_system_headers --depend .\build\Template\HARDWARE\SRC\ui.d .\HARDWARE\SRC\ui.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\HARDWARE\SRC\ui.c", line 610: Error:  #8: missing closing quote
+              LCD_16_HanZi_ASCII(6, 0, "ÂºÄËΩ?);
+                                       ^
+".\HARDWARE\SRC\ui.c", line 611: Error:  #18: expected a ")"
+              break;
+              ^
+".\HARDWARE\SRC\ui.c", line 690: Error:  #8: missing closing quote
+      OLED_DrawHanzi(47, 47, "ÂºÄËΩ?, 1);
+                             ^
+".\HARDWARE\SRC\ui.c", line 691: Error:  #165: too few arguments in function call
+      OLED_Refresh();
+      ^
+".\HARDWARE\SRC\ui.c", line 691: Error:  #18: expected a ")"
+      OLED_Refresh();
+      ^
+".\HARDWARE\SRC\ui.c", line 1247: Error:  #8: missing closing quote
+                          OLED_DrawHanzi(i * 32, 16, "Ââ?, 0);
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 1248: Error:  #165: too few arguments in function call
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1248: Error:  #18: expected a ")"
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1250: Error:  #8: missing closing quote
+                          OLED_DrawHanzi(i * 32, 16, "Âê?, 0);
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 1251: Error:  #165: too few arguments in function call
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1251: Error:  #18: expected a ")"
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1253: Error:  #8: missing closing quote
+                          OLED_DrawHanzi(i * 32, 16, "Â∑?, 0);
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 1254: Error:  #165: too few arguments in function call
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1254: Error:  #18: expected a ")"
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1256: Error:  #8: missing closing quote
+                          OLED_DrawHanzi(i * 32, 16, "Âè?, 0);
+                                                     ^
+".\HARDWARE\SRC\ui.c", line 1257: Error:  #165: too few arguments in function call
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1257: Error:  #18: expected a ")"
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1274: Error:  #8: missing closing quote
+                          OLED_DrawHanzi((i - 4) * 32, 32, "Ââ?, 0);
+                                                           ^
+".\HARDWARE\SRC\ui.c", line 1275: Error:  #165: too few arguments in function call
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1275: Error:  #18: expected a ")"
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1277: Error:  #8: missing closing quote
+                          OLED_DrawHanzi((i - 4) * 32, 32, "Âê?, 0);
+                                                           ^
+".\HARDWARE\SRC\ui.c", line 1278: Error:  #165: too few arguments in function call
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1278: Error:  #18: expected a ")"
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1280: Error:  #8: missing closing quote
+                          OLED_DrawHanzi((i - 4) * 32, 32, "Â∑?, 0);
+                                                           ^
+".\HARDWARE\SRC\ui.c", line 1281: Error:  #165: too few arguments in function call
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1281: Error:  #18: expected a ")"
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1283: Error:  #8: missing closing quote
+                          OLED_DrawHanzi((i - 4) * 32, 32, "Âè?, 0);
+                                                           ^
+".\HARDWARE\SRC\ui.c", line 1284: Error:  #165: too few arguments in function call
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1284: Error:  #18: expected a ")"
+                          break;
+                          ^
+".\HARDWARE\SRC\ui.c", line 1300: Error:  #8: missing closing quote
+                          OLED_DrawHanzi((i - 8) * 32, 48, "Ââ?, 0);
+                                                           ^
+.\HARDWARE\SRC\ui.c: 0 warnings, 30 errors
+
+[2023-05-24 13:11:14]	[done]
+	build successfully !
+
+[2023-05-24 13:11:22]	[done]
+	build successfully !
+
+[2023-05-24 13:11:51]	[done]
+	build successfully !
+
+[2023-05-24 13:13:03]	[done]
+	build successfully !
+
+[2023-05-24 13:14:25]	[done]
+	build successfully !
+
