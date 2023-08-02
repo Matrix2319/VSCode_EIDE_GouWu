@@ -33,7 +33,7 @@ int main(void)
     uart3_init(9600);   // 串口3
 
     Init_BMQ();              // 编码器初始化
-    Init_TIM1_PWM(2999, 71); // 0.5ms
+    Init_TIM1_PWM(19999, 71); // 0.5ms
     ADC_DMA_Configuration(); // ADC1初始化(不知道有没有用到，上车调试)
     ADKey_Init();            // ACD3初始化(用到)
 
@@ -44,14 +44,22 @@ int main(void)
     LCD_CLS();
     Printf(USART3, "%s\r\n", "tlcdb");
 
-    sprintf(OLED_BUF, "%s", "tlcdb");
-    LCD_16_HanZi_ASCII(0, 0, OLED_BUF);
+    // sprintf(OLED_BUF, "%s", "tlcdb");
+    // LCD_16_HanZi_ASCII(0, 0, OLED_BUF);
     delay_ms(100);
-    TIM_SetCompare2(TIM1, 500);
-
+    TIM_SetCompare2(TIM1, 500);//PE11
+    TIM_SetCompare3(TIM1, 500);//PE13
+    u16 PE11p = 500;
+    u16 PE13p = 500;
     while (1) {
 
-
+        if (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == 'z') {
+            PE11p++;
+            if(PE11p>=2500)
+            PE11p=2500;
+            TIM_SetCompare2(TIM1, PE11p); // PE11
+        }
+        delay_ms(500);
 
         // Printf(USART1, "%s\r\n", "TLCDB1!");
         // delay_ms(500);

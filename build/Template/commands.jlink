@@ -1,6 +1,6 @@
 r
 halt
-loadfile "d:\Others\VsCode\EIDE\gouwu4.17\build\Template\Template.hex"
+loadfile "c:\Users\Frappuccino\Desktop\JIGUANG\build\Template\Template.hex"
 r
 go
 exit
