@@ -1,4 +1,4 @@
-arm-none-eabi-objcopy --update-section ER_RO="d:\Others\VsCode\EIDE\gouwu4.17\build\Template\Template.bin" "d:\Others\VsCode\EIDE\gouwu4.17\build\Template\Template.axf" "d:\Others\VsCode\EIDE\gouwu4.17\build\Template\Template.elf"
+arm-none-eabi-objcopy --update-section ER_RO="c:\Users\Frappuccino\Desktop\JIGUANG\build\Template\Template.bin" "c:\Users\Frappuccino\Desktop\JIGUANG\build\Template\Template.axf" "c:\Users\Frappuccino\Desktop\JIGUANG\build\Template\Template.elf"
 
-arm-none-eabi-objcopy: d:\Others\VsCode\EIDE\gouwu4.17\build\Template\Template.elf: warning: allocated section `ER_RW' not in segment
+arm-none-eabi-objcopy: c:\Users\Frappuccino\Desktop\JIGUANG\build\Template\Template.elf: warning: allocated section `ER_RW' not in segment
 

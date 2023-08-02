@@ -26,56 +26,29 @@ int main(void)
     LCD_CLS();    // OLED清屏
     //	TZXH_LOGO();//台州学院logo显示
     All_GPIO_Init(); // 用到的IO口初始化
-    SHOP_GPIO_init();
-    BuJin_GPIO_Init();
+    // SHOP_GPIO_init();
+    // BuJin_GPIO_Init();
     uart1_init(115200); // 串口1
     uart2_init(115200);   // 串口2
     uart3_init(9600);   // 串口3
 
     Init_BMQ();              // 编码器初始化
-    Init_TIM1_PWM(1199, 89); // 步进电机1499,69为600HZ,数字越大越慢
+    Init_TIM1_PWM(2999, 71); // 0.5ms
     ADC_DMA_Configuration(); // ADC1初始化(不知道有没有用到，上车调试)
     ADKey_Init();            // ACD3初始化(用到)
 
-    Init_TIM8_PWM(899, 7); // 电机PWM波
-
+    // Init_TIM8_PWM(899, 7); // 电机PWM波
 
     read_from_flash(); // 从flash中读取数据
 
     LCD_CLS();
-    //BuJin_Zhuan('S');
-    delay_ms(10);
-    BuJin_Zhuan('I');      
-    delay_ms(10);
-    Printf(USART2, zhiling[13]);
-    delay_ms(10);
-    LunPan_Zhuan();
-    delay_ms(100);
-    // Printf(USART2, "%s\r\n", "tlcdb");
-  //DJ_MOVE_KaoBian(1,8,1);
     Printf(USART3, "%s\r\n", "tlcdb");
-            //   Printf(USART2, zhiling[5]); // 抓上左
-            // for (u8 i = 0; i < 11; i++)
-            //     delay_ms(1000);
-            // Printf(USART2, zhiling[0]);
-          
-          
-// DJ_MOVE_KaoBian(1,8,1);
-// delay_ms(100);
 
- //DJ_MOVE_PingYi(5,120);
-// delay_ms(1000);
-// DJ_MOVE_PingYi(5,120);
-//DJ_MOVE_PingYi(6,100);
-    // DJ_MOVE_KaoBian(1, 8, 1);
-    // DJ_MOVE_PingYi(6, 10);
-    // Printf(USART2, zhiling[6]);
-    // for (u8 i = 0; i < 11; i++) {
-    //     delay_ms(1000);
-    // }
-    // Printf(USART2, zhiling[0]);
+    sprintf(OLED_BUF, "%s", "tlcdb");
+    LCD_16_HanZi_ASCII(0, 0, OLED_BUF);
+    delay_ms(100);
+    TIM_SetCompare2(TIM1, 500);
 
-      //BMQ_MOVE(0, 18, 0);           // 往左走
     while (1) {
 
 
@@ -89,9 +62,8 @@ int main(void)
         // sprintf(OLED_BUF, "%c", ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)));
         // LCD_16_HanZi_ASCII(0, 0, OLED_BUF);
 
-        // LunPan_Zhuan();
-    
-        MenuOperate();
-        // DJ_MOVE_PingYi(5,100);
+
+
+        // MenuOperate();
     }
 }

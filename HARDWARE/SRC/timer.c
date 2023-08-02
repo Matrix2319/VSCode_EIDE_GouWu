@@ -97,7 +97,7 @@ void Init_TIM1_PWM(u16 arr ,u16 psc)//19999  71    4999  71
 	 TIM_SetCompare2(TIM1, 0);
 	  TIM_SetCompare3(TIM1, 0);
 
-	TIM_Cmd(TIM1, DISABLE); //不使能TIM1
+	TIM_Cmd(TIM1, ENABLE); //不使能TIM1
 }
 
 
