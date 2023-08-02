@@ -12,6 +12,7 @@
 #include "ui.h"
 #include "stmflash.h"
 #include "hand.h"
+#include "zuobiao.h"
 
 int AD_test = 0;
 int tx_qian = 0;
@@ -26,13 +27,12 @@ int main(void)
     LCD_CLS();    // OLED清屏
     //	TZXH_LOGO();//台州学院logo显示
     All_GPIO_Init(); // 用到的IO口初始化
-    // SHOP_GPIO_init();
-    // BuJin_GPIO_Init();
-    uart1_init(115200); // 串口1
-    uart2_init(115200);   // 串口2
-    uart3_init(9600);   // 串口3
 
-    Init_BMQ();              // 编码器初始化
+     uart1_init(115200); // 串口1
+    // uart2_init(115200);   // 串口2
+    // uart3_init(9600);   // 串口3
+
+    Init_BMQ();              // 编码器初始化不能注释不然会影响tim1
     Init_TIM1_PWM(19999, 71); // 0.5ms
     ADC_DMA_Configuration(); // ADC1初始化(不知道有没有用到，上车调试)
     ADKey_Init();            // ACD3初始化(用到)
@@ -42,36 +42,32 @@ int main(void)
     read_from_flash(); // 从flash中读取数据
 
     LCD_CLS();
-    Printf(USART3, "%s\r\n", "tlcdb");
+    //Printf(USART3, "%s\r\n", "tlcdb");
 
     // sprintf(OLED_BUF, "%s", "tlcdb");
     // LCD_16_HanZi_ASCII(0, 0, OLED_BUF);
     delay_ms(100);
-    TIM_SetCompare2(TIM1, 500);//PE11
-    TIM_SetCompare3(TIM1, 500);//PE13
-    u16 PE11p = 500;
-    u16 PE13p = 500;
+    //PE11p 1763 PE13p 1782左上原点   1500 1500为原点
+    //ZuoBiao_Init();
+
+    ZuoBiao_Init();
+    u16 aa=1500;
     while (1) {
 
-        if (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == 'z') {
-            PE11p++;
-            if(PE11p>=2500)
-            PE11p=2500;
-            TIM_SetCompare2(TIM1, PE11p); // PE11
-        }
-        delay_ms(500);
+    AnJian_Scan();
 
-        // Printf(USART1, "%s\r\n", "TLCDB1!");
-        // delay_ms(500);
-        // Printf(USART2, "%s\r\n", "TLCDB2!");
-        // delay_ms(500);
-        // Printf(USART3, "%s\r\n", "TLCDB3!");
 
-        // sprintf(OLED_BUF, "%c", ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)));
+        //     TIM_SetCompare2(TIM1, PE11p); 
+        //     delay_ms(20);
+        // }
+        // delay_ms(500);
+        // while (PE13p <= 1782) {
+        //     PE13p++;
+        //     TIM_SetCompare3(TIM1, PE13p); // 
+        //     delay_ms(20);
+
+         // sprintf(OLED_BUF, "%c", ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)));
         // LCD_16_HanZi_ASCII(0, 0, OLED_BUF);
-
-
-
-        // MenuOperate();
+      
     }
 }

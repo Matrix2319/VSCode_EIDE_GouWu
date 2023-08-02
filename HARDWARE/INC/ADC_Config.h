@@ -27,6 +27,7 @@ void ADKey_Init(void);
 u16 Get_Key_Adc(u8 ch);
 u16 Get_Key_Adc_Average(u8 ch,u8 times);
 u8 ADKey_Deal(u16 ADKey_Value);
+void AnJian_Scan(void);
 
 
 #endif

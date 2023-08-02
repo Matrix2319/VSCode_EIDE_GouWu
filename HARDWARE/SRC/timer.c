@@ -94,8 +94,6 @@ void Init_TIM1_PWM(u16 arr ,u16 psc)//19999  71    4999  71
 	TIM_CtrlPWMOutputs(TIM1, ENABLE); // MOE 主输出使能
 
 	TIM_ARRPreloadConfig(TIM1, ENABLE); //使能TIMx在ARR上的预装载寄存器
-	 TIM_SetCompare2(TIM1, 0);
-	  TIM_SetCompare3(TIM1, 0);
 
 	TIM_Cmd(TIM1, ENABLE); //不使能TIM1
 }

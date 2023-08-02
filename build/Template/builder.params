@@ -18,9 +18,7 @@
         "SYSTEM/sys",
         "SYSTEM/usart",
         "HARDWARE/INC",
-        ".cmsis/include",
-        "USER/RTE/_Template",
-        ".eide/deps"
+        "USER/RTE/_Template"
     ],
     "libDirs": [],
     "defines": [
@@ -42,6 +40,7 @@
         "HARDWARE/SRC/stmflash.c",
         "HARDWARE/SRC/timer.c",
         "HARDWARE/SRC/ui.c",
+        "HARDWARE/SRC/zuobiao.c",
         "STM32F10x_FWLib/src/misc.c",
         "STM32F10x_FWLib/src/stm32f10x_adc.c",
         "STM32F10x_FWLib/src/stm32f10x_bkp.c",

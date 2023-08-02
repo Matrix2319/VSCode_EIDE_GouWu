@@ -32,3 +32,4 @@
 .\build\Template\HARDWARE\SRC\ADC_Config.o: HARDWARE/INC/oled.h
 .\build\Template\HARDWARE\SRC\ADC_Config.o: SYSTEM/delay/delay.h
 .\build\Template\HARDWARE\SRC\ADC_Config.o: SYSTEM/usart/usart.h
+.\build\Template\HARDWARE\SRC\ADC_Config.o: HARDWARE/INC/zuobiao.h

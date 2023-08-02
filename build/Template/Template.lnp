@@ -14,6 +14,7 @@
 .\build\Template\HARDWARE\SRC\stmflash.o
 .\build\Template\HARDWARE\SRC\timer.o
 .\build\Template\HARDWARE\SRC\ui.o
+.\build\Template\HARDWARE\SRC\zuobiao.o
 .\build\Template\STM32F10x_FWLib\src\misc.o
 .\build\Template\STM32F10x_FWLib\src\stm32f10x_adc.o
 .\build\Template\STM32F10x_FWLib\src\stm32f10x_bkp.o

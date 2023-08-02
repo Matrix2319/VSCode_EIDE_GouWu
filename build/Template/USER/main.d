@@ -41,3 +41,4 @@
 .\build\Template\USER\main.o: HARDWARE/INC/ui.h
 .\build\Template\USER\main.o: HARDWARE/INC/hand.h
 .\build\Template\USER\main.o: HARDWARE/INC/stmflash.h
+.\build\Template\USER\main.o: HARDWARE/INC/zuobiao.h

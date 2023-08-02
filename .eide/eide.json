@@ -134,6 +134,9 @@
           },
           {
             "path": "HARDWARE/SRC/ui.c"
+          },
+          {
+            "path": "HARDWARE/SRC/zuobiao.c"
           }
         ],
         "folders": []
@@ -344,9 +347,7 @@
           "SYSTEM/sys",
           "SYSTEM/usart",
           "HARDWARE/INC",
-          ".cmsis/include",
-          "USER/RTE/_Template",
-          ".eide/deps"
+          "USER/RTE/_Template"
         ],
         "libList": [],
         "sourceDirList": [],

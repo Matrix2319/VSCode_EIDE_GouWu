@@ -620,6 +620,11 @@
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\SRC\hand.c</FilePath>
             </File>
+            <File>
+              <FileName>zuobiao.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\SRC\zuobiao.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

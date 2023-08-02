@@ -13,6 +13,7 @@
 
 #include "oled.h"
 #include "usart.h"	
+#include "zuobiao.h"
 
 u8  Key_Num;
 u8 Keykey_Flag;      //按键生效标志位
@@ -285,6 +286,48 @@ void AD_AnJian(void)
 //	}
 }
 
-
-
-
+void AnJian_Scan()
+{
+    if (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == '1') {
+        while (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == '1')
+            ;
+        ZuoBiao_Go(-250, 250);
+    }
+    if (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == '3') {
+        while (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == '3')
+            ;
+        ZuoBiao_Go(250, 250);
+    }
+    if (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == '4') {
+        while (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == '4')
+            ;
+        ZuoBiao_Go(-250, -250);
+    }
+    if (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == '6') {
+        while (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == '6')
+            ;
+        ZuoBiao_Go(250, -250);
+    }
+    if (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == 'o') {
+        while (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == 'o')
+            ;
+        ZuoBiao_Go(0, 0); 
+    }
+	    if (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == '2') {
+        while (ADKey_Deal(Get_Key_Adc_Average(ADC_Channel_4, 1)) == '2')
+            ;
+        ZuoBiao_Go(-250, 0);
+        delay_ms(1000);
+        ZuoBiao_Go(-250, 250);
+        delay_ms(1000);
+        ZuoBiao_Go(250, 250);
+        delay_ms(1000);
+        ZuoBiao_Go(250, -250);
+        delay_ms(1000);
+        ZuoBiao_Go(-250, -250);
+        delay_ms(1000);
+        ZuoBiao_Go(-250, 0);
+        delay_ms(1000);
+        ZuoBiao_Go(0, 0);
+    }
+}
